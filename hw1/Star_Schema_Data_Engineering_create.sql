@@ -1,5 +1,5 @@
 -- Created by Vertabelo (http://vertabelo.com)
--- Last modification date: 2025-10-03 06:39:39.168
+-- Last modification date: 2025-10-03 12:36:09.503
 
 -- tables
 -- Table: DimCompany
@@ -39,7 +39,7 @@ CREATE TABLE DimTicker (
 
 -- Table: FactStock
 CREATE TABLE FactStock (
-    DateKey serial  NOT NULL,
+    DateKey int  NOT NULL,
     CompanyKey int  NOT NULL,
     TickerKey int  NOT NULL,
     OpenPrice money  NOT NULL,
