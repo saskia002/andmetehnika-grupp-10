@@ -8,8 +8,8 @@ The objective of our project is to create a database including data from Forbes 
 
 ## DDL
 
-/hw1/Star_Schema_Data_Engineering_create.sql
+- [Star_Schema_Data_Engineering_create.sql](Star_Schema_Data_Engineering_create.sql)
 
 ## DML 
 
-/hw1/Demo_Queries.sql
+- [Demo_Queries.sql](Demo_Queries.sql)
