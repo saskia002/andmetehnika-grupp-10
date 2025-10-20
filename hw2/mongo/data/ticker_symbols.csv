@@ -1,8 +1,6 @@
 Rank;Company;Ticker
-1;JPMorganChase;JPM
 2;Berkshire Hathaway;BRK-B
 3;ICBC;1398.HK
-4;Saudi Arabian Oil Company (Saudi Aramco);AMZN
 5;Amazon;AMZN
 6;Bank of America;BAC
 7;China Construction Bank;C6TB.F
@@ -11,7 +9,6 @@ Rank;Company;Ticker
 9;Microsoft;MSFT
 11;Apple;AAPL
 12;Bank of China;3988.HK
-13;ExxonMobil;CL=F
 14;Toyota Motor;TM
 15;HSBC Holdings;HSBC
 16;Wells Fargo;WFC
@@ -42,20 +39,16 @@ Rank;Company;Ticker
 41;TotalEnergies;TTE
 42;Johnson & Johnson;JNJ
 43;Comcast;CMCSA
-44;AXA Group;VTA.AS
 45;Reliance Industries;RLI.MU
-46;TD Bank Group;TCSH.TO
 47;NVIDIA;NVDA
 48;Nestlé;NESN.SW
 50;American Express;AXP
 51;Sinopec;YZCFF
 53;HDFC Bank;HDFCBANK.NS
-54;Volkswagen Group;ECXWW
 55;State Bank of India;SBIN.NS
 56;Sumitomo Mitsui Financial;SMFG
 57;Bank of Communications;C4C.F
 57;Sony;SONY
-59;Postal Savings Bank Of China (PSBC);AMZN
 60;Procter & Gamble;PG
 62;Siemens;SIE.DE
 63;Commonwealth Bank;CBA.AX
@@ -76,7 +69,6 @@ Rank;Company;Ticker
 78;Munich Re;1MUV2.MI
 79;Nippon Telegraph & Tel;NITT.VI
 80;Roche Holding;ROG.SW
-81;BMW Group;BMW.DE
 82;Itaú Unibanco Holding;ITUB
 83;Life Insurance Corp. of India;LICI.NS
 84;BMO;BMO
@@ -109,7 +101,6 @@ Rank;Company;Ticker
 111;China Citic Bank;601998.SS
 112;Iberdrola;IBE.MC
 113;DBS;D05.SI
-114;Generali Group;BGN.MI
 115;ICICI Bank;IBN
 116;UniCredit;UCG.MI
 117;Honda Motor;HMC
@@ -127,7 +118,6 @@ Rank;Company;Ticker
 129;Canadian Imperial Bank;CM
 130;Softbank;9434.T
 131;Sanofi;SNY
-132;NAB - National Australia Bank;NABPH.AX
 133;Deutsche Bank;DB
 134;Barclays;BARC.L
 135;Rio Tinto;RIO
@@ -143,7 +133,6 @@ Rank;Company;Ticker
 146;PNC Financial Services;PNC
 147;Salesforce;CRM
 148;Thermo Fisher Scientific;TMO
-149;John Deere;AMZN
 150;ANZ Group Holdings;ANZ.NZ
 151;Mitsui;8031.T
 152;Itochu;8001.T
@@ -212,9 +201,8 @@ Rank;Company;Ticker
 215;Swiss Re;SSREY
 216;MS&AD Insurance;59M.F
 217;Mastercard;MA
-218;China Everbright Bank;C0V.MU
+218;China Everbright Bank;601818.SS
 219;Deutsche Post;DHL.DE
-220;Oil & Natural Gas;AMZN
 221;Marathon Petroleum;MPC
 222;Emirates NBD;EMIRATESNBD.AE
 223;Al Rajhi Bank;1120.SR
@@ -228,17 +216,13 @@ Rank;Company;Ticker
 231;Japan Post Holdings;JPPHY
 232;Fubon Financial;2881C.TW
 233;Gilead Sciences;GILD
-234;Dai-ichi Life Insurance;8750.T
-235;Volvo Group;TATAMOTORS.BO
 236;GSK;GSK
 237;Banco Bradesco;BBD
 238;American International Group;AIG
 238;PayPal;PYPL
-240;First Abu Dhabi Bank;C
 241;Danaher;DHR
 242;General Dynamics;GD
 242;Target;TGT
-244;Discover Financial Services;COF
 245;The Saudi National Bank;1180.SR
 246;Centene;CNC
 247;Meituan;3690.HK
@@ -288,7 +272,6 @@ Rank;Company;Ticker
 292;Axis Bank;AXISBANK.NS
 293;American Electric;AEP
 294;Ameriprise Financial;AMP
-295;SEB AB;KLAR
 296;SLB;SLB
 297;Cathay Financial;2882B.TW
 297;EOG Resources;EOG
@@ -303,7 +286,6 @@ Rank;Company;Ticker
 307;Exelon;EXC
 308;Shinhan Financial Group;055550.KS
 309;GE Vernova;GEV
-310;Advanced Micro Devices (AMD);AMZN
 311;Constellation Energy;CEG
 312;Brookfield Corporation;BN
 312;Sumitomo;S19.SG
@@ -319,7 +301,6 @@ Rank;Company;Ticker
 323;Denso;6902.T
 324;Cosco Shipping;CTH.HA
 325;Altria Group;MO
-326;Royal Ahold Delhaize N.V.;AMZN
 327;Citic Securities;CI9.F
 327;Eaton;ETN
 329;Oneok;OKE
@@ -327,7 +308,6 @@ Rank;Company;Ticker
 331;Stryker;SYK
 332;Starbucks;SBUX
 333;Hartford Financial Services;HFF.BE
-334;0.0030;AMZN
 335;SAIC Motor;600104.SS
 336;Tata Motors;TATAMOTORS.NS
 337;Nippon Steel;NPS.F
@@ -342,7 +322,6 @@ Rank;Company;Ticker
 346;Gree Electric Appliances;000651.SZ
 347;CK Hutchison;0001.HK
 348;Tesco;TSCDY
-349;Bank Rakyat Indonesia (BRI);AMZN
 350;Takeda Pharmaceutical;TAK
 351;Waste Management;WM
 352;Banco Btg Pactual;BPAC5.SA
@@ -353,7 +332,6 @@ Rank;Company;Ticker
 357;Panasonic;3719.KL
 358;Seven & I Holdings;SVNDY
 359;Nomura;6254.T
-360;IntercontinentalExchange;WSFX.BO
 361;Danone;BN.PA
 362;Svenska Handelsbanken;SHB-B.ST
 363;Fannie Mae;FNMA
@@ -398,7 +376,6 @@ Rank;Company;Ticker
 403;Baidu;BIDU
 403;Baker Hughes Company;BKR
 405;Orix;IX
-406;First Citizens Bank (NC);AMZN
 407;Boston Scientific;BSX
 408;Bank Mandiri;BMRI.JK
 409;Tata Consultancy Services;TCS.NS
@@ -419,11 +396,10 @@ Rank;Company;Ticker
 424;China Railway Construction;688425.SS
 424;Corebridge Financial;CRBG
 426;Toyota Industries;TYIDF
-427;Shin-Etsu Chemical;SHECY
+427;Shin-Etsu Chemical;SHECF
 428;Toyota Tsusho;9TO.F
 429;Aviva;AVIVA.BO
 430;Etisalat;7020.SR
-431;Fifth Third Bank;WAL-PA
 431;Imperial Brands;IMBBY
 431;Regeneron Pharmaceuticals;REGN
 434;Block;XYZ
@@ -439,7 +415,6 @@ Rank;Company;Ticker
 443;Royal Caribbean Group;RC8.MU
 445;Consolidated Edison;ED
 446;American Tower;AMT
-446;EnBW Energie Baden-Wurttemberg;EQIX
 448;Sysco;SYY
 449;Boeing;BA
 450;Marriott International;MAR
@@ -488,16 +463,13 @@ Rank;Company;Ticker
 493;Williams;SHW
 494;Woodside Energy Group;WDS
 495;Bridgestone;BGT.F
-496;Michelin Group;MGDDF
 497;Daikin Industries;DKI.F
 498;Naturgy Energy Group;NTGY.MC
 499;Keurig Dr Pepper;KDP
 500;Nucor;NUE
 501;NetEase;NTES
 502;Compass Group;CMPGF
-503;Abu Dhabi Commercial Bank;CBD.AE
 504;Gallagher;AJG
-505;Huntington Bank;HBAN
 506;Lam Research;LRCX
 507;Quanta Computer;2382.TW
 508;Kansai Electric Power;KPO.DU
@@ -505,9 +477,7 @@ Rank;Company;Ticker
 510;Standard Bank Group;SKCS.F
 510;Thales;THLEF
 512;Sun Hung Kai Properties;SHG.BE
-513;Poly Developments & Holdings Group;AMZN
 514;Bouygues;BYG.F
-515;Glencore International;PMETF
 516;OTP Bank;OTP.MU
 517;General Mills;GIS
 518;Edison International;EIX
@@ -562,7 +532,7 @@ Rank;Company;Ticker
 569;Ecolab;ECL
 570;Colgate-Palmolive;CL
 571;Riyad Bank;1010.SR
-572;George Weston;WN-PC.TO
+572;George Weston;WN-PA.TO
 573;Woori Financial Group;2WGA.F
 574;Public Service Enterprise Group;PEG
 575;Naspers;NNW0.F
@@ -605,7 +575,6 @@ Rank;Company;Ticker
 613;Samsung Life Insurance;032830.KS
 614;Fidelity National Financial;FNF
 615;Everest Re Group;ERE.SG
-616;Turkish Airlines;EADSY
 617;NEC;NEC1.F
 618;Bayer;BAYN.DE
 618;Legal & General Group;LGEN.L
@@ -686,7 +655,6 @@ Rank;Company;Ticker
 697;Evergreen Marine Corp. (Taiwan);2603.TW
 698;Mitsubishi Estate;MES.F
 699;3i Group;TGOPY
-700;Isbank;BANF
 701;Ageas;AGS.BR
 702;YPF;YPF
 703;AIB Group;AIBGL.XC
@@ -713,8 +681,7 @@ Rank;Company;Ticker
 724;Keyence;6861.T
 725;Spotify Technology;SPOT
 726;Compagnie de l'Odet;ODETP.XC
-727;Hong Kong Exchanges;HK2C.SG
-728;Bancolombia;GLW
+727;Hong Kong Exchanges;HK2C.HA
 728;Interactive Brokers Group;IBKR
 730;Global Payments;GPN
 731;Li Auto;LI
@@ -724,10 +691,9 @@ Rank;Company;Ticker
 735;Tenaga Nasional;TNABY
 736;Fresenius;FMEA.F
 736;Sumitomo Electric;SMTOY
-738;EXOR;EYX.DU
+738;EXOR;0RKY.IL
 739;Roper Technologies;ROP
 740;Raiffeisen Bank International;RAW.F
-741;Fortis (Canada);AMZN
 742;Eversource Energy;NU
 743;Dow;DOW
 744;CLP Holdings;0002.HK
@@ -764,7 +730,6 @@ Rank;Company;Ticker
 775;Omnicom Group;OMC
 776;East Money Information;300059.SZ
 776;Kasikornbank;KPCUF
-778;Fidelity National Information (FIS);AMZN
 779;Ameren;AEE
 779;Huishang Bank;HB8.DU
 781;Molina Healthcare;MOH
@@ -772,7 +737,6 @@ Rank;Company;Ticker
 783;CenterPoint Energy;CNP
 784;Nidec;NIB.F
 785;Beijing-Shanghai High-Speed Railway;601816.SS
-786;Mitsui OSK Lines;SLNG
 787;eBay;EBAY
 787;Western Digital;WDC
 789;Thomson Reuters;TRI
@@ -838,7 +802,6 @@ Rank;Company;Ticker
 852;Arista Networks;ANET
 854;Anta Sports Products;ANPDY
 855;Smurfit Westrock;SW
-856;Walgreens Boots Alliance;BDX
 857;Abu Dhabi Islamic Bank;EGS60111C019.CA
 858;China Vanke;2202.HK
 859;Vienna Insurance Group;WSV2.HA
@@ -913,7 +876,7 @@ Rank;Company;Ticker
 930;Yuanta Financial Holding;2885.TW
 932;Bangkok Bank;BKKLY
 933;Dassault Aviation;DAU0.F
-934;Israel Discount Bank;ISDAF
+934;Israel Discount Bank;DSCT.TA
 935;Rheinmetall;RHM.DE
 936;DSM-Firmenich;ZX6.F
 937;Euronext;ENX.PA
@@ -935,7 +898,7 @@ Rank;Company;Ticker
 954;Guosen Securities;002736.SZ
 955;Coles Group;2OF.F
 956;Sany Heavy Industry;600031.SS
-957;Bank of India;SBIN.NS
+957;Bank of India;UNIONBANK.BO
 958;Kone;1KNEBV.MI
 959;Snam;SNM0.F
 960;Vertex Pharmaceuticals;VRTX
@@ -947,7 +910,7 @@ Rank;Company;Ticker
 966;Lonza Group;LONN.SW
 967;Flutter Entertainment;FLUT
 968;Jeronimo Martins;JEM.F
-969;Tohoku Electric Power;TKT.F
+969;Tohoku Electric Power;TEPCY
 970;Givaudan;GIVN.SW
 970;Synopsys;SNPS
 972;Qatar Islamic Bank;QIBK.QA
@@ -1017,7 +980,6 @@ Rank;Company;Ticker
 1037;HD HYUNDAI;089470.KS
 1038;KE Holdings;BEKE
 1039;Builders FirstSource;BLDR
-1040;Aldar Properties;CL=F
 1041;Xylem;XYL
 1042;Nongfu Spring;7NF.F
 1043;Chunghwa Telecom;CHT
@@ -1077,7 +1039,6 @@ Rank;Company;Ticker
 1098;Greentown China Holdings;G7C.F
 1099;Wuchan Zhongda Group;600704.SS
 1100;Hydro One;H.TO
-1101;All Nippon Airways;EMBR3.SA
 1102;Voya Financial;VOYA-PB
 1103;Paramount;6PM.F
 1104;J Sainsbury;SUY1.F
@@ -1113,7 +1074,7 @@ Rank;Company;Ticker
 1137;Yum China Holdings;YUMC
 1138;Coterra Energy;CTRA
 1139;Asahi Kasei;AHKSF
-1140;Adani Power Limited;ADANIPOWER.BO
+1140;Adani Power Limited;ADANIPOWER.NS
 1141;Luzhou Lao Jiao;000568.SZ
 1142;The Estée Lauder Companies;EL
 1143;Brown & Brown;BRO
@@ -1137,7 +1098,6 @@ Rank;Company;Ticker
 1162;IndusInd Bank;INDUSINDBK.BO
 1163;Adyen;ADYEN.AS
 1164;Huadian Power International;SHX.F
-1165;Adani Ports & Special Economic Zone;AMZN
 1166;Pan Pacific International Holdings;QJE.F
 1167;Booz Allen Hamilton Holding;BAH
 1169;Seagate Technology;STX
@@ -1233,8 +1193,7 @@ Rank;Company;Ticker
 1261;XP;XP
 1262;Ovintiv;OVV
 1263;China Eastern Airlines;CIAH.BE
-1264;Latam Airlines;LTM
-1265;Borouge;AMCR
+1264;Latam Airlines;LTM.SN
 1266;SinoPac Financial;2890.TW
 1266;SS&C Technologies;SSNC
 1268;STRABAG;XD4.F
@@ -1257,7 +1216,6 @@ Rank;Company;Ticker
 1285;Globe Life;GL
 1286;Shanghai Electric Group;USR.F
 1287;Industries Qatar;IQCD.QA
-1288;Mirae Asset Financial Group;MPAY/U.TO
 1289;Ares Management;ARES
 1290;Yamaha Motor;YMA.F
 1291;Advanced Info Service;AIS.F
@@ -1265,7 +1223,6 @@ Rank;Company;Ticker
 1293;Goodman Group;GMGSF
 1294;Dongfeng Motor Group;D4D.F
 1295;Sojitz;XEB.F
-1296;Charoen Pokphand Group;9992.HK
 1297;TUI;TUI1.DE
 1298;Lindt & Sprungli;LDSVF
 1298;WESCO International;WCC
@@ -1307,7 +1264,7 @@ Rank;Company;Ticker
 1336;AutoNation;AN
 1337;BAIC Motor;2B5.F
 1338;ENN Energy Holdings;XNGSY
-1339;Shandong Gold Mining;1787.HK
+1339;Shandong Gold Mining;188H.F
 1340;Aristocrat Leisure;ALL.AX
 1340;Zhongyuan Bank;ZNNGY
 1342;Vipshop Holdings;1VPA.F
@@ -1322,7 +1279,6 @@ Rank;Company;Ticker
 1351;Ingram Micro Holding;INGM
 1353;China Merchants Port Group;201872.SZ
 1353;Ventas;VTR
-1355;ICON (Ireland);AMZN
 1356;MTU Aero Engines AG;MTX.F
 1356;Popular;BPOP
 1358;Kerry Group;KRZ.IR
@@ -1399,7 +1355,7 @@ Rank;Company;Ticker
 1429;SBA Communications;4SB.F
 1430;Thai Beverage;TBVPY
 1431;ASM International;ASM.AS
-1433;Bank of East Asia;BOA.HA
+1433;Bank of East Asia;BOA.F
 1434;KPN;KPNA.XC
 1435;Kinross Gold;KGC
 1436;Amman Mineral Internasional;U4Z.F
@@ -1423,18 +1379,15 @@ Rank;Company;Ticker
 1454;Alcoa;AA
 1455;C.H. Robinson;CHRW
 1456;South State;SSB
-1456;Vietnam Technological & Commercial Joint Stock Bank;AMZN
 1458;Ningxia Baofeng Energy Group;600989.SS
 1459;Masco;MAS
 1460;Heico;HEI
-1462;Phoenix Holdings;PHOE.TA
 1463;Hyatt Hotels;H
 1464;Ooredoo Q.P.S.C;ORDS.QA
 1465;Kawasaki Kisen Kaisha;KLI1.F
 1466;Brown-Forman;BF-A
 1467;APA;APA
 1467;Deckers Outdoor;DECK
-1469;Arab Bank;AMRK.TA
 1469;PGE Polska Grupa Energetyczna;6PG.F
 1471;China Longyuan Power;6WX0.F
 1472;Banca Popolare di Sondrio;BPSOM.XD
@@ -1487,14 +1440,12 @@ Rank;Company;Ticker
 1521;Bajaj Holdings & Investment;BAJAJHLDNG.BO
 1521;Lens Technology;300433.SZ
 1523;Akzo Nobel;AKU1.F
-1523;Ansys;ANSS
 1523;Gemdale;600383.SS
 1523;Suntory Beverage & Food;7SN.F
 1523;Yang Ming Marine Transport;2609.TW
 1528;Admiral Group;FLN.MU
 1529;Zhuhai Huafa Properties;600325.SS
 1530;Manila Electric;MERVF
-1531;Gerdau (Cosigua);AMZN
 1532;HF Sinclair;DINO
 1532;Nitto Denko;ND5.F
 1534;Hyundai Engineering;000720.KS
@@ -1528,7 +1479,6 @@ Rank;Company;Ticker
 1564;Bank OZK;OZK
 1565;TMBThanachart Bank;NVPJ.F
 1566;S-Oil;GSG.F
-1567;Titan (India);AMZN
 1568;Bank of Maharashtra;MAHABANK.NS
 1569;Cencosud;CENCOMALLS.SN
 1570;Electric Power Development;200539.SZ
@@ -1542,7 +1492,6 @@ Rank;Company;Ticker
 1578;Lotte Chemical;5284.KL
 1579;Essex Property Trust;ESS
 1580;Lear;4291.SR
-1580;Old National Bank;OFG
 1582;Ralph Lauren;RL
 1583;Commercial International Bank;CIN.F
 1583;Iron Mountain;IRM
@@ -1576,7 +1525,6 @@ Rank;Company;Ticker
 1611;Hikari Tsushin;HKTGF
 1613;PTT Global Chemical;GCB1.MU
 1614;Emera;EMA-PJ.TO
-1614;Lundbergs;LBGUF
 1616;China Tourism Group Duty Free;601888.SS
 1617;CapitaLand Integrated Commercial Trust;C38U.SI
 1617;Hangzhou Binjiang Real Estate Group;002244.SZ
@@ -1588,7 +1536,6 @@ Rank;Company;Ticker
 1623;Neste;NEF.F
 1625;Knorr-Bremse;KBX.F
 1626;Rajesh Exports;RAJESHEXPO.NS
-1627;Metro Group;^HSI
 1628;Hokuhoku Financial Group;8377.T
 1629;Comfort Systems USA;FIX
 1631;PBF Energy;PBF
@@ -1616,7 +1563,6 @@ Rank;Company;Ticker
 1653;Group 1 Automotive;GAV.DU
 1653;NEXON;NEXOY
 1655;Shanghai Commercial & Savings Bank;5876.TW
-1656;Companhia Energetica de Minas Gerais;CIG
 1657;JM Smucker;JM2.MU
 1658;Bank of Zhengzhou;3BZ.F
 1658;Power Assets Holdings;HEH.F
@@ -1654,7 +1600,7 @@ Rank;Company;Ticker
 1694;Cambricon Technologies;688256.SS
 1695;Columbia Banking System;COLB
 1696;IEIT Systems;000977.SZ
-1697;Yamaguchi Financial;5FW.F
+1697;Yamaguchi Financial;5FW.DU
 1698;Shenzhen Overseas;000069.SZ
 1699;Link REIT;0823.HK
 1700;Rexel;RXEEY
@@ -1705,7 +1651,7 @@ Rank;Company;Ticker
 1748;Shimizu;XSZ.F
 1749;Taylor Morrison;THM.SG
 1750;Hygon Information Technology;688041.SS
-1750;Voestalpine;AT0000A3AA00.VI
+1750;Voestalpine;AT0000A3A9Z9.VI
 1752;Daishi Hokuetsu Financial Group;7327.T
 1753;Alnylam Pharmaceuticals;ALNY
 1753;Central Bank of India;CENTRALBK.NS
@@ -1718,7 +1664,6 @@ Rank;Company;Ticker
 1760;Zall Smart Commerce Group;2098.HK
 1762;HubSpot;HUBS
 1762;Permian Resources;PR
-1764;FIBI Holdings;FIBIH.TA
 1764;Prio;PRTH
 1766;Avnet;AVT
 1766;Domino's Pizza;DPZ
@@ -1787,7 +1732,6 @@ Rank;Company;Ticker
 1834;ARC Resources;ARX.TO
 1834;NH Investment & Securities;005940.KS
 1834;Viva Energy Group;2AH.F
-1837;MBH Bank Plc.;AMZN
 1838;Konami;KOA.F
 1838;Trade Desk;TTD
 1840;Beazley;2D7.F
@@ -1801,9 +1745,8 @@ Rank;Company;Ticker
 1848;Bank Of Gansu;2139.HK
 1849;China Mengniu Dairy;CIADY
 1850;Yara International;YARIY
-1851;Federal Bank;FEDS.L
+1851;Federal Bank;FEDERALBNK.NS
 1852;Alfresa Holdings;ALFRY
-1853;SKF Group;STERV.HE
 1854;Talen Energy;TLN
 1855;Buzzi Unicem;UCM.BE
 1855;Prosperity Bancshares;PB
@@ -1820,7 +1763,6 @@ Rank;Company;Ticker
 1867;Solventum;KB7.F
 1868;Warner Music Group;WA4.MU
 1869;EMS-Chemie Holding;EMC1.F
-1870;Ag Anadolu Grubu Holding Anonim Sirketi;AGHOL.IS
 1871;Nippon Express Holdings;9147.T
 1872;Indorama Ventures;I93.F
 1873;Eternal;ETERNAL.NS
@@ -1860,7 +1802,7 @@ Rank;Company;Ticker
 1909;Nova Ljubljanska Banka;NLB.IL
 1910;Huaibei Mining Holdings;600985.SS
 1911;AlRayan Bank;MARK.QA
-1912;Juroku Financial Group;7380.N
+1912;Juroku Financial Group;7380.T
 1914;Celltrion;068760.KQ
 1915;Dentsu;DEN.F
 1916;Shiga Bank;8366.T
@@ -1880,7 +1822,6 @@ Rank;Company;Ticker
 1930;Wärtsilä;WRT1V.HE
 1932;Ubiquiti;UI
 1933;Bid;BIDU
-1934;Arab Banking;ADCB.AB
 1935;Ambuja Cements;AMBUJACEM.BO
 1935;China Fortune Land Development;600340.SS
 1935;Kingfisher;9700.F
@@ -1896,7 +1837,6 @@ Rank;Company;Ticker
 1947;W. P. Carey;WPC
 1949;GFL Environmental;GFL
 1949;Skechers USA;SKAA.SG
-1951;National Bank of Ras Al-Khaimah (P.S.C.);AMZN
 1951;RattanIndia Power;RTNPOWER.NS
 1953;China Gas Holdings;EBZ.F
 1953;Unisplendour;000938.SZ
@@ -1912,12 +1852,11 @@ Rank;Company;Ticker
 1964;BEKB-BCBE;BEKN.SW
 1965;Alior Bank;A6O.F
 1966;Sime Darby;SMEBF
-1967;Liberty Media Corporation Series A Liberty Formula One;AMZN
 1968;Umicore;UMI.BR
 1969;AVIC Chengdu Aircraft;302132.SZ
 1969;China Resources Beer (Holdings);CHK0.F
 1971;Hertz Global Holdings;HTZ
-1972;Nexi S.p.A.;N0XA.F
+1972;Nexi S.p.A.;N0X0.F
 1973;Hancock Holding;HH1.SG
 1974;Accor;ACCYY
 1974;Suzuken;SZUKF
@@ -1933,7 +1872,6 @@ Rank;Company;Ticker
 1984;U-Haul Holding;AUK0.F
 1986;Hainan Airlines Holding;600221.SS
 1988;Bath & Body Works;BBWI
-1989;Berry Global Group;AMCCF
 1989;KakaoBank;323410.KS
 1991;Allegion;ALLE
 1992;Jiangxi Zhengbang Technology;002157.SZ

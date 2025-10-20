@@ -51,6 +51,7 @@ if not os.path.exists(FORBES_2000_CSV):
 
 df: DataFrame = pd.read_csv(FORBES_2000_CSV, delimiter=";")
 
+
 if os.path.exists(TICKER_CSV):
 	ticker_df: DataFrame = pd.read_csv(TICKER_CSV, delimiter=";")
 else:
@@ -73,30 +74,11 @@ else:
 				results: DataFrame = yf.Search(comany, max_results=1).quotes
 				symbol = results[0].get("symbol")
 			except Exception:
-				try:
-					results: DataFrame = yf.Search(comany, max_results=1, include_research=True).all
-
-					related_tickers: List[any] = []
-					for news_item in results.get('news', []):
-						tickers = news_item.get('relatedTickers')
-						if tickers:
-							related_tickers.extend(tickers)
-
-					related_tickers = list(set(related_tickers))
-
-					if not related_tickers or len(related_tickers) == 0:
-						raise Exception("No related tickers found.")
-
-					symbol = related_tickers[0]
-
-				except Exception:
-					#pprint(f"Could not find ticker for Company: {comany}, Rank: {rank}")
-					ticker_not_found_df.loc[len(ticker_not_found_df)] = {
+				ticker_not_found_df.loc[len(ticker_not_found_df)] = {
 						"Rank": rank,
 						"Company": comany
 					}
-					continue
-
+				continue
 
 		#pprint(f"Found ticker: {symbol} for Company: {comany}")
 		ticker_df.loc[len(ticker_df)] = {
@@ -107,6 +89,7 @@ else:
 
 	ticker_df.to_csv(TICKER_CSV, sep=";", index=False)
 	ticker_not_found_df.to_csv(TICKER_NOT_FOUND_CSV, sep=";", index=False)
+
 
 df = pd.merge(df, ticker_df, on=["Rank", "Company"], how="left")
 mongo_upload_failed_df = pd.DataFrame(columns=(list(df.columns) + ["Reason"]))
