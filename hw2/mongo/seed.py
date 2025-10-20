@@ -143,6 +143,10 @@ for _, row in tqdm(df.iterrows(), total=len(df), desc="Inserting companies docum
 		continue
 
 	#pprint(f"Inserting document for Company: {row["Company"]}, Rank: {row["Rank"]}")
-	collection.insert_one(document)
+
+	if collection.find_one({"rank": document["rank"]}):
+		collection.replace_one({"rank": document["rank"]}, document)
+	else:
+		collection.insert_one(document)
 
 mongo_upload_failed_df.to_csv(MONGO_UPLOAD_FAILED_CSV, sep=";", index=False)
