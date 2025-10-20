@@ -30,15 +30,15 @@ def fix_amount(value: str) -> float:
 
 	return float(value.replace(",", "").replace("$", "").strip()) * 1000
 
-
-pprint("Connecting to database")
+print("\nStarting MongoDB seeding script\n")
+print("Connecting to database")
 
 client: MongoClient = MongoClient(
 	config.get("mongo", "url"),
 	username=config.get("mongo", "username"),
 	password=config.get("mongo", "password")
 )
-pprint(f"Connection: {client.admin.command("ping")}")
+print(f"Connection: {client.admin.command("ping")}")
 
 db: MongoClient = client[db_name := config.get("mongo", "database")]
 collection: MongoClient = db[config.get("mongo", "collection")]
@@ -150,3 +150,5 @@ for _, row in tqdm(df.iterrows(), total=len(df), desc="Inserting companies docum
 		collection.insert_one(document)
 
 mongo_upload_failed_df.to_csv(MONGO_UPLOAD_FAILED_CSV, sep=";", index=False)
+
+print("\nMongoDB seeding script completed successfully\n")

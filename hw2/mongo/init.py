@@ -10,6 +10,7 @@ config_path = os.path.join(
 config.read(config_path)
 
 
+print("\nStarting MongoDB initialization script\n")
 print("Creating database and collection")
 
 client: MongoClient = MongoClient(
@@ -32,3 +33,4 @@ if db_name not in client.list_database_names():
 	raise Exception(f"Database '{db_name}' was not created.")
 
 print(f"Database '{db_name}' created successfully!")
+print("\nMongoDB initialization script completed successfully\n")
