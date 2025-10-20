@@ -111,7 +111,7 @@ else:
 df = pd.merge(df, ticker_df, on=["Rank", "Company"], how="left")
 mongo_upload_failed_df = pd.DataFrame(columns=(list(df.columns) + ["Reason"]))
 
-for _, row in tqdm(df.iterrows(), total=len(df), desc="Inserting companies document into MongoDB"):
+for _, row in tqdm(df.iterrows(), total=len(df), desc="Inserting companies into MongoDB"):
 	row = row.to_dict()
 
 	row = {

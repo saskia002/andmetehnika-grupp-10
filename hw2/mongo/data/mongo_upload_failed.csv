@@ -1,0 +1,3 @@
+Rank;Company;Headquarters;Industry;Sales ($B);Profit ($B);Assets ($B);Market Value ($B);Ticker;Reason
+879;Semiconductor Manufacturing International;China;Semiconductors;7.99;0.513.7;48.42;46.38;688981.SS;could not convert string to float: '0.513.7'
+1095;Quinenco;Chile;Banking;10.63;0.703.6;66.99;6.91;QUINENCO.SN;could not convert string to float: '0.703.6'

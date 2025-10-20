@@ -1,0 +1,1946 @@
+Rank;Company;Ticker
+1;JPMorganChase;JPM
+2;Berkshire Hathaway;BRK-B
+3;ICBC;1398.HK
+4;Saudi Arabian Oil Company (Saudi Aramco);AMZN
+5;Amazon;AMZN
+6;Bank of America;BAC
+7;China Construction Bank;C6TB.F
+8;Agricultural Bank of China;EK7.HA
+9;Alphabet;GOOG
+9;Microsoft;MSFT
+11;Apple;AAPL
+12;Bank of China;3988.HK
+13;ExxonMobil;CL=F
+14;Toyota Motor;TM
+15;HSBC Holdings;HSBC
+16;Wells Fargo;WFC
+17;UnitedHealth Group;UNH
+18;Walmart;WMT
+19;Samsung Electronics;005930.KS
+20;Goldman Sachs Group;GS
+20;Meta Platforms;META
+22;Citigroup;C
+23;Shell Plc;SHEL
+24;Morgan Stanley;MS
+25;Allianz;ALV.DE
+26;RBC;RBC
+27;Ping An Insurance Group;601318.SS
+28;PetroChina;PC60.F
+29;Santander;SAN
+30;Chevron;CVX
+30;Verizon Communications;VZ
+32;China Mobile;0941.HK
+33;Alibaba Group;BABA
+34;Mitsubishi UFJ Financial;MUFG
+35;AT&T;T
+35;BNP Paribas;BNP.PA
+37;Tencent Holdings;TCEHY
+38;Taiwan Semiconductor;TSM
+39;China Merchants Bank;CIHKY
+40;Deutsche Telekom;DTE.DE
+41;TotalEnergies;TTE
+42;Johnson & Johnson;JNJ
+43;Comcast;CMCSA
+44;AXA Group;VTA.AS
+45;Reliance Industries;RLI.MU
+46;TD Bank Group;TCSH.TO
+47;NVIDIA;NVDA
+48;Nestlé;NESN.SW
+50;American Express;AXP
+51;Sinopec;YZCFF
+53;HDFC Bank;HDFCBANK.NS
+54;Volkswagen Group;ECXWW
+55;State Bank of India;SBIN.NS
+56;Sumitomo Mitsui Financial;SMFG
+57;Bank of Communications;C4C.F
+57;Sony;SONY
+59;Postal Savings Bank Of China (PSBC);AMZN
+60;Procter & Gamble;PG
+62;Siemens;SIE.DE
+63;Commonwealth Bank;CBA.AX
+64;UBS;UBS
+65;Credit Agricole;ACA.PA
+66;Oracle;ORCL
+67;The Home Depot;HD
+68;Broadcom;AVGO
+69;Tesla;TSLA
+70;Zurich Insurance Group;ZURN.SW
+71;The Walt Disney Company;DIS
+72;Mercedes-Benz Group;MBG.DE
+73;Pfizer;PFE
+74;CVS Health;CVS
+75;Industrial Bank;601166.SS
+76;Merck & Co.;MRK
+77;Chubb;CB
+78;Munich Re;1MUV2.MI
+79;Nippon Telegraph & Tel;NITT.VI
+80;Roche Holding;ROG.SW
+81;BMW Group;BMW.DE
+82;Itaú Unibanco Holding;ITUB
+83;Life Insurance Corp. of India;LICI.NS
+84;BMO;BMO
+84;CNOOC;0883.HK
+86;PepsiCo;PEP
+87;BYD;BYD
+88;Enel;ENEL.MI
+89;China Life Insurance;2628.HK
+90;Mizuho Financial;MFG
+91;RTX;RTX
+92;Anheuser-Busch InBev;BUD
+93;Costco Wholesale;COST
+94;Cisco Systems;CSCO
+95;IBM;IBM
+95;Progressive;PGR
+97;Mitsubishi;MUFG
+98;Elevance Health;ELV
+99;Petrobras;PBR
+100;Novartis;NVS
+101;CITIC;CZR.F
+102;Bank of Nova Scotia;BNS
+102;General Motors;GM
+104;Coca-Cola;KO
+105;ConocoPhillips;COP
+106;Equinor;EQNR
+107;Capital One;COF
+108;AbbVie;ABBV
+109;AstraZeneca;AZN
+109;US Bancorp;USB.BA
+111;China Citic Bank;601998.SS
+112;Iberdrola;IBE.MC
+113;DBS;D05.SI
+114;Generali Group;BGN.MI
+115;ICICI Bank;IBN
+116;UniCredit;UCG.MI
+117;Honda Motor;HMC
+118;Caterpillar;CAT
+119;AIRBUS;AIR.PA
+120;Cigna;CI
+120;Contemporary Amperex Technology;300750.SZ
+122;Tokio Marine Holdings;MH6.F
+123;GE Aerospace;GE
+124;Charles Schwab;SCHW
+125;BHP Group;BHP
+126;Visa;V
+127;Ford Motor;F
+127;MetLife;MET
+129;Canadian Imperial Bank;CM
+130;Softbank;9434.T
+131;Sanofi;SNY
+132;NAB - National Australia Bank;NABPH.AX
+133;Deutsche Bank;DB
+134;Barclays;BARC.L
+135;Rio Tinto;RIO
+136;China State Construction Engineering;601668.SS
+137;Hon Hai Precision;2317.TW
+138;Eli Lilly;LLY
+139;VINCI;DG.PA
+141;Shanghai Pudong Development;600000.SS
+142;Hyundai Motor;HYUNDAI.BO
+143;Lloyds Banking Group;LLOY.L
+144;Abbott Laboratories;ABT
+145;Unilever;UL
+146;PNC Financial Services;PNC
+147;Salesforce;CRM
+148;Thermo Fisher Scientific;TMO
+149;John Deere;AMZN
+150;ANZ Group Holdings;ANZ.NZ
+151;Mitsui;8031.T
+152;Itochu;8001.T
+152;PDD Holdings;PDD
+154;AIA Group;7A2S.F
+155;SK Hynix;000660.KS
+156;NatWest Group;NWG
+157;Bank of New York Mellon;BK
+158;Novo Nordisk;NOVO-B.CO
+159;ENGIE;ENGI.PA
+160;Accenture;ACN
+161;Société Générale;GLE.PA
+162;CaixaBank;48CA.F
+162;China Telecom;0728.HK
+164;SAP;SAP
+165;ING Group;ING
+166;Enbridge;ENB
+167;Manulife;MFC
+168;Charter Communications;CHTR
+169;China Shenhua Energy;IKF.HA
+170;NextEra Energy;NEE
+171;JD.com;JD
+172;United Parcel Service;UPS
+173;Bristol Myers Squibb;BMY
+174;Duke Energy;DUK
+174;Hitachi;6501.T
+176;E.ON;EOAN.DE
+177;Linde;LIN
+178;Apollo Global Management;APO
+179;Philip Morris International;PM
+180;Stellantis;STLA
+181;Nordea Bank;NDA-FI.HE
+182;L'Oréal;LRLCY
+183;Dell Technologies;DELL
+184;British American Tobacco;BTI
+184;Midea Group;1520.F
+186;Prudential Financial;PRU
+187;Allstate;ALL
+188;Banco do Brasil;BDORY
+189;Netflix;NFLX
+190;Travelers;TRV
+191;BlackRock;BLK
+191;Honeywell International;HON
+193;Lockheed Martin;LMT
+193;Qualcomm;QCOM
+195;McKesson;MCK
+195;Qatar National Bank;EGS60081C014.CA
+197;Southern Company;SO
+198;International Holding Company;4083.SR
+199;Uber;UBER
+200;China Pacific Insurance;601601.SS
+201;Standard Chartered;STAN.L
+202;Amgen;AMGN
+202;PICC;PJC.F
+204;HCA Healthcare;HCA
+205;Eni;EI4.MU
+206;Lowe's;LOW
+207;KKR;KKR
+208;Truist Financial;TFC
+209;Schneider Electric;SU.PA
+210;Medtronic;MDT
+211;KDDI;DIP.F
+212;FedEx;FDX
+213;Oversea-Chinese Banking;OVCHY
+214;ASML Holding;ASML
+215;Swiss Re;SSREY
+216;MS&AD Insurance;59M.F
+217;Mastercard;MA
+218;China Everbright Bank;C0V.MU
+219;Deutsche Post;DHL.DE
+220;Oil & Natural Gas;AMZN
+221;Marathon Petroleum;MPC
+222;Emirates NBD;EMIRATESNBD.AE
+223;Al Rajhi Bank;1120.SR
+224;McDonald's;MCD
+225;Mondelez International;MDLZ
+226;KBC Group;KBCSY
+227;United Overseas Bank;U11.SI
+228;Micron Technology;MU
+229;Union Pacific;UNP
+229;Xiaomi;1810.HK
+231;Japan Post Holdings;JPPHY
+232;Fubon Financial;2881C.TW
+233;Gilead Sciences;GILD
+234;Dai-ichi Life Insurance;8750.T
+235;Volvo Group;TATAMOTORS.BO
+236;GSK;GSK
+237;Banco Bradesco;BBD
+238;American International Group;AIG
+238;PayPal;PYPL
+240;First Abu Dhabi Bank;C
+241;Danaher;DHR
+242;General Dynamics;GD
+242;Target;TGT
+244;Discover Financial Services;COF
+245;The Saudi National Bank;1180.SR
+246;Centene;CNC
+247;Meituan;3690.HK
+248;KB Financial Group;KB
+249;Vale;VALE
+250;Fairfax Financial;FRFHF
+251;Zijin Mining Group;FJZB.F
+252;China Minsheng Bank;CMAKY
+253;Commerzbank;CBK.DE
+254;A.P. Moller-Maersk;DP4H.SG
+254;Inditex;IXD1.F
+256;DNB Bank;DNB.OL
+257;Aflac;AFL
+258;Talanx;TLX.F
+259;National Grid;NGG
+260;Saint-Gobain;SGO.PA
+261;Kroger;KR
+262;Air Liquide;AIL.SG
+263;Orange;TPA1.MU
+264;China Unicom;0762.HK
+265;TJX Cos;TJXD.XC
+266;EssilorLuxottica;EL.PA
+267;Marsh McLennan;MMC
+268;Danske Bank;DANSKE.CO
+269;China Resources Land;CRBJY
+269;Fiserv;FI
+271;Erste Group Bank;EBS.VI
+272;Sun Life Financial;SLF
+273;Northrop Grumman;NOC
+274;Kweichow Moutai;600519.SS
+275;Suncor Energy;SU.TO
+276;Phillips 66;PSX
+277;Canadian Natural Resources;CNQ.TO
+278;KIA;000270.KS
+278;Nike;NKE
+281;Daimler Truck Holding;DTG.DE
+281;Delta Air Lines;DAL
+283;Bank Of Jiangsu;600919.SS
+284;PTT;PTTG.F
+285;Macquarie Group Limited;MQBKY
+286;Automatic Data Processing;ADP
+287;Cencora;COR
+288;ABB;ABBV
+289;Holcim;HLBN.SG
+290;CRH;CRH
+291;National Bank of Canada;NBCDF
+292;Axis Bank;AXISBANK.NS
+293;American Electric;AEP
+294;Ameriprise Financial;AMP
+295;SEB AB;KLAR
+296;SLB;SLB
+297;Cathay Financial;2882B.TW
+297;EOG Resources;EOG
+299;América Móvil;AMX
+300;Applied Materials;AMAT
+301;Sompo;8630.T
+302;Occidental Petroleum;OXY
+302;Power Corp of Canada;PCR.F
+304;PG&E;PCG
+305;BASF;BAS.DE
+306;Vodafone;VOD
+307;Exelon;EXC
+308;Shinhan Financial Group;055550.KS
+309;GE Vernova;GEV
+310;Advanced Micro Devices (AMD);AMZN
+311;Constellation Energy;CEG
+312;Brookfield Corporation;BN
+312;Sumitomo;S19.SG
+314;United Airlines Holdings;UAL
+315;Marubeni;8002.T
+316;State Street;STT
+317;Bharti Airtel;AIRTELPP.BO
+318;Newmont;NEM
+319;Paccar;PCAR
+320;BAE Systems, Inc.;BSP.DU
+320;Huaxia Bank;600015.SS
+322;Kraft Heinz Company;KHC
+323;Denso;6902.T
+324;Cosco Shipping;CTH.HA
+325;Altria Group;MO
+326;Royal Ahold Delhaize N.V.;AMZN
+327;Citic Securities;CI9.F
+327;Eaton;ETN
+329;Oneok;OKE
+330;Rolls-Royce Holdings;RR.L
+331;Stryker;SYK
+332;Starbucks;SBUX
+333;Hartford Financial Services;HFF.BE
+334;0.0030;AMZN
+335;SAIC Motor;600104.SS
+336;Tata Motors;TATAMOTORS.NS
+337;Nippon Steel;NPS.F
+338;Banorte;GFNORTEO.MX
+339;Merck KGaA, Darmstadt, Germany and its affiliates;MRK.BE
+340;Adobe;ADBE
+341;Poste Italiane;7PI.F
+342;Couche Tard;ANCTF
+343;S&P Global;SPGI
+344;Bank of Ningbo;002142.SZ
+345;China Railway Group;CRWOF
+346;Gree Electric Appliances;000651.SZ
+347;CK Hutchison;0001.HK
+348;Tesco;TSCDY
+349;Bank Rakyat Indonesia (BRI);AMZN
+350;Takeda Pharmaceutical;TAK
+351;Waste Management;WM
+352;Banco Btg Pactual;BPAC5.SA
+353;Booking Holdings;BKNG
+354;Bank of Beijing;601169.SS
+355;Diageo;DEO
+356;China Yangtze Power;CYZB.F
+357;Panasonic;3719.KL
+358;Seven & I Holdings;SVNDY
+359;Nomura;6254.T
+360;IntercontinentalExchange;WSFX.BO
+361;Danone;BN.PA
+362;Svenska Handelsbanken;SHB-B.ST
+363;Fannie Mae;FNMA
+364;Swedbank;SWED-A.ST
+365;D.R. Horton;DHI
+366;Freddie Mac;FMCC
+367;Saudi Telecom;7010.SR
+368;NTPC;NTPC.NS
+369;Carrier Global;CARR
+370;Kinder Morgan;KMI
+371;China Communications Construction;508018.SS
+372;Mitsubishi Heavy Industries;7011.T
+373;Cardinal Health;CAH
+374;Texas Instruments;TXN
+375;Prudential;PRU
+376;Freeport-McMoRan;FCX
+377;Cummins;CMI
+378;Bank Of Shanghai;601229.SS
+379;Hewlett Packard Enterprise;HPE
+381;Arch Capital Group;ACGL
+382;ArcelorMittal;MT
+383;Sempra;SRE
+384;Archer Daniels Midland;ADM
+385;Dominion Energy;D
+386;CTBC Financial Holding;2891B.TW
+387;Kotak Mahindra Bank;KOTAKBANK.BO
+388;Aon;AON
+389;Mitsubishi Electric;6503.T
+390;Richemont;CFR.SW
+391;Ecopetrol;EC
+392;Becton Dickinson;BDX
+392;Synchrony Financial;SYF
+394;Intuit;ISRG
+395;M&T Bank;MTB
+396;Larsen & Toubro;LT.NS
+397;Valero Energy;VLO
+398;TAQA;9599.SR
+399;Humana;HUM
+399;Lennar;LEN
+399;TC Energy;TRP
+402;Korea Electric Power;KEP
+403;Baidu;BIDU
+403;Baker Hughes Company;BKR
+405;Orix;IX
+406;First Citizens Bank (NC);AMZN
+407;Boston Scientific;BSX
+408;Bank Mandiri;BMRI.JK
+409;Tata Consultancy Services;TCS.NS
+410;Veolia Environnement;VVDH.SG
+411;Hana Financial Group;086790.KS
+412;Swiss Life Holding;SLW.F
+413;Johnson Controls International;JCI
+414;HP;HP
+415;Cheniere Energy;LNG
+416;Haier Smart Home;690D.F
+417;Prologis;PLD
+418;Blackstone;BX
+419;Hermès International;RMS.PA
+419;Indian Oil;IOC.NS
+421;BP;BP
+421;Emerson Electric;EMR
+423;Femsa;KOFM.BA
+424;China Railway Construction;688425.SS
+424;Corebridge Financial;CRBG
+426;Toyota Industries;TYIDF
+427;Shin-Etsu Chemical;SHECY
+428;Toyota Tsusho;9TO.F
+429;Aviva;AVIVA.BO
+430;Etisalat;7020.SR
+431;Fifth Third Bank;WAL-PA
+431;Imperial Brands;IMBBY
+431;Regeneron Pharmaceuticals;REGN
+434;Block;XYZ
+435;Power Construction Corporation of China;601669.SS
+436;Parker-Hannifin;PH
+437;Vistra Energy;0V6.SG
+438;Maybank;MST.BK
+439;Fast Retailing;FR7.F
+439;Raymond James Financial;RJF
+441;CSL;CSL
+442;CSX;CSX
+443;Grupo Mexico;GMEXICOB.MX
+443;Royal Caribbean Group;RC8.MU
+445;Consolidated Edison;ED
+446;American Tower;AMT
+446;EnBW Energie Baden-Wurttemberg;EQIX
+448;Sysco;SYY
+449;Boeing;BA
+450;Marriott International;MAR
+451;London Stock Exchange;LS4C.MU
+452;Suzuki Motor;7269.T
+453;Daiwa House Industry;DWAHF
+453;Sherwin-Williams;SHW
+455;Bank of Baroda;BANKBARODA.NS
+456;Sumitomo Mitsui Trust;MIU0.F
+457;Luxshare Precision Industry;002475.SZ
+458;Japan Tobacco;JAT.VI
+459;Canadian Pacific Kansas City;CP
+460;Cenovus Energy;CVE
+460;Xcel Energy;XEL
+462;Hyundai Mobis;012330.KS
+463;CRRC;ZTX.F
+464;Bank of Nanjing;601009.SS
+465;China Tower Corp.;2Y11.F
+466;Kuwait Finance House;KFH.KW
+466;Repsol;REP.SG
+468;Investor AB;INVE-B.ST
+469;Carnival Corporation;CCL
+470;NN Group;NN.AS
+471;Diamondback Energy;FANG
+472;Komatsu;6301.T
+473;FirstRand;FSRA.BE
+473;JBS;JBS
+475;Air Products & Chemicals;AP3.F
+476;International Airlines;IAG.VI
+477;Northern Trust;NTRS
+478;CME Group;CME
+479;HeidelbergCement;HEI.MU
+480;Deutsche Boerse;DB1.DE
+481;Canadian National Railway;CNI
+482;Bank Central Asia;BBCA.JK
+482;Bank Leumi;LUMI.TA
+484;Henkel;HEN3.DE
+485;MercadoLibre;MELI
+486;Norfolk Southern;NSC
+487;L3Harris Technologies;LHX
+488;Intact Financial;INTAF
+488;Intel;INTC
+488;Republic Services;RSG
+491;Shaanxi Coal Industry;601225.SS
+492;ENEOS Holdings;5020.T
+493;Williams;SHW
+494;Woodside Energy Group;WDS
+495;Bridgestone;BGT.F
+496;Michelin Group;MGDDF
+497;Daikin Industries;DKI.F
+498;Naturgy Energy Group;NTGY.MC
+499;Keurig Dr Pepper;KDP
+500;Nucor;NUE
+501;NetEase;NTES
+502;Compass Group;CMPGF
+503;Abu Dhabi Commercial Bank;CBD.AE
+504;Gallagher;AJG
+505;Huntington Bank;HBAN
+506;Lam Research;LRCX
+507;Quanta Computer;2382.TW
+508;Kansai Electric Power;KPO.DU
+509;DSV;DSVSF
+510;Standard Bank Group;SKCS.F
+510;Thales;THLEF
+512;Sun Hung Kai Properties;SHG.BE
+513;Poly Developments & Holdings Group;AMZN
+514;Bouygues;BYG.F
+515;Glencore International;PMETF
+516;OTP Bank;OTP.MU
+517;General Mills;GIS
+518;Edison International;EIX
+519;Wanhua Chemical Group;600309.SS
+520;Amphenol;APH
+521;East Japan Railway;EJPRY
+522;Renault;RNO.PA
+523;Markel;MKL
+524;Haleon;HLN
+525;PKO Bank Polski;P9O.MU
+528;Geely Automobile Holdings;GELYF
+529;Coal India;COALINDIA.NS
+530;Punjab National Bank;PNB.NS
+531;Coca-Cola Europacific Partners;CK0.F
+532;S.F. Holding;2NM0.F
+533;Wilmar International;RTHA.F
+534;Reckitt Benckiser Group;RBGPF
+535;Fortescue Metals Group;FVJA.F
+536;Baoshan Iron & Steel;600019.SS
+537;Trane Technologies;TT
+538;MediaTek;2454.TW
+539;GE HealthCare Technologies;GEHC
+540;QBE Insurance Group;QBE.F
+541;Bank Hapoalim;BKHPF
+542;Barrick Gold;B-C.BA
+543;Lenovo Group;0992.HK
+544;Power Finance;PFC.BO
+545;Bajaj Finserv;NIFTYBETF.BO
+546;Nu Holdings;NU
+546;Recruit Holdings;1RH.DU
+548;Banco de Sabadell;SAB.MC
+549;Canon;CNJ.F
+549;China Coal Energy;CVV.F
+551;Weichai Power;000338.SZ
+552;BT Group;BX1B.F
+553;Wuliangye Yibin;000858.SZ
+554;Mitsui Fudosan;8801.T
+555;United Rentals;URI
+556;Analog Devices;ADI
+556;Publicis Groupe;PUB.PA
+558;Banco BPM;BNCZF
+559;Atlas Copco;ACO.F
+559;Loews;L
+561;Central Japan Railway;JAP.F
+562;Infosys;INFY
+563;Equitable Holdings;EQH
+564;Mahindra & Mahindra;MOM.F
+565;Tyson Foods;TSN
+566;Emaar Properties;EMAAR.AE
+567;China Zheshang Bank;6CZ.F
+568;Citizens Financial Group;CFG
+569;Ecolab;ECL
+570;Colgate-Palmolive;CL
+571;Riyad Bank;1010.SR
+572;George Weston;WN-PC.TO
+573;Woori Financial Group;2WGA.F
+574;Public Service Enterprise Group;PEG
+575;Naspers;NNW0.F
+576;Fujifilm Holdings;FJI.F
+576;Lincoln National;LNC
+578;National Bank of Kuwait;EGS60171C013-EGP.CA
+579;Canara Bank;CANBK.NS
+580;China Hongqiao Group;CHHQF
+581;AutoZone;AZO
+582;CBRE Group;CBRE
+583;Regions Financial;RF
+584;Swisscom;SWJ.F
+585;Capgemini;CAP.PA
+585;Continental Automotive Systems, Inc.;TSLA
+585;Kering;KER.PA
+585;Schweizerische Nationalbank;1Y4.F
+589;Hess;HESM
+590;Wesfarmers;WFAFF
+591;W. R. Berkley;WRB
+592;Fujitsu;6702.T
+592;Subaru Corporation;FUH0.F
+595;Union Bank of India;UNIONBANK.NS
+596;China National Nuclear Power;601985.SS
+597;Entergy;ETR
+598;Dollar General;DG
+599;NXP Semiconductors;NXPI
+600;Bank Of Hangzhou;600926.SS
+601;Corteva;CTVA
+602;Principal Financial Group;PFG
+603;Leonardo;DRS
+604;LyondellBasell Industries;LYB
+605;Cognizant;CTSH
+605;SSE;588060.SS
+607;Devon Energy;DVN
+607;Inpex;IPXHY
+609;Safran;SAF.PA
+610;Associated British Foods;ABF.L
+611;DTE Energy;DTE
+612;Samsung C&T;028260.KS
+613;Samsung Life Insurance;032830.KS
+614;Fidelity National Financial;FNF
+615;Everest Re Group;ERE.SG
+616;Turkish Airlines;EADSY
+617;NEC;NEC1.F
+618;Bayer;BAYN.DE
+618;Legal & General Group;LGEN.L
+620;Nutrien;NTR
+621;BOE Technology Group;000725.SZ
+621;Tokyo Electron;8035.T
+623;Agnico Eagle Mines;AEM
+624;Ferrovial;8ZQ.F
+624;Siemens Energy;ENR.DE
+626;Telefónica;TEF.MC
+627;Illinois Tool Works;ITW
+628;ACS Actividades de Construccion y Servicios;OCI.MU
+629;Hindalco Industries;HINDALCO.NS
+630;Bharat Petroleum;BPCL.BO
+630;CMOC Group;D7N.F
+632;RELX;RELX
+633;AirBnB;ABNB
+634;Asr Nederland;ARNNY
+635;Infineon Technologies;IFX.DE
+636;Aeon;AEON
+637;O'Reilly Automotive;ORLY
+638;GD Power Development;600795.SS
+639;Kimberly-Clark;KMB
+640;FirstEnergy;FE
+641;Halliburton;HAL
+642;TE Connectivity;TEL
+643;Industrial Bank of Korea;024110.KS
+643;Ross Stores;ROST
+645;ServiceNow;NOW
+646;China Energy Engineering;3996.HK
+648;Nokia;NOK
+649;Asahi Group Holdings;2502.T
+650;CIMB Group Holdings;CIMDF
+651;Ferguson Enterprises;FERG
+651;Targa Resources;TRGP
+653;Daiichi Sankyo;D4S.F
+654;Otsuka Holding;OS1.F
+655;Woolworths;WN30.F
+656;WEC Energy Group;WEC
+657;Posco;PKX
+658;Aegon;AEG
+659;Welltower;WELL
+660;CNH Industrial;37C.F
+661;Sekisui House;SPH1.F
+662;Nippon Yusen;NYUKF
+663;Cincinnati Financial;CINF
+663;Kuaishou Technology;5Y0.F
+665;Huaneng Power International;HUP1.SG
+666;Pernod Ricard;PDRDF
+667;NRG Energy;NRG
+668;Mapfre;MAPE.XC
+670;Universal Music Group;0VD.F
+671;Hengli Petrochemical;600346.SS
+671;Warner Bros. Discovery;WBD
+673;Metallurgical Corp of China;MLLUY
+674;Kenvue;KVUE
+675;Intuitive Surgical;ISRG
+676;Deutsche Lufthansa;LHA.F
+677;Unum Group;UUM.DU
+678;Bank of Ireland;BIRG.F
+679;Carrefour;CRERF
+680;Adidas;ADS.DE
+680;IQVIA;IQV
+682;Heineken;HEIA.AS
+683;Unipol Gruppo;UIPN.MU
+684;Reinsurance Group of America;RGA
+686;AerCap Holdings;AER
+687;Fox;FOX
+687;Telstra;TLS.AX
+689;CGN Power;1816.HK
+689;Kubota;KUOA.F
+691;Tenet Healthcare;THC
+692;Anglo American;AAL.L
+693;Resona Holdings;SWD.F
+694;Longfor Group Holdings;RLF.F
+694;T&D Holdings;TDHOY
+696;Meritz Financial Group;138040.KS
+697;Evergreen Marine Corp. (Taiwan);2603.TW
+698;Mitsubishi Estate;MES.F
+699;3i Group;TGOPY
+700;Isbank;BANF
+701;Ageas;AGS.BR
+702;YPF;YPF
+703;AIB Group;AIBGL.XC
+704;Albertsons;ACI
+705;Great Wall Motor;2333.HK
+706;Trip.com Group;TCOM
+707;Eiffage;FGR.PA
+707;Nissan Motor;7201.T
+709;KLA;KLAC
+710;Inner Mongolia Yili;600887.SS
+711;Tokyo Electric Power;TPO.F
+712;New China Life Insurance;NCL.F
+713;Vedanta Limited;VEDL.NS
+714;Edp-energias De Portugal;EDP.BE
+715;Nintendo;NTDOY
+716;Brookfield Wealth Solutions;BNT.TO
+717;Assa Abloy;1ASSA.MI
+718;China Resources Power;CRPJY
+719;Rogers Communications;RCI
+720;Yankuang Energy Group;YZCHF
+721;PulteGroup;PHM
+722;Quanta Services;PWR
+723;WW Grainger;G1WW34.SA
+724;Keyence;6861.T
+725;Spotify Technology;SPOT
+726;Compagnie de l'Odet;ODETP.XC
+727;Hong Kong Exchanges;HK2C.SG
+728;Bancolombia;GLW
+728;Interactive Brokers Group;IBKR
+730;Global Payments;GPN
+731;Li Auto;LI
+732;VICI Properties;VICI
+733;Samsung Fire & Marine;000815.KS
+734;MTR;MTR
+735;Tenaga Nasional;TNABY
+736;Fresenius;FMEA.F
+736;Sumitomo Electric;SMTOY
+738;EXOR;EYX.DU
+739;Roper Technologies;ROP
+740;Raiffeisen Bank International;RAW.F
+741;Fortis (Canada);AMZN
+742;Eversource Energy;NU
+743;Dow;DOW
+744;CLP Holdings;0002.HK
+745;Alcon;ALC
+746;Coinbase;COIN
+747;Equinix;EQIX
+748;Chongqing Changan Auto;200625.SZ
+749;Sinopharm Group;X2S.MU
+750;TransDigm Group;TDG
+751;Aluminum Corp of China;AOC.F
+752;Chubu Electric Power;CHUEF
+753;Saudi Electricity;5110.SR
+754;China Merchants Shekou Industrial Zone Holdings;001979.SZ
+755;China Taiping Insurance;CTIHY
+756;PPG;PPG
+757;Mizrahi Tefahot Bank;MZTFF
+758;HCLTech;HCLTECH.NS
+759;Singapore Airlines;C6L.SI
+760;Simon Property Group;SPG
+761;Palo Alto Networks;PANW
+762;Sika;SIKA.SG
+763;TELUS;TU
+764;Kuehne & Nagel International;KNIN.SW
+765;RenaissanceRe Holdings;RNR-PG
+766;Hanwha Aerospace;012450.KS
+766;NASDAQ;NDAQ
+768;Hikvision;002415.SZ
+769;BPER Banca;BPEM.XC
+770;Bunge Global;BG
+771;Eletrobrás;EBR
+772;Aptiv;APTV
+772;Public Bank;1295.KL
+774;Sampo;HMSP.JK
+775;Omnicom Group;OMC
+776;East Money Information;300059.SZ
+776;Kasikornbank;KPCUF
+778;Fidelity National Information (FIS);AMZN
+779;Ameren;AEE
+779;Huishang Bank;HB8.DU
+781;Molina Healthcare;MOH
+782;Guotai Junan Securities;508031.SS
+783;CenterPoint Energy;CNP
+784;Nidec;NIB.F
+785;Beijing-Shanghai High-Speed Railway;601816.SS
+786;Mitsui OSK Lines;SLNG
+787;eBay;EBAY
+787;Western Digital;WDC
+789;Thomson Reuters;TRI
+790;Ryanair Holdings;RY4D.F
+791;Hilton Worldwide Holdings;HLT
+792;Dubai Islamic Bank;DIB.AE
+793;Akbank;AKBTY
+794;DuPont De Nemours;DD
+795;Shanghai Rural Commercial Bank;601825.SS
+795;ZTE;ZTEK
+797;Volvo Car;VOLCAR-B.ST
+798;Magna International;MGA
+799;ASE Technology Holding;ASX
+799;Banca MPS;BMPS.MI
+801;Zoetis;ZTS
+802;Realty Income;O
+803;Shopify;SHOP
+804;Centrica;CPYYY
+804;Chipotle Mexican Grill;CMG
+807;Tenaris;TS
+808;Credicorp;BAP
+808;Expedia Group;EXPE
+810;Motorola Solutions;MSI
+811;Hanwha;012450.KS
+811;SM Investments;SVTMF
+813;Jardine Matheson;J36.SI
+814;Cintas;CTAS
+815;Alinma Bank;1150.SR
+817;TDK;TTDKY
+818;Ashtead Group;0LC.F
+819;Anhui Conch Cement;600585.SS
+819;Mediobanca;MB.MI
+821;ITC;287840.KQ
+822;H&M - Hennes & Mauritz;HMSA.F
+823;China Reinsurance Group;C53.F
+824;Korea Shipbuilding & Offshore Engineering;009540.KS
+825;Huatai Securities;206H.SG
+826;Live Nation Entertainment;LYV
+827;Otis Worldwide;OTIS
+828;Murata Manufacturing;MRAAY
+828;PPL;PPL
+830;Daqin Railway;601006.SS
+830;Grasim Industries;GRASIM.BO
+832;WH Group;WHGLY
+833;Super Micro Computer;SMCI
+834;American Airlines Group;AAL
+835;STMicroelectronics;STM
+836;Las Vegas Sands;LVS
+837;Koç Holding;KRKA.SG
+838;Daiwa Securities;DSE.F
+838;Saudi Arabian Mining;1211.SR
+840;Julius Baer Group;BAERZ.XC
+841;Joint Stock Commercial Bank for Foreign Trade of Vietnam;VCB.VN
+842;Verbund;VER.VI
+844;Southwest Airlines;LUV
+845;Biogen;BIIB
+846;BDO Unibank;BDOUY
+846;CP All;CPPCY
+848;Sanlam;SLM.JO
+849;The Hershey Company;HSY
+850;Mega Financial Holding;2886.TW
+851;St. James's Place;STJ.L
+852;Arista Networks;ANET
+854;Anta Sports Products;ANPDY
+855;Smurfit Westrock;SW
+856;Walgreens Boots Alliance;BDX
+857;Abu Dhabi Islamic Bank;EGS60111C019.CA
+858;China Vanke;2202.HK
+859;Vienna Insurance Group;WSV2.HA
+860;Absa Group;AGRPY
+861;Ally Financial;ALLY
+862;KGI Financial Holding;2883.TW
+863;Sandvik;SVK.F
+864;Bank Of Chengdu;601838.SS
+865;Moody's;MCO
+866;LG Chem;051910.KS
+867;Genuine Parts;GPC
+868;Kellanova;K
+870;Venture Global;DW3.F
+871;BCE;BCE
+872;HAL Trust;HALA.XC
+873;SK;SWKS
+874;SK Innovation;096775.KS
+875;CDW;CDW
+876;CMS Energy;CMS
+877;CK Asset Holdings;1CK.F
+878;Steel Dynamics;STLD
+879;Semiconductor Manufacturing International;688981.SS
+879;Westinghouse Air Brake Technologies;WAB
+881;Xiamen C&D;600153.SS
+882;Tata Steel;MVX.F
+883;Bank Pekao;BP1.SG
+883;Idemitsu Kosan;I7B.F
+885;Halkbank;HALKS.IS
+885;International Paper;IP
+887;Flex;FLEX
+888;Renesas Electronics;6723.T
+889;China Merchants Securities;195H.F
+890;Lululemon Athletica;LULU
+891;Corning;GLW
+892;Jiangxi Copper;JIAXF
+893;TD SYNNEX;SNX
+894;Robinhood Markets;HOOD
+895;Ericsson;ERIC-B.ST
+896;Phoenix Group Holdings;PHNX.L
+897;Delta Electronics;DLS0.F
+898;Naver;035420.KS
+899;JSW Steel;JSWSTEEL.BO
+900;SCB X Public Company;OU80.F
+901;Eurobank Ergasias;EUROB.AT
+901;Wipro;WIT
+903;JFE Holdings;JFR.F
+904;Seres Group;601127.SS
+905;Public Storage;PSA
+906;Indian Bank;SOUTHBANK.NS
+907;Best Buy;BBY
+908;AES;AES
+909;Rakuten;4755.T
+910;LG Electronics;066570.KS
+910;Sumitomo Realty;SURDF
+912;Schindler Holding;SHRQ.F
+913;SDIC Power Holdings;600886.SS
+914;Essity;ESSITY-B.ST
+915;Rongsheng Petrochemical;002493.SZ
+916;Korea Gas;036460.KS
+916;Sichuan Road & Bridge;600039.SS
+918;Ferrari;RACE
+919;Tractor Supply;TSCO
+921;Leidos;LDOS
+922;Sungrow Power Supply;300274.SZ
+923;Legend Holding;1PC.F
+924;Db Insurance;005830.KS
+925;Helvetia Holding;HVXA.F
+926;Legrand;LRC.F
+927;Galp Energia;GLPEF
+928;GAIL India;GQI.SG
+929;Philips;PHIA.AS
+930;Yuanta Financial Holding;2885.TW
+932;Bangkok Bank;BKKLY
+933;Dassault Aviation;DAU0.F
+934;Israel Discount Bank;ISDAF
+935;Rheinmetall;RHM.DE
+936;DSM-Firmenich;ZX6.F
+937;Euronext;ENX.PA
+937;Grupo Bimbo;BIMBOA.MX
+939;Martin Marietta Materials;MLM
+940;Aisin Seiki;AKN.SG
+941;Country Garden Holdings;2007.HK
+942;Vonovia;VNA.DE
+943;Monster Beverage;MNST
+944;Restaurant Brands International;QSR
+945;Aena;A441.F
+946;American Water Works;AWK
+946;Prysmian;AEU.F
+948;MGM Resorts;MGM
+950;HMM;HMMR
+951;SingTel;Z74.SI
+952;KeyCorp;KEY
+953;Telenor;TEQ.F
+954;Guosen Securities;002736.SZ
+955;Coles Group;2OF.F
+956;Sany Heavy Industry;600031.SS
+957;Bank of India;SBIN.NS
+958;Kone;1KNEBV.MI
+959;Snam;SNM0.F
+960;Vertex Pharmaceuticals;VRTX
+961;Coupang;CPNG
+962;SBI Holdings;SBHGF
+963;Annaly Capital Management;NLY
+964;Banque Saudi Fransi;1050.SR
+965;Shanghai International Port;600018.SS
+966;Lonza Group;LONN.SW
+967;Flutter Entertainment;FLUT
+968;Jeronimo Martins;JEM.F
+969;Tohoku Electric Power;TKT.F
+970;Givaudan;GIVN.SW
+970;Synopsys;SNPS
+972;Qatar Islamic Bank;QIBK.QA
+973;Asustek Computer;2357.TW
+973;Waste Connections;WCN
+975;E.Sun Financial;2884.TW
+976;Molson Coors Brewing;TAP
+977;Penske Automotive;UA9.F
+978;LPL Financial Holdings;LPLA
+980;Dassault Systemes;DASTF
+980;Uni-President;1216.TW
+982;Arab National Bank;1080.SR
+983;Mazda Motor;MZA.SG
+983;XCMG Construction Machinery;000425.SZ
+985;East West Bancorp;EWBC
+985;Yum! Brands;YUM
+987;Banca Mediolanum;BNCDY
+988;Techtronic Industries;TIB.MU
+989;Teva Pharmaceutical;TEVA
+990;Lithia Motors;LAD
+990;NVR;NVR
+992;CGI;GIB
+993;Indian Railway Finance;IRFC.NS
+994;Constellation Software;W9C.F
+994;TCL;TC2A.F
+996;Dover;DOV
+997;China Bohai Bank;CNE100003YB7.SG
+998;Commercial Bank For Investment & Development Of Vietnam;BID.VN
+999;China National Chemical;601117.SS
+1000;Sunshine Insurance Group;E57.F
+1001;Cemex;CEMEXCPO.MX
+1001;China Galaxy Securities;CGL.F
+1003;Fortinet;FTNT
+1003;Telkom Indonesia;TLKM.JK
+1005;Bankinter;BKTE.XC
+1005;Fosun International;FNI.SG
+1007;AppLovin;APP
+1007;Howmet Aerospace;HWM
+1009;China Three Gorges Renewables (Group);600905.SS
+1010;Vestas Wind Systems;VWS.CO
+1011;Labcorp Holdings;LH
+1012;Beiersdorf;BEI.DE
+1013;GF Securities;000776.SZ
+1014;Darden Restaurants;DRI
+1014;EMCOR Group;EME
+1016;Tokyo Gas;TKGSF
+1017;Shanghai Pharmaceuticals;S1R.BE
+1018;Pembina Pipeline;PBA
+1019;M&G;CMG
+1020;Fastenal;FAST
+1021;Arca Continental;AJZ.F
+1022;Swire Pacific;SWI1.F
+1023;Ametek;AME
+1024;Extra Space Storage;EXR
+1025;Atmos Energy;ATO
+1025;Itaúsa;ITSA4.SA
+1027;Sabanci Holding;SAHOL.IS
+1028;Experian;EXPGF
+1029;Kajima;KAJMY
+1030;Jefferies Financial;JEF
+1031;UCB;UCB
+1032;Krung Thai Bank;KGTFY
+1033;Nippon Paint;NI7.F
+1034;Shaanxi Construction Engineering Group;600248.SS
+1035;DiDi Global;DIDIY
+1036;National Bank of Greece;ETE.AT
+1037;HD HYUNDAI;089470.KS
+1038;KE Holdings;BEKE
+1039;Builders FirstSource;BLDR
+1040;Aldar Properties;CL=F
+1041;Xylem;XYL
+1042;Nongfu Spring;7NF.F
+1043;Chunghwa Telecom;CHT
+1044;Paychex;PAYX
+1045;Vulcan Materials;VMC
+1046;Nedbank;NCO.F
+1047;Adani Enterprises;ADANIENT.NS
+1049;CNPC Capital;000617.SZ
+1050;AntarChile;ANTARCHILE.SN
+1051;Shanghai Construction;600170.SS
+1052;First Financial Holding;FFHMY
+1053;Isuzu Motors;ISU.F
+1054;Zhejiang Zheneng Electric Power;600023.SS
+1055;Banco Comercial Portugues;BCPU.XD
+1055;Dick's Sporting Goods;DKS
+1057;Henderson Land;HLDVF
+1058;Bank of Changsha;601577.SS
+1059;Zimmer Biomet;ZBH
+1060;Ulta Beauty;ULTA
+1061;WPP;WPP
+1062;Copart;CPRT
+1063;Digital Realty Trust;DLR
+1064;Bank Negara Indonesia;BKE1.F
+1065;Terna;1GT.F
+1066;CarMax;KMX
+1067;AvalonBay Communities;AVB
+1068;Carlsberg;CBGA.F
+1069;Jabil Circuit;JBL
+1070;Hua Nan Financial;2880.TW
+1071;MOL Hungarian Oil;US6084642023.SG
+1072;Suncorp Group;SUN.AX
+1073;Sun Pharma Industries;SUNPHARMA.NS
+1074;Workday;WDAY
+1075;China National Building;CBUMY
+1076;Electronic Arts;EA
+1077;iA Financial Corporation;1OD.F
+1078;Air Canada;AC.TO
+1079;Obayashi;OBA.HA
+1080;Ingersoll Rand;IR
+1081;China Huarong Asset Management;CHE.BE
+1082;Amadeus IT Group;AI3A.F
+1082;Dollar Tree;DLTR
+1084;Shriram Finance;SHRIRAMFIN.NS
+1085;Garmin;GRMN
+1086;Korean Air;003490.KS
+1087;WEG;WEGE.JK
+1088;Mitsubishi Chemical;M3C.F
+1089;WTW;WTW
+1090;T Rowe Price;TROW
+1090;Universal Health Services;UHS.F
+1092;Shenzhen Mindray Bio-Medical Electronics;300760.SZ
+1093;Alstom;ALSMY
+1094;Edwards Lifesciences;EW
+1095;Quinenco;QUINENCO.SN
+1096;Quest Diagnostics;DGX
+1097;Shanxi Xinghuacun Fen Wine Factory;600809.SS
+1098;Greentown China Holdings;G7C.F
+1099;Wuchan Zhongda Group;600704.SS
+1100;Hydro One;H.TO
+1101;All Nippon Airways;EMBR3.SA
+1102;Voya Financial;VOYA-PB
+1103;Paramount;6PM.F
+1104;J Sainsbury;SUY1.F
+1105;United Microelectronics;UMC
+1106;Jackson Financial;JXN
+1107;Cadence Design;CDNS
+1108;Equity Residential;EQR
+1109;China Resources Pharmaceutical Group;640.SG
+1111;Antofagasta;ANTO.L
+1111;Coca-Cola HBC;CCKC.F
+1114;Autodesk;ADSK
+1115;Wolters Kluwer;WKL.AS
+1117;Cathay Pacific Airways;CTYA.BE
+1118;StoneX Group;SNEX
+1118;Textron;TXT
+1120;Amcor;AMCR
+1121;Assurant;AIZN
+1122;Metro;SAME.JK
+1123;International Flavors & Fragrances;IFF
+1123;Kyocera;KYRA.F
+1123;Taiwan Cooperative Financial;5880.TW
+1126;Rockwell Automation;ROK
+1127;Hoya;HYB.F
+1127;US Foods;USFD
+1129;Performance Food Group;PFGC
+1130;Evergy;EVRG
+1131;Monolithic Power Systems;MPWR
+1132;DaVita;DVA
+1133;Agilent Technologies;A
+1134;Vibra Energia;VBREY
+1135;Bandai Namco Holdings;NCBDF
+1135;NiSource;NOU.F
+1137;Yum China Holdings;YUMC
+1138;Coterra Energy;CTRA
+1139;Asahi Kasei;AHKSF
+1140;Adani Power Limited;ADANIPOWER.BO
+1141;Luzhou Lao Jiao;000568.SZ
+1142;The Estée Lauder Companies;EL
+1143;Brown & Brown;BRO
+1144;Hexagon;HXGBY
+1146;Crown Castle International;CCI
+1146;Gartner;IT
+1148;Santos;SSLZY
+1149;Constellation Brands;STZ
+1150;China Southern Airlines;ZNHH.F
+1151;ResMed;RMD
+1152;Olam Group;K25.F
+1153;Fluor;FLR
+1154;Sodexo;SJ7.F
+1155;Air France-KLM;AF.PA
+1156;Partners Group Holding;0QOQ.L
+1157;MSCI;MSCI
+1158;Reliance Steel;RS
+1159;Vietin Bank;CTS.VN
+1160;Kaspi.kz JSC;US48581R2058.SG
+1161;Piraeus Financial Holdings;TPEIR.AT
+1162;IndusInd Bank;INDUSINDBK.BO
+1163;Adyen;ADYEN.AS
+1164;Huadian Power International;SHX.F
+1165;Adani Ports & Special Economic Zone;AMZN
+1166;Pan Pacific International Holdings;QJE.F
+1167;Booz Allen Hamilton Holding;BAH
+1169;Seagate Technology;STX
+1170;Orsted;ORSTED.CO
+1171;EQT;EQT
+1172;ON Semiconductor;ON
+1173;Williams-Sonoma;WSM
+1174;Vertiv Holdings;VRT
+1175;Acciona;ANE.MC
+1175;Baxter International;BAX
+1177;Kyushu Electric Power;2CJ.F
+1178;Csc Financial;CS0.F
+1179;InterGlobe Aviation;INDIGO.BO
+1180;Wistron;3231.TW
+1181;Grupo Carso;4GF.SG
+1182;Hormel Foods;HRL
+1183;American Financial Group;AFG
+1183;MicroStrategy;STRC
+1185;China CSSC Holdings;600150.SS
+1185;SK Telecom;S1KM34.SA
+1188;BJ's Wholesale Club;BJ
+1189;Kao;4452.T
+1190;First Horizon;FHN
+1191;DoorDash;DASH
+1192;Viatris;VTRS
+1193;Halyk Bank;HSBK.IL
+1194;Jones Lang LaSalle;4J2.F
+1195;Falabella;FALABELLA.SN
+1196;CJ Corporation;00104K.KS
+1197;China International Capital;3908.HK
+1198;Cellnex Telecom;CLLNY
+1199;Westlake Corporation;WLK
+1200;Echostar;SATS
+1201;Jiangsu Hengrui Medicine;0BO.F
+1202;Astellas Pharma;YPH.F
+1203;Old Dominion Freight Line;ODFL
+1204;Corpay;CPAY
+1204;Japan Exchange Group;OSK.F
+1206;A2A;A2AM.XD
+1207;Old Mutual;2KS.F
+1208;Verisk Analytics;VRSK
+1209;Norsk Hydro;NHYDY
+1210;Towngas;PGJ.F
+1211;Teck Resources;TECK
+1212;Pegatron;4938.TW
+1213;Forvia;4FRVIA.TI
+1214;Storebrand;STBO.XC
+1215;Ford Otosan;FROTO.IS
+1215;Guangdong Haid Group;002311.SZ
+1217;Osaka Gas;OSA.DU
+1218;JDE Peet's;JDE.F
+1219;Marfrig Global Foods;MBRFY
+1220;Bayan Resources;BNB.MU
+1221;IDBI Bank;IDBI.NS
+1221;Toll Brothers;TOL.MX
+1223;Liberty Global;LBTYA
+1224;Casey's General Stores;CASY
+1225;Bank Albilad;1140.SR
+1226;Carvana;CVNA
+1227;West Japan Railway;WEJ.F
+1228;Next;NEXT
+1229;Longi Green Energy Technology;601012.SS
+1230;Insurance Australia Group;IAUGY
+1231;Advantest;ATEYY
+1232;Jacobs Solutions;J
+1233;Carlyle Group;CG
+1234;Sunac China Holdings;SCNR.MU
+1235;Pinterest;PINS
+1236;Bawag Group;0B2.F
+1237;Expeditors International;EXPD
+1238;Grupo De Inversiones Suramericana;PFGRUPSURA.CL
+1239;Bank of Chongqing;CQN.F
+1240;Sabesp;SAJA.F
+1241;Fortive;FTV
+1242;Terumo;TRUMY
+1243;IDEXX Laboratories;IDXX
+1244;Beijing Enterprises;HUN2.F
+1245;Western Alliance Bancorp.;WAL
+1246;Raizen;RAIZ4F.SA
+1247;Packaging Corp of America;PKG
+1248;Datang International Power;DIPGF
+1249;Webster Financial;WBS
+1250;Fortum;FORTUM.HE
+1251;Investec;1087.HK
+1252;Jyske Bank;JYS1.F
+1253;WSP;1W3.F
+1253;Zions Bancorp;ZION
+1256;Scor;SCOR
+1257;Telia;TEL1L.VS
+1258;ENN Natural Gas;600803.SS
+1259;Wuxi Apptec;2359.HK
+1260;Bank Of Guiyang;601997.SS
+1261;XP;XP
+1262;Ovintiv;OVV
+1263;China Eastern Airlines;CIAH.BE
+1264;Latam Airlines;LTM
+1265;Borouge;AMCR
+1266;SinoPac Financial;2890.TW
+1266;SS&C Technologies;SSNC
+1268;STRABAG;XD4.F
+1269;Dollarama;DOL.TO
+1269;FinecoBank;ZS3.F
+1271;Foshan Haitian Flavouring and Food;603288.SS
+1272;Telecom Italia;TQI.F
+1273;Carlisle Cos;CSL
+1274;Ajinomoto;AJINY
+1275;Broadridge Financial;BR
+1276;NetApp;NTAP
+1277;Qilu Bank;601665.SS
+1278;Shenwan Hongyuan Group;2X2A.F
+1279;NAURA Technology Group;002371.SZ
+1280;Kirin Holdings;KIR.F
+1281;EQT AB;6EQ.F
+1281;Grupo Aval;0J1B.L
+1281;Origin Energy;OGFGY
+1284;KT;KT
+1285;Globe Life;GL
+1286;Shanghai Electric Group;USR.F
+1287;Industries Qatar;IQCD.QA
+1288;Mirae Asset Financial Group;MPAY/U.TO
+1289;Ares Management;ARES
+1290;Yamaha Motor;YMA.F
+1291;Advanced Info Service;AIS.F
+1292;HBIS;HBIS
+1293;Goodman Group;GMGSF
+1294;Dongfeng Motor Group;D4D.F
+1295;Sojitz;XEB.F
+1296;Charoen Pokphand Group;9992.HK
+1297;TUI;TUI1.DE
+1298;Lindt & Sprungli;LDSVF
+1298;WESCO International;WCC
+1300;Bank of Suzhou;002966.SZ
+1300;Gold Fields;GFI
+1302;TBEA;600089.SS
+1303;Marks & Spencer;MA6.F
+1304;GoDaddy;38D.F
+1305;Toray Industries;TOR1.F
+1306;Oriental Land;OLCLY
+1307;Bank of Greece;ETE.AT
+1308;Bajaj Auto;BAJAJ-AUTO.NS
+1309;Kingspan Group PLC;KRX.IR
+1309;Korea Investment Holdings;071050.KS
+1311;Yuexiu Property;GUZA.F
+1312;Jiangsu Eastern Shenghong;000301.SZ
+1314;Hyundai Marine & Fire;001450.KS
+1315;Evolution Gaming Group AB;E3G1.SG
+1316;Comerica;CMA
+1317;Metropolitan Bank & Trust;MTPOF
+1318;Zoom Video Communications;ZOOM.VI
+1319;Sandoz Group;D8Y.F
+1320;Fanuc;FANUY
+1321;Veeva Systems;VEEV
+1322;LKQ;LKQ
+1323;Tongwei;600438.SS
+1324;China International Marine;OCM.F
+1325;Kobe Steel;KST.F
+1326;Dongguan Rural Commercial Bank;857.SG
+1327;Hong Leong Financial;HLFBF
+1328;Macy's;M
+1329;China Cinda Asset Management;0CI.SG
+1330;Hyundai Glovis;086280.KS
+1331;Kawasaki Heavy Industries;KHE.F
+1332;SMC;SMC
+1333;Alliant Energy;LNT
+1334;Tokyo Century;59O.F
+1335;Evonik Industries;1EVK.MI
+1336;AutoNation;AN
+1337;BAIC Motor;2B5.F
+1338;ENN Energy Holdings;XNGSY
+1339;Shandong Gold Mining;1787.HK
+1340;Aristocrat Leisure;ALL.AX
+1340;Zhongyuan Bank;ZNNGY
+1342;Vipshop Holdings;1VPA.F
+1343;Shenzhen Transsion Holding;688036.SS
+1345;Trimble;TRMB
+1346;RHB Bank;1066.KL
+1347;Epiroc;3AD1.F
+1347;Palantir Technologies;PLTR
+1349;IHI;IHICF
+1349;Unicaja Banco;UNIE.XC
+1351;Banca Transilvania;7TB.F
+1351;Ingram Micro Holding;INGM
+1353;China Merchants Port Group;201872.SZ
+1353;Ventas;VTR
+1355;ICON (Ireland);AMZN
+1356;MTU Aero Engines AG;MTX.F
+1356;Popular;BPOP
+1358;Kerry Group;KRZ.IR
+1359;BBMG;9BM.F
+1359;McCormick;MKC
+1361;Alpha Bank;UI6.F
+1361;Sinotruk Hong Kong;3808.HK
+1363;Arrow Electronics;ARW
+1364;Klepierre;KPR.MU
+1365;AngloGold Ashanti;AU
+1366;SGS;SGSN.SW
+1367;Marvell Technology;MRVL
+1368;Qantas Airways;QABSY
+1369;Banque Cantonale Vaudoise;0ACP.L
+1369;ZTO Express (Cayman);ZTO
+1371;AECOM;ACM
+1371;TechnipFMC;FTI
+1373;Teledyne Technologies;TDY
+1374;Wintrust Financial;WTFC
+1375;Military Commercial Joint Stock Bank;MBB.VN
+1376;Seazen Group;6FLA.F
+1377;Brambles;BXB.AX
+1378;Credito Emiliano;EAO.F
+1379;VeriSign;VRSN
+1380;Old Republic International;ORI
+1381;Taisei;1904.T
+1382;SoFi;SOFI
+1383;Smithfield Foods;4IT.F
+1384;Mettler-Toledo International;MTD
+1385;Norwegian Cruise Line Holdings;NCLH
+1386;Check Point Software;CHKP
+1387;Bunzl;BNZLL.XC
+1388;First Solar;FSLR
+1389;J.B. Hunt Transport Services;JBHT
+1390;Owens Corning;O5Q.F
+1391;UPM-Kymmene;UPM.HE
+1392;Fuyao Glass Industry Group;FIGIF
+1393;Brenntag;BNR.DE
+1393;Veralto;VLTO
+1395;Tourmaline Oil;08T.F
+1396;Bank of Tianjin;B95.F
+1397;Expand Energy;EXE
+1398;Valeo;FR.PA
+1399;Gap;GAP
+1400;China Nuclear Engineering Corporation;601611.SS
+1401;GS Holdings;078935.KS
+1402;China Communications Services;CMW.HA
+1403;ZIM Integrated Shipping Services;ZIM
+1404;ACWA Power;2082.SR
+1405;Concordia Financial Group;CRDIY
+1406;First Pacific;FPC.F
+1407;Guangzhou Automobile Group;GNZUY
+1408;E-mart;EMIL.BO
+1409;Xiamen Xiangyu;600057.SS
+1410;Chow Tai Fook Jewellery;CJEWY
+1411;Stanley Black & Decker;SWK
+1412;FICO;FICO
+1413;Bank of Qingdao;4BQ.F
+1413;El Puerto de Liverpool;PLV1.F
+1415;Avery Dennison;AVY
+1415;DocuSign;DOCU
+1417;US Steel;0P0001R9PW.SA
+1418;Royalty Pharma;RPRX
+1419;Galaxy Entertainment;KW9A.F
+1420;Ball;BALL
+1420;Segro;S4VC.F
+1422;Schaeffler;SHA0.F
+1423;Murphy USA;1MU.F
+1424;Chugoku Electric Power;59K.F
+1425;DISCO Corp.;HDVY
+1425;Skanska;SKAB.PR
+1427;Axis Capital Holdings;AXS
+1427;Migdal Insurance;MGDL.TA
+1429;SBA Communications;4SB.F
+1430;Thai Beverage;TBVPY
+1431;ASM International;ASM.AS
+1433;Bank of East Asia;BOA.HA
+1434;KPN;KPNA.XC
+1435;Kinross Gold;KGC
+1436;Amman Mineral Internasional;U4Z.F
+1436;Conagra Brands;CAG
+1438;Tianshan Material;000877.SZ
+1439;Samsung SDI;006400.KS
+1440;Shimao Property Holdings;QHI.SG
+1441;CBOE Global Markets;CBOE
+1441;Coloplast;CBHD.F
+1441;Lumen Technologies;LUMN
+1444;Secom;SOMLY
+1445;Equifax;EFX
+1446;Snap-on;SNA
+1447;China Shipbuilding Industry;600482.SS
+1448;Aurubis;NDA.DE
+1449;LG Display;034220.KS
+1450;Unibail-Rodamco-Westfield;URW.PA
+1451;BNK Financial Group;138930.KS
+1452;China Merchants Expressway Network & Technology Holdings;001965.SZ
+1452;Transurban Group;TRAUF
+1454;Alcoa;AA
+1455;C.H. Robinson;CHRW
+1456;South State;SSB
+1456;Vietnam Technological & Commercial Joint Stock Bank;AMZN
+1458;Ningxia Baofeng Energy Group;600989.SS
+1459;Masco;MAS
+1460;Heico;HEI
+1462;Phoenix Holdings;PHOE.TA
+1463;Hyatt Hotels;H
+1464;Ooredoo Q.P.S.C;ORDS.QA
+1465;Kawasaki Kisen Kaisha;KLI1.F
+1466;Brown-Forman;BF-A
+1467;APA;APA
+1467;Deckers Outdoor;DECK
+1469;Arab Bank;AMRK.TA
+1469;PGE Polska Grupa Energetyczna;6PG.F
+1471;China Longyuan Power;6WX0.F
+1472;Banca Popolare di Sondrio;BPSOM.XD
+1472;Ternium;T5Z.F
+1474;CJ Cheiljedang;097955.KS
+1474;Rithm Capital;RITM
+1476;Sumitomo Chemical;SMM.DU
+1477;CF Industries Holdings;CF
+1478;Shionogi;SH0.F
+1480;Shenzhen Inovance Technology;300124.SZ
+1481;AGNC Investment;AGNC
+1482;Stifel Financial;SF-PD
+1483;Suzano;SPXB.F
+1484;China Development Bank Financial Leasing;2C6.F
+1485;United Therapeutics;UTHR
+1486;Lennox International;LII.MX
+1487;ST Engineering;S63.SI
+1488;Franklin Resources;BEN
+1488;Porsche Automobil Holding;1PAH.MI
+1490;CrowdStrike;CRWD
+1490;Hubbell;HUBB
+1492;Bank of Guizhou;6199.HK
+1493;Chiba Bank;CHBAY
+1493;Eastman;KODK
+1495;Wuestenrot & Wuerttembergische;WUWD.XD
+1496;Covestro;1CO.F
+1496;Japan Airlines;JAL.F
+1498;Dr. Sulaiman Al-Habib Medical Services Group;4013.SR
+1498;Wheaton Precious Metals;WPM
+1500;Scentre Group;SCG.AX
+1501;Franco-Nevada;FNV
+1501;Prada;PRP.F
+1503;Tapestry;TPR
+1504;MTN Group;LL6A.F
+1505;Vingroup;VIC.VN
+1506;Hyundai Steel;004020.KS
+1508;Burlington Stores;BURL
+1509;Brighthouse Financial;BHF
+1510;Fukuoka Financial Group;8354.T
+1511;Cleveland-Cliffs;CLF
+1511;Endo;ENDO
+1511;Goodyear;GT
+1511;Sumitomo Forestry;5F6.F
+1515;Geberit;GEBNE.SW
+1516;Hunan Valin Steel;000932.SZ
+1517;China Jinmao;3F5.MU
+1518;Pinnacle West;PNW
+1519;Dexcom;DXCM
+1519;News Corp;NC0.F
+1521;Bajaj Holdings & Investment;BAJAJHLDNG.BO
+1521;Lens Technology;300433.SZ
+1523;Akzo Nobel;AKU1.F
+1523;Ansys;ANSS
+1523;Gemdale;600383.SS
+1523;Suntory Beverage & Food;7SN.F
+1523;Yang Ming Marine Transport;2609.TW
+1528;Admiral Group;FLN.MU
+1529;Zhuhai Huafa Properties;600325.SS
+1530;Manila Electric;MERVF
+1531;Gerdau (Cosigua);AMZN
+1532;HF Sinclair;DINO
+1532;Nitto Denko;ND5.F
+1534;Hyundai Engineering;000720.KS
+1535;Empire;HEALTH-R.BK
+1535;Siam Cement;TCM1.F
+1537;Formosa Petrochemical;6505.TW
+1538;Quilter;2FQ0.F
+1539;Cholamandalam Investment and Finance;CHOLAFIN.NS
+1540;China Power International Development;HPD.F
+1541;Shizuoka Financial Group;P2U.F
+1542;Anhui Construction Engineering Group;600502.SS
+1542;Genmab;GMAB.CO
+1542;Keysight Technologies;KEYS
+1542;Liberty Broadband;8L8C.F
+1546;Guangzhou Rural Commercial Bank;CNE100002FR4.SG
+1547;SK Square;402340.KS
+1548;Synovus;SNV
+1549;Boliden;BOL.ST
+1549;Church & Dwight;CHD
+1551;Alfa Laval;ALFA.ST
+1551;Savola Group;2050.SR
+1553;Bharat Electronics;BEL.NS
+1554;Chewy;CHWY
+1556;Grupo Bolivar;GRUBOLIVAR.CL
+1557;CAPITEC;CPIP.JO
+1557;Genworth Financial;GNW
+1560;Cullen/Frost Bankers;CFR
+1561;Caesars Entertainment;CZR
+1562;Mitsubishi Motors;7211.T
+1563;Alexandria Real Estate Equities;ARE
+1564;Bank OZK;OZK
+1565;TMBThanachart Bank;NVPJ.F
+1566;S-Oil;GSG.F
+1567;Titan (India);AMZN
+1568;Bank of Maharashtra;MAHABANK.NS
+1569;Cencosud;CENCOMALLS.SN
+1570;Electric Power Development;200539.SZ
+1570;Samvardhana Motherson International;MOTHERSON.NS
+1572;Shengjing Bank;2066.HK
+1573;Johnson Matthey;JMT2.F
+1573;MIXUE Group;2097.HK
+1575;Samsung Securities;016360.KS
+1576;Avis Budget Group;CAR
+1576;Mebuki Financial Group;5EE.F
+1578;Lotte Chemical;5284.KL
+1579;Essex Property Trust;ESS
+1580;Lear;4291.SR
+1580;Old National Bank;OFG
+1582;Ralph Lauren;RL
+1583;Commercial International Bank;CIN.F
+1583;Iron Mountain;IRM
+1585;General Insurance Corporation Of India;GICRE.NS
+1586;Hotai Motor;2207.TW
+1587;Wise;5CL.F
+1588;Atlassian;TEAM
+1589;The Mosaic Company;MOS
+1589;World Fuel Services;WFK.BE
+1591;Zhejiang Huayou Cobalt;603799.SS
+1592;Avenue Supermarts;DMART.NS
+1593;Campbell Soup;CPB
+1594;Waters;WAT
+1595;Jiangsu Changshu Rural Commercial Bank;601128.SS
+1596;AviChina Industry & Technology;AVT.F
+1596;Harbin Bank;5H6.F
+1598;Nomura Research Institute;NR7.F
+1599;BOK Financial;BOKF
+1600;Zhongsheng Group Holdings;5Z0.F
+1601;RPM International;RPM
+1602;Huaqin Technology;603296.SS
+1603;Invitation Homes;INVH
+1604;BAC Holding International;BHI.CL
+1604;Inner Mongolia Baotou Steel;600010.SS
+1606;China Steel;CNS.SG
+1607;Cosmo Energy Holdings;2LW.F
+1607;Watsco;WSO
+1609;Iveco Group;IVG.VI
+1610;Tata Power Company;TATAPOWER.NS
+1611;Daou Data;032190.KQ
+1611;Hikari Tsushin;HKTGF
+1613;PTT Global Chemical;GCB1.MU
+1614;Emera;EMA-PJ.TO
+1614;Lundbergs;LBGUF
+1616;China Tourism Group Duty Free;601888.SS
+1617;CapitaLand Integrated Commercial Trust;C38U.SI
+1617;Hangzhou Binjiang Real Estate Group;002244.SZ
+1619;Snowflake;SNOW
+1620;Invesco;VKQ
+1621;Flagstar Financial;FLG
+1622;Tradeweb Markets;4T0.F
+1623;CTP;CTPNV.AS
+1623;Neste;NEF.F
+1625;Knorr-Bremse;KBX.F
+1626;Rajesh Exports;RAJESHEXPO.NS
+1627;Metro Group;^HSI
+1628;Hokuhoku Financial Group;8377.T
+1629;Comfort Systems USA;FIX
+1631;PBF Energy;PBF
+1632;Asian Paints;ASIANPAINT.BO
+1633;Moncler SpA;MONC.VI
+1634;Far East Horizon;F6H.F
+1635;Canadian Tire Corporation;YAAA.F
+1636;Momentum Metropolitan Holdings;M1A.BE
+1636;Zhejiang Expressway;ZHJ.SG
+1638;Ultrapar Participacoes;UGR.F
+1639;Novonesis A/S;NZM.F
+1640;Cadence Bank;BTO0.F
+1641;Daou Technology;023590.KS
+1641;United Natural Foods;UNFI
+1643;Sonova Holding;PHBN.F
+1644;Ayala Corp;AYALY
+1645;Tryg;TRYG.CO
+1646;Axon Enterprise;AXON
+1647;Asia Commercial Bank;ACB.VN
+1648;Mobily;DGNMO.IS
+1649;Pinnacle Financial Partners;PNFP
+1650;China Resources Gas Group;CGASY
+1650;WT Microelectronics;3036A.TW
+1652;Roblox;RBLX
+1653;Group 1 Automotive;GAV.DU
+1653;NEXON;NEXOY
+1655;Shanghai Commercial & Savings Bank;5876.TW
+1656;Companhia Energetica de Minas Gerais;CIG
+1657;JM Smucker;JM2.MU
+1658;Bank of Zhengzhou;3BZ.F
+1658;Power Assets Holdings;HEH.F
+1660;Bureau Veritas;4BV.F
+1661;Krafton;259960.KS
+1662;DCC;DCC.F
+1663;Hanwha Ocean;042660.KS
+1664;Compal Electronics;CMPCY
+1665;Gen Digital;GEN
+1666;China Merchants Port Holdings;CMHHY
+1667;Kiwoom Securities;039490.KS
+1669;Japan Securities Finance;8511.T
+1670;Hachijuni Bank;5FI.F
+1671;Cloudflare;NET
+1671;Globalfoundries;GFS
+1671;Hansoh Pharmaceutical Group;3KY.F
+1674;Nishi-nippon Financial Holdings;7189.T
+1675;Securitas;S7MB.SG
+1676;Altice USA;ATUS
+1677;Hera;HERANBA.NS
+1678;Weyerhaeuser;WY
+1679;Avolta;AVOLZ.XC
+1679;Chailease Holding;5871A.TW
+1679;WPG Holdings;3702.TW
+1682;Kyushu Financial Group;7180.T
+1684;Sofina;SOF28.NX
+1686;North Pacific Bank;2PT.F
+1687;Rollins;ROL
+1688;Take-Two Interactive Software;TTWO
+1689;Barry Callebaut;BARN.SW
+1689;E-L Financial;74N.F
+1689;LIC Housing Finance;LICHSGFIN.BO
+1692;CPFL Energia;CPFE3F.SA
+1692;Dai Nippon Printing;DNP.F
+1694;Cambricon Technologies;688256.SS
+1695;Columbia Banking System;COLB
+1696;IEIT Systems;000977.SZ
+1697;Yamaguchi Financial;5FW.F
+1698;Shenzhen Overseas;000069.SZ
+1699;Link REIT;0823.HK
+1700;Rexel;RXEEY
+1701;Kongsberg Gruppen;KOZ1.F
+1702;International Container Terminal Services;ICTEF
+1703;Interpublic Group;IPG.BE
+1704;Computershare;CMSQY
+1704;Hirogin Holdings;HROGF
+1706;Jiangxi Bank;1916.HK
+1706;Pop Mart International Group;9992.HK
+1708;Randstad N.V.;RSH0.SG
+1709;Gaming And Leisure Properties;GLPI
+1709;Yunnan Copper;000878.SZ
+1711;Erie Indemnity;ERIE
+1712;B3;B350.BR
+1713;Adecco Group;ADI1.F
+1713;Doosan;000157.KS
+1715;Ceconomy;CECV.F
+1716;Focus Media Information Technology;002027.SZ
+1717;Huntington Ingalls Industries;HII
+1718;Harel Insurance Investments & Financial Services;HARL.TA
+1718;Toppan Printing;TPX.SG
+1720;Kyoto Financial Group;5844.T
+1721;Public Power;PU8.DU
+1722;InterContinental Hotels;IHG
+1722;Sasol;SASOF
+1725;Zhongji Innolight;300308.SZ
+1726;Datadog;DDOG
+1727;Sinotrans Ltd.;SIY.F
+1728;CoStar Group;RLG.F
+1729;Clal Insurance Enterprises;CLIS.TA
+1731;SBI Sumishin Net Bank;B0E.SG
+1732;Lotte Shopping;023530.KS
+1732;Medipal Holdings;MAHLY
+1734;Clorox;CLX
+1735;Taiwan Business Bank;2834.TW
+1735;Unicharm;UN4.F
+1737;BIM Birlesik Magazalar;BMBRF
+1738;Bank of Jiujiang;BJ8.F
+1739;BayWa;BYW6.VI
+1740;Hologic;HOLX
+1741;KION Group;KGXD.XC
+1742;Qingdao Rural Commercial Bank;002958.SZ
+1743;Chugin Financial Group;5832.T
+1745;Aramark;0AK.F
+1746;Orient Securities;501053.SS
+1746;Zscaler;ZS
+1748;Shimizu;XSZ.F
+1749;Taylor Morrison;THM.SG
+1750;Hygon Information Technology;688041.SS
+1750;Voestalpine;AT0000A3AA00.VI
+1752;Daishi Hokuetsu Financial Group;7327.T
+1753;Alnylam Pharmaceuticals;ALNY
+1753;Central Bank of India;CENTRALBK.NS
+1755;Bank of Lanzhou;001227.SZ
+1756;Ampol;AU0000088338.SG
+1756;Crown Holdings;CWN.F
+1758;Pentair;PNR
+1759;Bausch Health Companies;BHC
+1760;Eve Energy;ES
+1760;Zall Smart Commerce Group;2098.HK
+1762;HubSpot;HUBS
+1762;Permian Resources;PR
+1764;FIBI Holdings;FIBIH.TA
+1764;Prio;PRTH
+1766;Avnet;AVT
+1766;Domino's Pizza;DPZ
+1766;Grupo Elektra;GE7C.F
+1769;Oshkosh;OSK
+1771;Daito Trust Construction;DIFTY
+1771;Luzerner Kantonalbank;0QNU.L
+1773;Ryder System;R
+1774;Anhui Gujing Distillery;000596.SZ
+1774;Gunma Bank;5F0.F
+1774;Northern Star Resources;NST.AX
+1777;Saudi Investment Bank;1030.SR
+1778;F.N.B.;FN2.F
+1779;Microchip Technology;MCHP
+1780;77 Bank;8341.T
+1781;Yunnan Baiyao Group;000538.SZ
+1782;Commerce Bancshares;CB5.F
+1782;Elia System Operator;0NTU.IL
+1782;Keppel Ltd;KEP1.F
+1785;Mid-america Apartment Communities;MAA
+1786;Beijing Shougang;000959.SZ
+1786;EasyJet;EJT1.MU
+1788;Jointown Pharmaceutical Group;600998.SS
+1789;Goertek;002241.SZ
+1790;Alaska Air Group;ALK
+1791;UMB Financial;UMBF
+1792;Oi;OI
+1793;Bank of Xi'an;600928.SS
+1794;Zhejiang Chint Electrics;601877.SS
+1795;iM Financial Group;139130.KS
+1796;JB Financial Group;175330.KS
+1798;Bendigo & Adelaide Bank;BDJ.DU
+1799;CoreWeave;CRWV
+1800;Eastroc Beverage (Group);605499.SS
+1800;Uniqa;UQA.VI
+1803;Autoliv;ALV
+1804;Satellite Chemical;002648.SZ
+1805;Starwood Property Trust;STWD
+1806;Bank of Queensland;BXZ.F
+1806;Valley National Bancorp;VLY
+1808;Blom Bank;BMBZF
+1809;F5;FFIV
+1810;Basler Kantonalbank;0B8.F
+1810;Steris;STE
+1813;Almarai;2280.SR
+1813;Eicher Motors;EICHERMOT.NS
+1813;Parkland;PF6.F
+1816;SLM;SLM
+1817;AGC;AGCO
+1818;ELM;ELTTF
+1819;Weihai City Commercial Bank;8K0.F
+1820;Whirlpool;WHR
+1821;Inhibrx Biosciences;INBX
+1822;Aeroports de Paris;W7L.F
+1822;SiriusXM Holdings;SIRI
+1822;Sprouts Farmers Markets;SFM.MX
+1825;Olympus;OLY1.F
+1826;Asbury Automotive Group;ABG
+1827;First National Of Nebraska;FINN
+1827;Tongling Nonferrous Metals;000630.SZ
+1829;SGH;SGHC
+1830;LS Corp;006260.KS
+1831;Inventec;2356.TW
+1832;Iyogin Holdings;5830.T
+1833;Essential Utilities;WTRG
+1834;ARC Resources;ARX.TO
+1834;NH Investment & Securities;005940.KS
+1834;Viva Energy Group;2AH.F
+1837;MBH Bank Plc.;AMZN
+1838;Konami;KOA.F
+1838;Trade Desk;TTD
+1840;Beazley;2D7.F
+1841;Shanghai Tunnel Engineering;600820.SS
+1842;Kesko;KESKOB.HE
+1843;Airports of Thailand;NYV.F
+1844;Xiamen Bank;601187.SS
+1845;Celanese;CE
+1845;Tech Mahindra;TECHM.BO
+1847;BeiGene;6160.HK
+1848;Bank Of Gansu;2139.HK
+1849;China Mengniu Dairy;CIADY
+1850;Yara International;YARIY
+1851;Federal Bank;FEDS.L
+1852;Alfresa Holdings;ALFRY
+1853;SKF Group;STERV.HE
+1854;Talen Energy;TLN
+1855;Buzzi Unicem;UCM.BE
+1855;Prosperity Bancshares;PB
+1857;Hengyi Petrochemical;000703.SZ
+1858;Equatorial Energia;EQUEY
+1859;Cipla;CIPLA.NS
+1860;New World Development;NWDA.F
+1860;Shenzhou International Group Holdings;S6LA.F
+1862;Americanas;AMER3F.SA
+1863;FactSet Research Systems;FDS
+1864;Ricoh;RICO.L
+1865;Kimco Realty;KIM-PM
+1866;MasTec;MTZ
+1867;Solventum;KB7.F
+1868;Warner Music Group;WA4.MU
+1869;EMS-Chemie Holding;EMC1.F
+1870;Ag Anadolu Grubu Holding Anonim Sirketi;AGHOL.IS
+1871;Nippon Express Holdings;9147.T
+1872;Indorama Ventures;I93.F
+1873;Eternal;ETERNAL.NS
+1874;CP Axtra;CPAXT-R.BK
+1875;Digital China Group;000034.SZ
+1875;Haidilao International Holding;8HI.F
+1877;Webuild;WBDR.MI
+1879;Shandong Hi-Speed Road & Bridge Group;000498.SZ
+1880;Lion Finance Group;BGEOL.XC
+1881;KGHM Polska Miedz;KGH.WA
+1882;Wan Hai Lines;2615.TW
+1883;Navient;NAVI
+1884;DLF;DLF.NS
+1884;Jinshang Bank;2558.HK
+1887;San-In Godo Bank;SGDBF
+1888;Braskem;BRDA.F
+1889;TMX Group;9TX.F
+1890;Yunnan Yuntianhua;600096.SS
+1891;Pandora;3P7.F
+1892;Mercuries & Associates;2905.TW
+1893;Grupo Catalana Occidente;OCZA.F
+1894;Aozora Bank;8304.T
+1894;Manpower;MAN
+1896;Ningbo Jintian Copper (Group);601609.SS
+1897;Inchcape;IJCA.F
+1897;St. Galler Kantonalbank;GNBN.F
+1897;Zalando;ZAL.DE
+1900;Saipem;SPM.MI
+1901;Nitori Holdings;9843.T
+1902;Stora Enso;STE-A.ST
+1903;Aier Eye Hospital Group;300015.SZ
+1904;Yes Bank;YESBANK.NS
+1905;New Hope Liuhe;000876.SZ
+1906;Hyakugo Bank;8368.T
+1907;IHH Healthcare;IHHHF
+1907;Teleperformance;TEP.PA
+1909;Nova Ljubljanska Banka;NLB.IL
+1910;Huaibei Mining Holdings;600985.SS
+1911;AlRayan Bank;MARK.QA
+1912;Juroku Financial Group;7380.N
+1914;Celltrion;068760.KQ
+1915;Dentsu;DEN.F
+1916;Shiga Bank;8366.T
+1917;AltaGas;ALA.TO
+1918;Hulic;87W.F
+1919;First Quantum Minerals;FM.TO
+1919;Straumann Holding;QS51.F
+1921;Qinghai Salt Lake Industry;000792.SZ
+1922;Celestica;CLS
+1923;Bangchak;JAV2.F
+1923;DCI Indonesia;DCII.JK
+1925;Just Group;JR0.F
+1926;Delivery Hero;DLVHF
+1927;Graphic Packaging;4W8.F
+1928;SSAB;SSABBS.XC
+1930;Hanwa;002362.SZ
+1930;Wärtsilä;WRT1V.HE
+1932;Ubiquiti;UI
+1933;Bid;BIDU
+1934;Arab Banking;ADCB.AB
+1935;Ambuja Cements;AMBUJACEM.BO
+1935;China Fortune Land Development;600340.SS
+1935;Kingfisher;9700.F
+1935;Symrise;SY1.MU
+1939;SpareBank 1 SR-Bank;SBRKF
+1939;Sumec Corporation;600710.SS
+1942;Bolsa de Valores de Colombia;BVC.CL
+1942;Jio Financial Services;JIOFIN.NS
+1942;Tyler Technologies;TYL
+1945;Deutsche Pfandbriefbank;PBB.VI
+1946;Samsara;IOT
+1947;Elbit Systems;ESLT
+1947;W. P. Carey;WPC
+1949;GFL Environmental;GFL
+1949;Skechers USA;SKAA.SG
+1951;National Bank of Ras Al-Khaimah (P.S.C.);AMZN
+1951;RattanIndia Power;RTNPOWER.NS
+1953;China Gas Holdings;EBZ.F
+1953;Unisplendour;000938.SZ
+1955;Sichuan Biokin Pharmaceutical;688506.SS
+1955;Sigma Healthcare;SIG.XA
+1957;EFG International;E2S.F
+1957;Kohl's;KSS
+1959;CIFI Holdings Group;6CI.F
+1960;BXP;BXP
+1961;Goneo Group;603195.SS
+1962;Bank of Cyprus Holdings;BOCHGR.AT
+1962;Eva Airways;2618.TW
+1964;BEKB-BCBE;BEKN.SW
+1965;Alior Bank;A6O.F
+1966;Sime Darby;SMEBF
+1967;Liberty Media Corporation Series A Liberty Formula One;AMZN
+1968;Umicore;UMI.BR
+1969;AVIC Chengdu Aircraft;302132.SZ
+1969;China Resources Beer (Holdings);CHK0.F
+1971;Hertz Global Holdings;HTZ
+1972;Nexi S.p.A.;N0XA.F
+1973;Hancock Holding;HH1.SG
+1974;Accor;ACCYY
+1974;Suzuken;SZUKF
+1976;Logitech International;LOGI
+1976;Trent;STRNY
+1978;Reddit;RDDT
+1979;Nanto Bank;8367.T
+1980;NOV;NOV
+1981;Banco Davivienda;PFDAVVNDA.CL
+1982;LG Innotek Co.,;011070.KS
+1983;Aichi Financial Group;7389.T
+1984;Associated Banc-Corp;ASB
+1984;U-Haul Holding;AUK0.F
+1986;Hainan Airlines Holding;600221.SS
+1988;Bath & Body Works;BBWI
+1989;Berry Global Group;AMCCF
+1989;KakaoBank;323410.KS
+1991;Allegion;ALLE
+1992;Jiangxi Zhengbang Technology;002157.SZ
+1992;Ogaki Kyoritsu Bank;8361.T
+1995;Tokyo Kiraboshi Financial Group;7173.T
+1996;Dino Polska;5Y2.DU
+1997;China Aviation Oil;VZ8.F
+1998;Jet2;DG1.F
+1998;Keiyo Bank;8544.T
+1998;PT Lippo Karawaci;PTLKF
