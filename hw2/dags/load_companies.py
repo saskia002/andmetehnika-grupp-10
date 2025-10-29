@@ -6,8 +6,6 @@ from airflow.api.common.experimental.trigger_dag import trigger_dag
 from pymongo import MongoClient
 import pandas as pd
 
-COMPANIES_PATH = "/opt/airflow/companies/companies.csv"
-
 
 def load_companies_from_mongodb(**context):
     client = MongoClient("mongodb://root:root@mongodb:27017")
