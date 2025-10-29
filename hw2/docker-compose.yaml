@@ -65,6 +65,8 @@ services:
       AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@airflow-db:5432/airflow
       AIRFLOW__CORE__LOAD_EXAMPLES: "false"
       _PIP_ADDITIONAL_REQUIREMENTS: "apache-airflow-providers-mongo pymongo yfinance==0.2.66 multitasking==0.0.11"
+      CLICKHOUSE_USER: etl
+      CLICKHOUSE_PASSWORD: pass
     volumes:
       - ./dags:/opt/airflow/dags
       - ./logs:/opt/airflow/logs
@@ -99,6 +101,18 @@ services:
     depends_on:
       - airflow-db
     restart: "no"
-
+  clickhouse:
+    image: clickhouse/clickhouse-server:24.8
+    container_name: clickhouse
+    restart: always
+    ports:
+      - "8123:8123"  # HTTP
+      - "9000:9000"  # TCP
+    environment:
+      - CLICKHOUSE_DEFAULT_ACCESS_MANAGEMENT=1
+    volumes:
+      - clickhouse_data:/var/lib/clickhouse
+      - ./clickhouse/init:/docker-entrypoint-initdb.d:ro
 volumes:
     mongo_data:
+    clickhouse_data:

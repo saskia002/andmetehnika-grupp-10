@@ -58,3 +58,8 @@ Make sure your IDE is using the created virtual environment as runtime interpret
     ```bash
     pip freeze > requirements.txt
     ```
+4. Ingest data from MongoDB to ClickHouse
+
+   ```
+   python "hw2/clickhouse/ingest_from_mongo.py"
+    ```
