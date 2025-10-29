@@ -3,6 +3,7 @@ from pymongo import MongoClient
 import requests
 import json
 import os
+import argparse
 
 
 MONGO_URI = "mongodb://root:root@localhost:27017"
@@ -11,8 +12,8 @@ MONGO_COLLECTION = "companies"
 
 CLICKHOUSE_HOST = "http://localhost"
 CLICKHOUSE_PORT = 8123  # HTTP port
-CLICKHOUSE_DATABASE = "forbes_2000"
-CLICKHOUSE_TABLE = "companies"
+CLICKHOUSE_DATABASE = "bronze"
+CLICKHOUSE_TABLE = "companies_raw"
 
 CLICKHOUSE_USER = os.environ.get("CLICKHOUSE_USER", "etl")
 CLICKHOUSE_PASSWORD = os.environ.get("CLICKHOUSE_PASSWORD", "pass")
@@ -48,6 +49,23 @@ def ch_query(sql: str) -> None:
 	params = {"query": sql}
 	resp = requests.post(url, params=params, auth=_auth_tuple())
 	resp.raise_for_status()
+
+
+def truncate_table() -> None:
+	"""Truncate the table before inserting (full refresh mode)"""
+	sql = f"TRUNCATE TABLE IF EXISTS {CLICKHOUSE_DATABASE}.{CLICKHOUSE_TABLE}"
+	ch_query(sql)
+	print(f"Truncated {CLICKHOUSE_DATABASE}.{CLICKHOUSE_TABLE}")
+
+
+def delete_by_ranks(ranks: List[int]) -> None:
+	"""Delete specific ranks before re-inserting"""
+	if not ranks:
+		return
+	ranks_str = ",".join(str(r) for r in ranks)
+	sql = f"ALTER TABLE {CLICKHOUSE_DATABASE}.{CLICKHOUSE_TABLE} DELETE WHERE rank IN ({ranks_str})"
+	ch_query(sql)
+	print(f"Deleted {len(ranks)} existing records with matching ranks")
 
 
 def insert_json_each_row(rows: List[Dict[str, Any]]) -> None:
@@ -97,9 +115,40 @@ def upsert_into_clickhouse(rows: List[Dict[str, Any]]) -> None:
 
 
 def main() -> None:
+	parser = argparse.ArgumentParser(
+		description="Ingest company data from MongoDB to ClickHouse Bronze layer"
+	)
+	parser.add_argument(
+		"--truncate",
+		action="store_true",
+		help="Truncate table before inserting (full refresh - deletes all existing data)"
+	)
+	parser.add_argument(
+		"--force-deduplicate",
+		action="store_true",
+		help="Force immediate deduplication using OPTIMIZE TABLE (for ReplacingMergeTree)"
+	)
+	args = parser.parse_args()
+	
 	rows = fetch_companies_from_mongo()
 	print(f"Fetched {len(rows)} documents from MongoDB")
+	
+	# Handle truncate option
+	if args.truncate:
+		truncate_table()
+	
+	# Insert data
 	upsert_into_clickhouse(rows)
+	
+	# Force immediate deduplication if requested
+	if args.force_deduplicate:
+		print("Forcing deduplication...")
+		optimize_sql = f"OPTIMIZE TABLE {CLICKHOUSE_DATABASE}.{CLICKHOUSE_TABLE} FINAL"
+		ch_query(optimize_sql)
+		print("Deduplication complete")
+	else:
+		print("\nNote: ReplacingMergeTree will deduplicate automatically during merges.")
+		print("To force immediate deduplication, use --force-deduplicate flag.")
 
 
 if __name__ == "__main__":

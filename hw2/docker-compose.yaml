@@ -64,7 +64,7 @@ services:
       AIRFLOW__CORE__EXECUTOR: LocalExecutor
       AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@airflow-db:5432/airflow
       AIRFLOW__CORE__LOAD_EXAMPLES: "false"
-      _PIP_ADDITIONAL_REQUIREMENTS: "apache-airflow-providers-mongo pymongo yfinance==0.2.66 multitasking==0.0.11"
+      _PIP_ADDITIONAL_REQUIREMENTS: "apache-airflow-providers-mongo pymongo yfinance==0.2.66 multitasking==0.0.11 requests"
       CLICKHOUSE_USER: etl
       CLICKHOUSE_PASSWORD: pass
     volumes:
