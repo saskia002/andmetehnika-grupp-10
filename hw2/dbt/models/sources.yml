@@ -1,0 +1,68 @@
+# dbt/models/sources.yml
+version: 2
+
+sources:
+  - name: bronze
+    description: "Raw data from Bronze layer"
+    database: your_clickhouse_database_name  # replace with your ClickHouse DB name
+    schema: bronze
+    tables:
+      - name: companies_raw
+        description: "Raw company data from Forbes 2000"
+        columns:
+          - name: _ingested_at
+            description: "Ingestion timestamp"
+          - name: company
+            description: "Company name"
+          - name: ticker
+            description: "Ticker symbol"
+          - name: headquarters
+            description: "Headquarters location"
+          - name: industry
+            description: "Industry of the company"
+          - name: assets_in_millions
+            description: "Assets in millions"
+          - name: market_value_in_millions
+            description: "Market value in millions"
+          - name: profit_in_millions
+            description: "Profit in millions"
+          - name: sales_in_millions
+            description: "Sales in millions"
+          - name: rank
+            description: "Forbes rank"
+
+      - name: stocks_raw
+        description: "Raw stock data"
+        columns:
+          - name: _ingested_at
+            description: "Ingestion timestamp"
+          - name: ticker_symbol
+            description: "Ticker symbol"
+          - name: exchange
+            description: "Stock exchange"
+          - name: day_of_week
+            description: "Day of the week"
+          - name: trading_day
+            description: "Trading date"
+          - name: open_price
+            description: "Open price"
+          - name: close_price
+            description: "Close price"
+          - name: high_price
+            description: "High price"
+          - name: low_price
+            description: "Low price"
+          - name: market_cap
+            description: "Market capitalization"
+          - name: dividend
+            description: "Dividend amount"
+          - name: currency
+            description: "Currency of the stock price"
+          - name: quarter
+            description: "Quarter of the year"
+          - name: month
+            description: "Month"
+          - name: season
+            description: "Season"
+          - name: sector
+            description: "Sector"

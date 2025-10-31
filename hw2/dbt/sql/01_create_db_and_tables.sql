@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS Forbes_2000;
+-- DROP DATABASE IF EXISTS Forbes_2000;
 
-CREATE DATABASE Forbes_2000;
+CREATE DATABASE IF NOT EXISTS Forbes_2000;
 
 -- ========== Dimensions ==========
 CREATE TABLE Forbes_2000.DimDate(
@@ -28,10 +28,10 @@ CREATE TABLE Forbes_2000.DimCompany (
     ValidFrom       Date,   -- NEW FIELD compared to PR1: as we changes DimCompany to SDC2 then I add ValidFrom and ValidTo dates
     ValidTo         Date    -- NEW FIELD compares to PR1
 ) ENGINE = MergeTree
-ORDER BY (CustomerKey);
+ORDER BY (CompanyKey);
 
 -- Storing Ticker dimension
-CREATE TABLE Forbes2000.DimTicker (
+CREATE TABLE Forbes_2000.DimTicker (
     TickerKey       UInt32, -- Primary Key
     TickerSymbol    String,
     Exchange        String,
@@ -48,7 +48,7 @@ CREATE TABLE Forbes_2000.FactFinancials (
     CompanyKey      UInt64, -- Foreign key
     Year            UInt32, -- Foreign key - currently we have only 2025 because we use as data source Kaggle and it has only 2025 currently, but theoretically our schema allows to load also other values
     Sales           UInt64,
-    Profit          UInt64,
+    Profit          Int64,  -- this can also be negative value and thus UInt64 is not suitable as it allows only positive values
     Assets          UInt64,
     MarketValue     UInt64
 ) ENGINE = MergeTree
@@ -62,12 +62,12 @@ CREATE TABLE Forbes_2000.FactStock (
     CompanyKey      UInt64, -- Foreign key
     DateKey         UInt32, -- Foreign key
     TickerKey       UInt32, -- Foreign key
-    OpenPrice       UInt32,
-    ClosePrice      UInt32,
-    HighPrice       UInt32,
-    LowPrice        UInt32,
+    OpenPrice       Float64,
+    ClosePrice      Float64,
+    HighPrice       Float64,
+    LowPrice        Float64,
     MarketCap       UInt64,
-    Dividend        UInt64  -- we changed from boolean to float as we are a loading last divident amount paid 
+    Dividend        Float64  -- we changed from boolean to float as we are a loading last divident amount paid 
 ) ENGINE = MergeTree
 PARTITION BY toYYYYMM(FullDate)
 ORDER BY (FullDate, CompanyKey, TickerKey);

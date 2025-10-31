@@ -139,6 +139,65 @@ services:
         depends_on:
             - mongodb-init
 
+  # --- Airflow DB initialization & user setup ---
+  airflow-init:
+    image: apache/airflow:2.8.1
+    container_name: airflow-init
+    entrypoint: /bin/bash
+    command:
+      - -c
+      - |
+        airflow db init
+        airflow users create \
+          --username airflow \
+          --password airflow \
+          --firstname Admin \
+          --lastname User \
+          --role Admin \
+          --email admin@example.com
+    environment:
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@airflow-db:5432/airflow
+      _PIP_ADDITIONAL_REQUIREMENTS: "apache-airflow-providers-mongo pymongo yfinance==0.2.66 multitasking==0.0.11"
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+    depends_on:
+      - airflow-db
+    restart: "no"
+
+  # --- Clickhouse initialization & user setup ---
+  clickhouse:
+    image: clickhouse/clickhouse-server:24.8
+    container_name: clickhouse
+    restart: always
+    ports:
+      - "8123:8123"  # HTTP
+      - "9000:9000"  # TCP
+    environment:
+      - CLICKHOUSE_DEFAULT_ACCESS_MANAGEMENT=1
+    volumes:
+      - clickhouse_data:/var/lib/clickhouse
+      - ./clickhouse/init:/docker-entrypoint-initdb.d:ro
+
+
+  # --- dbt initialization & user setup ---
+  dbt:
+    # dbt container for building and testing ClickHouse models
+    build:
+      context: ./dbt-docker              # Build context is the current directory
+      dockerfile: Dockerfile   # Use the Dockerfile in this directory to build dbt image
+    container_name: dbt
+    depends_on:
+      - clickhouse      # Ensure ClickHouse starts before dbt
+    volumes:
+      - ./data:/var/lib/clickhouse # Shared folder for input files
+      - ./sql:/sql                                  # Shared SQL scripts
+      - ./mongo:/dbt                                  # Mount local dbt project directory
+    working_dir: /dbt          # Set dbt project directory as the working directory
+    tty: true                  # Keep container running for interactive dbt commands
+
+
 volumes:
     mongo_data:
     clickhouse_data:

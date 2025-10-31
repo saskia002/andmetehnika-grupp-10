@@ -1,11 +1,10 @@
 
 
 SELECT
-    TickerKey, -- Primary Key
-    TicketSymbol,
-    Exchange,
-    Class,
-    Currency,
-    ValidFrom,   -- NEW FIELD compared to PR1: as we changes DimCompany to SDC2 then I add ValidFrom and ValidTo dates
-    ValidTo   -- NEW FIELD compares to PR1
-FROM  file('/var/lib/clickhouse/DimTicker.csv')
+    abs(mod(cast(hash(ticker_symbol) as bigint), 1000000000)) as TickerKey, -- Generated Primary Key
+    ticker_symbol as TickerSymbol,
+    exchange as Exchange,
+    Class, -- ei näe allikas
+    currency as Currency
+FROM  {{ source('bronze', 'stocks_raw') }}
+WHERE ticker_symbol IS NOT NULL;

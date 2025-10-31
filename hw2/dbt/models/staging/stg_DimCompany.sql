@@ -1,11 +1,9 @@
 
 
 SELECT
-    CompanyKey,  -- Primary Key - should not change whatever happens to company
-    CompanyName,  
-    Headquarters,
-    Industry,
-    Sector,
-    ValidFrom,   -- NEW FIELD compared to PR1: as we changes DimCompany to SDC2 then I add ValidFrom and ValidTo dates
-    ValidTo      -- NEW FIELD compares to PR1
-FROM file('/var/lib/clickhouse/DimCompany.csv')
+    abs(mod(cast(hash(company) as bigint), 1000000000)) as CompanyKey,  -- Primary Key - unfortunately we are not able to load it from source and thus need to generate from name. should not change whatever happens to company
+    company as CompanyName,  
+    headquarters as Headquarters,
+    industry as Industry,
+    Sector --TOBEDELETED IF not existing
+FROM bronze.companies_raw;
