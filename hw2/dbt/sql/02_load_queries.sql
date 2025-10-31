@@ -19,14 +19,14 @@ FROM file('dim_ticker.csv', 'CSVWithNames');
 -- ========== Fact Tables ==========
 
 INSERT INTO Forbes_2000.FactFinancials
-SELECT toUInt64(CompanyKey), toUInt32(Year), toUInt64(Sales), toUInt64(Profit),
+SELECT toUInt64(CompanyKey), toUInt32(Year), toUInt64(Sales), toInt64(Profit),
        toUInt64(Assets), toUInt64(MarketValue)
 FROM file('fact_financials.csv', 'CSVWithNames');
 
 INSERT INTO Forbes_2000.FactStock
 SELECT toUInt64(CompanyKey), toUInt32(DateKey), toUInt32(TickerKey), toUInt32(OpenPrice),
        toUInt32(ClosePrice), toUInt32(HighPrice), toUInt32(LowPrice),
-       toUInt64(MarketCap), toUInt8(Dividend)
+       toUInt64(MarketCap), toUInt32(Dividend)
 FROM file('fact_stock.csv', 'CSVWithNames');
 
 INSERT INTO Forbes_2000.FactForbesRank
