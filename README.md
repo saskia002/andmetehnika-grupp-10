@@ -65,6 +65,7 @@ Make sure your IDE is using the created virtual environment as runtime interpret
    ```
 
 5. Connect to ClickHouse
+6. test
 
    ```
    docker exec -it clickhouse clickhouse-client
