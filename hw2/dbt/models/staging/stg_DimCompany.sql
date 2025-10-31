@@ -6,4 +6,4 @@ SELECT
     headquarters as Headquarters,
     industry as Industry,
     Sector --TOBEDELETED IF not existing
-FROM bronze.companies_raw;
+FROM {{ source('bronze', 'companies_raw') }};
