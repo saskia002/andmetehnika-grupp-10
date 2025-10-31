@@ -1,8 +1,5 @@
-version: "3.9"
-
 services:
-  # --- Airflow metadata database ---
-  mongodb:
+    mongodb:
         image: mongo:8
         container_name: mongodb
         restart: always
@@ -13,67 +10,134 @@ services:
             MONGO_INITDB_ROOT_PASSWORD: root
         volumes:
             - mongo_data:/data/db
-    
-  airflow-db:
-    container_name: airflow-db
-    image: postgres:16.4
-    environment:
-      POSTGRES_USER: airflow
-      POSTGRES_PASSWORD: airflow
-      POSTGRES_DB: airflow
-      PGUSER: airflow
-      PGPASSWORD: airflow
-      PGDATABASE: airflow
-    ports:
-      - "5432:5432"
-    volumes:
-      - ./pgdata_airflow:/var/lib/postgresql/data
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U airflow"]
-      interval: 10s
-      retries: 5
-    restart: always
 
-  # --- Airflow Webserver ---
-  airflow-webserver:
-    image: apache/airflow:2.8.1
-    container_name: airflow-webserver
-    command: webserver
-    environment:
-      AIRFLOW__CORE__EXECUTOR: LocalExecutor
-      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@airflow-db:5432/airflow
-      AIRFLOW__CORE__LOAD_EXAMPLES: "false"
-      AIRFLOW__API__AUTH_BACKENDS: "airflow.api.auth.backend.basic_auth"
-      _PIP_ADDITIONAL_REQUIREMENTS: "apache-airflow-providers-mongo pymongo yfinance==0.2.66 multitasking==0.0.11"
-    ports:
-      - "8080:8080"
-    volumes:
-      - ./dags:/opt/airflow/dags
-      - ./logs:/opt/airflow/logs
-    depends_on:
-      - airflow-init
-      - airflow-db
-    restart: always
+    mongodb-init:
+        image: python:3.12
+        container_name: mongodb-init
+        depends_on:
+            - mongodb
+        volumes:
+            - ./mongo:/mongo # contains init.py, seed.py
+            - ../requirements.txt:/requirements.txt:ro
+        working_dir: /mongo
+        command: >
+            bash -c "
+              echo 'Installing dependencies...' &&
+              pip install -r /requirements.txt &&
+              echo 'Waiting for MongoDB...' &&
+              sleep 10 &&
+              python init.py &&
+              python seed.py
+            "
 
-  # --- Airflow Scheduler ---
-  airflow-scheduler:
-    image: apache/airflow:2.8.1
-    container_name: airflow-scheduler
-    command: scheduler
-    environment:
-      AIRFLOW__CORE__EXECUTOR: LocalExecutor
-      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@airflow-db:5432/airflow
-      AIRFLOW__CORE__LOAD_EXAMPLES: "false"
-      _PIP_ADDITIONAL_REQUIREMENTS: "apache-airflow-providers-mongo pymongo yfinance==0.2.66 multitasking==0.0.11 requests"
-      CLICKHOUSE_USER: etl
-      CLICKHOUSE_PASSWORD: pass
-    volumes:
-      - ./dags:/opt/airflow/dags
-      - ./logs:/opt/airflow/logs
-    depends_on:
-      - airflow-init
-      - airflow-db
-    restart: always
+    airflow-db:
+        container_name: airflow-db
+        image: postgres:16.4
+        depends_on:
+            - mongodb-init
+        environment:
+            POSTGRES_USER: airflow
+            POSTGRES_PASSWORD: airflow
+            POSTGRES_DB: airflow
+            PGUSER: airflow
+            PGPASSWORD: airflow
+            PGDATABASE: airflow
+        ports:
+            - "5432:5432"
+        volumes:
+            - ./pgdata_airflow:/var/lib/postgresql/data
+        healthcheck:
+            test: ["CMD-SHELL", "pg_isready -U airflow"]
+            interval: 10s
+            retries: 5
+        restart: always
+
+    # --- Airflow Webserver ---
+    airflow-webserver:
+        image: apache/airflow:2.8.1
+        container_name: airflow-webserver
+        command: webserver
+        environment:
+            AIRFLOW__CORE__EXECUTOR: LocalExecutor
+            AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@airflow-db:5432/airflow
+            AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+            AIRFLOW__API__AUTH_BACKENDS: "airflow.api.auth.backend.basic_auth"
+            _PIP_ADDITIONAL_REQUIREMENTS: "apache-airflow-providers-mongo pymongo yfinance==0.2.66 multitasking==0.0.11"
+        ports:
+            - "8080:8080"
+        volumes:
+            - ./dags:/opt/airflow/dags
+            - ./logs:/opt/airflow/logs
+        depends_on:
+            - airflow-init
+            - airflow-db
+            - mongodb-init
+        restart: always
+
+    # --- Airflow Scheduler ---
+    airflow-scheduler:
+        image: apache/airflow:2.8.1
+        container_name: airflow-scheduler
+        command: scheduler
+
+        environment:
+            AIRFLOW__CORE__EXECUTOR: LocalExecutor
+            AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@airflow-db:5432/airflow
+            AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+            _PIP_ADDITIONAL_REQUIREMENTS: "apache-airflow-providers-mongo pymongo yfinance==0.2.66 multitasking==0.0.11 requests"
+            CLICKHOUSE_USER: etl
+            CLICKHOUSE_PASSWORD: pass
+        volumes:
+            - ./dags:/opt/airflow/dags
+            - ./logs:/opt/airflow/logs
+        depends_on:
+            - airflow-init
+            - airflow-db
+            - mongodb-init
+        restart: always
+
+    # --- Airflow DB initialization & user setup ---
+    airflow-init:
+        image: apache/airflow:2.8.1
+        container_name: airflow-init
+        entrypoint: /bin/bash
+        command:
+            - -c
+            - |
+                airflow db init
+                airflow users create \
+                  --username airflow \
+                  --password airflow \
+                  --firstname Admin \
+                  --lastname User \
+                  --role Admin \
+                  --email admin@example.com
+        environment:
+            AIRFLOW__CORE__EXECUTOR: LocalExecutor
+            AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@airflow-db:5432/airflow
+            _PIP_ADDITIONAL_REQUIREMENTS: "apache-airflow-providers-mongo pymongo yfinance==0.2.66 multitasking==0.0.11"
+        volumes:
+            - ./dags:/opt/airflow/dags
+            - ./logs:/opt/airflow/logs
+        depends_on:
+            - airflow-db
+            - mongodb-init
+        restart: "no"
+
+    clickhouse:
+        image: clickhouse/clickhouse-server:24.8
+        container_name: clickhouse
+        restart: always
+        ports:
+            - "8123:8123" # HTTP
+            - "9000:9000" # TCP
+        environment:
+            - CLICKHOUSE_DEFAULT_ACCESS_MANAGEMENT=1
+        volumes:
+            - clickhouse_data:/var/lib/clickhouse
+            - ./clickhouse/init:/docker-entrypoint-initdb.d:ro
+        depends_on:
+            - mongodb-init
 
   # --- Airflow DB initialization & user setup ---
   airflow-init:

@@ -1,4 +1,5 @@
 from configparser import ConfigParser
+from connection import get_mongo_url
 from pymongo import MongoClient
 from pandas import DataFrame
 from pprint import pprint
@@ -15,10 +16,11 @@ config_path = os.path.join(
 )
 config.read(config_path)
 
-FORBES_2000_CSV = os.path.join(os.path.dirname(__file__), "./data/forbes_2000_companies_2025.csv")
-TICKER_CSV = os.path.join(os.path.dirname(__file__), "./data/ticker_symbols.csv")
-TICKER_NOT_FOUND_CSV = os.path.join(os.path.dirname(__file__), "./data/ticker_not_found.csv")
-MONGO_UPLOAD_FAILED_CSV = os.path.join(os.path.dirname(__file__), "./data/mongo_upload_failed.csv")
+FORBES_2000_CSV: str = os.path.join(os.path.dirname(__file__), "./data/forbes_2000_companies_2025.csv")
+TICKER_CSV: str = os.path.join(os.path.dirname(__file__), "./data/ticker_symbols.csv")
+TICKER_NOT_FOUND_CSV: str = os.path.join(os.path.dirname(__file__), "./data/ticker_not_found.csv")
+MONGO_UPLOAD_FAILED_CSV: str = os.path.join(os.path.dirname(__file__), "./data/mongo_upload_failed.csv")
+FINANCIAL_YEAR: int = int(FORBES_2000_CSV.split("_")[-1].split(".")[0])
 
 
 def fix_amount(value: str) -> float:
@@ -30,11 +32,12 @@ def fix_amount(value: str) -> float:
 
 	return float(value.replace(",", "").replace("$", "").strip()) * 1000
 
+
 print("\nStarting MongoDB seeding script\n")
 print("Connecting to database")
 
 client: MongoClient = MongoClient(
-	config.get("mongo", "url"),
+	get_mongo_url(config),
 	username=config.get("mongo", "username"),
 	password=config.get("mongo", "password")
 )
@@ -102,6 +105,7 @@ for _, row in tqdm(df.iterrows(), total=len(df), desc="Inserting companies into 
 		for key, value in row.items()
 	}
 
+
 	# Rank;Company;Headquarters;Industry;Sales ($B);Profit ($B);Assets ($B);Market Value ($B)
 	# + Ticker
 	try:
@@ -115,6 +119,7 @@ for _, row in tqdm(df.iterrows(), total=len(df), desc="Inserting companies into 
 			"profit_in_millions":  		fix_amount(row["Profit ($B)"]),
 			"assets_in_millions":  		fix_amount(row["Assets ($B)"]),
 			"market_value_in_millions": fix_amount(row["Market Value ($B)"]),
+			"financial_year": 			FINANCIAL_YEAR,
 
 		}
 	except ValueError as e:
