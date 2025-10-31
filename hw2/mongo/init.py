@@ -1,5 +1,6 @@
 from configparser import ConfigParser
 from pymongo import MongoClient
+from connection import get_mongo_url
 import os
 
 config = ConfigParser()
@@ -14,7 +15,7 @@ print("\nStarting MongoDB initialization script\n")
 print("Creating database and collection")
 
 client: MongoClient = MongoClient(
-	config.get("mongo", "url"),
+	get_mongo_url(config),
 	username=config.get("mongo", "username"),
 	password=config.get("mongo", "password")
 )
