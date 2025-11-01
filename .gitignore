@@ -207,8 +207,8 @@ marimo/_lsp/
 __marimo__/
 
 
-hw2/pgdata_airflow/
-hw2/--port
-hw2/logs
+**/pgdata_airflow/
+**/--port
+**/logs/
 .DS_Store
 .textClipping
