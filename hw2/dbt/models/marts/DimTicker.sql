@@ -1,11 +1,16 @@
 
+{{ config(
+    materialized='table',
+    schema='gold'
+) }}
 
 SELECT
     TickerKey, -- Primary Key
-    TicketSymbol,
+    TickerSymbol,
     Exchange,
     Class,
     Currency,
-    ValidFrom,   -- NEW FIELD compared to PR1: as we changes DimCompany to SDC2 then I add ValidFrom and ValidTo dates
-    ValidTo   -- NEW FIELD compares to PR1
-FROM {{ ref('stg_DimTicket') }}
+    Sector,
+    dbt_valid_from AS ValidFrom,    -- NEW FIELD compared to PR1: as we changes DimCompany to SDC2 then I add ValidFrom and ValidTo dates
+    dbt_valid_to   AS ValidTo       -- NEW FIELD compares to PR1
+FROM {{ ref('DimTicker_snapshot') }}

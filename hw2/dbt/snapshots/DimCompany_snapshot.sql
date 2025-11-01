@@ -1,14 +1,17 @@
 {% snapshot DimCompany_snapshot %}
 {{ config(
+    target_schema='snapshots',
     unique_key='CompanyKey',
     strategy='check',
-    check_cols=['CompanyName', 'Industry','Headquarters','Sector']
+    check_cols=['CompanyName', 'Headquarters', 'Industry', 'Sector'] 
 ) }}
 
 SELECT
+    CompanyKey,
     CompanyName,
     Headquarters,
     Industry,
-    Sector
-FROM {{ ref('DimCompany') }}
+    Sector,
+    _load_datetime
+FROM {{ ref('stg_DimCompany') }}
 {% endsnapshot %}

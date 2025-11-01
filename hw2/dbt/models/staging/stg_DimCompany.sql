@@ -1,11 +1,14 @@
 
+{{ config(
+    materialized='table',
+    schema='silver'
+) }}
 
 SELECT
-    CompanyKey,  -- Primary Key - should not change whatever happens to company
-    CompanyName,  
-    Headquarters,
-    Industry,
-    Sector,
-    ValidFrom,   -- NEW FIELD compared to PR1: as we changes DimCompany to SDC2 then I add ValidFrom and ValidTo dates
-    ValidTo      -- NEW FIELD compares to PR1
-FROM file('/var/lib/clickhouse/DimCompany.csv')
+    CAST(xxHash64(concat(company,headquarters)) AS UInt32) AS CompanyKey,  -- Primary Key
+    CAST(company AS String) AS CompanyName,
+    CAST(headquarters AS String) AS Headquarters,
+    CAST(industry AS String) AS Industry,
+    CAST('sector' AS String) AS Sector,  -- optional, can drop later if not needed
+    CAST(_ingested_at AS DateTime) AS _load_datetime
+FROM {{ source('bronze', 'companies_raw') }}

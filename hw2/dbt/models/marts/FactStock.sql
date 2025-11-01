@@ -1,3 +1,9 @@
+
+{{ config(
+    materialized='table',
+    schema='gold'
+) }}
+
 SELECT
     *
-FROM {{ ref('stg_FactSales') }}
+FROM {{ ref('stg_FactStock') }}

@@ -139,6 +139,21 @@ services:
         depends_on:
             - mongodb-init
 
+    # --- dbt initialization & user setup ---
+    dbt:
+        # dbt container for building and testing ClickHouse models
+        build:
+            context: ./dbt              # Build context is the current directory
+            dockerfile: Dockerfile   # Use the Dockerfile in this directory to build dbt image
+        container_name: dbt
+        depends_on:
+            - clickhouse      # Ensure ClickHouse starts before dbt
+        volumes:
+            - ./dbt:/dbt                                  # Mount local dbt project directory
+        working_dir: /dbt          # Set dbt project directory as the working directory
+        tty: true                  # Keep container running for interactive dbt commands
+
+
 volumes:
     mongo_data:
     clickhouse_data:
