@@ -210,5 +210,5 @@ __marimo__/
 **/pgdata_airflow/
 **/--port
 **/logs/
-.DS_Store
+**/.DS_Store
 .textClipping
