@@ -1,9 +1,16 @@
 
+
+{{ config(
+    materialized='table',
+    schema='silver'
+) }}
+
 SELECT
-    abs(mod(cast(hash(company) as bigint), 1000000000)) AS CompanyKey,  -- primary key
-    year AS Year,                          -- currently only 2024 data in source, but later we could load other years as well
-    sales_in_millions AS Sales,
-    profit_in_millions AS Profit,
-    assets_in_millions AS Assets,
-    market_value_in_millions AS MarketValue
-FROM {{ source('bronze', 'companies_raw') }};
+    CAST(xxHash64(concat(company,headquarters)) AS UInt32)  AS CompanyKey,  -- surrogate primary key
+    CAST('2025' AS UInt32) AS Year,                                                       -- year as UInt32
+    CAST(sales_in_millions AS UInt64) AS Sales,                                         -- sales as UInt64
+    CAST(profit_in_millions AS Int64) AS Profit,                                        -- profit can be negative
+    CAST(assets_in_millions AS UInt64) AS Assets,
+    CAST(market_value_in_millions AS UInt64) AS MarketValue
+FROM {{ source('bronze', 'companies_raw') }}
+WHERE company IS NOT NULL

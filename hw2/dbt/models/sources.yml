@@ -4,7 +4,11 @@ version: 2
 sources:
   - name: bronze
     description: "Raw data from Bronze layer"
+<<<<<<< HEAD
     database: your_clickhouse_database_name  # replace with your ClickHouse DB name
+=======
+    database: bronze
+>>>>>>> dbt
     schema: bronze
     tables:
       - name: companies_raw

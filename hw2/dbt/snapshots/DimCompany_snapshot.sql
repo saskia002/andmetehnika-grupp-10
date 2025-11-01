@@ -1,9 +1,9 @@
 {% snapshot DimCompany_snapshot %}
 {{ config(
-    target_schema='forbes_2000',
+    target_schema='snapshots',
     unique_key='CompanyKey',
     strategy='check',
-    check_cols=['CompanyName', 'Headquarters', 'Industry', 'Sector'] -- unfortuantely we had to generate companykey from name and thus we cannot really catch name changes
+    check_cols=['CompanyName', 'Headquarters', 'Industry', 'Sector'] 
 ) }}
 
 SELECT

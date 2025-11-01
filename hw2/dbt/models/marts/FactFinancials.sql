@@ -1,9 +1,9 @@
 
 {{ config(
     materialized='table',
-    schema='Forbes_2000'
+    schema='gold'
 ) }}
 
 SELECT
     *
-FROM {{ ref('stg_FactSales') }}
+FROM {{ ref('stg_FactFinancials') }}
