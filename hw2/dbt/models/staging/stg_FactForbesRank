@@ -1,8 +1,0 @@
-
-
-SELECT
-    abs(mod(cast(hash(concat(toString(toYear(now())), company)) AS bigint), 1000000000)) AS ForbesRankKey,  -- temporary key
-    abs(mod(cast(hash(company) as bigint), 1000000000)) AS CompanyKey,    -- temporary key
-    toUInt32(toYear(now())) AS Year,
-    rank AS ForbesRank
-FROM bronze.companies_raw;

@@ -1,7 +1,7 @@
 
 {{ config(
     materialized='table',
-    schema='Forbes_2000'
+    schema='gold'
 ) }}
 
 SELECT

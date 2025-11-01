@@ -1,20 +1,24 @@
 
+{{ config(
+    materialized='table',
+    schema='silver'
+) }}
 
 SELECT
-    toUInt32(Year*10000 + Month*100 + Day) AS DateKey,
-    TradingDate,
-    Year,
-    Month,
-    Day,
-    Quarter
+    CAST(toUInt32(Year*10000 + Month*100 + Day) AS UInt32) AS DateKey,
+    CAST(TradingDate AS Date) AS TradingDate,
+    CAST(Year AS UInt32) AS Year,
+    CAST(Month AS UInt32) AS Month,
+    CAST(Day AS UInt32) AS Day,
+    CAST(Quarter AS UInt32) AS Quarter
 FROM 
 (
     SELECT DISTINCT
-        trading_day AS TradingDate,
-        toYear(trading_day) AS Year,
-        toMonth(trading_day) AS Month,
-        toDayOfMonth(trading_day) AS Day,
-        toQuarter(trading_day) AS Quarter
-    FROM bronze.stocks_raw
-);
+        CAST(trading_day AS Date) AS TradingDate,
+        CAST(toYear(trading_day) AS UInt32) AS Year,
+        CAST(toMonth(trading_day) AS UInt32) AS Month,
+        CAST(toDayOfMonth(trading_day) AS UInt32) AS Day,
+        CAST(toQuarter(trading_day) AS UInt32) AS Quarter
+    FROM {{ source('bronze', 'stocks_raw') }}
+)
 

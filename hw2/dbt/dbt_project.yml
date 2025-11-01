@@ -7,7 +7,7 @@ config-version: 2
 profile: 'clickhouse_profile'  # This should match your profile name in profiles.yml
 
 # Folder configurations
-source-paths: ["models"]
+model-paths: ["models"]
 analysis-paths: ["analysis"]
 test-paths: ["tests"]
 data-paths: ["data"]
@@ -22,7 +22,7 @@ clean-targets:
 # Model configurations
 models:
   staging:
-    +schema: "staging"        # staging tables
+    +schema: "silver"        # staging tables
     +materialized: table      # default materialization for staging
   marts:
     +schema: "Forbes_2000"   # gold layer tables
