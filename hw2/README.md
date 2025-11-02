@@ -57,6 +57,7 @@ Daily at 22:00 UTC
 │  (Fetch data from yfinance,  │
 │  loads data into ClickHouse) │
 └──────────────────────────────┘
+```
 </pre>
 
 ### Overview
