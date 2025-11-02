@@ -24,9 +24,8 @@
 
         5.1.1. Uncomment this line in plugins/tasks/fetch_yfinance.py file inside the fetch_stock_info() function
 
-            ```bash
-            df = df.iloc[:250]
-            ```
+            # df = df.iloc[:250]
+
         
     5.2. Open Airflow on http://localhost:8080/home
 
@@ -42,7 +41,8 @@
 
 ## Airflow
 
-Daily at 22:00 UTC
+
+<pre>Daily at 22:00 UTC
 ┌─────────────────────────────┐
 │     load_companies_dag      │
 │  (Loads data from MongoDB)  │
@@ -57,7 +57,7 @@ Daily at 22:00 UTC
 │  (Fetch data from yfinance,  │
 │  loads data into ClickHouse) │
 └──────────────────────────────┘
-
+</pre>
 
 ## Example analytical queries
 
