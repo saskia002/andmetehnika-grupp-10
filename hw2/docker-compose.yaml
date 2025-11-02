@@ -68,6 +68,7 @@ services:
         volumes:
             - ./dags:/opt/airflow/dags
             - ./logs:/opt/airflow/logs
+            - ./plugins:/opt/airflow/plugins
             - /var/run/docker.sock:/var/run/docker.sock            
         depends_on:
             - airflow-init
@@ -91,6 +92,7 @@ services:
         volumes:
             - ./dags:/opt/airflow/dags
             - ./logs:/opt/airflow/logs
+            - ./plugins:/opt/airflow/plugins
             - /var/run/docker.sock:/var/run/docker.sock
         depends_on:
             - airflow-init
@@ -121,6 +123,7 @@ services:
         volumes:
             - ./dags:/opt/airflow/dags
             - ./logs:/opt/airflow/logs
+            - ./plugins:/opt/airflow/plugins
         depends_on:
             - airflow-db
             - mongodb-init
