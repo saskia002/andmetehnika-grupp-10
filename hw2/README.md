@@ -46,6 +46,9 @@ Daily at 22:00 UTC
 ┌─────────────────────────────┐
 │     load_companies_dag      │
 │  (Loads data from MongoDB)  │
+│  (insert_companies_to_bronze│
+│   loads data into the bronze│
+│   layer)                    │ 
 └─────────────┬───────────────┘
               │ 
               │ Trigger next DAG
@@ -55,7 +58,22 @@ Daily at 22:00 UTC
 ┌──────────────────────────────┐
 │      fetch_yfinance_dag      │
 │  (Fetch data from yfinance,  │
-│  loads data into ClickHouse) │
+│  loads data into ClickHouse, │
+│  inserts stocks data to      │
+│   bronze layer)              │
+└──────────────────────────────┘
+              │ 
+              │ 
+              │ 
+              │ 
+              ▼
+┌──────────────────────────────┐
+│    run_dbt_transformations   │
+│  (create dbt snapshots,      │
+│  tranform data from Bronze   │
+│   to Silver(staging)         │
+│   to Gold(Marts)             │
+│   run dbt tests).            │
 └──────────────────────────────┘
 ```
 </pre>
@@ -292,9 +310,38 @@ LIMIT 20;
     └──────────────────────────────────┴───────────────┘
 ```
 **6. Which industry among Forbes 2000 has had the highest annual increase in stock market price based on average y-o-y growth of closing price?**
-
-  The query is not tested as there is not enough data to run the query. We do not have data over multiple years as of today.
-
+  This query does not have an output as we do not have enough data yet to test it.
+  
+```
+WITH current_prices AS (
+    -- Get today's stock prices (max date)
+    SELECT 
+        fs.CompanyKey,
+        c.Industry,
+        fs.ClosePrice as current_price,
+        fs.TradingDate
+    FROM FactStock fs
+    JOIN DimCompany c ON fs.CompanyKey = c.CompanyKey
+    WHERE fs.TradingDate = (SELECT MAX(d.TradingDate) FROM DimDate d)
+),
+prior_year_prices AS (
+    -- Get stock prices from November 2, 2024
+    SELECT 
+        fs.CompanyKey,
+        fs.ClosePrice as prior_price
+    FROM FactStock fs
+    WHERE fs.TradingDate = (SELECT MAX(d.TradingDate) - INTERVAL '1 year' FROM DimDate d)
+)
+SELECT 
+    cp.Industry,
+    AVG(((cp.current_price - pp.prior_price) / pp.prior_price) * 100) as avg_yoy_growth_pct,
+    COUNT(DISTINCT cp.CompanyKey) as company_count
+FROM current_prices cp
+JOIN prior_year_prices pp ON cp.CompanyKey = pp.CompanyKey
+GROUP BY cp.Industry
+ORDER BY avg_yoy_growth_pct DESC
+LIMIT 10;
+```
 ## Troubleshooting
 
 If for some reason airflow-webserver doesn't come up when running docker, try starting airflow-init again and wait for webserver to come up (takes ~1 minute).

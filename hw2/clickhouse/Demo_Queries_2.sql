@@ -125,43 +125,32 @@ LIMIT 20;
 
 --Which industry among Forbes 2000 has had the highest annual increase in stock market price based on average y-o-y growth of closing price?
 --!!! Not yet tested due to lack of data !!!
--- TBD
 
-WITH LatestDate AS (
-    SELECT max(TradingDate) AS as_of_date, max(TradingDate)-INTERVAL '1 year', DateKey
-    FROM gold.DimDate GROUP BY TradingDate, DateKey
-),
-YearlyAvg AS (
-    SELECT
-        MAX(CASE WHEN TradingDate = ld.as_of_date THEN ClosePrice END) AS closing_price_yesterday,
-        MAX(CASE WHEN TradingDate = ld.as_of_date - INTERVAL '1 year' THEN ClosePrice END) AS closing_price_last_year
-    FROM FactStock fs 
-    OUTER JOIN LatestDate ld ON ld.DateKey = fs.DateKey
-    WHERE (fs.TradingDate = OR fs.TradingDate = )
-),
-YoYGrowth AS (
+WITH current_prices AS (
+    -- Get today's stock prices (max date)
     SELECT 
-        ya_one.Industry,
-        ya_one.Year,
-        (ya_one.avg_close - ya_two.avg_close) / ya_two.avg_close AS yoy_growth
-    FROM YearlyAvg ya_one
-    OUTER JOIN YearlyAvg ya_two ON ya_one.CompanyKey = ya_two.CompanyKey AND ya_one.Year = ya_two.Year + 1
-    JOIN LatestDate lt ON ya_one.TradingDate = lt.TradingDate
-    WHERE ya_two.avg_close > 0 AND ya_one.TradingDate = toYear(lt.as_of_date)
+        fs.CompanyKey,
+        c.Industry,
+        fs.ClosePrice as current_price,
+        fs.TradingDate
+    FROM FactStock fs
+    JOIN DimCompany c ON fs.CompanyKey = c.CompanyKey
+    WHERE fs.TradingDate = (SELECT MAX(d.TradingDate) FROM DimDate d)
 ),
-IndustryGrowth AS (
+prior_year_prices AS (
+    -- Get stock prices from November 2, 2024
     SELECT 
-        Industry,
-        AVG(yoy_growth) AS avg_yoy_growth
-    FROM YoYGrowth
-    GROUP BY Industry
-    HAVING count(*) >= 1
+        fs.CompanyKey,
+        fs.ClosePrice as prior_price
+    FROM FactStock fs
+    WHERE fs.TradingDate = (SELECT MAX(d.TradingDate) - INTERVAL '1 year' FROM DimDate d)
 )
 SELECT 
-    ld.as_of_date,
-    ig.Industry,
-    round(ig.avg_yoy_growth * 100, 2) AS avg_yoy_growth_pct
-FROM LatestDate ld
-CROSS JOIN IndustryGrowth ig
-ORDER BY ig.avg_yoy_growth DESC
+    cp.Industry,
+    AVG(((cp.current_price - pp.prior_price) / pp.prior_price) * 100) as avg_yoy_growth_pct,
+    COUNT(DISTINCT cp.CompanyKey) as company_count
+FROM current_prices cp
+JOIN prior_year_prices pp ON cp.CompanyKey = pp.CompanyKey
+GROUP BY cp.Industry
+ORDER BY avg_yoy_growth_pct DESC
 LIMIT 10;
