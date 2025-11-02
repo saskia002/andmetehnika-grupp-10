@@ -25,7 +25,7 @@ models:
     +schema: "silver"        # staging tables
     +materialized: table      # default materialization for staging
   marts:
-    +schema: "Forbes_2000"   # gold layer tables
+    +schema: "gold"   # gold layer tables
     +materialized: table      # default materialization for gold
   snapshots:
     +schema: "snapshots"      # snapshots for SCD2

@@ -1,5 +1,6 @@
 from airflow import DAG
 from airflow.operators.python import PythonOperator
+from airflow.operators.trigger_dagrun import TriggerDagRunOperator
 from datetime import datetime
 import yfinance as yf
 import pandas as pd
@@ -180,3 +181,13 @@ with DAG(
         python_callable=fetch_stock_info,
         provide_context=True
     )
+    
+    # Trigger dbt transformations after stocks are loaded
+    trigger_dbt = TriggerDagRunOperator(
+        task_id="trigger_dbt_transformations",
+        trigger_dag_id="run_dbt_transformations",
+        wait_for_completion=True,
+        poke_interval=30
+    )
+    
+    fetch_task >> trigger_dbt

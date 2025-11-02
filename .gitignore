@@ -208,7 +208,20 @@ __marimo__/
 
 
 **/pgdata_airflow/
-**/--port
+**/clickhouse_data/
+**/mongo_data/
+
 **/logs/
-.DS_Store
+**/--port
+
+**/dbt/target/
+**/dbt/dbt_packages/
+**/dbt/.dbt/
+**/dbt/logs/
+
+**/.DS_Store
 .textClipping
+
+**/.env.local
+**/secrets/
+**/*.secret

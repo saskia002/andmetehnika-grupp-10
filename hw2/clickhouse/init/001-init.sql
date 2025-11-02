@@ -1,6 +1,4 @@
 CREATE DATABASE IF NOT EXISTS bronze;
-CREATE DATABASE IF NOT EXISTS silver;
-CREATE DATABASE IF NOT EXISTS gold;
 
 CREATE TABLE IF NOT EXISTS bronze.companies_raw
 (
@@ -13,6 +11,7 @@ CREATE TABLE IF NOT EXISTS bronze.companies_raw
     profit_in_millions Float64,
     assets_in_millions Float64,
     market_value_in_millions Float64,
+    financial_year UInt32,
     _ingested_at DateTime DEFAULT now()
 )
 ENGINE = ReplacingMergeTree(_ingested_at)
@@ -46,7 +45,7 @@ PARTITION BY toYYYYMM(execution_date_utc);
 CREATE USER IF NOT EXISTS etl IDENTIFIED BY 'pass';
 GRANT SELECT, INSERT, CREATE, CREATE DATABASE ON *.* TO etl;
 
--- Create user for dbt (for future use)
+-- Create user for dbt 
 CREATE USER IF NOT EXISTS dbt_user IDENTIFIED BY 'dbt_pass';
-GRANT SELECT, INSERT, CREATE, CREATE DATABASE, ALTER ON *.* TO dbt_user;
+GRANT SELECT, INSERT, CREATE, CREATE DATABASE, ALTER, DROP ON *.* TO dbt_user;
 

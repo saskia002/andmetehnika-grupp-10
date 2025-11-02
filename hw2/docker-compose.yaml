@@ -68,6 +68,7 @@ services:
         volumes:
             - ./dags:/opt/airflow/dags
             - ./logs:/opt/airflow/logs
+            - /var/run/docker.sock:/var/run/docker.sock            
         depends_on:
             - airflow-init
             - airflow-db
@@ -90,6 +91,7 @@ services:
         volumes:
             - ./dags:/opt/airflow/dags
             - ./logs:/opt/airflow/logs
+            - /var/run/docker.sock:/var/run/docker.sock
         depends_on:
             - airflow-init
             - airflow-db
@@ -136,8 +138,41 @@ services:
         volumes:
             - clickhouse_data:/var/lib/clickhouse
             - ./clickhouse/init:/docker-entrypoint-initdb.d:ro
+        healthcheck:
+            test: ["CMD", "clickhouse-client", "--query", "SELECT 1"]
+            interval: 10s
+            timeout: 5s
+            retries: 5
+            start_period: 30s
         depends_on:
             - mongodb-init
+
+    clickhouse-init-users:
+        image: clickhouse/clickhouse-server:24.8
+        container_name: clickhouse-init-users
+        depends_on:
+            clickhouse:
+                condition: service_healthy
+        command: >
+            bash -c "
+            echo 'Waiting for ClickHouse to be ready...' &&
+            sleep 5 &&
+            until clickhouse-client --host clickhouse --port 9000 --query 'SELECT 1' > /dev/null 2>&1; do
+              echo 'Waiting for ClickHouse...' &&
+              sleep 2
+            done &&
+            echo 'Ensuring users exist...' &&
+            clickhouse-client --host clickhouse --port 9000 --multiquery --query \"
+            CREATE USER IF NOT EXISTS etl IDENTIFIED BY 'pass';
+            GRANT SELECT, INSERT, CREATE, CREATE DATABASE ON *.* TO etl;
+            CREATE USER IF NOT EXISTS dbt_user IDENTIFIED BY 'dbt_pass';
+            GRANT SELECT, INSERT, CREATE, CREATE DATABASE, ALTER, DROP ON *.* TO dbt_user;
+            \" &&
+            echo 'Users verified successfully!' &&
+            clickhouse-client --host clickhouse --port 9000 --user dbt_user --password dbt_pass --query 'SELECT 1' &&
+            echo 'dbt_user authentication test passed!'
+            "
+        restart: "on-failure"
 
     # --- dbt initialization & user setup ---
     dbt:
@@ -148,6 +183,7 @@ services:
         container_name: dbt
         depends_on:
             - clickhouse      # Ensure ClickHouse starts before dbt
+            - clickhouse-init-users # Ensure users are created before dbt 
         volumes:
             - ./dbt:/dbt                                  # Mount local dbt project directory
         working_dir: /dbt          # Set dbt project directory as the working directory
