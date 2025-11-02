@@ -1,4 +1,5 @@
 CREATE DATABASE IF NOT EXISTS bronze;
+-- Silver and Gold databases will be created and managed by dbt
 
 CREATE TABLE IF NOT EXISTS bronze.companies_raw
 (
@@ -45,7 +46,78 @@ PARTITION BY toYYYYMM(execution_date_utc);
 CREATE USER IF NOT EXISTS etl IDENTIFIED BY 'pass';
 GRANT SELECT, INSERT, CREATE, CREATE DATABASE ON *.* TO etl;
 
--- Create user for dbt 
+-- Create user for dbt (manages Silver and Gold layers)
 CREATE USER IF NOT EXISTS dbt_user IDENTIFIED BY 'dbt_pass';
-GRANT SELECT, INSERT, CREATE, CREATE DATABASE, ALTER, DROP ON *.* TO dbt_user;
+GRANT SELECT, INSERT, CREATE, CREATE DATABASE, ALTER ON *.* TO dbt_user;
+
+-- Create views for dbt to query (deduplicated, avoiding dbt-clickhouse auto-transformation issues)
+CREATE VIEW IF NOT EXISTS bronze.companies_raw_view AS
+SELECT 
+    company,
+    headquarters,
+    ticker,
+    industry,
+    rank,
+    sales_in_millions,
+    profit_in_millions,
+    assets_in_millions,
+    market_value_in_millions,
+    financial_year
+FROM (
+    SELECT 
+        company,
+        headquarters,
+        ticker,
+        industry,
+        rank,
+        sales_in_millions,
+        profit_in_millions,
+        assets_in_millions,
+        market_value_in_millions,
+        financial_year,
+        ROW_NUMBER() OVER (PARTITION BY company, headquarters, financial_year ORDER BY _ingested_at DESC) AS rn
+    FROM bronze.companies_raw FINAL
+)
+WHERE rn = 1;
+
+CREATE VIEW IF NOT EXISTS bronze.stocks_raw_view AS
+SELECT 
+    ticker_symbol,
+    sector,
+    open_price,
+    close_price,
+    high_price,
+    low_price,
+    market_cap,
+    currency,
+    exchange,
+    dividend,
+    execution_date_utc,
+    trading_day,
+    month,
+    day_of_week,
+    quarter,
+    season
+FROM (
+    SELECT 
+        ticker_symbol,
+        sector,
+        open_price,
+        close_price,
+        high_price,
+        low_price,
+        market_cap,
+        currency,
+        exchange,
+        dividend,
+        execution_date_utc,
+        trading_day,
+        month,
+        day_of_week,
+        quarter,
+        season,
+        ROW_NUMBER() OVER (PARTITION BY ticker_symbol, execution_date_utc ORDER BY _ingested_at DESC) AS rn
+    FROM bronze.stocks_raw FINAL
+)
+WHERE rn = 1;
 

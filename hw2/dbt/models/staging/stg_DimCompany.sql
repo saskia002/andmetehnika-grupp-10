@@ -10,5 +10,6 @@ SELECT
     CAST(headquarters AS String) AS Headquarters,
     CAST(industry AS String) AS Industry,
     CAST('sector' AS String) AS Sector,  -- optional, can drop later if not needed
-    CAST(_ingested_at AS DateTime) AS _load_datetime
-FROM {{ source('bronze', 'companies_raw') }}
+    CAST(now() AS DateTime) AS _load_datetime  -- Using current timestamp since duplicates are prevented in ETL
+FROM bronze.companies_raw_view
+WHERE company IS NOT NULL AND headquarters IS NOT NULL

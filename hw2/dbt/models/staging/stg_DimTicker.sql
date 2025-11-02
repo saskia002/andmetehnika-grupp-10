@@ -11,6 +11,6 @@ SELECT
     CAST('Equity' AS String) AS Class,--  CAST(Class AS String) AS Class,       -- Keep if exists in source, otherwise handle later
     CAST(COALESCE(currency, '') AS String) AS Currency,
     CAST(COALESCE(sector, '') AS String) AS Sector,
-    CAST(_ingested_at AS DateTime) AS _load_datetime
-FROM {{ source('bronze', 'stocks_raw') }}
+    CAST(now() AS DateTime) AS _load_datetime  -- Using current timestamp since duplicates are prevented in ETL
+FROM bronze.stocks_raw_view
 WHERE ticker_symbol IS NOT NULL

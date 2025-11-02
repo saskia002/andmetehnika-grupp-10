@@ -8,12 +8,15 @@ import time
 def run_dbt_command(command: str, **context):
     """
     Run dbt command in the dbt container.
-    Commands: 'run' or 'test'
+    Commands: 'snapshot', 'run', or 'test'
     """
     dbt_container = "dbt"
     dbt_project_dir = "/dbt"
     
-    if command == "run":
+    if command == "snapshot":
+        dbt_cmd = ["dbt", "snapshot", "--profiles-dir", dbt_project_dir, "--project-dir", dbt_project_dir]
+        task_description = "Running dbt snapshots"
+    elif command == "run":
         dbt_cmd = ["dbt", "run", "--profiles-dir", dbt_project_dir, "--project-dir", dbt_project_dir]
         task_description = "Running dbt transformations (refresh gold layer)"
     elif command == "test":
@@ -199,6 +202,13 @@ with DAG(
     description="Run dbt transformations to refresh Silver and Gold layers"
 ) as dag:
 
+    # Run dbt snapshots (needed before DimCompany and DimTicker)
+    run_dbt_snapshots = PythonOperator(
+        task_id="run_dbt_snapshots",
+        python_callable=run_dbt_command,
+        op_kwargs={"command": "snapshot"},
+    )
+    
     # Run dbt transformations (refresh gold layer)
     run_dbt_models = PythonOperator(
         task_id="run_dbt_models",
@@ -214,6 +224,6 @@ with DAG(
         trigger_rule="all_done",  # Run even if models fail (for debugging)
     )
 
-    # Set task dependencies - run tests after models
-    run_dbt_models >> run_dbt_tests
+    # Set task dependencies - snapshots first, then models, then tests
+    run_dbt_snapshots >> run_dbt_models >> run_dbt_tests
 

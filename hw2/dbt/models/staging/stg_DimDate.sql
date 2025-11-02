@@ -19,6 +19,6 @@ FROM
         CAST(toMonth(trading_day) AS UInt32) AS Month,
         CAST(toDayOfMonth(trading_day) AS UInt32) AS Day,
         CAST(toQuarter(trading_day) AS UInt32) AS Quarter
-    FROM {{ source('bronze', 'stocks_raw') }}
+    FROM bronze.stocks_raw_view
 )
 
