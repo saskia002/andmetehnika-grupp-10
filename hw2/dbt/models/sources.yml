@@ -11,11 +11,9 @@ sources:
 >>>>>>> dbt
     schema: bronze
     tables:
-      - name: companies_raw
-        description: "Raw company data from Forbes 2000"
+      - name: companies_raw_view
+        description: "Deduplicated view of company data from Forbes 2000"
         columns:
-          - name: _ingested_at
-            description: "Ingestion timestamp"
           - name: company
             description: "Company name"
           - name: ticker
@@ -35,11 +33,9 @@ sources:
           - name: rank
             description: "Forbes rank"
 
-      - name: stocks_raw
-        description: "Raw stock data"
+      - name: stocks_raw_view
+        description: "Deduplicated view of stock data"
         columns:
-          - name: _ingested_at
-            description: "Ingestion timestamp"
           - name: ticker_symbol
             description: "Ticker symbol"
           - name: exchange

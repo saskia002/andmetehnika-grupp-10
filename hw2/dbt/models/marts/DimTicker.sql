@@ -1,7 +1,8 @@
 
 {{ config(
     materialized='table',
-    schema='gold'
+    schema='gold',
+    order_by=['TickerKey']
 ) }}
 
 SELECT

@@ -1,9 +1,15 @@
 
 {{ config(
     materialized='table',
-    schema='gold'
+    schema='gold',
+    order_by=['CompanyKey', 'Year'] 
 ) }}
 
 SELECT
-    *
+    CompanyKey,
+    Year,
+    Sales,
+    Profit,
+    Assets,
+    MarketValue
 FROM {{ ref('stg_FactFinancials') }}

@@ -1,5 +1,6 @@
 from airflow import DAG
 from airflow.operators.python import PythonOperator
+from airflow.operators.trigger_dagrun import TriggerDagRunOperator
 from datetime import datetime
 import yfinance as yf
 import pandas as pd
@@ -16,7 +17,7 @@ CLICKHOUSE_USER = os.getenv("CLICKHOUSE_USER", "etl")
 CLICKHOUSE_PASSWORD = os.getenv("CLICKHOUSE_PASSWORD", "pass")
 
 def insert_stocks_to_bronze(data: list, date_data: dict, execution_date_utc: str):
-    """Insert stock data to Bronze layer in ClickHouse"""
+    """Insert stock data to Bronze layer in ClickHouse with duplicate prevention"""
     if not data:
         logging.info("No stock data to insert")
         return
@@ -37,7 +38,35 @@ def insert_stocks_to_bronze(data: list, date_data: dict, execution_date_utc: str
         else:
             trading_day_str = str(date_data["trading_day"])
     
+    # Check for existing records to prevent duplicates
+    url = f"{CLICKHOUSE_HOST}:{CLICKHOUSE_PORT}/"
+    auth = None
+    if CLICKHOUSE_USER or CLICKHOUSE_PASSWORD:
+        auth = (CLICKHOUSE_USER, CLICKHOUSE_PASSWORD)
+    
+    # Get existing ticker_symbol + execution_date_utc combinations (using FINAL to get deduplicated view)
+    try:
+        check_sql = "SELECT ticker_symbol, execution_date_utc FROM bronze.stocks_raw FINAL"
+        check_params = {
+            "query": check_sql,
+            "database": "bronze",
+        }
+        check_resp = requests.post(url, params=check_params, auth=auth, timeout=30)
+        check_resp.raise_for_status()
+        existing_records = set()
+        if check_resp.text.strip():
+            for line in check_resp.text.strip().split('\n'):
+                if line.strip() and '\t' in line:
+                    parts = line.strip().split('\t')
+                    if len(parts) >= 2:
+                        existing_records.add((parts[0], parts[1]))
+        logging.info(f"Found {len(existing_records)} existing stock records")
+    except Exception as e:
+        logging.warning(f"Could not check existing records: {e}. Proceeding with insert...")
+        existing_records = set()
+    
     lines = []
+    skipped_count = 0
     for record in data:
         market_cap_value = record.get("market_cap")
         if market_cap_value is None or pd.isna(market_cap_value):
@@ -45,8 +74,14 @@ def insert_stocks_to_bronze(data: list, date_data: dict, execution_date_utc: str
         else:
             market_cap_value = int(market_cap_value)
         
+        ticker_symbol = str(record.get("ticker_symbol", ""))
+        # Skip if this ticker_symbol + execution_date_utc already exists
+        if (ticker_symbol, execution_date_formatted) in existing_records:
+            skipped_count += 1
+            continue
+        
         obj = {
-            "ticker_symbol": str(record.get("ticker_symbol", "")),
+            "ticker_symbol": ticker_symbol,
             "sector": record.get("sector") if record.get("sector") is not None else None,
             "open_price": float(record.get("open_price")) if record.get("open_price") is not None and not pd.isna(record.get("open_price")) else None,
             "close_price": float(record.get("close_price")) if record.get("close_price") is not None and not pd.isna(record.get("close_price")) else None,
@@ -64,19 +99,22 @@ def insert_stocks_to_bronze(data: list, date_data: dict, execution_date_utc: str
             "season": str(date_data.get("season", "")),
         }
         lines.append(json.dumps(obj, ensure_ascii=False, default=str))
+        existing_records.add((ticker_symbol, execution_date_formatted))  # Track what we're inserting
+    
+    if skipped_count > 0:
+        logging.info(f"Skipped {skipped_count} duplicate stock records")
+    
+    if not lines:
+        logging.warning("All records were duplicates, nothing to insert")
+        return
     
     # Insert into ClickHouse Bronze layer
     insert_sql = "INSERT INTO bronze.stocks_raw FORMAT JSONEachRow"
-    url = f"{CLICKHOUSE_HOST}:{CLICKHOUSE_PORT}/"
     params = {
         "query": insert_sql,
         "database": "bronze",
         "input_format_skip_unknown_fields": 1,
     }
-    
-    auth = None
-    if CLICKHOUSE_USER or CLICKHOUSE_PASSWORD:
-        auth = (CLICKHOUSE_USER, CLICKHOUSE_PASSWORD)
     
     try:
         resp = requests.post(
