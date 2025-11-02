@@ -1,0 +1,167 @@
+-- Demo Queries based on business questions in the business brief
+-- Updated for hw2 schema structure (ClickHouse)
+-- Note: Schema uses CompanyKey for companies (company+headquarters) and TickerKey for tickers (ticker_symbol+exchange)
+-- FactStock uses TickerKey for joins, while FactFinancials and FactForbesRank use CompanyKey
+
+--Valuation
+
+--Which industries have the highest market capitalization among top 20 rank using a 3 month rolling average?
+
+WITH RollingAvg AS (
+    SELECT
+        dc.Industry AS Industry,
+        dd.Year AS Year,
+        dd.Month AS Month,
+        AVG(fs.MarketCap) OVER (
+            PARTITION BY dc.Industry
+            ORDER BY dd.Year, dd.Month
+            ROWS BETWEEN 2 PRECEDING AND CURRENT ROW
+        ) AS avg_3m_marketcap
+    FROM gold.FactStock fs
+    JOIN gold.DimTicker dt ON fs.TickerKey = dt.TickerKey
+    JOIN gold.DimDate dd ON fs.DateKey = dd.DateKey
+    JOIN bronze.companies_raw_view cr ON dt.TickerSymbol = cr.ticker
+    JOIN gold.DimCompany dc ON CAST(xxHash64(concat(cr.company, cr.headquarters)) AS UInt32) = dc.CompanyKey
+    JOIN gold.FactForbesRank fr ON dc.CompanyKey = fr.CompanyKey
+    WHERE fr.ForbesRank <= 20
+)
+SELECT 
+    ra.Industry, 
+    ra.Year, 
+    ra.Month, 
+    ra.avg_3m_marketcap
+FROM RollingAvg ra
+ORDER BY ra.avg_3m_marketcap DESC
+LIMIT 10;
+
+--What is a company's valuation relative to its earnings performance. Name top 10 stocks per P/E (price to earnings) ratio?
+
+SELECT 
+    dd.Year,
+    dd.Month,
+    dd.Day,
+    dc.CompanyName,
+    dc.Industry,
+    AVG(fs.ClosePrice) / NULLIF(AVG(ff.Profit), 0) AS pe_ratio
+FROM gold.FactStock fs
+JOIN gold.DimTicker dt ON fs.TickerKey = dt.TickerKey
+JOIN bronze.companies_raw cr ON dt.TickerSymbol = cr.ticker
+JOIN gold.DimCompany dc ON CAST(xxHash64(concat(cr.company, cr.headquarters)) AS UInt32) = dc.CompanyKey
+JOIN gold.FactFinancials ff ON dc.CompanyKey = ff.CompanyKey
+JOIN gold.DimDate dd ON fs.DateKey = dd.DateKey
+GROUP BY dd.Year, dd.Month, dd.Day, dc.CompanyName, dc.Industry
+HAVING AVG(ff.Profit) > 0
+ORDER BY pe_ratio DESC
+LIMIT 10;
+
+--Higher ROA indicates how well a company is converting its assets into new income. Which companies or industries are most efficient based on  their ROA (name top 10)?
+
+SELECT 
+    dc.CompanyName,
+    dc.Industry,
+    (CAST(ff.Profit AS Float64) / NULLIF(CAST(ff.Assets AS Float64), 0)) AS roa
+FROM gold.DimCompany dc
+JOIN gold.FactFinancials ff ON dc.CompanyKey = ff.CompanyKey
+WHERE ff.Assets > 0
+ORDER BY roa DESC
+LIMIT 10;
+
+--Is the company over or undervalued compared to its peers? List for each industry the average P/E using only Forbes 2000 data and select the top company for each sector based on P/E including the delta with the average of that industry.
+--Select based on the last trading day.
+
+WITH IndustryPE AS (
+    SELECT 
+        MAX(dd.TradingDate) as TradingDate,
+        dc.Industry,
+        AVG(fs.ClosePrice / NULLIF(ff.Profit, 0)) AS avg_pe
+    FROM gold.FactStock fs
+    JOIN gold.DimTicker dt ON fs.TickerKey = dt.TickerKey
+    JOIN bronze.companies_raw cr ON dt.TickerSymbol = cr.ticker
+    JOIN gold.DimCompany dc ON CAST(xxHash64(concat(cr.company, cr.headquarters)) AS UInt32) = dc.CompanyKey
+    JOIN gold.FactFinancials ff ON dc.CompanyKey = ff.CompanyKey
+    JOIN gold.FactForbesRank fr ON dc.CompanyKey = fr.CompanyKey
+    JOIN gold.DimDate dd ON fs.DateKey = dd.DateKey
+    WHERE fr.ForbesRank <= 2000 AND ff.Profit > 0 AND dd.TradingDate<=now()
+    GROUP BY dc.Industry, dd.TradingDate
+),
+CompanyPE AS (
+    SELECT 
+        dc.Industry,
+        dc.CompanyName,
+        AVG(fs.ClosePrice / NULLIF(ff.Profit, 0)) AS company_pe
+    FROM gold.FactStock fs
+    JOIN gold.DimTicker dt ON fs.TickerKey = dt.TickerKey
+    JOIN bronze.companies_raw cr ON dt.TickerSymbol = cr.ticker
+    JOIN gold.DimCompany dc ON CAST(xxHash64(concat(cr.company, cr.headquarters)) AS UInt32) = dc.CompanyKey
+    JOIN gold.FactFinancials ff ON dc.CompanyKey = ff.CompanyKey
+    WHERE ff.Profit > 0
+    GROUP BY dc.Industry, dc.CompanyName
+)
+SELECT 
+    ip.TradingDate,
+    cp.Industry,
+    cp.CompanyName,
+    cp.company_pe,
+    ip.avg_pe,
+    cp.company_pe - ip.avg_pe AS delta
+FROM CompanyPE cp
+JOIN IndustryPE ip ON cp.Industry = ip.Industry
+ORDER BY cp.Industry, delta DESC LIMIT 20;
+
+--Profitability
+
+--Which industries generate the highest total revenue among Forbes 2000 companies? Name top 20.
+
+SELECT 
+    dc.Industry,
+    SUM(ff.Sales) AS total_revenue
+FROM gold.DimCompany dc
+JOIN gold.FactFinancials ff ON dc.CompanyKey = ff.CompanyKey
+JOIN gold.FactForbesRank fr ON dc.CompanyKey = fr.CompanyKey
+WHERE fr.ForbesRank <= 2000
+GROUP BY dc.Industry
+ORDER BY total_revenue DESC
+LIMIT 20;
+
+--Which industry among Forbes 2000 has had the highest annual increase in stock market price based on average y-o-y growth of closing price?
+--!!! Not yet tested due to lack of data !!!
+-- TBD
+
+WITH LatestDate AS (
+    SELECT max(TradingDate) AS as_of_date, max(TradingDate)-INTERVAL '1 year', DateKey
+    FROM gold.DimDate GROUP BY TradingDate, DateKey
+),
+YearlyAvg AS (
+    SELECT
+        MAX(CASE WHEN TradingDate = ld.as_of_date THEN ClosePrice END) AS closing_price_yesterday,
+        MAX(CASE WHEN TradingDate = ld.as_of_date - INTERVAL '1 year' THEN ClosePrice END) AS closing_price_last_year
+    FROM FactStock fs 
+    OUTER JOIN LatestDate ld ON ld.DateKey = fs.DateKey
+    WHERE (fs.TradingDate = OR fs.TradingDate = )
+),
+YoYGrowth AS (
+    SELECT 
+        ya_one.Industry,
+        ya_one.Year,
+        (ya_one.avg_close - ya_two.avg_close) / ya_two.avg_close AS yoy_growth
+    FROM YearlyAvg ya_one
+    OUTER JOIN YearlyAvg ya_two ON ya_one.CompanyKey = ya_two.CompanyKey AND ya_one.Year = ya_two.Year + 1
+    JOIN LatestDate lt ON ya_one.TradingDate = lt.TradingDate
+    WHERE ya_two.avg_close > 0 AND ya_one.TradingDate = toYear(lt.as_of_date)
+),
+IndustryGrowth AS (
+    SELECT 
+        Industry,
+        AVG(yoy_growth) AS avg_yoy_growth
+    FROM YoYGrowth
+    GROUP BY Industry
+    HAVING count(*) >= 1
+)
+SELECT 
+    ld.as_of_date,
+    ig.Industry,
+    round(ig.avg_yoy_growth * 100, 2) AS avg_yoy_growth_pct
+FROM LatestDate ld
+CROSS JOIN IndustryGrowth ig
+ORDER BY ig.avg_yoy_growth DESC
+LIMIT 10;
