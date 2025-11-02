@@ -106,7 +106,7 @@ SELECT
     cp.company_pe - ip.avg_pe AS delta
 FROM CompanyPE cp
 JOIN IndustryPE ip ON cp.Industry = ip.Industry
-ORDER BY cp.Industry, delta DESC;
+ORDER BY cp.Industry, delta DESC LIMIT 20;
 
 --Profitability
 
@@ -125,22 +125,19 @@ LIMIT 20;
 
 --Which industry among Forbes 2000 has had the highest annual increase in stock market price based on average y-o-y growth of closing price?
 --!!! Not yet tested due to lack of data !!!
+-- TBD
 
 WITH LatestDate AS (
-    SELECT max(TradingDate) AS as_of_date
-    FROM gold.DimDate
+    SELECT max(TradingDate) AS as_of_date, max(TradingDate)-INTERVAL '1 year', DateKey
+    FROM gold.DimDate GROUP BY TradingDate, DateKey
 ),
 YearlyAvg AS (
     SELECT
-        dc.Industry AS Industry,
-        dd.Year AS Year,
-        AVG(fs.ClosePrice) AS avg_close
-    FROM gold.FactStock fs
-    JOIN gold.DimDate dd ON fs.DateKey = dd.DateKey
-    JOIN gold.DimCompany dc ON fs.CompanyKey = dc.CompanyKey
-    JOIN gold.FactForbesRank fr ON dc.CompanyKey = fr.CompanyKey
-    WHERE fr.ForbesRank <= 2000
-    GROUP BY dc.Industry, dd.Year
+        MAX(CASE WHEN TradingDate = ld.as_of_date THEN ClosePrice END) AS closing_price_yesterday,
+        MAX(CASE WHEN TradingDate = ld.as_of_date - INTERVAL '1 year' THEN ClosePrice END) AS closing_price_last_year
+    FROM FactStock fs 
+    OUTER JOIN LatestDate ld ON ld.DateKey = fs.DateKey
+    WHERE (fs.TradingDate = OR fs.TradingDate = )
 ),
 YoYGrowth AS (
     SELECT 
@@ -148,8 +145,9 @@ YoYGrowth AS (
         ya_one.Year,
         (ya_one.avg_close - ya_two.avg_close) / ya_two.avg_close AS yoy_growth
     FROM YearlyAvg ya_one
-    JOIN YearlyAvg ya_two ON ya_one.Industry = ya_two.Industry AND ya_one.Year = ya_two.Year + 1
-    WHERE ya_two.avg_close > 0
+    OUTER JOIN YearlyAvg ya_two ON ya_one.CompanyKey = ya_two.CompanyKey AND ya_one.Year = ya_two.Year + 1
+    JOIN LatestDate lt ON ya_one.TradingDate = lt.TradingDate
+    WHERE ya_two.avg_close > 0 AND ya_one.TradingDate = toYear(lt.as_of_date)
 ),
 IndustryGrowth AS (
     SELECT 
@@ -167,4 +165,3 @@ FROM LatestDate ld
 CROSS JOIN IndustryGrowth ig
 ORDER BY ig.avg_yoy_growth DESC
 LIMIT 10;
-
