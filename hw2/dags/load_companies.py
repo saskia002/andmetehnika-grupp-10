@@ -77,17 +77,17 @@ def insert_companies_to_bronze(**context):
             
         obj = {
             "rank": rank,
-            "company": str(record.get("company", "") or ""),
-            "ticker": str(record.get("ticker", "") or ""),
-            "headquarters": str(record.get("headquarters", "") or ""),
-            "industry": str(record.get("industry", "") or ""),
-            "sales_in_millions": float(record.get("sales_in_millions", 0) or 0),
-            "profit_in_millions": float(record.get("profit_in_millions", 0) or 0),
-            "assets_in_millions": float(record.get("assets_in_millions", 0) or 0),
-            "market_value_in_millions": float(record.get("market_value_in_millions", 0) or 0),
-            "financial_year": int(record.get("financial_year", 0) or 0),
+            "company": record.get("company", ""),
+            "ticker": record.get("ticker", ""),
+            "headquarters": record.get("headquarters", ""),
+            "industry": record.get("industry", ""),
+            "sales_in_millions": float(record.get("sales_in_millions", 0.0)),
+            "profit_in_millions": float(record.get("profit_in_millions", 0.0)),
+            "assets_in_millions": float(record.get("assets_in_millions", 0.0)),
+            "market_value_in_millions": float(record.get("market_value_in_millions", 0.0)),
+            "financial_year": int(record.get("financial_year", 0)),
         }
-        lines.append(json.dumps(obj, ensure_ascii=False))
+        lines.append(json.dumps(obj))
         existing_ranks.add(rank)  # Track what we're inserting
     
     if skipped_count > 0:
