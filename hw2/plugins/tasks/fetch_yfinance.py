@@ -154,10 +154,17 @@ def fetch_stock_info(**context):
     #list of dictonaries, each company separately
     companies_dict = ast.literal_eval(conf.get("companies_dict"))
 
-    df = pd.DataFrame(companies_dict)
+    df = pd.DataFrame(companies_dict) 
+
+    #df = df.iloc[:250]   <--------------------- Uncomment this ----------------------->
+
+    #making sure that there are no duplicate tickers in data
+    df = df.drop_duplicates(subset=["ticker"], keep="first")
+
     data = []
     for _, row in df.iterrows():
         ticker = row.get('ticker')
+        #checking that ticker is not empty, none or nan value
         if not ticker or pd.isna(ticker):
             logging.info(f"Ticker missing for company: {row.get('company')}")
             continue
@@ -165,6 +172,7 @@ def fetch_stock_info(**context):
             stock = yf.Ticker(ticker)
             info = stock.info
             if info:
+
                 data.append({
                     'ticker_symbol': ticker, 
                     'sector': info.get('sector'),
@@ -204,28 +212,3 @@ def get_date_data(execution_date_utc):
         date_data["season"] = "Autumn"
     return date_data
         
-
-
-with DAG(
-    dag_id="fetch_yfinance_dag",
-    start_date=datetime(2025, 10, 26),
-    schedule=None, 
-    catchup=False,
-) as dag:
-
-    fetch_task = PythonOperator(
-        task_id="fetch_yfinance",
-        python_callable=fetch_stock_info,
-        provide_context=True
-    )
-    
-    # Trigger dbt transformations after stocks are loaded
-    # Note: If dbt fails, check the run_dbt_transformations DAG logs for details
-    trigger_dbt = TriggerDagRunOperator(
-        task_id="trigger_dbt_transformations",
-        trigger_dag_id="run_dbt_transformations",
-        wait_for_completion=True,
-        poke_interval=30,  # Check every 30 seconds
-    )
-    
-    fetch_task >> trigger_dbt
