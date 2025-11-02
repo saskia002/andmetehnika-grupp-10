@@ -102,6 +102,51 @@ def insert_stocks_to_bronze(data: list, date_data: dict, execution_date_utc: str
             logging.error(f"Sample data (first record): {lines[0]}")
         raise
 
+
+
+
+def check_if_data_exists(execution_date_utc: str) -> bool:
+    """Check if data for the given execution date already exists in ClickHouse"""
+
+    dt = pd.Timestamp(execution_date_utc)
+    date = dt.date().isoformat()
+    
+    query = f"""
+    SELECT COUNT(*) 
+    FROM bronze.stocks_raw
+    WHERE trading_day = '{date}'
+    """
+    
+    url = f"{CLICKHOUSE_HOST}:{CLICKHOUSE_PORT}/"
+    params = {
+        "query": query,
+        "database": "bronze",
+        "input_format_skip_unknown_fields": 1,
+    }
+    
+    auth = None
+    if CLICKHOUSE_USER or CLICKHOUSE_PASSWORD:
+        auth = (CLICKHOUSE_USER, CLICKHOUSE_PASSWORD)
+    
+    try:
+        response = requests.get(url, params=params, auth=auth)
+        response.raise_for_status()
+        count = int(response.text.strip())  # Get the number of rows
+        if count > 0:
+            logging.info(f"Data for trading date {date} already exists in ClickHouse.")
+            return True  # Data exists
+        else:
+            logging.info(f"No data found for trading date {date}.")
+            return False  # No data
+    except requests.exceptions.RequestException as e:
+        logging.error(f"Error querying ClickHouse: {e}")
+        return False  # Return False if there's an error querying ClickHouse
+
+
+
+
+
+
 def fetch_stock_info(**context):
     conf = context["dag_run"].conf
 
@@ -118,7 +163,11 @@ def fetch_stock_info(**context):
 
     df = pd.DataFrame(companies_dict) 
 
-    #df = df.iloc[:250]   <--------------------- Uncomment this ----------------------->
+    if check_if_data_exists(execution_date_utc):
+        logging.info(f"Skipping Yahoo Finance pull for {execution_date_utc} as data already exists.")
+        return
+
+    #df = df.iloc[:250]  <--------------------- Uncomment this ----------------------->
 
     #making sure that there are no duplicate tickers in data
     df = df.drop_duplicates(subset=["ticker"], keep="first")
