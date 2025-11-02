@@ -37,6 +37,9 @@ LIMIT 10;
 --What is a company's valuation relative to its earnings performance. Name top 10 stocks per P/E (price to earnings) ratio?
 
 SELECT 
+    dd.Year,
+    dd.Month,
+    dd.Day,
     dc.CompanyName,
     dc.Industry,
     AVG(fs.ClosePrice) / NULLIF(AVG(ff.Profit), 0) AS pe_ratio
@@ -45,7 +48,8 @@ JOIN gold.DimTicker dt ON fs.TickerKey = dt.TickerKey
 JOIN bronze.companies_raw cr ON dt.TickerSymbol = cr.ticker
 JOIN gold.DimCompany dc ON CAST(xxHash64(concat(cr.company, cr.headquarters)) AS UInt32) = dc.CompanyKey
 JOIN gold.FactFinancials ff ON dc.CompanyKey = ff.CompanyKey
-GROUP BY dc.CompanyName, dc.Industry
+JOIN gold.DimDate dd ON fs.DateKey = dd.DateKey
+GROUP BY dd.Year, dd.Month, dd.Day, dc.CompanyName, dc.Industry
 HAVING AVG(ff.Profit) > 0
 ORDER BY pe_ratio DESC
 LIMIT 10;
@@ -63,9 +67,11 @@ ORDER BY roa DESC
 LIMIT 10;
 
 --Is the company over or undervalued compared to its peers? List for each industry the average P/E using only Forbes 2000 data and select the top company for each sector based on P/E including the delta with the average of that industry.
+--Select based on the last trading day.
 
 WITH IndustryPE AS (
     SELECT 
+        MAX(dd.TradingDate) as TradingDate,
         dc.Industry,
         AVG(fs.ClosePrice / NULLIF(ff.Profit, 0)) AS avg_pe
     FROM gold.FactStock fs
@@ -74,8 +80,9 @@ WITH IndustryPE AS (
     JOIN gold.DimCompany dc ON CAST(xxHash64(concat(cr.company, cr.headquarters)) AS UInt32) = dc.CompanyKey
     JOIN gold.FactFinancials ff ON dc.CompanyKey = ff.CompanyKey
     JOIN gold.FactForbesRank fr ON dc.CompanyKey = fr.CompanyKey
-    WHERE fr.ForbesRank <= 2000 AND ff.Profit > 0
-    GROUP BY dc.Industry
+    JOIN gold.DimDate dd ON fs.DateKey = dd.DateKey
+    WHERE fr.ForbesRank <= 2000 AND ff.Profit > 0 AND dd.TradingDate<=now()
+    GROUP BY dc.Industry, dd.TradingDate
 ),
 CompanyPE AS (
     SELECT 
@@ -91,6 +98,7 @@ CompanyPE AS (
     GROUP BY dc.Industry, dc.CompanyName
 )
 SELECT 
+    ip.TradingDate,
     cp.Industry,
     cp.CompanyName,
     cp.company_pe,
@@ -116,5 +124,47 @@ ORDER BY total_revenue DESC
 LIMIT 20;
 
 --Which industry among Forbes 2000 has had the highest annual increase in stock market price based on average y-o-y growth of closing price?
+--!!! Not yet tested due to lack of data !!!
 
-/* TBD */
+WITH LatestDate AS (
+    SELECT max(TradingDate) AS as_of_date
+    FROM gold.DimDate
+),
+YearlyAvg AS (
+    SELECT
+        dc.Industry AS Industry,
+        dd.Year AS Year,
+        AVG(fs.ClosePrice) AS avg_close
+    FROM gold.FactStock fs
+    JOIN gold.DimDate dd ON fs.DateKey = dd.DateKey
+    JOIN gold.DimCompany dc ON fs.CompanyKey = dc.CompanyKey
+    JOIN gold.FactForbesRank fr ON dc.CompanyKey = fr.CompanyKey
+    WHERE fr.ForbesRank <= 2000
+    GROUP BY dc.Industry, dd.Year
+),
+YoYGrowth AS (
+    SELECT 
+        ya_one.Industry,
+        ya_one.Year,
+        (ya_one.avg_close - ya_two.avg_close) / ya_two.avg_close AS yoy_growth
+    FROM YearlyAvg ya_one
+    JOIN YearlyAvg ya_two ON ya_one.Industry = ya_two.Industry AND ya_one.Year = ya_two.Year + 1
+    WHERE ya_two.avg_close > 0
+),
+IndustryGrowth AS (
+    SELECT 
+        Industry,
+        AVG(yoy_growth) AS avg_yoy_growth
+    FROM YoYGrowth
+    GROUP BY Industry
+    HAVING count(*) >= 1
+)
+SELECT 
+    ld.as_of_date,
+    ig.Industry,
+    round(ig.avg_yoy_growth * 100, 2) AS avg_yoy_growth_pct
+FROM LatestDate ld
+CROSS JOIN IndustryGrowth ig
+ORDER BY ig.avg_yoy_growth DESC
+LIMIT 10;
+
