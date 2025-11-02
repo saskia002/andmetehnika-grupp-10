@@ -219,7 +219,7 @@ __marimo__/
 **/dbt/.dbt/
 **/dbt/logs/
 
-**/.DS_Store
+.DS_Store
 .textClipping
 
 **/.env.local
