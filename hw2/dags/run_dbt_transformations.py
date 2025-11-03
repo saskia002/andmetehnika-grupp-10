@@ -5,7 +5,7 @@ import subprocess
 import logging
 import time
 
-def run_dbt_command(command: str, **context):
+def run_dbt_command(command: str, selector: str = None, **context):
     """
     Run dbt command in the dbt container.
     Commands: 'snapshot', 'run', or 'test'
@@ -18,7 +18,9 @@ def run_dbt_command(command: str, **context):
         task_description = "Running dbt snapshots"
     elif command == "run":
         dbt_cmd = ["dbt", "run", "--profiles-dir", dbt_project_dir, "--project-dir", dbt_project_dir]
-        task_description = "Running dbt transformations (refresh gold layer)"
+        if selector:
+            dbt_cmd += ["--select", selector]
+        task_description = f"Running dbt models ({selector or 'all'})"
     elif command == "test":
         dbt_cmd = ["dbt", "test", "--profiles-dir", dbt_project_dir, "--project-dir", dbt_project_dir]
         task_description = "Running dbt tests"
@@ -201,6 +203,13 @@ with DAG(
     catchup=False,
     description="Run dbt transformations to refresh Silver and Gold layers"
 ) as dag:
+    
+    # Run dbt transformations (staging models)
+    run_dbt_staging = PythonOperator(
+        task_id="run_dbt_staging",
+        python_callable=run_dbt_command,
+        op_kwargs={"command": "run","selector": "staging"},
+    )
 
     # Run dbt snapshots (needed before DimCompany and DimTicker)
     run_dbt_snapshots = PythonOperator(
@@ -208,12 +217,12 @@ with DAG(
         python_callable=run_dbt_command,
         op_kwargs={"command": "snapshot"},
     )
-    
-    # Run dbt transformations (refresh gold layer)
-    run_dbt_models = PythonOperator(
-        task_id="run_dbt_models",
+
+    # Run dbt marts (gold layer)
+    run_dbt_marts = PythonOperator(
+        task_id="run_dbt_marts",
         python_callable=run_dbt_command,
-        op_kwargs={"command": "run"},
+        op_kwargs={"command": "run","selector": "marts"},
     )
     
     # Optionally run dbt tests (non-blocking if tests fail)
@@ -225,5 +234,5 @@ with DAG(
     )
 
     # Set task dependencies - snapshots first, then models, then tests
-    run_dbt_snapshots >> run_dbt_models >> run_dbt_tests
+    run_dbt_staging >> run_dbt_snapshots >> run_dbt_marts >> run_dbt_tests
 

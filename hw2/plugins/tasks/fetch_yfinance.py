@@ -142,7 +142,6 @@ def insert_stocks_to_bronze(data: list, date_data: dict, execution_date_utc: str
 
 
 
-
 def check_if_data_exists(execution_date_utc: str) -> bool:
     """Check if data for the given execution date already exists in ClickHouse"""
 
@@ -205,7 +204,7 @@ def fetch_stock_info(**context):
         logging.info(f"Skipping Yahoo Finance pull for {execution_date_utc} as data already exists.")
         return
 
-    #df = df.iloc[:250]  <--------------------- Uncomment this ----------------------->
+    #df = df.iloc[:20]  <--------------------- Uncomment this ----------------------->
 
     #making sure that there are no duplicate tickers in data
     df = df.drop_duplicates(subset=["ticker"], keep="first")
