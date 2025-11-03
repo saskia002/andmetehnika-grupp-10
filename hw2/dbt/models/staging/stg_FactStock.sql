@@ -10,7 +10,7 @@ SELECT
     CAST(xxHash64(concat(co.company,co.headquarters)) AS UInt32) AS CompanyKey, 
     CAST(xxHash64(concat(st.ticker_symbol, COALESCE(st.exchange, ''))) AS UInt32) AS TickerKey,
     -- Fact measures
-    --CAST(st.trading_day AS Date) AS TradingDate, --not part of star schema
+    CAST(st.trading_day AS Date) AS TradingDate, --not part of star schema
     CAST(COALESCE(st.open_price, 0) AS Float64) AS OpenPrice,
     CAST(COALESCE(st.close_price, 0) AS Float64) AS ClosePrice,
     CAST(COALESCE(st.high_price, 0) AS Float64) AS HighPrice,
