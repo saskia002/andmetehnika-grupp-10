@@ -1,0 +1,2001 @@
+Rank;Company;Headquarters;Industry;Sales ($B);Profit ($B);Assets ($B);Market Value ($B)
+1;JPMorganChase;United States;Banking;285.11 ;59.36 ;4,357.86 ;677.8
+2;Berkshire Hathaway;United States;Insurance;371.43 ;89;1,153.88 ;1,145.46
+3;ICBC;China;Banking;221.96 ;50.84 ;6,688.6 ;251.33
+4;Saudi Arabian Oil Company (Saudi Aramco);Saudi Arabia;Oil & Gas Operations;480.15 ;104.97 ;645.03 ;1,663.38
+5;Amazon;United States;Retail and Wholesale;637.96 ;59.25 ;624.89 ;2,005.64
+6;Bank of America;United States;Banking;196.53 ;27.85 ;3,349.42 ;300.06
+7;China Construction Bank;China;Banking;196.71 ;46.64 ;5,558.26 ;219.81
+8;Agricultural Bank of China;China;Banking;198.02 ;39.2 ;5,923.64 ;212.51
+9;Alphabet;United States;IT Software & Services;359.31 ;111;475.37 ;1,973.64
+9;Microsoft;United States;IT Software & Services;261.8 ;92.75 ;533.9 ;2,913.01
+11;Apple;United States;Technology Hardware & Equipment;395.76 ;96.15 ;344.08 ;3,143.82
+12;Bank of China;China;Banking;177.05 ;32.3 ;4,855.83 ;164.71
+13;ExxonMobil;United States;Oil & Gas Operations;339.91 ;33.68 ;453.48 ;469.6
+14;Toyota Motor;Japan;Consumer Durables;308.57 ;33.65 ;602.41 ;244.39
+15;HSBC Holdings;United Kingdom;Banking;145.25 ;22.97 ;3,017.05 ;196.16
+16;Wells Fargo;United States;Banking;124;20;1,950.31 ;227.44
+17;UnitedHealth Group;United States;Insurance;410.06 ;22.11 ;309.79 ;382.94
+18;Walmart;United States;Retailing;680.99 ;19.44 ;260.82 ;762.32
+19;Samsung Electronics;South Korea;Technology Hardware & Equipment;220.63 ;24.65 ;349.51 ;259.77
+20;Goldman Sachs Group;United States;Diversified Financials;120.09 ;14.88 ;1,766;169.34
+20;Meta Platforms;United States;IT Software & Services;164.5 ;62.36 ;276.05 ;1,381.87
+22;Citigroup;United States;Banking;168.76 ;13.25 ;2,571.51 ;127.81
+23;Shell Plc;United Kingdom;Oil & Gas Operations;283.78 ;16.12 ;387.61 ;195.55
+24;Morgan Stanley;United States;Diversified Financials;101.28 ;14.29 ;1,300.3 ;187.11
+25;Allianz;Germany;Insurance;167.47 ;10.59 ;1,081.66 ;157.55
+26;RBC;Canada;Banking;98.42 ;12.9 ;1,512.88 ;166.38
+27;Ping An Insurance Group;China;Insurance;158;17.61 ;1,775.23 ;107.27
+28;PetroChina;China;Oil & Gas Operations;383.64 ;22.88 ;377.13 ;136.38
+29;Santander;Spain;Banking;145.95 ;13.6 ;1,902.3 ;110.41
+30;Chevron;United States;Oil & Gas Operations;193.47 ;17.66 ;256.94 ;242.32
+30;Verizon Communications;United States;Telecommunications Services;135.29 ;17.78 ;380.36 ;176.86
+32;China Mobile;Hong Kong;Telecommunications Services;144.16 ;19.31 ;293.11 ;223.47
+33;Alibaba Group;China;Retailing;136.39 ;16.72 ;254.13 ;285.47
+34;Mitsubishi UFJ Financial;Japan;Banking;83.45 ;12.82 ;2,629.12 ;139.79
+35;AT&T;United States;Telecommunications Services;122.93 ;11.85 ;397.47 ;192.45
+35;BNP Paribas;France;Banking;166.58 ;11.73 ;2,800.93 ;93.5
+37;Tencent Holdings;China;IT Software & Services;91.74 ;26.97 ;244;562.27
+38;Taiwan Semiconductor;Taiwan;Semiconductors;96.73 ;40.32 ;214.84 ;708.2
+39;China Merchants Bank;China;Banking;70.37 ;20.62 ;1,664.83 ;143.87
+40;Deutsche Telekom;Germany;Telecommunications Services;125.22 ;12.12 ;339.95 ;173.71
+41;TotalEnergies;France;Oil & Gas Operations;195.6 ;15.78 ;285.49 ;125.83
+42;Johnson & Johnson;United States;Drugs & Biotechnology;89.33 ;21.81 ;193.67 ;372.51
+43;Comcast;United States;Media;123.56 ;15.71 ;267.77 ;128.18
+44;AXA Group;France;Insurance;116.84 ;8.31 ;676.97 ;100.33
+45;Reliance Industries;India;Oil & Gas Operations;114.1 ;8.24 ;228.16 ;205.91
+46;TD Bank Group;Canada;Banking;87.84 ;6.39 ;1,445.58 ;108.88
+47;NVIDIA;United States;Semiconductors;130.5 ;72.88 ;111.6 ;2,708.64
+48;Nestlé;Switzerland;Food, Drink & Tobacco;103.73 ;12.36 ;153.67 ;265.65
+49;LVMH Louis Vuitton Moet Hennessy;France;Household & Personal Products;91.6 ;13.58 ;154.49 ;283.06
+50;American Express;United States;Business Services & Supplies;75.33 ;10.2 ;282.24 ;185.52
+51;Sinopec;China;Oil & Gas Operations;390.07 ;6.99 ;298.97 ;94.58
+52;BBVA-Banco Bilbao Vizcaya;Spain;Banking;89.87 ;10.77 ;799.82 ;81.51
+53;HDFC Bank;India;Banking;55.7 ;8.37 ;513.9 ;171.09
+54;Volkswagen Group;Germany;Consumer Durables;351.18 ;11.6 ;686.77 ;55.71
+55;State Bank of India;India;Banking;77.53 ;9.48 ;846.3 ;83.43
+56;Sumitomo Mitsui Financial;Japan;Banking;64.06 ;8.62 ;1,977.94 ;87.95
+57;Bank of Communications;China;Banking;75.83 ;12.22 ;2,041.4 ;64.43
+57;Sony;Japan;Technology Hardware & Equipment;91.14 ;7.48 ;229.01 ;147.94
+59;Postal Savings Bank Of China (PSBC);China;Banking;81.34 ;12.02 ;2,340.64 ;60.98
+60;Procter & Gamble;United States;Household & Personal Products;83.93 ;15.5 ;122.98 ;377.57
+61;Intesa Sanpaolo Assicura;Italy;Insurance;55.47 ;9.37 ;966.42 ;94.28
+62;Siemens;Germany;Capital Goods;83.53 ;10.4 ;163.46 ;184.52
+63;Commonwealth Bank;Australia;Banking;45.53 ;6.44 ;810.2 ;176.01
+64;UBS;Switzerland;Diversified Financials;86.9 ;5.08 ;1,565.03 ;91.25
+65;Credit Agricole;France;Banking;113.37 ;6.88 ;2,391.78 ;57.76
+66;Oracle;United States;IT Software & Services;55.78 ;12.16 ;161.38 ;388.36
+67;The Home Depot;United States;Retailing;159.51 ;14.81 ;96.12 ;355.41
+68;Broadcom;United States;Semiconductors;54.53 ;10.07 ;165.36 ;904.23
+69;Tesla;United States;Consumer Durables;95.72 ;6.37 ;125.11 ;916.55
+70;Zurich Insurance Group;Switzerland;Insurance;85.46 ;5.82 ;402.17 ;97.54
+71;The Walt Disney Company;United States;Media;92.09 ;5.62 ;197.05 ;163.21
+72;Mercedes-Benz Group;Germany;Consumer Durables;157.49 ;11.04 ;274.42 ;59.76
+73;Pfizer;United States;Drugs & Biotechnology;63.63 ;8.02 ;213.4 ;129.99
+74;CVS Health;United States;Retailing;372.69 ;4.61 ;260.82 ;82.46
+75;Industrial Bank;China;Banking;56.6 ;10.73 ;1,440.47 ;59.72
+76;Merck & Co.;United States;Drugs & Biotechnology;63.69 ;17.43 ;117.11 ;208.21
+77;Chubb;Switzerland;Insurance;56.34 ;8.46 ;231.74 ;111.83
+78;Munich Re;Germany;Insurance;74.96 ;6.15 ;296.69 ;89.45
+79;Nippon Telegraph & Tel;Japan;Telecommunications Services;90.48 ;7.39 ;194.73 ;85.23
+80;Roche Holding;Switzerland;Drugs & Biotechnology;68.69 ;9.4 ;112.33 ;251.06
+81;BMW Group;Germany;Consumer Durables;154.01 ;7.89 ;291.02 ;54.01
+82;Itaú Unibanco Holding;Brazil;Banking;62.92 ;7.62 ;463.89 ;65.56
+83;Life Insurance Corp. of India;India;Insurance;107.19 ;5.15 ;682.46 ;58.6
+84;BMO;Canada;Banking;58.41 ;5.92 ;1,013.7 ;69.24
+84;CNOOC;Hong Kong;Oil & Gas Operations;57.28 ;19.17 ;148;103.31
+86;PepsiCo;United States;Food, Drink & Tobacco;91.52 ;9.37 ;101.74 ;182.91
+87;BYD;China;Consumer Durables;111.8 ;6.21 ;115.91 ;155.43
+88;Enel;Italy;Utilities;79.94 ;7.59 ;193.78 ;86.93
+89;China Life Insurance;China;Insurance;55.35 ;14.86 ;947.7 ;51.01
+90;Mizuho Financial;Japan;Banking;59.56 ;5.89 ;1,815.93 ;60.45
+91;RTX;United States;Aerospace & Defense;81.74 ;4.6 ;164.86 ;167.29
+92;Anheuser-Busch InBev;Belgium;Food, Drink & Tobacco;59.77 ;5.85 ;208.64 ;128.73
+93;Costco Wholesale;United States;Retailing;264.09 ;7.62 ;73.22 ;433.55
+94;Cisco Systems;United States;IT Software & Services;54.18 ;9.19 ;121.38 ;225.61
+95;IBM;United States;IT Software & Services;62.83 ;5.47 ;145.67 ;215.5
+95;Progressive;United States;Insurance;78.51 ;8.72 ;106.96 ;155.36
+97;Mitsubishi;Japan;Trading Companies;124.13 ;7.23 ;138.62 ;73.97
+98;Elevance Health;United States;Drugs & Biotechnology;183.12 ;5.92 ;119.72 ;95.27
+99;Petrobras;Brazil;Oil & Gas Operations;91.05 ;6.79 ;182.07 ;68.43
+100;Novartis;Switzerland;Drugs & Biotechnology;50.31 ;11.95 ;106.76 ;211.63
+101;CITIC;Hong Kong;Business Services & Supplies;104.61 ;8.04 ;1,654.34 ;34.5
+102;Bank of Nova Scotia;Canada;Banking;54.4 ;4.88 ;993.72 ;60.78
+102;General Motors;United States;Consumer Durables;187.44 ;6.01 ;279.76 ;45.52
+104;Coca-Cola;United States;Food, Drink & Tobacco;46.77 ;10.63 ;100.55 ;309.47
+105;ConocoPhillips;United States;Oil & Gas Operations;54.61 ;9.22 ;122.78 ;115.95
+106;Equinor;Norway;Oil & Gas Operations;102.52 ;8.79 ;131.14 ;62.39
+107;Capital One;United States;Banking;53.72 ;4.8 ;493.6 ;69.98
+108;AbbVie;United States;Drugs & Biotechnology;57.37 ;4.17 ;135.16 ;329.14
+109;AstraZeneca;United Kingdom;Drugs & Biotechnology;54.06 ;7.05 ;104.03 ;214.62
+109;US Bancorp;United States;Banking;42.25 ;6.66 ;676.49 ;62.2
+111;China Citic Bank;China;Banking;53.17 ;9.53 ;1,305.99 ;43.62
+112;Iberdrola;Spain;Utilities;48.39 ;6.07 ;170.14 ;109.87
+113;DBS;Singapore;Banking;29.72 ;8.45 ;606.46 ;91.21
+114;Generali Group;Italy;Insurance;88.56 ;4.03 ;557.77 ;55.28
+115;ICICI Bank;India;Banking;34.84 ;6.04 ;309.13 ;117.09
+116;UniCredit;Italy;Banking;27.08 ;10.38 ;811.84 ;90.08
+117;Honda Motor;Japan;Consumer Durables;143.62 ;6.88 ;199.63 ;46.32
+118;Caterpillar;United States;Engineering, Manufacturing;64.81 ;10.79 ;87.76 ;146.46
+119;AIRBUS;France;Aerospace & Defense;74.89 ;4.58 ;133.8 ;125.95
+120;Cigna;United States;Insurance;244.38 ;3.43 ;151.5 ;90.92
+120;Contemporary Amperex Technology;China;Capital Goods;50.55 ;7.51 ;113.09 ;142.51
+122;Tokio Marine Holdings;Japan;Insurance;51.13 ;7.09 ;194.19 ;73.05
+123;GE Aerospace;United States;Aerospace & Defense;39.68 ;6.97 ;124.12 ;211.6
+124;Charles Schwab;United States;Diversified Financials;26.2 ;6.49 ;462.9 ;144.98
+125;BHP Group;Australia;Materials;53.61 ;11.39 ;100.72 ;123.44
+126;Visa;United States;Banking;36.8 ;19.7 ;91.89 ;654.78
+127;Ford Motor;United States;Consumer Durables;184.99 ;5.88 ;285.2 ;39.92
+127;MetLife;United States;Insurance;70.99 ;4.43 ;677.46 ;51.22
+129;Canadian Imperial Bank;Canada;Banking;46.52 ;5.49 ;747.43 ;57.44
+130;Softbank;Japan;Telecommunications Services;46.58 ;5.6 ;299.24 ;72.3
+131;Sanofi;France;Drugs & Biotechnology;44.44 ;6.01 ;137.51 ;128.52
+132;NAB - National Australia Bank;Australia;Banking;41.65 ;4.59 ;749.5 ;68.53
+133;Deutsche Bank;Germany;Diversified Financials;71.04 ;4.08 ;1,440.41 ;48.55
+134;Barclays;United Kingdom;Diversified Financials;34.23 ;6.79 ;1,901.4 ;55.63
+135;Rio Tinto;United Kingdom;Materials;53.66 ;11.55 ;102.79 ;98.38
+136;China State Construction Engineering;China;Construction;302.55 ;6.42 ;437.6 ;30.86
+137;Hon Hai Precision;Taiwan;Technology Hardware & Equipment;213.58 ;4.75 ;134.04 ;59.38
+138;Eli Lilly;United States;Drugs & Biotechnology;45.04 ;10.59 ;78.72 ;838.53
+139;VINCI;France;Construction;78.38 ;5.26 ;134.09 ;77.35
+140;Westpac Banking Group;Australia;Banking;37.91 ;4.6 ;748.35 ;70.04
+141;Shanghai Pudong Development;China;Banking;48.58 ;6.29 ;1,296.28 ;42.67
+142;Hyundai Motor;South Korea;Consumer Durables;128.44 ;9.1 ;230.82 ;34.66
+143;Lloyds Banking Group;United Kingdom;Banking;39.87 ;5.01 ;1,135.55 ;58.31
+144;Abbott Laboratories;United States;Health Care Equipment & Services;42.34 ;13.46 ;81.41 ;223.47
+145;Unilever;United Kingdom;Household & Personal Products;65.75 ;6.23 ;82.58 ;155.96
+146;PNC Financial Services;United States;Banking;33.55 ;6;554.72 ;62.75
+147;Salesforce;United States;IT Software & Services;37.9 ;6.2 ;105.25 ;257.4
+148;Thermo Fisher Scientific;United States;Drugs & Biotechnology;42.9 ;6.52 ;99.04 ;160.15
+149;John Deere;United States;Capital Goods;48.05 ;6.22 ;103.12 ;124.66
+150;ANZ Group Holdings;Australia;Banking;43.57 ;4.31 ;852.7 ;54.67
+151;Mitsui;Japan;Chemicals;94.46 ;6.53 ;110.49 ;55.52
+152;Itochu;Japan;Food Markets;96.49 ;5.72 ;100.17 ;70.27
+152;PDD Holdings;Ireland;Retailing;54.73 ;15.62 ;69.19 ;144.45
+154;AIA Group;Hong Kong;Insurance;29.55 ;6.84 ;305.45 ;75.63
+155;SK Hynix;South Korea;Semiconductors;51.24 ;18.64 ;84.2 ;88.42
+156;NatWest Group;United Kingdom;Banking;37.52 ;5.77 ;886.68 ;50.95
+157;Bank of New York Mellon;United States;Diversified Financials;39.93 ;4.72 ;440.69 ;56.27
+158;Novo Nordisk;Denmark;Drugs & Biotechnology;42.12 ;14.65 ;64.68 ;272.76
+159;ENGIE;France;Utilities;79.84 ;4.44 ;196.27 ;48.05
+160;Accenture;Ireland;IT Software & Services;67.22 ;7.68 ;59.87 ;183.67
+161;Société Générale;France;Banking;79.2 ;3.76 ;1,629.41 ;34.27
+162;CaixaBank;Spain;Banking;28.41 ;6.26 ;653.4 ;55.01
+162;China Telecom;China;Telecommunications Services;72.42 ;4.61 ;118.38 ;63.94
+164;SAP;Germany;IT Software & Services;37.73 ;6.15 ;81.69 ;324.53
+165;ING Group;Netherlands;Banking;24.46 ;6.92 ;1,056.77 ;59.4
+166;Enbridge;Canada;Oil & Gas Operations;39.12 ;3.97 ;152.25 ;100.62
+167;Manulife;Canada;Insurance;39.33 ;3.93 ;680.59 ;52.12
+168;Charter Communications;United States;Media;55.14 ;5.19 ;150.95 ;53.04
+169;China Shenhua Energy;China;Materials;44.39 ;8.04 ;93.2 ;78.89
+170;NextEra Energy;United States;Utilities;24.72 ;5.51 ;194.26 ;136.06
+171;JD.com;China;Retailing;160.97 ;5.74 ;95.66 ;46.88
+172;United Parcel Service;United States;Transportation;90.89 ;5.78 ;70.07 ;83.03
+173;Bristol Myers Squibb;United States;Drugs & Biotechnology;47.64 ;5.42 ;92.43 ;97.47
+174;Duke Energy;United States;Utilities;30.36 ;4.51 ;190.74 ;93.13
+174;Hitachi;Japan;Capital Goods;62.85 ;3.8 ;86.96 ;117.58
+176;E.ON;Germany;Utilities;86.66 ;4.9 ;124.33 ;44.63
+177;Linde;United Kingdom;Chemicals;33.01 ;6.57 ;80.15 ;212.05
+178;Apollo Global Management;United States;Diversified Financials;26.32 ;4.43 ;377.89 ;76.1
+179;Philip Morris International;United States;Food, Drink & Tobacco;38.18 ;7.57 ;65.08 ;264.98
+180;Stellantis;Netherlands;Consumer Durables;169.69 ;5.92 ;214.98 ;26.7
+181;Nordea Bank;Finland;Banking;29.67 ;5.27 ;692.81 ;46.52
+182;L'Oréal;France;Household & Personal Products;47.04 ;6.93 ;58.35 ;227.3
+183;Dell Technologies;United States;Technology Hardware & Equipment;95.47 ;4.47 ;79.75 ;66.22
+184;British American Tobacco;United Kingdom;Food, Drink & Tobacco;33.05 ;3.87 ;148.91 ;91.71
+184;Midea Group;China;Consumer Durables;56.55 ;5.37 ;82.8 ;71.6
+186;Prudential Financial;United States;Insurance;70.41 ;2.73 ;735.59 ;36.47
+187;Allstate;United States;Insurance;64.11 ;4.67 ;104.75 ;51.15
+188;Banco do Brasil;Brazil;Banking;60.45 ;4.89 ;388.28 ;28.15
+189;Netflix;United States;IT Software & Services;39.87 ;9.27 ;52.09 ;468.78
+190;Travelers;United States;Insurance;47.01 ;4.27 ;126.07 ;58.72
+191;BlackRock;United States;Diversified Financials;21.34 ;6.31 ;138.62 ;140.71
+191;Honeywell International;United States;Trading Companies;38.5 ;5.71 ;75.2 ;128.11
+193;Lockheed Martin;United States;Aerospace & Defense;71.81 ;5.5 ;56.67 ;111.91
+193;Qualcomm;United States;Semiconductors;40.7 ;10.55 ;55.58 ;164.31
+195;McKesson;United States;Health Care Equipment & Services;344.58 ;2.83 ;71.08 ;87.1
+195;Qatar National Bank;Qatar;Banking;37.96 ;4.31 ;363.58 ;40.92
+197;Southern Company;United States;Utilities;26.72 ;4.4 ;145.18 ;99.49
+198;International Holding Company;United Arab Emirates;Conglomerates;25.23 ;4.29 ;109.39 ;239.57
+199;Uber;United States;Transportation;43.98 ;9.86 ;51.24 ;162.6
+200;China Pacific Insurance;China;Insurance;52.4 ;5.94 ;402.26 ;26.73
+201;Standard Chartered;United Kingdom;Banking;42.21 ;3.7 ;849.69 ;34.19
+202;Amgen;United States;Drugs & Biotechnology;33.23 ;4.09 ;91.84 ;150.99
+202;PICC;China;Insurance;81.16 ;5.86 ;241.99 ;26.11
+204;HCA Healthcare;United States;Health Care Equipment & Services;71.58 ;5.78 ;59.8 ;80.73
+205;Eni;Italy;Oil & Gas Operations;94.93 ;2.79 ;156.04 ;42.69
+206;Lowe's;United States;Retailing;83.67 ;6.94 ;44.57 ;123.64
+207;KKR;United States;Diversified Financials;23.38 ;3.08 ;360.1 ;100.93
+208;Truist Financial;United States;Banking;24.15 ;4.88 ;535.9 ;49.17
+209;Schneider Electric;France;Capital Goods;41.27 ;4.62 ;68.28 ;138.93
+210;Medtronic;Ireland;Health Care Equipment & Services;33.2 ;4.26 ;89.97 ;107.94
+211;KDDI;Japan;Telecommunications Services;38.63 ;4.15 ;103.62 ;69.64
+212;FedEx;United States;Transportation;87.81 ;3.91 ;85.04 ;50.69
+213;Oversea-Chinese Banking;Singapore;Banking;20.64 ;5.68 ;458.18 ;54.41
+214;ASML Holding;Netherlands;Semiconductors;32.97 ;9.34 ;49.13 ;263.3
+215;Swiss Re;Switzerland;Insurance;50.15 ;3.19 ;127.23 ;51.32
+216;MS&AD Insurance;Japan;Insurance;43.14 ;4.71 ;168.68 ;33.74
+217;Mastercard;United States;Banking;28.16 ;12.87 ;48.08 ;485.1
+218;China Everbright Bank;China;Banking;37.35 ;5.78 ;996.85 ;24.83
+219;Deutsche Post;Germany;Transportation;91.06 ;3.61 ;76.12 ;48.84
+220;Oil & Natural Gas;India;Oil & Gas Operations;78.61 ;4.65 ;90.41 ;36.27
+221;Marathon Petroleum;United States;Oil & Gas Operations;138.52 ;3.44 ;80.35 ;42.82
+222;Emirates NBD;United Arab Emirates;Banking;27;5.98 ;280.58 ;34.65
+223;Al Rajhi Bank;Saudi Arabia;Banking;15.9 ;5.44 ;272.74 ;104.71
+224;McDonald's;United States;Hotels, Restaurants & Leisure;25.92 ;8.22 ;55.18 ;226.49
+225;Mondelez International;United States;Food, Drink & Tobacco;36.44 ;4.61 ;68.5 ;84.97
+226;KBC Group;Belgium;Banking;28.88 ;3.6 ;386.29 ;37.07
+227;United Overseas Bank;Singapore;Banking;21.43 ;4.52 ;394.12 ;45.39
+228;Micron Technology;United States;Semiconductors;31.32 ;4.67 ;73.05 ;89.16
+229;Union Pacific;United States;Transportation;24.25 ;6.73 ;68.49 ;127.83
+229;Xiaomi;China;Technology Hardware & Equipment;50.83 ;3.29 ;55.23 ;154.41
+231;Japan Post Holdings;Japan;Insurance;76.94 ;2.06 ;1,958.28 ;26.65
+232;Fubon Financial;Taiwan;Insurance;25.45 ;4.7 ;367.19 ;33.37
+233;Gilead Sciences;United States;Drugs & Biotechnology;28.71 ;5.96 ;56.43 ;128.62
+234;Dai-ichi Life Insurance;Japan;Insurance;62.22 ;3.01 ;436.12 ;24.5
+235;Volvo Group;Sweden;Capital Goods;48.63 ;4.34 ;68.46 ;55.35
+236;GSK;United Kingdom;Drugs & Biotechnology;40.09 ;3.29 ;74.47 ;74.9
+237;Banco Bradesco;Brazil;Banking;55.88 ;3.2 ;334.99 ;24.97
+238;American International Group;United States;Insurance;33.44 ;3.35 ;123.28 ;47.41
+238;PayPal;United States;Business Services & Supplies;31.79 ;4.15 ;81.61 ;63.86
+240;First Abu Dhabi Bank;United Arab Emirates;Banking;21.02 ;4.44 ;330.31 ;41.81
+241;Danaher;United States;Health Care Equipment & Services;23.82 ;3.77 ;79.12 ;141.09
+242;General Dynamics;United States;Aerospace & Defense;49.21 ;3.98 ;56.58 ;73
+242;Target;United States;Retailing;106.57 ;4.09 ;57.77 ;44
+244;Discover Financial Services;United States;Business Services & Supplies;23.55 ;4.77 ;147.91 ;46.51
+245;The Saudi National Bank;Saudi Arabia;Banking;16.22 ;5.91 ;312.2 ;56.73
+246;Centene;United States;Drugs & Biotechnology;169.28 ;3.45 ;87.04 ;28.62
+247;Meituan;China;Transportation;46.91 ;4.98 ;44.44 ;99.92
+248;KB Financial Group;South Korea;Banking;40.72 ;3.99 ;514.79 ;22.59
+249;Vale;Brazil;Materials;37.71 ;5.61 ;83.64 ;40.48
+250;Fairfax Financial;Canada;Insurance;41.59 ;3.88 ;96.78 ;37.1
+251;Zijin Mining Group;China;Materials;41.76 ;4.98 ;56.77 ;58.59
+252;China Minsheng Bank;China;Banking;40.52 ;3.89 ;1,070.65 ;20.21
+253;Commerzbank;Germany;Banking;27.98 ;2.9 ;586.08 ;30.91
+254;A.P. Moller-Maersk;Denmark;Transportation;55.47 ;6.1 ;87.95 ;26.3
+254;Inditex;Spain;Retailing;41.6 ;6.32 ;36.09 ;172.35
+256;DNB Bank;Norway;Banking;20.28 ;4.08 ;318.22 ;37.88
+257;Aflac;United States;Insurance;18.93 ;5.44 ;117.4 ;58.91
+258;Talanx;Germany;Insurance;58.27 ;2.14 ;201.48 ;29.18
+259;National Grid;United Kingdom;Utilities;24.49 ;2.29 ;136.62 ;69.87
+260;Saint-Gobain;France;Construction;50.38 ;3.08 ;63.91 ;53.38
+261;Kroger;United States;Food Markets;147.12 ;2.65 ;55.61 ;46.26
+262;Air Liquide;France;Chemicals;29.27 ;3.58 ;53.71 ;116.97
+263;Orange;France;Telecommunications Services;43.55 ;2.54 ;111.07 ;37.26
+264;China Unicom;Hong Kong;Telecommunications Services;54.13 ;2.86 ;91.96 ;34.28
+265;TJX Cos;United States;Retailing;56.36 ;4.86 ;31.75 ;141.38
+266;EssilorLuxottica;France;Health Care Equipment & Services;28.67 ;2.55 ;66.55 ;131.52
+267;Marsh McLennan;United States;Insurance;25.06 ;4.04 ;57.02 ;108.03
+268;Danske Bank;Denmark;Banking;23.05 ;3.43 ;516;28.14
+269;China Resources Land;Hong Kong;Construction;39.68 ;3.55 ;154.59 ;24.91
+269;Fiserv;United States;Banking;20.7 ;3.25 ;80.4 ;99.16
+271;Erste Group Bank;Austria;Banking;25.13 ;3.24 ;366.93 ;27.98
+272;Sun Life Financial;Canada;Insurance;30.17 ;2.28 ;257.77 ;33.4
+273;Northrop Grumman;United States;Aerospace & Defense;40.37 ;3.71 ;48.47 ;68.11
+274;Kweichow Moutai;China;Food, Drink & Tobacco;20.46 ;11.98 ;40.96 ;267.31
+275;Suncor Energy;Canada;Oil & Gas Operations;37;4.39 ;62.43 ;44.03
+276;Phillips 66;United States;Oil & Gas Operations;137.6 ;1.85 ;71.84 ;42.36
+277;Canadian Natural Resources;Canada;Oil & Gas Operations;26.03 ;4.46 ;61.97 ;61.6
+278;KIA;South Korea;Consumer Durables;78.4 ;6.72 ;63.01 ;24.16
+278;Nike;United States;Household & Personal Products;47.91 ;4.51 ;37.79 ;85.05
+278;RWE Group;Germany;Utilities;26.21 ;5.56 ;115.75 ;28.62
+281;Daimler Truck Holding;Germany;Consumer Durables;58.5 ;3.14 ;76.48 ;30.64
+281;Delta Air Lines;United States;Transportation;61.93 ;3.66 ;77.34 ;27.15
+283;Bank Of Jiangsu;China;Banking;21.14 ;4.42 ;541.43 ;24.91
+284;PTT;Thailand;Oil & Gas Operations;87.57 ;2.55 ;100.86 ;25.96
+285;Macquarie Group Limited;Australia;Diversified Financials;20.7 ;2.36 ;287.43 ;44.82
+286;Automatic Data Processing;United States;IT Software & Services;19.9 ;3.93 ;64.1 ;118.71
+287;Cencora;United States;Health Care Equipment & Services;303.19 ;1.4 ;69.05 ;55.44
+288;ABB;Switzerland;Capital Goods;32.92 ;4.14 ;42.46 ;95.52
+289;Holcim;Switzerland;Construction;29.98 ;3.32 ;59.9 ;61.03
+290;CRH;Ireland;Construction;35.57 ;3.46 ;50.61 ;62.66
+291;National Bank of Canada;Canada;Banking;20.83 ;2.82 ;334.08 ;33.51
+292;Axis Bank;India;Banking;18.44 ;3.32 ;193.86 ;42.25
+293;American Electric;United States;Utilities;19.92 ;2.97 ;105.73 ;59.41
+294;Ameriprise Financial;United States;Diversified Financials;18.13 ;2.99 ;179.06 ;44.64
+295;SEB AB;Sweden;Banking;18.27 ;3.39 ;340.21 ;31.86
+296;SLB;United States;Oil & Gas Operations;36.09 ;4.19 ;49;46.94
+297;Cathay Financial;Taiwan;Insurance;22.43 ;3.43 ;419.44 ;24.41
+297;EOG Resources;United States;Oil & Gas Operations;23.48 ;6.4 ;47.19 ;62.36
+299;América Móvil;Mexico;Telecommunications Services;47.42 ;1.54 ;86.88 ;52.11
+300;Applied Materials;United States;Capital Goods;27.62 ;6.34 ;33.34 ;123.13
+301;Sompo;Japan;Insurance;32.72 ;3.13 ;94.06 ;30.47
+302;Occidental Petroleum;United States;Oil & Gas Operations;27.1 ;3.04 ;87.78 ;37.93
+302;Power Corp of Canada;Canada;Insurance;34.11 ;2.01 ;591.96 ;23.56
+304;PG&E;United States;Utilities;24.54 ;2.41 ;135.44 ;37.67
+305;BASF;Germany;Capital Goods;70.59 ;1.41 ;85.98 ;45.65
+306;Vodafone;United Kingdom;Telecommunications Services;35.81 ;2.77 ;155.75 ;23.32
+307;Exelon;United States;Utilities;23.03 ;2.46 ;107.78 ;46.66
+308;Shinhan Financial Group;South Korea;Banking;32.32 ;3.23 ;502.51 ;17.88
+309;GE Vernova;United States;Capital Goods;35.72 ;1.94 ;51.56 ;101.65
+310;Advanced Micro Devices (AMD);United States;Semiconductors;25.79 ;1.64 ;69.23 ;157.01
+311;Constellation Energy;United States;Utilities;23.59 ;3.75 ;52.93 ;69.86
+312;Brookfield Corporation;Canada;Diversified Financials;87.17 ;0.6481;490.42 ;79.8
+312;Sumitomo;Japan;Trading Companies;47.3 ;2.63 ;76.87 ;29.02
+314;United Airlines Holdings;United States;Transportation;57.74 ;3.66 ;76.11 ;22.27
+315;Marubeni;Japan;Food, Drink & Tobacco;49.79 ;3.47 ;60.36 ;29.01
+316;State Street;United States;Diversified Financials;21.56 ;2.87 ;372.69 ;25.23
+317;Bharti Airtel;India;Telecommunications Services;19.45 ;2.94 ;58.5 ;121.07
+318;Newmont;United States;Materials;19.51 ;5.07 ;55.52 ;60.8
+319;Paccar;United States;Capital Goods;33.65 ;4.16 ;43.42 ;48.24
+320;BAE Systems, Inc.;United Kingdom;Aerospace & Defense;33.62 ;2.5 ;47.77 ;65.59
+320;Huaxia Bank;China;Banking;24.76 ;3.85 ;599.58 ;17.44
+322;Kraft Heinz Company;United States;Food, Drink & Tobacco;25.85 ;2.74 ;88.29 ;35.24
+323;Denso;Japan;Consumer Durables;46.98 ;2.75 ;54.33 ;35.54
+324;Cosco Shipping;China;Transportation;32.5 ;6.83 ;68.15 ;23.28
+325;Altria Group;United States;Food, Drink & Tobacco;20.44 ;11.24 ;35.18 ;98.25
+326;Royal Ahold Delhaize N.V.;Netherlands;Food Markets;96.66 ;1.91 ;53.68 ;35.65
+327;Citic Securities;China;Diversified Financials;15.92 ;2.96 ;234.37 ;36.88
+327;Eaton;Ireland;Capital Goods;24.88 ;3.79 ;38.38 ;113.15
+329;Oneok;United States;Oil & Gas Operations;21.7 ;3.04 ;67.71 ;53.91
+330;Rolls-Royce Holdings;United Kingdom;Aerospace & Defense;24.16 ;3.22 ;44.69 ;85.19
+331;Stryker;United States;Health Care Equipment & Services;22.59 ;2.99 ;42.97 ;139.34
+332;Starbucks;United States;Hotels, Restaurants & Leisure;36.12 ;3.52 ;31.89 ;95.2
+333;Hartford Financial Services;United States;Insurance;26.93 ;2.99 ;75.12 ;33.89
+334;0.0030;United States;Conglomerates;24.51 ;4.36 ;39.95 ;73.9
+335;SAIC Motor;China;Consumer Durables;89.78 ;1.33 ;136.16 ;24.66
+336;Tata Motors;India;Consumer Durables;52.95 ;3.8 ;46.62 ;28.21
+337;Nippon Steel;Japan;Materials;57.95 ;3.11 ;70.15 ;21.7
+338;Banorte;Mexico;Banking;26.94 ;2.99 ;124.78 ;23.55
+339;Merck KGaA, Darmstadt, Germany and its affiliates;Germany;Drugs & Biotechnology;22.88 ;3;53.94 ;59.88
+340;Adobe;United States;IT Software & Services;22.04 ;6.75 ;29.95 ;156.72
+341;Poste Italiane;Italy;Banking;22.88 ;2.16 ;286.94 ;25.68
+342;Couche Tard;Canada;Retailing;74.28 ;2.6 ;36.57 ;49.52
+343;S&P Global;United States;Business Services & Supplies;14.21 ;3.85 ;60.22 ;150.64
+344;Bank of Ningbo;China;Banking;16.93 ;3.77 ;430.17 ;22.43
+345;China Railway Group;China;Construction;161.23 ;3.71 ;309.11 ;10.8
+346;Gree Electric Appliances;China;Capital Goods;26.2 ;4.47 ;52.84 ;33.99
+347;CK Hutchison;Hong Kong;Retailing;36.06 ;2.19 ;143.22 ;21.36
+348;Tesco;United Kingdom;Food Markets;89.08 ;2.07 ;48.97 ;31.86
+349;Bank Rakyat Indonesia (BRI);Indonesia;Banking;16.07 ;3.8 ;123.83 ;33.48
+350;Takeda Pharmaceutical;Japan;Drugs & Biotechnology;30.23 ;1.37 ;96.12 ;47.07
+351;Waste Management;United States;Business Services & Supplies;22.06 ;2.75 ;45.22 ;91.86
+352;Banco Btg Pactual;Brazil;Diversified Financials;15.25 ;2.19 ;104.7 ;74.07
+353;Booking Holdings;United States;IT Software & Services;23.74 ;5.88 ;27.71 ;157.93
+354;Bank of Beijing;China;Banking;19.57 ;3.59 ;579.02 ;18
+355;Diageo;United Kingdom;Food, Drink & Tobacco;20.19 ;3.59 ;46.95 ;61.07
+356;China Yangtze Power;China;Utilities;11.5 ;4.47 ;77.63 ;99.16
+357;Panasonic;Japan;Consumer Durables;56.77 ;2.2 ;61.71 ;25.68
+358;Seven & I Holdings;Japan;Food Markets;78.5 ;1.13 ;75.56 ;37.79
+359;Nomura;Japan;Diversified Financials;31.07 ;2.24 ;379.85 ;16.74
+360;IntercontinentalExchange;United States;Diversified Financials;11.08 ;2.75 ;139.43 ;93.78
+361;Danone;France;Food, Drink & Tobacco;29.61 ;2.18 ;46.9 ;54.76
+362;Svenska Handelsbanken;Sweden;Banking;17.8 ;2.6 ;320.31 ;23.69
+363;Fannie Mae;United States;Business Services & Supplies;151.42 ;16.98 ;4,349.73 ;7.3
+364;Swedbank;Sweden;Banking;15.09 ;3.3 ;272.39 ;26.17
+365;D.R. Horton;United States;Construction;35.31 ;4.29 ;35.69 ;38.26
+366;Freddie Mac;United States;Business Services & Supplies;120.45 ;11.86 ;3,386.74 ;3.37
+367;Saudi Telecom;Saudi Arabia;Telecommunications Services;20.3 ;3.15 ;42.75 ;63.81
+368;NTPC;India;Utilities;22.22 ;2.63 ;58.74 ;40.44
+369;Carrier Global;United States;Capital Goods;24;3.94 ;37.4 ;51.89
+370;Kinder Morgan;United States;Oil & Gas Operations;15.49 ;2.57 ;72.32 ;59.66
+371;China Communications Construction;China;Construction;106.75 ;3.14 ;254.58 ;10.43
+372;Mitsubishi Heavy Industries;Japan;Aerospace & Defense;32.64 ;1.69 ;43.43 ;64.11
+373;Cardinal Health;United States;Health Care Equipment & Services;222.32 ;1.31 ;47;33.23
+374;Texas Instruments;United States;Semiconductors;16.05 ;4.85 ;33.76 ;148.19
+375;Prudential;United Kingdom;Insurance;16.65 ;2.26 ;181.88 ;27.67
+376;Freeport-McMoRan;United States;Materials;24.66 ;1.76 ;56.02 ;53.67
+377;Cummins;United States;Consumer Durables;34.1 ;3.95 ;31.54 ;40.4
+378;Bank Of Shanghai;China;Banking;15.07 ;3.28 ;451.03 ;20.38
+379;Hewlett Packard Enterprise;United States;IT Software & Services;31.15 ;2.82 ;70.33 ;21.33
+379;ORLEN Spolka Akcyjna;Poland;Oil & Gas Operations;74.61 ;1.91 ;61.82 ;21.25
+381;Arch Capital Group;Bermuda;Insurance;16.86 ;4.31 ;60.22 ;34.07
+382;ArcelorMittal;Luxembourg;Materials;62.44 ;1.34 ;89.39 ;22.68
+383;Sempra;United States;Oil & Gas Operations;12.96 ;2.86 ;96.16 ;48.69
+384;Archer Daniels Midland;United States;Food, Drink & Tobacco;85.5 ;1.8 ;53.27 ;23.17
+385;Dominion Energy;United States;Utilities;14.34 ;2.35 ;102.42 ;45.13
+386;CTBC Financial Holding;Taiwan;Banking;17;2.24 ;269.63 ;22.34
+387;Kotak Mahindra Bank;India;Banking;12.86 ;2.69 ;95.53 ;51.26
+388;Aon;Ireland;Insurance;16.35 ;2.55 ;50.3 ;72.54
+389;Mitsubishi Electric;Japan;Capital Goods;36.15 ;2.29 ;39.67 ;38.15
+390;Richemont;Switzerland;Consumer Durables;22.19 ;1.42 ;47.27 ;103.35
+391;Ecopetrol;Colombia;Oil & Gas Operations;32.02 ;3.66 ;68.4 ;17.72
+392;Becton Dickinson;United States;Health Care Equipment & Services;20.64 ;1.75 ;54.66 ;58.89
+392;Synchrony Financial;United States;Business Services & Supplies;19.6 ;2.96 ;122.03 ;19.99
+394;Intuit;United States;IT Software & Services;17.17 ;3.04 ;31.68 ;174.48
+395;M&T Bank;United States;Banking;13.24 ;2.64 ;210.32 ;27.21
+396;Larsen & Toubro;India;Construction;29.69 ;1.67 ;42.55 ;52.67
+397;Valero Energy;United States;Oil & Gas Operations;128.31 ;0.924;59.18 ;35.81
+398;TAQA;United Arab Emirates;Utilities;15.02 ;1.92 ;59.03 ;96.73
+399;Humana;United States;Insurance;117.76 ;1.21 ;46.31 ;31.91
+399;Lennar;United States;Construction;35.81 ;3.7 ;34.99 ;28.39
+399;TC Energy;Canada;Oil & Gas Operations;11.55 ;3.43 ;82.22 ;51.62
+402;Korea Electric Power;South Korea;Utilities;68.49 ;2.56 ;167.65 ;11.28
+403;Baidu;China;IT Software & Services;18.5 ;3.22 ;58.61 ;31.21
+403;Baker Hughes Company;United States;Oil & Gas Operations;27.84 ;2.93 ;38.11 ;36.11
+405;Orix;Japan;Business Services & Supplies;19.35 ;2.63 ;107.64 ;21.84
+406;First Citizens Bank (NC);United States;Banking;14.76 ;2.53 ;228.82 ;24.08
+407;Boston Scientific;United States;Health Care Equipment & Services;17.55 ;2.03 ;39.4 ;150.72
+408;Bank Mandiri;Indonesia;Banking;12.34 ;3.52 ;150.82 ;26.9
+409;Tata Consultancy Services;India;IT Software & Services;30.2 ;5.74 ;18.68 ;145.98
+410;Veolia Environnement;France;Utilities;48.34 ;1.19 ;75.55 ;26.19
+411;Hana Financial Group;South Korea;Banking;28.49 ;2.68 ;433.28 ;11.98
+412;Swiss Life Holding;Switzerland;Insurance;17.35 ;1.39 ;248.44 ;27.59
+413;Johnson Controls International;Ireland;Capital Goods;25.6 ;1.75 ;42.1 ;53.52
+414;HP;United States;Technology Hardware & Equipment;53.6 ;2.72 ;38.93 ;23.83
+415;Cheniere Energy;United States;Oil & Gas Operations;15.78 ;3.25 ;45.45 ;51.96
+416;Haier Smart Home;China;Consumer Durables;39.56 ;2.6 ;39.75 ;26.62
+417;Prologis;United States;Diversified Financials;8.38 ;3.74 ;95.99 ;94.77
+418;Blackstone;United States;Diversified Financials;12.93 ;2.54 ;45.26 ;161.16
+419;Hermès International;France;Household & Personal Products;16.41 ;4.98 ;23.9 ;283.78
+419;Indian Oil;India;Oil & Gas Operations;91.01 ;1.27 ;60.9 ;22.25
+421;BP;United Kingdom;Oil & Gas Operations;189.23 ;0.3992;282.23 ;76.04
+421;Emerson Electric;United States;Technology Hardware & Equipment;17.55 ;2.41 ;42.61 ;59.37
+423;Femsa;Mexico;Food, Drink & Tobacco;42.66 ;1.54 ;40.95 ;36.92
+424;China Railway Construction;China;Construction;147.78 ;3.09 ;255.43 ;8.74
+424;Corebridge Financial;United States;Diversified Financials;18.72 ;2.23 ;362.9 ;16.41
+426;Toyota Industries;Japan;Capital Goods;26.8 ;1.72 ;62.88 ;27.69
+427;Shin-Etsu Chemical;Japan;Chemicals;16.8 ;3.5 ;37.69 ;55.08
+428;Toyota Tsusho;Japan;Trading Companies;66.84 ;2.23 ;46.11 ;18.87
+429;Aviva;United Kingdom;Insurance;52.21 ;0.8306;443.2 ;19.25
+430;Etisalat;United Arab Emirates;Telecommunications Services;16.12 ;2.93 ;49.81 ;40.73
+431;Fifth Third Bank;United States;Banking;13.74 ;2.31 ;212.67 ;23.57
+431;Imperial Brands;United Kingdom;Food, Drink & Tobacco;23.43 ;3.31 ;37.32 ;33.58
+431;Regeneron Pharmaceuticals;United States;Drugs & Biotechnology;14.2 ;4.41 ;37.85 ;65.55
+434;Block;United States;Banking;24.12 ;2.9 ;36.78 ;35.99
+435;Power Construction Corporation of China;China;Construction;84.93 ;1.71 ;183.51 ;11.4
+436;Parker-Hannifin;United States;Technology Hardware & Equipment;19.91 ;3.16 ;28.27 ;77
+437;Vistra Energy;United States;Utilities;19.38 ;2.66 ;40.53 ;43.08
+438;Maybank;Malaysia;Banking;11.85 ;2.21 ;240.48 ;27.26
+439;Fast Retailing;Japan;Retailing;21.6 ;2.69 ;24.75 ;99.62
+439;Raymond James Financial;United States;Diversified Financials;15.6 ;2.19 ;83.13 ;28.15
+441;CSL;Australia;Drugs & Biotechnology;15.1 ;2.75 ;38.45 ;74.86
+442;CSX;United States;Transportation;14.28 ;3.24 ;43.2 ;52.3
+443;Grupo Mexico;Mexico;Materials;16.54 ;3.7 ;38.45 ;41.4
+443;Royal Caribbean Group;United States;Hotels, Restaurants & Leisure;16.48 ;2.88 ;37.07 ;57.56
+445;Consolidated Edison;United States;Utilities;15.26 ;1.82 ;70.56 ;39.78
+446;American Tower;United States;Diversified Financials;10.8 ;2.25 ;61.08 ;98.69
+446;EnBW Energie Baden-Wurttemberg;Germany;Utilities;37.34 ;1.35 ;70.79 ;21.62
+448;Sysco;United States;Food Markets;80.57 ;1.93 ;25.32 ;34.7
+449;Boeing;United States;Aerospace & Defense;69.44 ;-11.51 ;156.49 ;134.18
+450;Marriott International;United States;Hotels, Restaurants & Leisure;25.1 ;2.38 ;26.18 ;65.04
+451;London Stock Exchange;United Kingdom;IT Software & Services;11.37 ;0.8753;917.78 ;80.38
+452;Suzuki Motor;Japan;Consumer Durables;38.35 ;2.52 ;38.35 ;22.76
+453;Daiwa House Industry;Japan;Construction;35.62 ;2.11 ;44.26 ;22.09
+453;Sherwin-Williams;United States;Chemicals;23.1 ;2.68 ;23.63 ;83.41
+455;Bank of Baroda;India;Banking;18;2.44 ;209.23 ;14.97
+456;Sumitomo Mitsui Trust;Japan;Banking;16.78 ;1.69 ;498.35 ;16.78
+457;Luxshare Precision Industry;China;Technology Hardware & Equipment;38.45 ;1.93 ;32.83 ;31.53
+458;Japan Tobacco;Japan;Food, Drink & Tobacco;20.79 ;1.18 ;53.26 ;53.7
+459;Canadian Pacific Kansas City;Canada;Transportation;10.62 ;2.71 ;61.47 ;67.65
+460;Cenovus Energy;Canada;Oil & Gas Operations;39.62 ;2.29 ;39.31 ;22.02
+460;Xcel Energy;United States;Utilities;13.73 ;1.93 ;72.75 ;39.74
+462;Hyundai Mobis;South Korea;Consumer Durables;41.71 ;3.03 ;46.52 ;15.74
+463;CRRC;China;Capital Goods;33.96 ;1.72 ;70.64 ;17.35
+464;Bank of Nanjing;China;Banking;13.8 ;2.85 ;381.32 ;15.84
+465;China Tower Corp.;China;Telecommunications Services;13.59 ;1.49 ;45.6 ;191.6
+466;Kuwait Finance House;Kuwait;Banking;11.27 ;1.9 ;119.53 ;40.32
+466;Repsol;Spain;Oil & Gas Operations;61.79 ;1.9 ;65.43 ;14.1
+468;Investor AB;Sweden;Diversified Financials;7.07 ;4.07 ;94.19 ;90.52
+469;Carnival Corporation;United States;Hotels, Restaurants & Leisure;25.43 ;2.05 ;48.53 ;24.4
+470;NN Group;Netherlands;Insurance;20.46 ;1.64 ;217.84 ;16.09
+471;Diamondback Energy;United States;Oil & Gas Operations;11.07 ;3.32 ;67.29 ;40.22
+472;Komatsu;Japan;Capital Goods;26.59 ;2.63 ;37.66 ;25.86
+473;FirstRand;South Africa;Banking;13.87 ;2.26 ;134.77 ;21.35
+473;JBS;Brazil;Food, Drink & Tobacco;77.34 ;1.78 ;40.78 ;18.7
+475;Air Products & Chemicals;United States;Construction, Chemicals, Raw Materials;12.04 ;3.85 ;40.02 ;59.43
+476;International Airlines;United Kingdom;Transportation;34.7 ;2.95 ;45.36 ;16.77
+477;Northern Trust;United States;Diversified Financials;15.48 ;2.19 ;165.07 ;17.86
+478;CME Group;United States;Diversified Financials;6.28 ;3.62 ;157.83 ;95.97
+479;HeidelbergCement;Germany;Construction;22.89 ;1.93 ;39.61 ;34.33
+480;Deutsche Boerse;Germany;Diversified Financials;7.62 ;2.11 ;230.29 ;59.09
+481;Canadian National Railway;Canada;Transportation;12.44 ;3.25 ;39.68 ;60.91
+482;Bank Central Asia;Indonesia;Banking;7.64 ;3.5 ;92.62 ;62.99
+482;Bank Leumi;Israel;Banking;11.39 ;2.65 ;215.59 ;21.32
+484;Henkel;Germany;Household & Personal Products;23.35 ;2.17 ;37.59 ;32.56
+485;MercadoLibre;Argentina;Retailing;20.78 ;1.91 ;25.2 ;112.84
+486;Norfolk Southern;United States;Transportation;12.11 ;3.32 ;43.8 ;50.16
+487;L3Harris Technologies;United States;Aerospace & Defense;21.25 ;1.6 ;41.25 ;40.56
+488;Intact Financial;Canada;Insurance;20.9 ;1.68 ;41.39 ;38.2
+488;Intel;United States;Semiconductors;53.04 ;-19.2 ;192.24 ;87.43
+488;Republic Services;United States;Business Services & Supplies;16.18 ;2.08 ;33.1 ;76.11
+491;Shaanxi Coal Industry;China;Materials;24.06 ;3.12 ;32.7 ;26.62
+492;ENEOS Holdings;Japan;Oil & Gas Operations;87.25 ;1.66 ;64.01 ;13.15
+493;Williams;United States;Oil & Gas Operations;10.75 ;2.23 ;56.58 ;72.06
+494;Woodside Energy Group;Australia;Oil & Gas Operations;13.98 ;3.57 ;61.26 ;24.24
+495;Bridgestone;Japan;Consumer Durables;29.24 ;1.88 ;36.42 ;28.12
+496;Michelin Group;France;Consumer Durables;29.41 ;2.04 ;38.68 ;25.18
+497;Daikin Industries;Japan;Capital Goods;31.19 ;1.67 ;33.77 ;32.59
+498;Naturgy Energy Group;Spain;Utilities;20.84 ;2.06 ;42.29 ;28.33
+499;Keurig Dr Pepper;United States;Food, Drink & Tobacco;15.52 ;1.5 ;53.7 ;46.67
+500;Nucor;United States;Materials;30.73 ;2.02 ;33.94 ;26.7
+501;NetEase;China;IT Software & Services;14.63 ;4.13 ;26.85 ;67.54
+502;Compass Group;United Kingdom;Hotels, Restaurants & Leisure;42;1.41 ;24.35 ;55.54
+503;Abu Dhabi Commercial Bank;United Arab Emirates;Banking;11.28 ;2.38 ;177.73 ;22.09
+504;Gallagher;United States;Insurance;11.44 ;1.46 ;64.25 ;82.42
+505;Huntington Bank;United States;Banking;11.99 ;2.05 ;209.6 ;21.04
+506;Lam Research;United States;Capital Goods;17.14 ;4.66 ;19.97 ;91.68
+507;Quanta Computer;Taiwan;Technology Hardware & Equipment;43.92 ;1.86 ;28.44 ;27.86
+508;Kansai Electric Power;Japan;Utilities;27.82 ;2.99 ;60.89 ;13.3
+509;DSV;Denmark;Transportation;24.23 ;1.47 ;32.85 ;45.8
+510;Standard Bank Group;South Africa;Banking;11.56 ;2.39 ;173.26 ;19.93
+510;Thales;France;Aerospace & Defense;22.26 ;1.12 ;41.41 ;54.57
+512;Sun Hung Kai Properties;Hong Kong;Construction;11.16 ;2.23 ;104.42 ;27.03
+513;Poly Developments & Holdings Group;China;Construction;45.66 ;0.914;195.83 ;14.27
+514;Bouygues;France;Construction;61.39 ;1.14 ;65.32 ;16.16
+515;Glencore International;Switzerland;Trading Companies;231.03 ;-1.62 ;130.46 ;42.93
+516;OTP Bank;Hungary;Banking;11.73 ;2.93 ;109.3 ;19.99
+517;General Mills;United States;Food, Drink & Tobacco;19.64 ;2.56 ;32.71 ;30.74
+518;Edison International;United States;Utilities;17.6 ;1.37 ;85.58 ;22.32
+519;Wanhua Chemical Group;China;Chemicals;24.64 ;1.66 ;43.79 ;24.16
+520;Amphenol;United States;Technology Hardware & Equipment;16.78 ;2.61 ;22.9 ;91.91
+521;East Japan Railway;Japan;Transportation;18.85 ;1.5 ;63.25 ;24.18
+522;Renault;France;Consumer Durables;60.83 ;0.8134;133.96 ;15.42
+523;Markel;United States;Insurance;16.62 ;2.64 ;47.35 ;22.92
+524;Haleon;United Kingdom;Drugs & Biotechnology;14.35 ;1.84 ;42.98 ;45.32
+525;PKO Bank Polski;Poland;Banking;10.22 ;2.34 ;127.16 ;25.34
+526;OMV Group;Austria;Oil & Gas Operations;36.76 ;1.5 ;52.46 ;16.88
+527;Muyuan Foodstuff;China;Food, Drink & Tobacco;20.43 ;3.43 ;27.33 ;29.85
+528;Geely Automobile Holdings;Hong Kong;Consumer Durables;33.37 ;2.29 ;31.43 ;20.76
+529;Coal India;India;Materials;16.77 ;4.12 ;29.76 ;28.32
+530;Punjab National Bank;India;Banking;16.27 ;2.01 ;209.82 ;13.35
+531;Coca-Cola Europacific Partners;United Kingdom;Food, Drink & Tobacco;22.11 ;1.53 ;32.2 ;40.49
+532;S.F. Holding;China;Transportation;39.42 ;1.41 ;29.29 ;29.73
+533;Wilmar International;Singapore;Food, Drink & Tobacco;67.34 ;1.17 ;59.57 ;14.86
+534;Reckitt Benckiser Group;United Kingdom;Household & Personal Products;18.11 ;1.82 ;31.68 ;42.02
+535;Fortescue Metals Group;Australia;Materials;16.35 ;3.9 ;29.22 ;30.5
+536;Baoshan Iron & Steel;China;Materials;43.35 ;1.09 ;50.74 ;19.57
+537;Trane Technologies;Ireland;Capital Goods;19.84 ;2.57 ;20.15 ;78.05
+538;MediaTek;Taiwan;Semiconductors;16.52 ;3.31 ;21.29 ;67.65
+539;GE HealthCare Technologies;United States;Health Care Equipment & Services;19.67 ;1.99 ;33.09 ;31.33
+540;QBE Insurance Group;Australia;Insurance;22.82 ;1.78 ;44.73 ;20.68
+541;Bank Hapoalim;Israel;Banking;10.74 ;2.06 ;197.84 ;19.68
+542;Barrick Gold;Canada;Materials;12.94 ;2.16 ;47.63 ;32.76
+543;Lenovo Group;Hong Kong;Technology Hardware & Equipment;65.91 ;1.54 ;44.72 ;14.14
+544;Power Finance;India;Business Services & Supplies;12.18 ;2.67 ;131.66 ;16.01
+545;Bajaj Finserv;India;Insurance;15.12 ;1.02 ;71.74 ;38.19
+546;Nu Holdings;Cayman Islands;Banking;10.33 ;1.97 ;49.93 ;58.27
+546;Recruit Holdings;Japan;IT Software & Services;23.36 ;2.48 ;18.51 ;73.82
+548;Banco de Sabadell;Spain;Banking;12.61 ;1.87 ;248.1 ;15.8
+549;Canon;Japan;Technology Hardware & Equipment;30.04 ;1.13 ;39.28 ;27.81
+549;China Coal Energy;China;Materials;26.32 ;2.52 ;49.02 ;13.74
+551;Weichai Power;China;Consumer Durables;29.87 ;1.58 ;47.11 ;16.77
+552;BT Group;United Kingdom;Telecommunications Services;26.06 ;0.9709;68.21 ;21.88
+553;Wuliangye Yibin;China;Food, Drink & Tobacco;10.76 ;4.53 ;27.3 ;68.77
+554;Mitsui Fudosan;Japan;Construction;15.59 ;1.33 ;62.49 ;27.19
+555;United Rentals;United States;Business Services & Supplies;15.58 ;2.55 ;28.05 ;41.18
+556;Analog Devices;United States;Semiconductors;9.34 ;1.56 ;47.97 ;96.51
+556;Publicis Groupe;France;Media;17.34 ;1.79 ;41.27 ;25.32
+558;Banco BPM;Italy;Banking;11.25 ;2.08 ;205.25 ;16.62
+559;Atlas Copco;Sweden;Capital Goods;16.72 ;2.82 ;19.45 ;78.16
+559;Loews;United States;Insurance;17.51 ;1.41 ;75.89 ;17.94
+561;Central Japan Railway;Japan;Transportation;11.92 ;2.92 ;64.32 ;19.89
+562;Infosys;India;IT Software & Services;19.28 ;3.16 ;17.42 ;71.95
+563;Equitable Holdings;United States;Insurance;14.41 ;1.31 ;287.63 ;15.24
+564;Mahindra & Mahindra;India;Consumer Durables;18.14 ;1.48 ;30.46 ;41.66
+565;Tyson Foods;United States;Food, Drink & Tobacco;53.61 ;1.05 ;37.31 ;21.17
+566;Emaar Properties;United Arab Emirates;Construction;10.08 ;3.68 ;43.62 ;31.16
+567;China Zheshang Bank;China;Banking;18.43 ;2.11 ;456.08 ;9.24
+568;Citizens Financial Group;United States;Banking;12.17 ;1.55 ;220.15 ;16.2
+569;Ecolab;United States;Chemicals;15.74 ;2.11 ;22.39 ;67.54
+570;Colgate-Palmolive;United States;Household & Personal Products;19.95 ;2.9 ;16.65 ;76.17
+571;Riyad Bank;Saudi Arabia;Banking;7.84 ;2.59 ;124.06 ;24.99
+572;George Weston;Canada;Food Markets;44.97 ;0.992;35.76 ;24.26
+573;Woori Financial Group;South Korea;Banking;21.23 ;2;357.13 ;8.9
+574;Public Service Enterprise Group;United States;Utilities;10.26 ;1.77 ;54.64 ;40.4
+575;Naspers;South Africa;IT Software & Services;6.87 ;3.31 ;69.71 ;42.85
+576;Fujifilm Holdings;Japan;Health Care Equipment & Services;20.68 ;1.66 ;33.59 ;24.64
+576;Lincoln National;United States;Insurance;20.75 ;3.28 ;366.46 ;5.42
+578;National Bank of Kuwait;Kuwait;Banking;8.24 ;1.84 ;135.04 ;26.47
+579;Canara Bank;India;Banking;17.9 ;1.96 ;191.42 ;10.24
+580;China Hongqiao Group;China;Materials;21.7 ;3.11 ;31.4 ;16.64
+581;AutoZone;United States;Retailing;18.67 ;2.61 ;18.12 ;60.38
+582;CBRE Group;United States;Construction;36.74 ;1;26.37 ;36.2
+583;Regions Financial;United States;Banking;9.35 ;2.02 ;159.85 ;18.36
+584;Swisscom;Switzerland;Telecommunications Services;12.53 ;1.75 ;41.06 ;33.62
+585;Capgemini;France;IT Software & Services;23.9 ;1.81 ;26.57 ;25.13
+585;Continental Automotive Systems, Inc.;United States;Consumer Durables;42.96 ;1.26 ;39.65 ;15.89
+585;Kering;France;Household & Personal Products;18.6 ;1.23 ;44.88 ;24.32
+585;Schweizerische Nationalbank;Switzerland;Banking;12.22 ;32.26 ;979.46 ;0.400
+589;Hess;United States;Oil & Gas Operations;12.9 ;2.77 ;26.55 ;40.93
+590;Wesfarmers;Australia;Retailing;29.59 ;1.71 ;17.16 ;54.93
+591;W. R. Berkley;United States;Insurance;13.93 ;1.73 ;41.35 ;26.73
+592;Fujitsu;Japan;IT Software & Services;23.29 ;1.44 ;23.39 ;38.02
+592;Subaru Corporation;Japan;Consumer Durables;31.31 ;2.66 ;32.11 ;13.27
+594;Grupa PZU;Poland;Insurance;16.32 ;1.34 ;121.84 ;13.64
+595;Union Bank of India;India;Banking;15.24 ;1.95 ;165.6 ;11.18
+596;China National Nuclear Power;China;Utilities;10.38 ;1.42 ;86.84 ;26.35
+597;Entergy;United States;Utilities;11.88 ;1.06 ;64.79 ;36.64
+598;Dollar General;United States;Retailing;40.61 ;1.13 ;31.13 ;20.58
+599;NXP Semiconductors;Netherlands;Semiconductors;12.61 ;2.51 ;24.39 ;49.09
+600;Bank Of Hangzhou;China;Banking;10.31 ;2.32 ;290.04 ;12.71
+601;Corteva;United States;Food, Drink & Tobacco;16.91 ;0.907;40.83 ;41.98
+602;Principal Financial Group;United States;Diversified Financials;12.19 ;1.09 ;313;16.53
+603;Leonardo;Italy;Aerospace & Defense;19.21 ;1.16 ;34.87 ;29.24
+604;LyondellBasell Industries;United Kingdom;Chemicals;37.99 ;1.06 ;35.19 ;19.19
+605;Cognizant;United States;IT Software & Services;19.74 ;2.24 ;19.97 ;35.58
+605;SSE;United Kingdom;Utilities;12.83 ;2.44 ;38.34 ;23.64
+607;Devon Energy;United States;Oil & Gas Operations;15.57 ;2.89 ;31.02 ;20.35
+607;Inpex;Japan;Oil & Gas Operations;14.96 ;2.82 ;46.96 ;15.11
+609;Safran;France;Aerospace & Defense;29.98 ;-0.7215;56.97 ;109.02
+610;Associated British Foods;United Kingdom;Food, Drink & Tobacco;25.44 ;1.84 ;25.5 ;21.11
+611;DTE Energy;United States;Utilities;12.34 ;1.4 ;48.85 ;27.96
+612;Samsung C&T;South Korea;Construction;30.88 ;1.64 ;42.11 ;12.69
+613;Samsung Life Insurance;South Korea;Insurance;16.36 ;1.54 ;212.08 ;10.35
+614;Fidelity National Financial;United States;Insurance;13.71 ;1.27 ;84.14 ;17.21
+615;Everest Re Group;Bermuda;Insurance;17.28 ;1.37 ;52.35 ;16.88
+616;Turkish Airlines;Turkey;Transportation;22.68 ;3.45 ;39.58 ;11.37
+617;NEC;Japan;IT Software & Services;22.48 ;1.23 ;26.86 ;29.65
+618;Bayer;Germany;Drugs & Biotechnology;50.41 ;-2.76 ;121.97 ;25.68
+618;Legal & General Group;United Kingdom;Insurance;45.53 ;0.2172;681.51 ;18.35
+620;Nutrien;Canada;Chemicals;25.96 ;0.6733;51.84 ;26.41
+621;BOE Technology Group;China;Technology Hardware & Equipment;27.39 ;0.7397;59;19.95
+621;Tokyo Electron;Japan;Capital Goods;15.34 ;3.47 ;15.92 ;67.74
+623;Agnico Eagle Mines;Canada;Materials;8.94 ;2.37 ;30.59 ;59.98
+624;Ferrovial;Spain;Construction;9.89 ;3.5 ;30.03 ;34.63
+624;Siemens Energy;Germany;Capital Goods;38.68 ;-0.1828;56.61 ;61.02
+626;Telefónica;Spain;Telecommunications Services;44.48 ;-0.0141;104.07 ;28.2
+627;Illinois Tool Works;United States;Consumer Durables;15.9 ;3.49 ;15.07 ;70.26
+628;ACS Actividades de Construccion y Servicios;Spain;Construction;45.03 ;0.8952;44.03 ;15.57
+629;Hindalco Industries;India;Materials;27.44 ;1.66 ;30.1 ;16.35
+630;Bharat Petroleum;India;Oil & Gas Operations;53.26 ;1.64 ;25.21 ;15
+630;CMOC Group;China;Trading Companies;28.92 ;2.13 ;25.02 ;16.36
+632;RELX;United Kingdom;Business Services & Supplies;12.05 ;2.47 ;18.95 ;98.12
+633;AirBnB;United States;Business Services & Supplies;11.1 ;2.65 ;20.96 ;76.12
+634;Asr Nederland;Netherlands;Insurance;17.71 ;0.9551;143.51 ;12.85
+635;Infineon Technologies;Germany;Semiconductors;15.88 ;1.04 ;30.79 ;44.5
+636;Aeon;Japan;Food Markets;66.45 ;0.1887;91.8 ;24.52
+637;O'Reilly Automotive;United States;Retailing;16.87 ;2.38 ;15.29 ;77.1
+638;GD Power Development;China;Utilities;23.77 ;1.37 ;68.99 ;11.21
+639;Kimberly-Clark;United States;Household & Personal Products;19.75 ;2.46 ;16.3 ;43.67
+640;FirstEnergy;United States;Utilities;13.95 ;1.08 ;52.04 ;24.44
+641;Halliburton;United States;Oil & Gas Operations;22.56 ;2.1 ;25.18 ;17.97
+642;TE Connectivity;Ireland;Semiconductors;16.03 ;1.39 ;23.66 ;43.07
+643;Industrial Bank of Korea;South Korea;Business Services & Supplies;16.68 ;1.83 ;320.77 ;8.31
+643;Ross Stores;United States;Retailing;21.13 ;2.09 ;15.97 ;45.94
+645;ServiceNow;United States;IT Software & Services;11.47 ;1.54 ;20.97 ;195.67
+646;CEZ Group;Czech Republic;Utilities;14.06 ;1.29 ;37.1 ;27.7
+646;China Energy Engineering;China;Construction;60.44 ;1.17 ;119.09 ;5.38
+648;Nokia;Finland;Technology Hardware & Equipment;20.57 ;0.8127;42.41 ;26.06
+649;Asahi Group Holdings;Japan;Food, Drink & Tobacco;19.4 ;1.27 ;34.38 ;20.33
+650;CIMB Group Holdings;Malaysia;Banking;8.06 ;1.69 ;168.88 ;17.17
+651;Ferguson Enterprises;United Kingdom;Trading Companies;29.9 ;1.64 ;16.53 ;33.67
+651;Targa Resources;United States;Oil & Gas Operations;16.63 ;1.27 ;23.95 ;38.65
+653;Daiichi Sankyo;Japan;Drugs & Biotechnology;12.37 ;1.94 ;23.11 ;45.68
+654;Otsuka Holding;Japan;Drugs & Biotechnology;15.38 ;2.26 ;23.79 ;25.19
+655;Woolworths;Australia;Food Markets;45.66 ;1.07 ;21.11 ;24.61
+656;WEC Energy Group;United States;Utilities;8.6 ;1.53 ;48.19 ;34.38
+657;Posco;South Korea;Materials;51.72 ;0.6446;69.35 ;13.38
+658;Aegon;Netherlands;Insurance;24.54 ;0.7442;339.01 ;10.33
+659;Welltower;United States;Diversified Financials;7.99 ;0.9517;51.04 ;95.75
+660;CNH Industrial;United Kingdom;Capital Goods;19.84 ;1.31 ;42.93 ;14.53
+661;Sekisui House;Japan;Construction;26.64 ;1.43 ;31.05 ;14.59
+662;Nippon Yusen;Japan;Transportation;17;3.11 ;28.19 ;14.58
+663;Cincinnati Financial;United States;Insurance;11.34 ;2.29 ;36.36 ;20.93
+663;Kuaishou Technology;China;Media;17.63 ;2.13 ;19.16 ;28.22
+665;Huaneng Power International;China;Utilities;33.84 ;1.01 ;82.2 ;9.69
+666;Pernod Ricard;France;Food, Drink & Tobacco;12.1 ;1.19 ;41.21 ;27.4
+667;NRG Energy;United States;Utilities;28.1 ;1.13 ;24.02 ;22.06
+668;Mapfre;Spain;Insurance;30.64 ;1.05 ;58.72 ;11.04
+669;Saudi British Bank;Saudi Arabia;Banking;6.95 ;2.07 ;106.31 ;19.39
+670;Universal Music Group;Netherlands;Business Services & Supplies;12.8 ;2.26 ;18.5 ;51.67
+671;Hengli Petrochemical;China;Chemicals;31.67 ;0.9635;38.42 ;14.96
+671;Warner Bros. Discovery;United States;Media;39.3 ;-11.31 ;104.56 ;21.25
+673;Metallurgical Corp of China;China;Construction;76.39 ;0.9391;110.7 ;3.95
+674;Kenvue;United States;Household & Personal Products;15.46 ;1.03 ;25.6 ;44.15
+675;Intuitive Surgical;United States;Health Care Equipment & Services;8.71 ;2.48 ;19.22 ;184.44
+676;Deutsche Lufthansa;Germany;Transportation;40.65 ;1.49 ;49.87 ;8.85
+677;Unum Group;United States;Insurance;12.9 ;1.78 ;53.55 ;13.83
+678;Bank of Ireland;Ireland;Banking;10.66 ;1.59 ;167.56 ;11.62
+679;Carrefour;France;Retailing;94.4 ;0.7821;59.4 ;10.1
+680;Adidas;Germany;Household & Personal Products;25.62 ;0.8253;21.39 ;44.05
+680;IQVIA;United States;Drugs & Biotechnology;15.4 ;1.37 ;26.9 ;26.5
+682;Heineken;Netherlands;Food, Drink & Tobacco;32.26 ;0.5387;56.72 ;20.69
+683;Unipol Gruppo;Italy;Insurance;15.01 ;1.16 ;86.39 ;12.46
+684;Reinsurance Group of America;United States;Insurance;22.16 ;0.717;113.14 ;12.42
+685;VakifBank;Turkey;Banking;24.85 ;1.5 ;115.77 ;5.49
+686;AerCap Holdings;Ireland;Business Services & Supplies;7.69 ;2.1 ;71.44 ;19.3
+687;Fox;United States;Media;15.18 ;2.19 ;23.02 ;22.38
+687;Telstra;Australia;Telecommunications Services;15.24 ;1.11 ;28.24 ;32.64
+689;CGN Power;China;Utilities;12.02 ;1.42 ;59.63 ;15.95
+689;Kubota;Japan;Capital Goods;19.91 ;1.52 ;38.3 ;13.22
+691;Tenet Healthcare;United States;Health Care Equipment & Services;20.66 ;3.2 ;28.94 ;11.52
+692;Anglo American;United Kingdom;Materials;27.37 ;-3.05 ;64.87 ;34.69
+693;Resona Holdings;Japan;Banking;6.85 ;1.41 ;491.32 ;16.9
+694;Longfor Group Holdings;China;Construction;17.77 ;1.45 ;91.19 ;9.34
+694;T&D Holdings;Japan;Insurance;19.2 ;1.01 ;109.19 ;10.49
+696;Meritz Financial Group;South Korea;Diversified Financials;10.33 ;1.66 ;78.51 ;14.39
+697;Evergreen Marine Corp. (Taiwan);Taiwan;Transportation;14.43 ;4.34 ;27.89 ;13.62
+698;Mitsubishi Estate;Japan;Construction;10.73 ;1.3 ;50.1 ;21.25
+699;3i Group;United Kingdom;Diversified Financials;1.39 ;5.34 ;31.25 ;54.08
+700;Isbank;Turkey;Banking;25.37 ;1.39 ;109.18 ;6.97
+701;Ageas;Belgium;Insurance;13.4 ;1.21 ;101.95 ;11.79
+702;YPF;Argentina;Oil & Gas Operations;19.37 ;2.27 ;29.38 ;12.8
+703;AIB Group;Ireland;Banking;6.79 ;2.46 ;146.28 ;15.1
+704;Albertsons;United States;Food Markets;80.39 ;0.9586;29.31 ;12.62
+705;Great Wall Motor;China;Consumer Durables;26.59 ;1.56 ;29.31 ;12.6
+706;Trip.com Group;China;Business Services & Supplies;7.41 ;2.37 ;33.23 ;37.46
+707;Eiffage;France;Construction;25.98 ;1.13 ;41.74 ;12.11
+707;Nissan Motor;Japan;Consumer Durables;83.55 ;0.7026;127.86 ;8.13
+709;KLA;United States;Technology Hardware & Equipment;10.84 ;3.21 ;15;92.31
+710;Inner Mongolia Yili;China;Food, Drink & Tobacco;16.25 ;1.65 ;21.47 ;25.44
+711;Tokyo Electric Power;Japan;Utilities;44.73 ;1.05 ;92.58 ;4.85
+712;New China Life Insurance;China;Insurance;10.65 ;1.36 ;205.71 ;11.46
+713;Vedanta Limited;India;Materials;17.69 ;1.54 ;24.48 ;18.9
+714;Edp-energias De Portugal;Portugal;Utilities;16.41 ;0.867;58.43 ;15.9
+715;Nintendo;Japan;IT Software & Services;8.14 ;2.11 ;21.55 ;92.19
+716;Brookfield Wealth Solutions;Bermuda;Diversified Financials;14.26 ;1.13 ;126.24 ;10.7
+717;Assa Abloy;Sweden;Consumer Durables;14.37 ;1.38 ;21.84 ;33.27
+718;China Resources Power;Hong Kong;Utilities;13.49 ;1.84 ;46.66 ;12.51
+719;Rogers Communications;Canada;Telecommunications Services;14.87 ;1.26 ;50.81 ;13.54
+720;Yankuang Energy Group;China;Materials;17.3 ;1.95 ;48.82 ;9.94
+721;PulteGroup;United States;Construction;17.89 ;2.94 ;17.34 ;20.42
+722;Quanta Services;United States;Construction;23.67 ;0.9048;18.68 ;42.6
+723;WW Grainger;United States;Trading Companies;17.17 ;1.91 ;8.83 ;48.84
+724;Keyence;Japan;Technology Hardware & Equipment;6.95 ;2.62 ;22;103.28
+725;Spotify Technology;Luxembourg;IT Software & Services;16.95 ;1.23 ;12.43 ;124.28
+726;Compagnie de l'Odet;France;Transportation;19.5 ;2.47 ;65.06 ;6.42
+727;Hong Kong Exchanges;Hong Kong;Diversified Financials;2.87 ;1.67 ;49.13 ;55.17
+728;Bancolombia;Colombia;Banking;10.92 ;1.54 ;84.49 ;11.98
+728;Interactive Brokers Group;United States;Diversified Financials;9.58 ;0.793;157.67 ;18.44
+730;Global Payments;United States;Business Services & Supplies;10.11 ;1.57 ;46.89 ;17.79
+731;Li Auto;China;Consumer Durables;20.07 ;1.12 ;22.24 ;23.76
+732;VICI Properties;United States;Diversified Financials;3.85 ;2.68 ;45.37 ;34.05
+733;Samsung Fire & Marine;South Korea;Insurance;15.19 ;1.52 ;59.28 ;10.66
+734;MTR;Hong Kong;Transportation;7.69 ;2.02 ;47.31 ;21.15
+735;Tenaga Nasional;Malaysia;Utilities;12.4 ;1.03 ;49.03 ;18.07
+736;Fresenius;Germany;Health Care Equipment & Services;23.97 ;0.5095;45.1 ;25.52
+736;Sumitomo Electric;Japan;Consumer Durables;30.51 ;1.23 ;29.51 ;12.03
+738;EXOR;Netherlands;Diversified Financials;1.93 ;29.51 ;41.73 ;20.03
+739;Roper Technologies;United States;IT Software & Services;7.04 ;1.55 ;31.34 ;59.89
+740;Raiffeisen Bank International;Austria;Banking;15.61 ;1.13 ;206.95 ;8.64
+741;Fortis (Canada);Canada;Utilities;8.4 ;1.23 ;52.19 ;24.36
+742;Eversource Energy;United States;Utilities;11.9 ;0.8117;59.59 ;21.24
+743;Dow;United States;Chemicals;42.63 ;0.281;57.5 ;21.13
+744;CLP Holdings;Hong Kong;Utilities;11.66 ;1.5 ;30.09 ;21.46
+745;Alcon;Switzerland;Health Care Equipment & Services;9.91 ;1.02 ;30.35 ;46.8
+746;Coinbase;United States;Diversified Financials;7.23 ;2.58 ;23.02 ;53.22
+747;Equinix;United States;Diversified Financials;8.75 ;0.815;35.09 ;81.98
+748;Chongqing Changan Auto;China;Consumer Durables;21.16 ;1.04 ;27.57 ;16.79
+749;Sinopharm Group;China;Health Care Equipment & Services;81.22 ;0.9795;53.82 ;7.01
+750;TransDigm Group;United States;Aerospace & Defense;8.16 ;1.64 ;21.52 ;77.29
+751;Aluminum Corp of China;China;Trading Companies;32.94 ;1.71 ;29.58 ;9.5
+752;Chubu Electric Power;Japan;Utilities;23.53 ;1.41 ;44.49 ;9.23
+753;Saudi Electricity;Saudi Arabia;Utilities;23.63 ;-0.513;145.58 ;16.82
+754;China Merchants Shekou Industrial Zone Holdings;China;Construction;23.9 ;0.5612;117.86 ;11.65
+755;China Taiping Insurance;Hong Kong;Insurance;20.54 ;0.9525;223.27 ;4.88
+756;PPG;United States;Chemicals;17.41 ;1.4 ;19.43 ;23.28
+757;Mizrahi Tefahot Bank;Israel;Banking;7.71 ;1.47 ;133.28 ;13.11
+758;HCLTech;India;IT Software & Services;13.85 ;2.06 ;12.35 ;50.16
+759;Singapore Airlines;Singapore;Transportation;14.43 ;1.47 ;31.95 ;15.1
+760;Simon Property Group;United States;Business Services & Supplies;5.96 ;2.41 ;32.41 ;51.11
+761;Palo Alto Networks;United States;IT Software & Services;8.57 ;1.25 ;20.95 ;118.5
+762;Sika;Switzerland;Chemicals;13.36 ;1.41 ;17.89 ;39.74
+763;TELUS;Canada;Telecommunications Services;14.7 ;0.7248;40.34 ;22.67
+764;Kuehne & Nagel International;Switzerland;Transportation;28.16 ;1.34 ;12.94 ;26.97
+765;RenaissanceRe Holdings;Bermuda;Insurance;12.52 ;1.64 ;47.84 ;11.53
+766;Hanwha Aerospace;South Korea;Aerospace & Defense;8.87 ;1.69 ;29.44 ;26.07
+766;NASDAQ;United States;Diversified Financials;7.81 ;1.28 ;30.65 ;43.27
+768;Hikvision;China;Technology Hardware & Equipment;12.82 ;1.68 ;17.34 ;35.57
+769;BPER Banca;Italy;Banking;8.26 ;1.52 ;145.58 ;11.34
+770;Bunge Global;United States;Food, Drink & Tobacco;53.11 ;1.14 ;24.9 ;10.84
+771;Eletrobrás;Brazil;Utilities;7.45 ;1.93 ;46.92 ;18.63
+772;Aptiv;Ireland;Capital Goods;19.71 ;1.79 ;23.46 ;12.83
+772;Public Bank;Malaysia;Banking;5.38 ;1.56 ;121.41 ;19.13
+774;Sampo;Finland;Insurance;11.52 ;1.25 ;25.35 ;26.51
+775;Omnicom Group;United States;Media;15.75 ;1.45 ;28.11 ;14.62
+776;East Money Information;China;IT Software & Services;2.18 ;1.44 ;45.71 ;44.86
+776;Kasikornbank;Thailand;Banking;8.99 ;1.4 ;128.38 ;10.87
+778;Fidelity National Information (FIS);United States;IT Software & Services;10.13 ;0.813;33.78 ;41.98
+779;Ameren;United States;Utilities;7.62 ;1.18 ;44.6 ;26.55
+779;Huishang Bank;China;Banking;10.35 ;2.02 ;276.12 ;5.25
+781;Molina Healthcare;United States;Drugs & Biotechnology;41.84 ;1.18 ;16.39 ;17.2
+782;Guotai Junan Securities;China;Diversified Financials;6.81 ;1.71 ;143.54 ;12.58
+783;CenterPoint Energy;United States;Utilities;8.94 ;0.966;44.49 ;24.89
+784;Nidec;Japan;Capital Goods;17.1 ;1.1 ;22.24 ;19.99
+785;Beijing-Shanghai High-Speed Railway;China;Transportation;5.82 ;1.75 ;40.38 ;39.24
+786;Mitsui OSK Lines;Japan;Transportation;11.41 ;2.81 ;29.42 ;12.79
+787;eBay;United States;Retailing;10.34 ;1.98 ;19.36 ;31.61
+787;Western Digital;United States;Technology Hardware & Equipment;15.6 ;1.55 ;25.46 ;14.18
+789;Thomson Reuters;Canada;IT Software & Services;7.26 ;2.21 ;18.44 ;81.79
+790;Ryanair Holdings;Ireland;Transportation;14.95 ;1.8 ;16.95 ;24.28
+791;Hilton Worldwide Holdings;United States;Hotels, Restaurants & Leisure;11.17 ;1.53 ;16.52 ;52.62
+792;Dubai Islamic Bank;United Arab Emirates;Banking;6.19 ;2.08 ;96.72 ;14.66
+793;Akbank;Turkey;Banking;18.52 ;1.29 ;75.03 ;6.97
+794;DuPont De Nemours;United States;Chemicals;12.39 ;0.703;36.64 ;27.49
+795;Shanghai Rural Commercial Bank;China;Banking;6.76 ;1.7 ;212.35 ;11.44
+795;ZTE;China;Technology Hardware & Equipment;16.96 ;1.13 ;30.05 ;13.69
+797;Volvo Car;Sweden;Consumer Durables;37.85 ;1.46 ;36.65 ;5.56
+798;Magna International;Canada;Consumer Durables;42.83 ;1.01 ;31.04 ;9.59
+799;ASE Technology Holding;Taiwan;Semiconductors;18.54 ;1.01 ;22.59 ;18.38
+799;Banca MPS;Italy;Banking;7.29 ;2.11 ;127.04 ;10.31
+801;Zoetis;United States;Drugs & Biotechnology;9.26 ;2.49 ;14.24 ;68.46
+802;Realty Income;United States;Diversified Financials;5.3 ;0.8608;68.83 ;50.73
+803;Shopify;Canada;IT Software & Services;8.9 ;2.05 ;13.92 ;125.78
+804;Centrica;United Kingdom;Oil & Gas Operations;25.45 ;1.7 ;23.46 ;10.35
+804;Chipotle Mexican Grill;United States;Hotels, Restaurants & Leisure;11.49 ;1.56 ;9.04 ;70.18
+804;Grupo Inbursa;Mexico;Banking;8.07 ;1.87 ;39.56 ;16.87
+807;Tenaris;Luxembourg;Materials;12.52 ;2.04 ;20.45 ;18.52
+808;Credicorp;Peru;Banking;7.21 ;1.47 ;68.17 ;15.74
+808;Expedia Group;United States;Business Services & Supplies;13.69 ;1.23 ;22.39 ;20.63
+810;Motorola Solutions;United States;Technology Hardware & Equipment;10.82 ;1.58 ;14.6 ;71.83
+811;Hanwha;South Korea;Chemicals;40.81 ;0.5668;171.2 ;3.02
+811;SM Investments;Philippines;Retailing;10.56 ;1.44 ;29.37 ;18.67
+813;Jardine Matheson;Bermuda;Conglomerates;35.78 ;-0.468;86.78 ;12.95
+814;Cintas;United States;Business Services & Supplies;10.14 ;1.77 ;9.61 ;84.15
+815;Alinma Bank;Saudi Arabia;Banking;5.27 ;1.55 ;73.67 ;19.99
+816;Mashreq Bank;United Arab Emirates;Banking;6.55 ;2.43 ;72.81 ;12.94
+817;TDK;Japan;Technology Hardware & Equipment;14.23 ;1.1 ;24.09 ;19.35
+818;Ashtead Group;United Kingdom;Business Services & Supplies;10.88 ;1.52 ;21.93 ;23.56
+819;Anhui Conch Cement;China;Construction;12.65 ;1.12 ;34.88 ;15.21
+819;Mediobanca;Italy;Banking;6.16 ;1.43 ;103.46 ;16.31
+821;ITC;India;Food, Drink & Tobacco;9.07 ;2.41 ;11.23 ;62.71
+822;H&M - Hennes & Mauritz;Sweden;Retailing;22.15 ;1.03 ;16.58 ;23.43
+823;China Reinsurance Group;China;Insurance;15.72 ;1.47 ;69.64 ;4.82
+824;Korea Shipbuilding & Offshore Engineering;South Korea;Capital Goods;19.83 ;1.14 ;24.94 ;13.06
+825;Huatai Securities;China;Diversified Financials;5.64 ;2.03 ;111.56 ;13.51
+826;Live Nation Entertainment;United States;Media;23.16 ;0.646;19.64 ;30.68
+827;Otis Worldwide;United States;Construction;14.17 ;1.53 ;11.18 ;36.77
+828;Murata Manufacturing;Japan;Technology Hardware & Equipment;11.37 ;1.37 ;19.42 ;28.72
+828;PPL;United States;Utilities;8.46 ;0.886;41.07 ;26.55
+830;Daqin Railway;China;Transportation;10.43 ;1.31 ;29.9 ;18.59
+830;Grasim Industries;India;Construction;16.73 ;0.4621;53.51 ;21.77
+832;WH Group;Hong Kong;Food, Drink & Tobacco;25.94 ;1.61 ;19.84 ;11.35
+833;Super Micro Computer;United States;Technology Hardware & Equipment;20.77 ;1.5 ;9.73 ;21.64
+834;American Airlines Group;United States;Transportation;54.19 ;0.685;62.61 ;6.43
+835;STMicroelectronics;Switzerland;Semiconductors;12.31 ;1.1 ;24.92 ;20.57
+836;Las Vegas Sands;United States;Hotels, Restaurants & Leisure;11.2 ;1.3 ;21.25 ;25.36
+837;Koç Holding;Turkey;Oil & Gas Operations;66.63 ;0.0319;110.52 ;9.6
+838;Daiwa Securities;Japan;Diversified Financials;9.26 ;1.08 ;233.57 ;9.25
+838;Saudi Arabian Mining;Saudi Arabia;Materials;8.67 ;0.7653;30.63 ;46.16
+840;Julius Baer Group;Switzerland;Diversified Financials;7.12 ;1.16 ;115.94 ;12.84
+841;Joint Stock Commercial Bank for Foreign Trade of Vietnam;Vietnam;Banking;4.66 ;1.35 ;81.85 ;18.46
+842;Mitsubishi UFJ Lease;Japan;Business Services & Supplies;13.71 ;0.860;75.11 ;9.99
+842;Verbund;Austria;Utilities;8.92 ;2.03 ;19.65 ;26.09
+844;Southwest Airlines;United States;Transportation;27.58 ;0.551;33.21 ;15.2
+845;Biogen;United States;Drugs & Biotechnology;9.27 ;1.63 ;28.05 ;17.39
+846;BDO Unibank;Philippines;Banking;6.31 ;1.43 ;84.33 ;15.09
+846;CP All;Thailand;Food Markets;27.18 ;0.7052;27.69 ;13.45
+848;Sanlam;South Africa;Insurance;12.78 ;1.21 ;60.04 ;9.25
+849;The Hershey Company;United States;Food, Drink & Tobacco;11.2 ;2.22 ;12.95 ;33.07
+850;Mega Financial Holding;Taiwan;Banking;5.6 ;1.08 ;142.49 ;17.09
+851;St. James's Place;United Kingdom;Insurance;33.07 ;0.5091;244.06 ;6.75
+852;Arista Networks;United States;Technology Hardware & Equipment;7;2.85 ;14.04 ;97.83
+853;Power Grid of India;India;Utilities;5.44 ;1.86 ;30.46 ;33.34
+854;Anta Sports Products;China;Household & Personal Products;9.84 ;2.17 ;15.43 ;33.06
+855;Smurfit Westrock;Ireland;Materials;21.11 ;0.319;43.76 ;22.04
+856;Walgreens Boots Alliance;United States;Retailing;151.94 ;-5.78 ;70.22 ;9.52
+857;Abu Dhabi Islamic Bank;United Arab Emirates;Banking;4.64 ;1.55 ;66.3 ;17.44
+858;China Vanke;China;Construction;47.81 ;-6.86 ;176.22 ;8.74
+859;Vienna Insurance Group;Austria;Insurance;15.41 ;0.698;53.01 ;11.98
+860;Absa Group;South Africa;Banking;12.07 ;1.17 ;109.63 ;7.45
+861;Ally Financial;United States;Banking;15.74 ;0.534;193.33 ;10.11
+862;KGI Financial Holding;Taiwan;Insurance;11.71 ;1.04 ;120.43 ;8.3
+863;Sandvik;Sweden;Capital Goods;11.58 ;1.38 ;17.47 ;26.35
+864;Bank Of Chengdu;China;Banking;6.32 ;1.74 ;174.12 ;10.31
+865;Moody's;United States;Business Services & Supplies;7.23 ;2.11 ;15.1 ;78.91
+866;LG Chem;South Korea;Chemicals;35.87 ;-0.5066;63.76 ;12.23
+867;Genuine Parts;United States;Trading Companies;23.57 ;0.8496;19.82 ;16.19
+868;Kellanova;United States;Food, Drink & Tobacco;12.75 ;1.34 ;15.63 ;28.52
+869;Chongqing Rural Bank;China;Banking;7.37 ;1.62 ;222.06 ;8.52
+870;Venture Global;United States;Oil & Gas Operations;4.97 ;1.69 ;43.49 ;20.88
+871;BCE;Canada;Telecommunications Services;17.82 ;0.2511;51.09 ;19.97
+872;HAL Trust;Netherlands;Diversified Financials;13.57 ;1.31 ;28.31 ;11.89
+873;SK;South Korea;Diversified Financials;91.73 ;-1.06 ;146.03 ;5
+874;SK Innovation;South Korea;Oil & Gas Operations;54.79 ;-1.66 ;75.08 ;9.89
+875;CDW;United States;IT Software & Services;21;1.08 ;14.68 ;20.81
+876;CMS Energy;United States;Utilities;7.79 ;1.02 ;36.3 ;21.59
+877;CK Asset Holdings;Hong Kong;Construction;6.04 ;1.75 ;64.6 ;14.23
+878;Steel Dynamics;United States;Materials;17.22 ;1.17 ;15.93 ;19.09
+879;Semiconductor Manufacturing International;China;Semiconductors;7.99 ;0.513.7;48.42 ;46.38
+879;Westinghouse Air Brake Technologies;United States;Capital Goods;10.5 ;1.11 ;19.1 ;31.49
+881;Xiamen C&D;China;Transportation;96.97 ;0.4093;105.2 ;4.28
+882;Tata Steel;India;Materials;26.41 ;0.3264;33.51 ;20.27
+883;Bank Pekao;Poland;Banking;5.77 ;1.6 ;80.92 ;13.38
+883;Idemitsu Kosan;Japan;Oil & Gas Operations;60.69 ;0.7716;32.76 ;7.88
+885;Halkbank;Turkey;Banking;22.24 ;0.6705;88.91 ;3.73
+885;International Paper;United States;Materials;18.62 ;0.557;22.8 ;25
+887;Flex;United States;Technology Hardware & Equipment;25.58 ;1.01 ;18.27 ;13.49
+888;Renesas Electronics;Japan;Semiconductors;8.56 ;1.08 ;28.06 ;22.15
+889;China Merchants Securities;China;Diversified Financials;4.2 ;1.36 ;98.8 ;13.57
+890;Lululemon Athletica;Canada;Household & Personal Products;10.59 ;1.81 ;7.6 ;32.32
+891;Corning;United States;Technology Hardware & Equipment;13.12 ;0.506;27.73 ;37.85
+892;Jiangxi Copper;China;Materials;72.15 ;0.9588;26.46 ;5.71
+893;TD SYNNEX;United States;Trading Companies;59.01 ;0.6783;28.8 ;9.32
+894;Robinhood Markets;United States;Diversified Financials;2.97 ;1.41 ;26.19 ;43.79
+895;Ericsson;Sweden;Technology Hardware & Equipment;23.46 ;0.1513;27.67 ;27.49
+896;Phoenix Group Holdings;United Kingdom;Insurance;31.97 ;-1.43 ;385.56 ;7.81
+897;Delta Electronics;Taiwan;Technology Hardware & Equipment;13.11 ;1.1 ;16.22 ;26.41
+898;Naver;South Korea;IT Software & Services;7.87 ;1.41 ;25.93 ;20.05
+899;JSW Steel;India;Materials;20.35 ;0.3944;27.82 ;29.42
+900;SCB X Public Company;Thailand;Banking;6.43 ;1.29 ;102.15 ;11.64
+901;Eurobank Ergasias;Greece;Banking;6.45 ;1.57 ;104.74 ;10.4
+901;Wipro;India;IT Software & Services;10.54 ;1.55 ;15.05 ;29.48
+903;JFE Holdings;Japan;Materials;32.9 ;0.8885;36.18 ;7.31
+904;Seres Group;China;Consumer Durables;19.63 ;0.8262;12.93 ;28.93
+905;Public Storage;United States;Diversified Financials;4.7 ;2.07 ;19.75 ;51.03
+906;Indian Bank;India;Banking;8.4 ;1.26 ;97.38 ;8.97
+907;Best Buy;United States;Retailing;41.53 ;0.927;14.78 ;14.31
+908;AES;United States;Utilities;12.28 ;1.69 ;47.41 ;7.16
+909;Rakuten;Japan;Retailing;15.04 ;-1.07 ;168.71 ;12.06
+910;LG Electronics;South Korea;Consumer Durables;64.14 ;0.4964;44.79 ;8.97
+910;Sumitomo Realty;Japan;Construction;6.76 ;1.18 ;42.37 ;17.72
+912;Schindler Holding;Switzerland;Capital Goods;12.76 ;1.08 ;13.24 ;35.57
+913;SDIC Power Holdings;China;Utilities;7.98 ;1;41.17 ;16.44
+914;Essity;Sweden;Household & Personal Products;13.69 ;1.18 ;17.05 ;19.07
+915;Rongsheng Petrochemical;China;Trading Companies;41.9 ;0.1007;51.84 ;10.79
+916;Korea Gas;South Korea;Oil & Gas Operations;28.17 ;0.8409;39.17 ;2.3
+916;Sichuan Road & Bridge;China;Construction;14.85 ;1;32.85 ;10.48
+918;Ferrari;Italy;Consumer Durables;7.22 ;1.65 ;9.83 ;81.78
+919;Tractor Supply;United States;Retailing;14.96 ;1.08 ;10.38 ;26.54
+920;Grupo Galicia;Argentina;Banking;10.78 ;1.62 ;31.74 ;10.39
+921;Leidos;United States;IT Software & Services;16.66 ;1.25 ;13.1 ;18.68
+922;Sungrow Power Supply;China;Semiconductors;11.62 ;1.77 ;16.93 ;16.74
+923;Legend Holding;China;Diversified Financials;71.26 ;0.0185;95.35 ;2.29
+924;Db Insurance;South Korea;Insurance;13.5 ;1.36 ;45.18 ;3.65
+925;Helvetia Holding;Switzerland;Insurance;13.34 ;0.5471;69.71 ;11.52
+926;Legrand;France;Technology Hardware & Equipment;9.36 ;1.26 ;16.65 ;28.92
+927;Galp Energia;Portugal;Oil & Gas Operations;23.05 ;1.12 ;17.41 ;11.97
+928;GAIL India;India;Oil & Gas Operations;16.52 ;1.49 ;15.39 ;14.37
+929;Philips;Netherlands;Health Care Equipment & Services;19.49 ;-0.759;30.33 ;23.2
+930;Yuanta Financial Holding;Taiwan;Diversified Financials;6.09 ;1.12 ;113.34 ;12.04
+931;Greenland Holdings Group;China;Construction;36.21 ;-1.64 ;152.32 ;3.53
+932;Bangkok Bank;Thailand;Banking;7.69 ;1.36 ;136.43 ;7.71
+933;Dassault Aviation;France;Aerospace & Defense;6.75 ;0.9993;30.15 ;26.37
+934;Israel Discount Bank;Israel;Banking;7.21 ;1.16 ;119.81 ;9.19
+935;Rheinmetall;Germany;Aerospace & Defense;10.55 ;0.7756;15.19 ;70.27
+936;DSM-Firmenich;Switzerland;Chemicals;13.85 ;0.2704;35.26 ;28.02
+937;Euronext;Netherlands;Diversified Financials;1.74 ;0.6334;289.01 ;16.69
+937;Grupo Bimbo;Mexico;Food, Drink & Tobacco;22.24 ;0.6823;20.05 ;15.12
+939;Martin Marietta Materials;United States;Construction;6.54 ;2;18.58 ;30.57
+940;Aisin Seiki;Japan;Consumer Durables;32.12 ;0.7057;28.65 ;9.12
+941;Country Garden Holdings;China;Construction;35.12 ;-4.56 ;141.91 ;1.57
+942;Vonovia;Germany;Construction;7.93 ;-0.9692;93.44 ;26.98
+943;Monster Beverage;United States;Food, Drink & Tobacco;7.49 ;1.51 ;7.72 ;57.09
+944;Restaurant Brands International;Canada;Hotels, Restaurants & Leisure;8.41 ;1.02 ;24.63 ;20.43
+945;Aena;Spain;Transportation;6.23 ;2.09 ;17.58 ;36.83
+946;American Water Works;United States;Utilities;4.68 ;1.05 ;33.85 ;28.08
+946;Prysmian;Italy;Capital Goods;18.42 ;0.7886;18.85 ;15.68
+948;MGM Resorts;United States;Hotels, Restaurants & Leisure;17.24 ;0.7437;42.23 ;8.96
+948;Wen's Foodstuff Group;China;Food, Drink & Tobacco;14.86 ;1.73 ;13.1 ;15.33
+950;HMM;South Korea;Transportation;8.58 ;2.74 ;22.99 ;11.54
+951;SingTel;Singapore;Telecommunications Services;10.51 ;-0.0819;35.23 ;47.22
+952;KeyCorp;United States;Banking;9.27 ;0.025;188.69 ;16.13
+953;Telenor;Norway;Telecommunications Services;7.43 ;1.8 ;20.15 ;19.64
+954;Guosen Securities;China;Diversified Financials;3.41 ;1.14 ;68.71 ;14.09
+955;Coles Group;Australia;Food Markets;29.36 ;0.7289;12.51 ;18.18
+956;Sany Heavy Industry;China;Capital Goods;10.83 ;0.8303;21.08 ;22.06
+957;Bank of India;India;Banking;9.15 ;1.02 ;122.11 ;6.15
+958;Kone;Finland;Construction;12.01 ;1.03 ;9.73 ;29.83
+959;Snam;Italy;Oil & Gas Operations;3.84 ;1.36 ;37.14 ;18.84
+960;Vertex Pharmaceuticals;United States;Drugs & Biotechnology;10.98 ;-0.5356;23.09 ;126.96
+961;Coupang;United States;Retailing;30.27 ;0.154;15.81 ;42.32
+962;SBI Holdings;Japan;Diversified Financials;8.88 ;0.8501;196.69 ;7.76
+963;Annaly Capital Management;United States;Diversified Financials;6.36 ;1;103.56 ;11.48
+964;Banque Saudi Fransi;Saudi Arabia;Banking;5.02 ;1.21 ;77.92 ;12.21
+965;Shanghai International Port;China;Transportation;5.17 ;2.08 ;29.05 ;17.53
+966;Lonza Group;Switzerland;Drugs & Biotechnology;7.46 ;0.7222;22.11 ;48.63
+967;Flutter Entertainment;United States;Hotels, Restaurants & Leisure;14.05 ;0.043;24.51 ;41.22
+968;Jeronimo Martins;Portugal;Food Markets;36.2 ;0.6479;15.84 ;15.24
+969;Tohoku Electric Power;Japan;Utilities;17.7 ;1.04 ;34.39 ;3.51
+970;Givaudan;Switzerland;Food, Drink & Tobacco;8.42 ;1.24 ;13.35 ;43.09
+970;Synopsys;United States;IT Software & Services;6.07 ;2.11 ;13.04 ;69.06
+972;Qatar Islamic Bank;Qatar;Banking;2.42 ;1.28 ;58.12 ;13.3
+973;Asustek Computer;Taiwan;Technology Hardware & Equipment;18.28 ;0.9775;16.98 ;13.5
+973;Waste Connections;Canada;Business Services & Supplies;9.08 ;0.6251;20.25 ;50.23
+975;E.Sun Financial;Taiwan;Banking;4.4 ;0.8135;124.09 ;13.55
+976;Molson Coors Brewing;United States;Food, Drink & Tobacco;11.63 ;1.12 ;26.06 ;11.51
+977;Penske Automotive;United States;Retailing;30.45 ;0.9189;17.48 ;10.5
+978;LPL Financial Holdings;United States;Diversified Financials;12.38 ;1.06 ;13.62 ;25.16
+979;Attijariwafa Bank;Morocco;Banking;4.84 ;0.956;71.7 ;14.44
+980;Dassault Systemes;France;IT Software & Services;6.75 ;1.26 ;16.57 ;48.61
+980;Uni-President;Taiwan;Food Markets;20.48 ;0.6437;21.66 ;13.32
+982;Arab National Bank;Saudi Arabia;Banking;4.57 ;1.32 ;66.08 ;11.85
+983;Mazda Motor;Japan;Consumer Durables;32.68 ;0.8765;25.24 ;3.83
+983;XCMG Construction Machinery;China;Capital Goods;12.42 ;0.8043;23.66 ;14.63
+985;East West Bancorp;United States;Banking;4.49 ;1.17 ;76.17 ;11.75
+985;Yum! Brands;United States;Hotels, Restaurants & Leisure;7.55 ;1.49 ;6.73 ;41.02
+987;Banca Mediolanum;Italy;Banking;4.69 ;1.21 ;89.21 ;11.03
+988;Techtronic Industries;Hong Kong;Consumer Durables;14.62 ;1.12 ;12.89 ;18.52
+989;Teva Pharmaceutical;Israel;Drugs & Biotechnology;16.53 ;-1.64 ;39.33 ;16.53
+990;Lithia Motors;United States;Retailing;36.85 ;0.849;23.48 ;7.69
+990;NVR;United States;Construction;10.41 ;1.59 ;6.2 ;21
+992;CGI;Canada;IT Software & Services;10.85 ;1.27 ;12.46 ;23.72
+993;Indian Railway Finance;India;Business Services & Supplies;3.22 ;0.7813;56.23 ;19.68
+994;Constellation Software;Canada;IT Software & Services;10.07 ;0.7323;12.86 ;74.65
+994;TCL;China;Technology Hardware & Equipment;22.66 ;0.2954;56.13 ;10.52
+996;Dover;United States;Capital Goods;7.96 ;2.3 ;12.65 ;23.16
+997;China Bohai Bank;China;Banking;9.15 ;0.7301;253.06 ;2.13
+998;Commercial Bank For Investment & Development Of Vietnam;Vietnam;Banking;6.88 ;0.9842;108.33 ;9.44
+999;China National Chemical;China;Construction;25.21 ;0.7689;32.02 ;6.22
+1000;Sunshine Insurance Group;China;Insurance;12.18 ;0.7571;79.7 ;6.24
+1001;Cemex;Mexico;Construction;16.47 ;0.9246;28.29 ;9
+1001;China Galaxy Securities;China;Diversified Financials;4.71 ;1.23 ;101.03 ;10.21
+1003;Fortinet;United States;IT Software & Services;5.96 ;1.75 ;9.76 ;78.28
+1003;Telkom Indonesia;Indonesia;Telecommunications Services;9.46 ;1.49 ;18.62 ;15.3
+1005;Bankinter;Spain;Banking;5.95 ;1.03 ;126.3 ;10.48
+1005;Fosun International;China;Insurance;26.7 ;-0.6047;109.13 ;4.22
+1007;AppLovin;United States;IT Software & Services;4.71 ;1.58 ;5.89 ;93.67
+1007;Howmet Aerospace;United States;Aerospace & Defense;7.43 ;1.16 ;10.52 ;54.91
+1009;China Three Gorges Renewables (Group);China;Utilities;3.99 ;0.9489;48.47 ;16.84
+1010;Vestas Wind Systems;Denmark;Capital Goods;18.71 ;0.5398;25.52 ;13.32
+1011;Labcorp Holdings;United States;Health Care Equipment & Services;13.01 ;0.746;18.38 ;19.1
+1012;Beiersdorf;Germany;Household & Personal Products;10.65 ;0.9865;13.57 ;30.41
+1013;GF Securities;China;Diversified Financials;5.07 ;1.21 ;103.95 ;9.86
+1014;Darden Restaurants;United States;Hotels, Restaurants & Leisure;11.76 ;1.05 ;12.56 ;23.3
+1014;EMCOR Group;United States;Business Services & Supplies;14.57 ;1.01 ;8.01 ;18.66
+1016;Tokyo Gas;Japan;Oil & Gas Operations;17.2 ;0.6005;24.76 ;12.66
+1017;Shanghai Pharmaceuticals;China;Drugs & Biotechnology;38.14 ;0.6328;30.39 ;5.15
+1018;Pembina Pipeline;Canada;Oil & Gas Operations;5.34 ;1.36 ;25.01 ;22.36
+1019;M&G;United Kingdom;Diversified Financials;18.23 ;-0.460;230.72 ;6.42
+1020;Fastenal;United States;Trading Companies;7.61 ;1.15 ;4.87 ;46.31
+1021;Arca Continental;Mexico;Food, Drink & Tobacco;12.83 ;1.04 ;14.72 ;18.47
+1022;Swire Pacific;Hong Kong;Food, Drink & Tobacco;10.51 ;0.5538;61.35 ;11.53
+1023;Ametek;United States;Capital Goods;6.94 ;1.38 ;14.63 ;38.46
+1024;Extra Space Storage;United States;Diversified Financials;3.26 ;0.8532;28.85 ;29.93
+1025;Atmos Energy;United States;Utilities;4.18 ;1.08 ;26.5 ;25.1
+1025;Itaúsa;Brazil;Diversified Financials;1.53 ;2.74 ;18.55 ;20.46
+1027;Sabanci Holding;Turkey;Banking;26.81 ;-0.4364;86.92 ;4.23
+1028;Experian;Ireland;Business Services & Supplies;7.3 ;1.18 ;12.51 ;44.16
+1029;Kajima;Japan;Construction;17.8 ;0.7455;21.61 ;10.9
+1030;Jefferies Financial;United States;Diversified Financials;9.74 ;0.6437;70.22 ;9.65
+1031;UCB;Belgium;Drugs & Biotechnology;6.66 ;1.15 ;17.96 ;32.34
+1032;Krung Thai Bank;Thailand;Banking;6.05 ;1.28 ;110.86 ;8.67
+1033;Nippon Paint;Japan;Chemicals;10.82 ;0.8405;19.54 ;17.27
+1034;Shaanxi Construction Engineering Group;China;Construction;21.86 ;0.5414;49.66 ;2.16
+1035;DiDi Global;China;IT Software & Services;28.73 ;0.175;19.77 ;18.23
+1036;National Bank of Greece;Greece;Banking;3.96 ;1.25 ;77.62 ;9.85
+1037;HD HYUNDAI;South Korea;Capital Goods;50.5 ;0.3733;50.18 ;3.76
+1038;KE Holdings;China;Construction;12.98 ;0.5643;18.24 ;25.5
+1039;Builders FirstSource;United States;Retailing;16.4 ;1.08 ;10.83 ;13.8
+1040;Aldar Properties;United Arab Emirates;Construction;6.29 ;1.5 ;23.35 ;17.55
+1041;Xylem;United States;Capital Goods;8.56 ;0.890;16.49 ;28.25
+1042;Nongfu Spring;China;Food, Drink & Tobacco;5.96 ;1.68 ;7.28 ;53.06
+1043;Chunghwa Telecom;Taiwan;Telecommunications Services;7.11 ;1.16 ;16.3 ;30.18
+1044;Paychex;United States;Business Services & Supplies;5.44 ;1.74 ;11.22 ;51.58
+1045;Vulcan Materials;United States;Construction;7.42 ;0.9121;17.57 ;32.63
+1046;Nedbank;South Africa;Banking;8.89 ;0.9266;75.17 ;6.22
+1047;Adani Enterprises;India;Trading Companies;11.96 ;0.4428;21.69 ;31.76
+1047;Shin Kong Financial;Taiwan;Insurance;9.87 ;0.6347;156.89 ;6.23
+1049;CNPC Capital;China;Banking;5.81 ;0.6464;148.53 ;12.57
+1050;AntarChile;Chile;Diversified Financials;28.26 ;0.6552;29.36 ;3.57
+1051;Shanghai Construction;China;Construction;41.56 ;0.3012;53.12 ;3.21
+1052;First Financial Holding;Taiwan;Banking;5.42 ;0.7896;143.5 ;10.77
+1053;Isuzu Motors;Japan;Consumer Durables;21.13 ;0.8375;20.94 ;9.07
+1054;Zhejiang Zheneng Electric Power;China;Utilities;12.8 ;1.01 ;21.79 ;10.7
+1055;Banco Comercial Portugues;Portugal;Banking;6;0.9804;105.77 ;9.77
+1055;Dick's Sporting Goods;United States;Retailing;13.44 ;1.17 ;11.37 ;14.99
+1057;Henderson Land;Hong Kong;Construction;3.24 ;0.8069;68.39 ;13.45
+1058;Bank of Changsha;China;Banking;6.45 ;1.1 ;167.03 ;5.18
+1059;Zimmer Biomet;United States;Health Care Equipment & Services;7.68 ;0.9036;21.36 ;20.08
+1060;Ulta Beauty;United States;Retailing;11.3 ;1.2 ;6.63 ;17.38
+1061;WPP;United Kingdom;Media;18.84 ;0.6926;32.25 ;7.97
+1062;Copart;United States;Retailing;4.51 ;1.45 ;9.19 ;58.84
+1063;Digital Realty Trust;United States;Diversified Financials;5.63 ;0.431;45.08 ;53.84
+1064;Bank Negara Indonesia;Indonesia;Banking;5.55 ;1.35 ;70.2 ;9.31
+1065;Terna;Italy;Utilities;3.98 ;1.15 ;26.66 ;19.43
+1066;CarMax;United States;Retailing;26.35 ;0.5006;27.69 ;9.93
+1067;AvalonBay Communities;United States;Diversified Financials;2.96 ;1.08 ;21;29.29
+1068;Carlsberg;Denmark;Food, Drink & Tobacco;10.87 ;0.9943;15.74 ;17.88
+1069;Jabil Circuit;United States;Capital Goods;27.45 ;0.484;17.4 ;15.77
+1070;Hua Nan Financial;Taiwan;Banking;4.49 ;0.7202;129.52 ;11.19
+1071;MOL Hungarian Oil;Hungary;Oil & Gas Operations;25.11 ;0.8952;21.33 ;5.46
+1072;Suncorp Group;Australia;Insurance;10.38 ;0.9294;20.56 ;13.59
+1073;Sun Pharma Industries;India;Drugs & Biotechnology;6.17 ;1.37 ;10.52 ;50.18
+1074;Workday;United States;IT Software & Services;8.42 ;0.526;17.98 ;63.72
+1075;China National Building;China;Construction;25.27 ;0.3322;67.68 ;3.89
+1076;Electronic Arts;United States;IT Software & Services;7.34 ;1.05 ;13.45 ;38.21
+1077;iA Financial Corporation;Canada;Diversified Financials;8.4 ;0.7022;76.39 ;8.88
+1078;Air Canada;Canada;Transportation;16.25 ;1.26 ;21.7 ;3.45
+1079;Obayashi;Japan;Construction;16.53 ;0.8127;19.5 ;10.62
+1080;Ingersoll Rand;United States;Capital Goods;7.24 ;0.8386;18.01 ;30.22
+1081;China Huarong Asset Management;China;Diversified Financials;4.26 ;1.22 ;134.85 ;7.66
+1082;Amadeus IT Group;Spain;IT Software & Services;6.64 ;1.36 ;12.37 ;34.74
+1082;Dollar Tree;United States;Retailing;27.58 ;-3.03 ;18.64 ;17.33
+1084;Shriram Finance;India;Business Services & Supplies;5.13 ;1.13 ;34.37 ;14.43
+1085;Garmin;Switzerland;Technology Hardware & Equipment;6.3 ;1.41 ;9.63 ;38.28
+1086;Korean Air;South Korea;Transportation;13.11 ;0.966;31.93 ;5.35
+1087;WEG;Brazil;Capital Goods;7.05 ;1.12 ;6.72 ;36.86
+1088;Mitsubishi Chemical;Japan;Chemicals;29.53 ;0.4957;38.76 ;6.77
+1089;WTW;United Kingdom;Insurance;9.81 ;-0.053;28.06 ;30.03
+1090;T Rowe Price;United States;Diversified Financials;7.09 ;2.04 ;13.66 ;19.66
+1090;Universal Health Services;United States;Health Care Equipment & Services;15.83 ;1.14 ;14.85 ;11.19
+1092;Shenzhen Mindray Bio-Medical Electronics;China;Health Care Equipment & Services;5.09 ;1.72 ;8.21 ;36.06
+1093;Alstom;France;Capital Goods;19.46 ;-0.2742;37.88 ;10.88
+1094;Edwards Lifesciences;United States;Health Care Equipment & Services;5.54 ;1.47 ;13.05 ;44.54
+1095;Quinenco;Chile;Banking;10.63 ;0.703.6;66.99 ;6.91
+1096;Quest Diagnostics;United States;Health Care Equipment & Services;10.16 ;0.892;15.8 ;19.4
+1097;Shanxi Xinghuacun Fen Wine Factory;China;Food, Drink & Tobacco;4.2 ;1.71 ;7.09 ;35.37
+1098;Greentown China Holdings;China;Construction;22.11 ;0.2216;69.57 ;3.38
+1099;Wuchan Zhongda Group;China;Trading Companies;80.88 ;0.4469;28.86 ;3.44
+1100;Hydro One;Canada;Utilities;6.19 ;0.8438;25.5 ;22.26
+1101;All Nippon Airways;Japan;Transportation;14.62 ;0.9385;22.79 ;8.82
+1102;Voya Financial;United States;Insurance;8.05 ;0.667;153;5.68
+1103;Paramount;United States;Media;29.21 ;-6.19 ;46.17 ;7.87
+1104;J Sainsbury;United Kingdom;Food Markets;41.81 ;0.4434;31.04 ;8
+1105;United Microelectronics;Taiwan;Semiconductors;7.25 ;1.37 ;17.26 ;17.25
+1106;Jackson Financial;United States;Insurance;3.27 ;0.946;319.77 ;5.53
+1107;Cadence Design;United States;IT Software & Services;4.64 ;1.06 ;8.97 ;79.45
+1108;Equity Residential;United States;Diversified Financials;2.96 ;1.04 ;20.83 ;26.03
+1109;Bâloise Group;Switzerland;Insurance;10.39 ;0.4369;88.25 ;10.1
+1109;China Resources Pharmaceutical Group;Hong Kong;Drugs & Biotechnology;35.8 ;0.4655;35.31 ;3.98
+1111;Antofagasta;United Kingdom;Materials;6.61 ;0.8263;22.64 ;22.28
+1111;Coca-Cola HBC;Switzerland;Food, Drink & Tobacco;11.63 ;0.8871;11.15 ;18.36
+1111;Modon Holding PSC;United Arab Emirates;Diversified Financials;1.77 ;2.56 ;20.67 ;13.53
+1114;Autodesk;United States;IT Software & Services;6.11 ;1.11 ;10.83 ;57.49
+1115;Wolters Kluwer;Netherlands;Business Services & Supplies;6.4 ;1.17 ;10.03 ;40.71
+1116;Top Frontier Investment Holdings;Philippines;Oil & Gas Operations;27.53 ;-0.1931;48.88 ;0.380
+1117;Cathay Pacific Airways;Hong Kong;Transportation;13.38 ;1.27 ;22.05 ;7.39
+1118;StoneX Group;United States;Diversified Financials;108.26 ;0.2674;29.59 ;4.22
+1118;Textron;United States;Aerospace & Defense;13.87 ;0.830;16.94 ;12.43
+1120;Amcor;United Kingdom;Materials;13.54 ;0.798;16.16 ;13.79
+1121;Assurant;United States;Insurance;11.88 ;0.7602;27.44 ;9.71
+1122;Metro;Canada;Food Markets;15.54 ;0.7139;9.9 ;16.27
+1123;International Flavors & Fragrances;United States;Food, Drink & Tobacco;11.48 ;0.243;28.67 ;19.5
+1123;Kyocera;Japan;Semiconductors;13.23 ;0.1917;29.22 ;16.42
+1123;Taiwan Cooperative Financial;Taiwan;Banking;4.63 ;0.5984;157.56 ;11.12
+1126;Rockwell Automation;United States;Capital Goods;8.09 ;0.9169;10.94 ;28.09
+1127;Hoya;Japan;Health Care Equipment & Services;5.58 ;1.37 ;8.14 ;39.49
+1127;US Foods;United States;Food Markets;37.88 ;0.494;13.79 ;14.84
+1129;Performance Food Group;United States;Transportation;60.1 ;0.3873;17.31 ;12.41
+1130;Evergy;United States;Utilities;5.82 ;0.8735;33.6 ;15.61
+1131;Monolithic Power Systems;United States;Semiconductors;2.21 ;1.79 ;3.62 ;27.95
+1132;DaVita;United States;Health Care Equipment & Services;12.82 ;0.9363;17.97 ;11.16
+1133;Agilent Technologies;United States;Health Care Equipment & Services;6.53 ;1.26 ;11.91 ;30.3
+1134;Vibra Energia;Brazil;Retailing;31.96 ;1.18 ;8.12 ;3.75
+1135;Bandai Namco Holdings;Japan;Consumer Durables;8.14 ;1.12 ;7.17 ;21.79
+1135;NiSource;United States;Oil & Gas Operations;5.46 ;0.7588;32.47 ;18.57
+1137;Yum China Holdings;China;Hotels, Restaurants & Leisure;11.3 ;0.911;11.12 ;17.09
+1138;Coterra Energy;United States;Oil & Gas Operations;5.46 ;1.12 ;21.83 ;19.39
+1139;Asahi Kasei;Japan;Chemicals;19.67 ;0.5526;25.8 ;9.1
+1140;Adani Power Limited;India;Utilities;6.42 ;1.56 ;13.22 ;24.79
+1141;Luzhou Lao Jiao;China;Food, Drink & Tobacco;3.89 ;1.98 ;9.48 ;25.25
+1142;The Estée Lauder Companies;United States;Household & Personal Products;15.12 ;-0.700;19.76 ;21.36
+1143;Brown & Brown;United States;Insurance;4.81 ;0.981;17.8 ;32.8
+1144;Hexagon;Sweden;Technology Hardware & Equipment;5.84 ;1.11 ;18.48 ;25.88
+1145;NARI Technology Development;China;Capital Goods;7.63 ;1.04 ;11.96 ;25.08
+1146;Crown Castle International;United States;Diversified Financials;6.57 ;-3.9 ;32.74 ;43.63
+1146;Gartner;United States;IT Software & Services;6.27 ;1.25 ;8.54 ;32.06
+1148;Santos;Australia;Oil & Gas Operations;5.47 ;1.22 ;30.87 ;12.18
+1149;Constellation Brands;United States;Food, Drink & Tobacco;10.21 ;-0.0814;21.65 ;32.99
+1150;China Southern Airlines;China;Transportation;24.21 ;-0.2458;45.21 ;7.52
+1151;ResMed;United States;Health Care Equipment & Services;5.02 ;1.31 ;7.57 ;34.64
+1152;Olam Group;Singapore;Food, Drink & Tobacco;42.02 ;0.0647;33.55 ;2.78
+1153;Fluor;United States;Construction;16.32 ;2.15 ;9.14 ;5.97
+1154;Sodexo;France;Hotels, Restaurants & Leisure;25.96 ;0.7260;15.95 ;9.22
+1155;Air France-KLM;France;Transportation;34.03 ;0.2639;37.44 ;2.29
+1156;Partners Group Holding;Switzerland;Diversified Financials;2.7 ;1.28 ;6.27 ;34.29
+1157;MSCI;United States;Business Services & Supplies;2.92 ;1.14 ;5.34 ;41.42
+1158;Reliance Steel;United States;Materials;13.68 ;0.7720;10.37 ;15.03
+1159;Vietin Bank;Vietnam;Banking;6.04 ;1.01 ;93.6 ;7.67
+1160;Kaspi.kz JSC;Kazakhstan;Business Services & Supplies;5.39 ;2.21 ;15.97 ;17.02
+1161;Piraeus Financial Holdings;Greece;Banking;4.21 ;1.15 ;82.89 ;7.05
+1162;IndusInd Bank;India;Banking;7.14 ;0.8669;64.84 ;7.5
+1163;Adyen;Netherlands;Banking;2.36 ;1;11.83 ;52.5
+1164;Huadian Power International;China;Utilities;15.44 ;0.6527;31.12 ;6.01
+1165;Adani Ports & Special Economic Zone;India;Transportation;3.45 ;1.21 ;15.04 ;30.14
+1166;Pan Pacific International Holdings;Japan;Retailing;14.36 ;0.6235;9.95 ;17.73
+1167;Booz Allen Hamilton Holding;United States;Business Services & Supplies;11.78 ;0.8650;6.82 ;15.15
+1168;BCI-Banco Credito;Chile;Banking;5.69 ;0.8492;83.88 ;8.83
+1169;Seagate Technology;Ireland;Technology Hardware & Equipment;8.04 ;1.18 ;7.96 ;17.51
+1170;Orsted;Denmark;Utilities;8.53 ;-0.1339;41.49 ;16.52
+1171;EQT;United States;Oil & Gas Operations;6.33 ;0.3692;39.7 ;30.07
+1172;ON Semiconductor;United States;Semiconductors;7.08 ;1.57 ;14.09 ;16.73
+1173;Williams-Sonoma;United States;Retailing;7.71 ;1.15 ;5.3 ;18.67
+1174;Vertiv Holdings;United States;Technology Hardware & Equipment;8.41 ;0.6662;9.45 ;33.14
+1175;Acciona;Spain;Construction;20.76 ;0.4565;35.85 ;7.68
+1175;Baxter International;United States;Health Care Equipment & Services;12.86 ;-0.6490;25.78 ;15.5
+1177;Kyushu Electric Power;Japan;Utilities;14.99 ;0.5826;36.41 ;4.21
+1178;Csc Financial;China;Diversified Financials;4.53 ;0.8556;77.6 ;8.85
+1179;InterGlobe Aviation;India;Transportation;9.14 ;0.7273;11.6 ;24.03
+1180;Wistron;Taiwan;Technology Hardware & Equipment;32.67 ;0.5432;17.99 ;9.12
+1181;Grupo Carso;Mexico;Retailing;11.07 ;0.8167;13.54 ;16.71
+1182;Hormel Foods;United States;Food, Drink & Tobacco;11.91 ;0.7567;13.4 ;16.33
+1183;American Financial Group;United States;Insurance;8.27 ;0.8870;25.01 ;10.58
+1183;MicroStrategy;United States;IT Software & Services;0.463;-1.17 ;25.84 ;98.14
+1185;China CSSC Holdings;China;Capital Goods;11.25 ;0.3700;25.43 ;17.94
+1185;SK Telecom;South Korea;Telecommunications Services;13.16 ;0.9059;20.73 ;8.56
+1187;ThyssenKrupp Group;Germany;Materials;37.52 ;-1.35 ;30.89 ;7.01
+1188;BJ's Wholesale Club;United States;Retailing;20.5 ;0.5344;7.07 ;14.75
+1189;Kao;Japan;Household & Personal Products;10.75 ;0.7114;11.88 ;19.56
+1190;First Horizon;United States;Banking;4.93 ;0.8010;81.49 ;9.03
+1191;DoorDash;United States;Transportation;10.72 ;0.1230;12.85 ;79.56
+1192;Viatris;United States;Drugs & Biotechnology;14.68 ;-0.6342;41.5 ;9.71
+1193;Halyk Bank;Kazakhstan;Banking;6.32 ;1.96 ;35.36 ;6.42
+1194;Jones Lang LaSalle;United States;Construction;23.43 ;0.5468;16.76 ;10.67
+1195;Falabella;Chile;Retailing;12.94 ;0.5095;25.42 ;11.33
+1196;CJ Corporation;South Korea;Food, Drink & Tobacco;32.01 ;0.0737;32.26 ;2.92
+1197;China International Capital;China;Diversified Financials;4.78 ;0.7905;92.44 ;8.69
+1198;Cellnex Telecom;Spain;Telecommunications Services;5.03 ;-0.0326;45.22 ;27.79
+1199;Westlake Corporation;United States;Chemicals;12.14 ;0.5980;20.75 ;12
+1200;Echostar;United States;Telecommunications Services;15.83 ;-0.1195;60.94 ;6.46
+1201;Jiangsu Hengrui Medicine;China;Drugs & Biotechnology;4.01 ;0.9478;7.07 ;43.82
+1202;Astellas Pharma;Japan;Drugs & Biotechnology;12.54 ;0.3329;22.33 ;17.18
+1203;Old Dominion Freight Line;United States;Transportation;5.73 ;1.15 ;5.49 ;31.13
+1204;Corpay;United States;Business Services & Supplies;3.98 ;1;17.96 ;22.62
+1204;Japan Exchange Group;Japan;Diversified Financials;1.08 ;0.4040;527.23 ;11.27
+1206;A2A;Italy;Utilities;13.6 ;0.9346;20.6 ;7.7
+1207;Old Mutual;South Africa;Insurance;13.26 ;0.4183;65.46 ;2.54
+1208;Verisk Analytics;United States;Business Services & Supplies;2.88 ;0.9582;4.26 ;40.03
+1209;Norsk Hydro;Norway;Materials;18.7 ;0.5384;18.26 ;10.73
+1210;Towngas;Hong Kong;Oil & Gas Operations;7.11 ;0.7320;20.38 ;16.86
+1211;Teck Resources;Canada;Materials;8.49 ;0.2531;31.89 ;17.89
+1212;Pegatron;Taiwan;Technology Hardware & Equipment;35.04 ;0.5255;20.58 ;6.6
+1213;Forvia;France;Consumer Durables;29.18 ;-0.2003;31.35 ;1.57
+1214;Storebrand;Norway;Banking;9.09 ;0.5108;87.77 ;5.09
+1215;Ford Otosan;Turkey;Consumer Durables;17.13 ;1.12 ;9.24 ;8.48
+1215;Guangdong Haid Group;China;Food, Drink & Tobacco;16.2 ;0.6824;6.6 ;12.15
+1217;Osaka Gas;Japan;Oil & Gas Operations;13.31 ;0.6413;20.68 ;9.94
+1218;JDE Peet's;Netherlands;Food, Drink & Tobacco;9.56 ;0.6068;24.9 ;11.55
+1219;Marfrig Global Foods;Brazil;Food, Drink & Tobacco;27.61 ;0.5185;22.26 ;3.44
+1220;Bayan Resources;Indonesia;Materials;3.44 ;0.9213;3.52 ;39.51
+1221;IDBI Bank;India;Banking;3.94 ;0.8615;44.19 ;10.13
+1221;Toll Brothers;United States;Construction;10.76 ;1.51 ;13.62 ;9.95
+1223;Liberty Global;United Kingdom;Telecommunications Services;4.34 ;1.59 ;41.77 ;3.78
+1224;Casey's General Stores;United States;Retailing;15.55 ;0.5352;8.22 ;16.61
+1225;Bank Albilad;Saudi Arabia;Banking;2.75 ;0.7479;41.24 ;11.76
+1226;Carvana;United States;Retailing;13.67 ;0.2100;8.48 ;31.86
+1227;West Japan Railway;Japan;Transportation;11.13 ;0.6834;23.24 ;9.82
+1228;Next;United Kingdom;Retailing;7.8 ;0.9383;6.05 ;18.69
+1229;Longi Green Energy Technology;China;Semiconductors;12.98 ;-1.03 ;22.12 ;15.45
+1230;Insurance Australia Group;Australia;Insurance;11.28 ;0.8370;15.58 ;12.08
+1231;Advantest;Japan;Technology Hardware & Equipment;5.11 ;1.06 ;5.71 ;30.58
+1232;Jacobs Solutions;United States;Business Services & Supplies;14.4 ;0.6089;11.61 ;14.9
+1233;Carlyle Group;United States;Diversified Financials;5.29 ;1.02 ;23.1 ;14.09
+1234;Sunac China Holdings;China;Construction;10.62 ;-3.57 ;120.95 ;2.11
+1235;Pinterest;United States;IT Software & Services;3.65 ;1.86 ;5.34 ;17.64
+1236;Bawag Group;Austria;Banking;3.97 ;0.8221;73.87 ;8.28
+1237;Expeditors International;United States;Transportation;10.6 ;0.8101;4.88 ;14.96
+1238;Grupo De Inversiones Suramericana;Colombia;Insurance;9.29 ;1.49 ;20.43 ;3.96
+1239;Bank of Chongqing;China;Banking;4.45 ;0.7198;128.48 ;3.18
+1240;Sabesp;Brazil;Utilities;6.71 ;1.78 ;13.38 ;13.89
+1241;Fortive;United States;Technology Hardware & Equipment;6.23 ;0.8329;17.02 ;23.42
+1242;Terumo;Japan;Health Care Equipment & Services;6.67 ;0.8258;11.95 ;28.11
+1243;IDEXX Laboratories;United States;Health Care Equipment & Services;3.9 ;0.8879;3.29 ;35.45
+1244;Beijing Enterprises;Hong Kong;Oil & Gas Operations;11.68 ;0.7118;28.74 ;5
+1245;Western Alliance Bancorp.;United States;Banking;5.02 ;0.8094;83.04 ;7.7
+1246;Raizen;Brazil;Retailing;46.6 ;-0.4821;23.28 ;3.28
+1247;Packaging Corp of America;United States;Materials;8.54 ;0.8573;9.02 ;16.62
+1248;Datang International Power;China;Utilities;16.77 ;0.1497;42.72 ;4.39
+1249;Webster Financial;United States;Banking;4.19 ;0.7735;80.28 ;7.99
+1250;Fortum;Finland;Utilities;6.27 ;1.26 ;17.92 ;13.7
+1251;Investec;United Kingdom;Diversified Financials;6.18 ;0.7753;77.95 ;4.92
+1252;Jyske Bank;Denmark;Banking;4.42 ;0.7324;104.17 ;4.96
+1253;WSP;Canada;Construction;11.8 ;0.4974;14.04 ;22.84
+1253;Zions Bancorp;United States;Banking;4.98 ;0.7960;87.99 ;6.62
+1255;arGEN-X;Netherlands;Drugs & Biotechnology;2.19 ;0.8324;6.2 ;37.19
+1256;Scor;France;Insurance;18.36 ;0.0043;38.67 ;5.47
+1257;Telia;Sweden;Telecommunications Services;8.26 ;0.6570;19.54 ;14.33
+1258;ENN Natural Gas;China;Oil & Gas Operations;18.7 ;0.6080;18.73 ;8.44
+1259;Wuxi Apptec;China;Drugs & Biotechnology;5.27 ;1.3 ;11.01 ;20.91
+1260;Bank Of Guiyang;China;Banking;4.21 ;0.7315;102.56 ;2.98
+1261;XP;Brazil;Diversified Financials;3.23 ;0.8384;56.24 ;8.62
+1262;Ovintiv;United States;Oil & Gas Operations;9.03 ;1.13 ;19.25 ;9.03
+1263;China Eastern Airlines;China;Transportation;18.36 ;-0.5871;38.2 ;4.94
+1264;Latam Airlines;Chile;Transportation;12.84 ;0.9779;15.25 ;9.23
+1265;Borouge;United Arab Emirates;Chemicals;6.03 ;1.23 ;8.71 ;21.03
+1266;SinoPac Financial;Taiwan;Banking;3.87 ;0.6921;93.6 ;8.1
+1266;SS&C Technologies;United States;IT Software & Services;5.96 ;0.8163;20.41 ;17.91
+1268;STRABAG;Austria;Construction;18.86 ;0.7005;14.54 ;9.33
+1269;Dollarama;Canada;Retailing;4.65 ;0.8479;4.94 ;34.17
+1269;FinecoBank;Italy;Banking;2.11 ;0.7056;35.93 ;12.11
+1271;Foshan Haitian Flavouring and Food;China;Food, Drink & Tobacco;3.71 ;0.8815;5.6 ;31.98
+1272;Telecom Italia;Italy;Telecommunications Services;15.62 ;-0.4619;39;8.19
+1273;Carlisle Cos;United States;Construction;5;1.73 ;5.45 ;16.56
+1274;Ajinomoto;Japan;Food, Drink & Tobacco;10.05 ;0.6070;11.81 ;19.54
+1275;Broadridge Financial;United States;IT Software & Services;6.68 ;0.7591;8.23 ;27.82
+1276;NetApp;United States;Technology Hardware & Equipment;6.51 ;1.14 ;8.99 ;18.25
+1277;Qilu Bank;China;Banking;3.37 ;0.7176;98.79 ;4.18
+1278;Shenwan Hongyuan Group;China;Diversified Financials;4.58 ;0.7246;95.57 ;6.68
+1279;NAURA Technology Group;China;Capital Goods;4.43 ;0.8417;9.41 ;33.24
+1280;Kirin Holdings;Japan;Food, Drink & Tobacco;15.44 ;0.3843;21.34 ;12.02
+1281;EQT AB;Sweden;Diversified Financials;2.87 ;0.8401;11.89 ;33.24
+1281;Grupo Aval;Colombia;Banking;11.22 ;0.2820;74.42 ;3.17
+1281;Origin Energy;Australia;Oil & Gas Operations;11.13 ;0.9360;12.89 ;11.31
+1284;KT;South Korea;Telecommunications Services;19.38 ;0.3441;28.45 ;8.59
+1285;Globe Life;United States;Insurance;5.78 ;1.07 ;29.08 ;10.24
+1286;Shanghai Electric Group;China;Capital Goods;16.04 ;0.1043;41.5 ;5.02
+1287;Industries Qatar;Qatar;Materials;3.48 ;1.23 ;11.65 ;20.19
+1288;Mirae Asset Financial Group;South Korea;Diversified Financials;6.18 ;0.6758;93.18 ;4.16
+1289;Ares Management;United States;Diversified Financials;4.21 ;0.4330;25.1 ;33.62
+1290;Yamaha Motor;Japan;Consumer Durables;17;0.7134;17.71 ;7.68
+1291;Advanced Info Service;Thailand;Telecommunications Services;6.05 ;0.9939;12.7 ;24.55
+1292;HBIS;China;Materials;17.1 ;0.1081;37.66 ;3.12
+1293;Goodman Group;Australia;Diversified Financials;1.44 ;0.6075;16.96 ;37.31
+1294;Dongfeng Motor Group;China;Consumer Durables;14.76 ;0.0080;44.53 ;4.64
+1295;Sojitz;Japan;Materials;16.55 ;0.6711;19.58 ;4.9
+1296;Charoen Pokphand Group;Thailand;Food, Drink & Tobacco;16.46 ;0.5235;25.71 ;5.94
+1297;TUI;Germany;Business Services & Supplies;25.68 ;0.5887;17.38 ;3.9
+1298;Lindt & Sprungli;Switzerland;Food, Drink & Tobacco;6.21 ;0.7634;10.3 ;31.62
+1298;WESCO International;United States;Trading Companies;21.82 ;0.7176;15.06 ;7.89
+1300;Bank of Suzhou;China;Banking;3.33 ;0.6963;96.52 ;4.94
+1300;Gold Fields;South Africa;Materials;5.18 ;1.24 ;10.14 ;19.43
+1302;TBEA;China;Capital Goods;13.31 ;0.5183;29.46 ;7.98
+1303;Marks & Spencer;United Kingdom;Retailing;16.97 ;0.6404;11.64 ;10.39
+1304;GoDaddy;United States;Business Services & Supplies;4.57 ;0.9369;8.23 ;26.12
+1305;Toray Industries;Japan;Household & Personal Products;16.89 ;0.3394;22.3 ;10.3
+1306;Oriental Land;Japan;Media;4.34 ;0.7668;9.04 ;34.76
+1307;Bank of Greece;Greece;Banking;7.68 ;0.0900;227.1 ;0.313
+1308;Bajaj Auto;India;Consumer Durables;5.96 ;0.9004;5.47 ;26.26
+1309;Kingspan Group PLC;Ireland;Construction;9.31 ;0.7199;10.17 ;15.42
+1309;Korea Investment Holdings;South Korea;Diversified Financials;4.13 ;0.7624;74.19 ;3.17
+1311;Yuexiu Property;Hong Kong;Construction;12.01 ;0.1443;56.23 ;2.54
+1312;Jiangsu Eastern Shenghong;China;Utilities;19.3 ;-0.4493;29.65 ;7.85
+1313;Rede D'Oro Luiz;Brazil;Health Care Equipment & Services;9.38 ;0.7136;16.61 ;12.28
+1314;Hyundai Marine & Fire;South Korea;Insurance;10.28 ;0.6237;32.96 ;1.14
+1315;Evolution Gaming Group AB;Sweden;IT Software & Services;2.23 ;1.35 ;5.54 ;17.61
+1316;Comerica;United States;Banking;4.76 ;0.7280;77.62 ;6.97
+1317;Metropolitan Bank & Trust;Philippines;Banking;3.61 ;0.8402;60.87 ;5.83
+1318;Zoom Video Communications;United States;IT Software & Services;4.67 ;1.01 ;10.99 ;23.21
+1319;Sandoz Group;Switzerland;Drugs & Biotechnology;10.36 ;0.0030;19.91 ;18.16
+1320;Fanuc;Japan;Capital Goods;5.23 ;0.9679;12.95 ;24.11
+1321;Veeva Systems;United States;IT Software & Services;2.75 ;0.7141;7.34 ;37.02
+1322;LKQ;United States;Consumer Durables;14.12 ;0.7010;15.47 ;9.67
+1323;Tongwei;China;Food, Drink & Tobacco;13.25 ;-0.9298;28.21 ;10.06
+1324;China International Marine;China;Materials;24.59 ;0.4061;24.06 ;3.42
+1325;Kobe Steel;Japan;Materials;16.86 ;0.6775;18.25 ;4.53
+1326;Dongguan Rural Commercial Bank;China;Banking;3.52 ;0.6425;102.22 ;2.86
+1327;Hong Leong Financial;Malaysia;Banking;2.67 ;0.7237;74.8 ;4.46
+1328;Macy's;United States;Retailing;23.01 ;0.5820;17.53 ;3.11
+1329;China Cinda Asset Management;China;Diversified Financials;6.93 ;0.4218;224.54 ;5.02
+1330;Hyundai Glovis;South Korea;Transportation;20.83 ;0.8021;11.45 ;5.91
+1331;Kawasaki Heavy Industries;Japan;Consumer Durables;13.38 ;0.5480;19.38 ;9.77
+1332;SMC;Japan;Capital Goods;5.18 ;1.07 ;13.52 ;20.77
+1333;Alliant Energy;United States;Utilities;3.98 ;0.6900;23.43 ;15.6
+1334;Tokyo Century;Japan;Business Services & Supplies;8.94 ;0.5751;41.76 ;5.01
+1335;Evonik Industries;Germany;Chemicals;16.39 ;0.2401;21.82 ;10.31
+1336;AutoNation;United States;Retailing;26.97 ;0.6776;13.33 ;6.87
+1337;BAIC Motor;China;Consumer Durables;26.75 ;0.1326;23.57 ;1.91
+1338;ENN Energy Holdings;China;Oil & Gas Operations;15.26 ;0.8320;14.14 ;8.78
+1339;Shandong Gold Mining;China;Materials;11.46 ;0.3465;22.06 ;13.23
+1340;Aristocrat Leisure;Australia;Hotels, Restaurants & Leisure;4.35 ;0.8591;7.15 ;25.61
+1340;Zhongyuan Bank;China;Banking;7.46 ;0.3881;187.03 ;1.63
+1342;Vipshop Holdings;China;Retailing;15.06 ;1.08 ;10.27 ;5.76
+1343;Shenzhen Transsion Holding;China;Technology Hardware & Equipment;9.52 ;0.7710;6.18 ;13.1
+1344;Taishin Financial Holdings;Taiwan;Diversified Financials;5.08 ;0.6247;100.37 ;6.45
+1345;Trimble;United States;IT Software & Services;3.68 ;1.5 ;9.49 ;15.17
+1346;RHB Bank;Malaysia;Banking;3.17 ;0.6820;78.25 ;6.5
+1347;Epiroc;Sweden;Capital Goods;6.02 ;0.8258;7.71 ;25.71
+1347;Palantir Technologies;United States;IT Software & Services;2.87 ;0.4622;6.34 ;264.51
+1349;IHI;Japan;Capital Goods;10.6 ;0.7801;14.71 ;11.42
+1349;Unicaja Banco;Spain;Banking;3.62 ;0.6205;100.82 ;4.9
+1351;Banca Transilvania;Romania;Banking;3.59 ;0.9953;43.09 ;5.88
+1351;Ingram Micro Holding;United States;IT Software & Services;47.98 ;0.2642;18.78 ;4.14
+1353;China Merchants Port Group;China;Transportation;2.23 ;0.6320;28.17 ;13.63
+1353;Ventas;United States;Diversified Financials;4.92 ;0.0812;26.19 ;29.83
+1355;ICON (Ireland);Ireland;Business Services & Supplies;8.28 ;0.7915;16.88 ;11.71
+1356;MTU Aero Engines AG;Germany;Aerospace & Defense;8.02 ;0.6847;13.42 ;17.8
+1356;Popular;United States;Banking;4.36 ;0.6884;74.04 ;6.65
+1358;Kerry Group;Ireland;Food, Drink & Tobacco;7.5 ;0.7643;12.96 ;17.15
+1359;BBMG;China;Construction;15.19 ;-0.0778;36.17 ;0.991
+1359;McCormick;United States;Food, Drink & Tobacco;6.73 ;0.7848;12.9 ;19.99
+1361;Alpha Bank;Greece;Banking;5.44 ;0.6800;74.63 ;5.75
+1361;Sinotruk Hong Kong;China;Capital Goods;13.21 ;0.8140;17.78 ;6.3
+1363;Arrow Electronics;United States;Trading Companies;27.92 ;0.3921;21.76 ;5.79
+1364;Klepierre;France;Construction;1.71 ;1.19 ;21.72 ;10.16
+1365;AngloGold Ashanti;South Africa;Materials;5.79 ;1;13.16 ;19.94
+1366;SGS;Switzerland;Business Services & Supplies;7.71 ;0.6597;7.45 ;18.78
+1367;Marvell Technology;United States;Semiconductors;5.77 ;-0.8850;20.2 ;51.03
+1368;Qantas Airways;Australia;Transportation;14.92 ;0.8608;13.52 ;8.26
+1369;Banque Cantonale Vaudoise;Switzerland;Banking;1.92 ;0.5003;66.9 ;10.21
+1369;ZTO Express (Cayman);China;Transportation;6.15 ;1.22 ;12.65 ;15.24
+1371;AECOM;United States;Construction;16.22 ;0.4749;11.82 ;12.92
+1371;TechnipFMC;United Kingdom;Oil & Gas Operations;9.29 ;0.8278;9.97 ;11.91
+1373;Teledyne Technologies;United States;Aerospace & Defense;5.78 ;0.8293;15.05 ;21.48
+1374;Wintrust Financial;United States;Banking;3.97 ;0.6950;64.88 ;7.41
+1375;Military Commercial Joint Stock Bank;Vietnam;Banking;3.63 ;0.9033;44.29 ;5.52
+1376;Seazen Group;China;Construction;12.4 ;0.0682;42.71 ;1.82
+1377;Brambles;Australia;Transportation;6.63 ;0.8347;8.45 ;18.32
+1378;Credito Emiliano;Italy;Banking;3.64 ;0.6707;70.38 ;4.53
+1379;VeriSign;United States;IT Software & Services;1.57 ;0.7909;1.45 ;25.68
+1380;Old Republic International;United States;Insurance;8.33 ;0.7808;20.89 ;9.21
+1381;Taisei;Japan;Construction;14.17 ;0.6884;15.11 ;9.17
+1382;SoFi;United States;Business Services & Supplies;3.77 ;0.4987;36.25 ;14.22
+1383;Smithfield Foods;United States;Food, Drink & Tobacco;14.14 ;0.9530;11.42 ;7.85
+1384;Mettler-Toledo International;United States;Health Care Equipment & Services;3.87 ;0.8631;3.24 ;22.13
+1385;Norwegian Cruise Line Holdings;United States;Hotels, Restaurants & Leisure;9.48 ;0.9103;19.97 ;7.64
+1386;Check Point Software;Israel;IT Software & Services;2.6 ;0.8527;5.56 ;22.38
+1387;Bunzl;United Kingdom;Trading Companies;15.05 ;0.6394;12.18 ;9.94
+1388;First Solar;United States;Semiconductors;4.21 ;1.29 ;12.12 ;15.21
+1389;J.B. Hunt Transport Services;United States;Transportation;12.06 ;0.5611;8.26 ;12.97
+1390;Owens Corning;United States;Materials;10.97 ;0.6470;14.07 ;12.32
+1391;UPM-Kymmene;Finland;Materials;11.11 ;0.3307;20.03 ;14.06
+1392;Fuyao Glass Industry Group;China;Consumer Durables;5.45 ;1.04 ;8.67 ;17.93
+1393;Brenntag;Germany;Trading Companies;17.56 ;0.5800;12.35 ;9.56
+1393;Veralto;United States;Capital Goods;5.19 ;0.8330;6.41 ;22.9
+1395;Tourmaline Oil;Canada;Oil & Gas Operations;3.78 ;0.9227;15.78 ;16.83
+1396;Bank of Tianjin;China;Banking;5.14 ;0.5282;126.86 ;1.38
+1397;Expand Energy;United States;Oil & Gas Operations;4.25 ;-0.7140;27.89 ;24.5
+1398;Valeo;France;Consumer Durables;23.25 ;0.1752;22.43 ;2.45
+1399;Gap;United States;Retailing;15.09 ;0.8440;11.88 ;7.91
+1400;China Nuclear Engineering Corporation;China;Construction;15.19 ;0.2923;31.61 ;3.69
+1401;GS Holdings;South Korea;Conglomerates;18.55 ;0.4158;23.82 ;2.53
+1402;China Communications Services;China;Construction;20.84 ;0.5011;18.72 ;3.63
+1403;ZIM Integrated Shipping Services;Israel;Transportation;8.43 ;2.15 ;11.39 ;1.73
+1404;ACWA Power;Saudi Arabia;Utilities;1.79 ;0.4683;15.24 ;64.25
+1405;Concordia Financial Group;Japan;Banking;2.48 ;0.5002;158.05 ;6.89
+1406;First Pacific;Hong Kong;Food, Drink & Tobacco;10.06 ;0.6002;28.68 ;2.76
+1407;Guangzhou Automobile Group;China;Consumer Durables;14.98 ;0.1143;31.85 ;3.76
+1408;E-mart;South Korea;Retailing;21.28 ;-0.4369;23.05 ;1.7
+1409;Xiamen Xiangyu;China;Transportation;50.88 ;0.1971;16.97 ;2.41
+1410;Chow Tai Fook Jewellery;Hong Kong;Consumer Durables;12.62 ;0.5732;11.18 ;11.88
+1411;Stanley Black & Decker;United States;Consumer Durables;15.37 ;0.2863;21.85 ;9.52
+1412;FICO;United States;IT Software & Services;1.77 ;0.5443;1.71 ;47.67
+1413;Bank of Qingdao;China;Banking;3.63 ;0.5569;95.35 ;2.49
+1413;El Puerto de Liverpool;Mexico;Retailing;11.44 ;1.18 ;14.24 ;6.39
+1415;Avery Dennison;United States;Materials;8.75 ;0.6988;8.36 ;13.48
+1415;DocuSign;United States;IT Software & Services;2.98 ;1.07 ;4.01 ;16.77
+1417;US Steel;United States;Materials;15.63 ;0.3840;20.89 ;9.66
+1418;Royalty Pharma;United States;Diversified Financials;2.26 ;0.8588;18.22 ;13.96
+1419;Galaxy Entertainment;Hong Kong;Hotels, Restaurants & Leisure;3.46 ;1.12 ;12.18 ;15.93
+1420;Ball;United States;Materials;11.8 ;-0.6260;17.63 ;14.28
+1420;Segro;United Kingdom;Diversified Financials;0.863;0.7590;22.01 ;12.45
+1422;Schaeffler;Germany;Consumer Durables;19.67 ;-0.6825;23.67 ;4.09
+1423;Murphy USA;United States;Retailing;20.24 ;0.5025;4.69 ;9.73
+1424;Chugoku Electric Power;Japan;Utilities;10.04 ;0.6056;27.19 ;2.1
+1425;DISCO Corp.;Japan;Capital Goods;2.58 ;0.8127;4.37 ;21.63
+1425;Skanska;Sweden;Construction;16.69 ;0.5250;15.76 ;9.18
+1427;Axis Capital Holdings;Bermuda;Insurance;5.97 ;1.08 ;30.58 ;7.46
+1427;Migdal Insurance;Israel;Insurance;9.11 ;0.1643;59.83 ;2
+1429;SBA Communications;United States;Diversified Financials;2.68 ;0.7495;11.42 ;23.99
+1430;Thai Beverage;Thailand;Food, Drink & Tobacco;9.52 ;0.7626;16.46 ;9.75
+1431;ASM International;Netherlands;Capital Goods;3.17 ;0.7418;5.38 ;23.88
+1432;Jiangsu Yanghe Brewery;China;Food, Drink & Tobacco;3.55 ;1.16 ;9.14 ;14.98
+1433;Bank of East Asia;Hong Kong;Banking;5.77 ;0.5144;113;3.62
+1434;KPN;Netherlands;Telecommunications Services;6.06 ;0.9173;13.51 ;17.35
+1435;Kinross Gold;Canada;Materials;5.15 ;0.9510;10.87 ;17.82
+1436;Amman Mineral Internasional;Indonesia;Materials;2.67 ;0.6411;11.12 ;29.62
+1436;Conagra Brands;United States;Food, Drink & Tobacco;11.74 ;0.3291;20.74 ;11.67
+1438;Tianshan Material;China;Construction;11.54 ;-0.0234;40.43 ;4.9
+1439;Samsung SDI;South Korea;Capital Goods;10.99 ;0.0791;27.65 ;9.89
+1440;Shimao Property Holdings;Hong Kong;Construction;8.91 ;-4.99 ;59.79 ;0.410
+1441;CBOE Global Markets;United States;Diversified Financials;4.09 ;0.7610;7.94 ;22.36
+1441;Coloplast;Denmark;Health Care Equipment & Services;3.98 ;0.7083;6.71 ;24.89
+1441;Lumen Technologies;United States;Telecommunications Services;13.11 ;-0.0550;33.5 ;3.43
+1444;Secom;Japan;Business Services & Supplies;7.81 ;0.6934;13.36 ;14.82
+1445;Equifax;United States;Business Services & Supplies;5.73 ;0.6123;11.86 ;31.86
+1446;Snap-on;United States;Consumer Durables;5.07 ;1.02 ;8.07 ;16.14
+1447;China Shipbuilding Industry;China;Capital Goods;7.1 ;0.0364;30.83 ;13.09
+1448;Aurubis;Germany;Materials;18.88 ;0.6642;8.72 ;3.81
+1449;LG Display;South Korea;Technology Hardware & Equipment;19.68 ;-1.45 ;22.32 ;2.95
+1450;Unibail-Rodamco-Westfield;France;Diversified Financials;3.52 ;0.1581;55.45 ;11.9
+1451;BNK Financial Group;South Korea;Banking;6.45 ;0.4489;103.57 ;2.33
+1452;China Merchants Expressway Network & Technology Holdings;China;Transportation;1.75 ;0.7395;21.82 ;12.02
+1452;Transurban Group;Australia;Transportation;2.62 ;0.0495;22.09 ;27.59
+1454;Alcoa;United States;Materials;13.01 ;0.8600;14.57 ;6.66
+1455;C.H. Robinson;United States;Business Services & Supplies;17.73 ;0.4657;5.3 ;10.61
+1456;South State;United States;Banking;2.75 ;0.5088;65.14 ;8.86
+1456;Vietnam Technological & Commercial Joint Stock Bank;Vietnam;Banking;2.98 ;0.8411;38.72 ;7.04
+1458;Ningxia Baofeng Energy Group;China;Chemicals;4.83 ;1.02 ;12.7 ;15.76
+1459;Masco;United States;Construction;7.7 ;0.7930;5.11 ;12.74
+1460;Commercial Bank of Qatar;Qatar;Diversified Financials;3.11 ;0.7136;46.43 ;4.63
+1460;Heico;United States;Aerospace & Defense;3.99 ;0.5674;7.89 ;34.18
+1462;Phoenix Holdings;Israel;Insurance;7.97 ;0.4911;46.29 ;4.84
+1463;Hyatt Hotels;United States;Hotels, Restaurants & Leisure;6.7 ;1.3 ;13.32 ;10.76
+1464;Ooredoo Q.P.S.C;Qatar;Telecommunications Services;6.48 ;0.9437;17.01 ;11.33
+1465;Kawasaki Kisen Kaisha;Japan;Transportation;6.94 ;2.08 ;14.48 ;8.2
+1466;Brown-Forman;United States;Food, Drink & Tobacco;4.03 ;0.9890;8.07 ;16.05
+1467;APA;United States;Oil & Gas Operations;9.74 ;0.8040;19.39 ;5.95
+1467;Deckers Outdoor;United States;Household & Personal Products;4.92 ;0.9422;3.96 ;16.57
+1469;Arab Bank;Jordan;Banking;3;0.7662;42.05 ;4.01
+1469;PGE Polska Grupa Energetyczna;Poland;Utilities;16.2 ;-0.7947;25.18 ;4.77
+1471;China Longyuan Power;China;Utilities;5.1 ;0.8761;35.34 ;6.91
+1472;Banca Popolare di Sondrio;Italy;Banking;3.04 ;0.6219;58.64 ;5.59
+1472;Ternium;Luxembourg;Materials;17.48 ;-0.0536;23.13 ;5.6
+1474;CJ Cheiljedang;South Korea;Transportation;21.53 ;0.1087;20.48 ;2.71
+1474;Rithm Capital;United States;Diversified Financials;4.78 ;0.7107;45.33 ;5.59
+1476;Sumitomo Chemical;Japan;Chemicals;16.8 ;-1.15 ;23.79 ;3.7
+1477;CF Industries Holdings;United States;Chemicals;5.94 ;1.22 ;13.63 ;13.06
+1478;Shionogi;Japan;Drugs & Biotechnology;2.85 ;1.11 ;9.65 ;14.21
+1479;Commercial Bank Dubai;United Arab Emirates;Banking;2.62 ;0.8235;38.42 ;6.23
+1480;Shenzhen Inovance Technology;China;Capital Goods;4.92 ;0.6628;7.56 ;24.89
+1481;AGNC Investment;United States;Diversified Financials;2.81 ;0.4700;95.89 ;8.1
+1482;Stifel Financial;United States;Diversified Financials;6;0.6208;40.2 ;8.9
+1483;Suzano;Brazil;Materials;8.79 ;-1.31 ;26.86 ;11.19
+1484;China Development Bank Financial Leasing;China;Business Services & Supplies;3.9 ;0.6257;55.6 ;1.92
+1485;United Therapeutics;United States;Drugs & Biotechnology;2.88 ;1.2 ;7.44 ;13.09
+1486;Lennox International;United States;Capital Goods;5.37 ;0.8029;3.46 ;18.71
+1487;ST Engineering;Singapore;Aerospace & Defense;8.44 ;0.5255;11.89 ;17.13
+1488;Franklin Resources;United States;Diversified Financials;8.68 ;0.3382;32.39 ;9.84
+1488;Porsche Automobil Holding;Germany;Consumer Durables;-21.47 ;-21.65 ;44.49 ;12.71
+1490;CrowdStrike;United States;IT Software & Services;3.95 ;-0.0193;8.7 ;105.32
+1490;Hubbell;United States;Capital Goods;5.63 ;0.7763;6.68 ;19.28
+1492;Bank of Guizhou;China;Banking;3.52 ;0.5250;80.83 ;1.99
+1493;Chiba Bank;Japan;Banking;2;0.4412;139.86 ;5.96
+1493;Eastman;United States;Chemicals;9.35 ;0.9220;14.97 ;8.76
+1495;Wuestenrot & Wuerttembergische;Germany;Insurance;7.36 ;0.0368;76.5 ;1.48
+1496;Covestro;Germany;Chemicals;15.34 ;-0.2877;14.46 ;12.66
+1496;Japan Airlines;Japan;Transportation;11.8 ;0.6648;17.57 ;7.86
+1498;Dr. Sulaiman Al-Habib Medical Services Group;Saudi Arabia;Health Care Equipment & Services;2.98 ;0.6170;5.47 ;26.61
+1498;Wheaton Precious Metals;Canada;Materials;1.29 ;0.5276;7.42 ;37.03
+1500;Scentre Group;Australia;Diversified Financials;1.74 ;0.6924;22.51 ;11.7
+1501;Franco-Nevada;Canada;Materials;1.11 ;0.5527;6.33 ;32.74
+1501;Prada;Italy;Household & Personal Products;5.88 ;0.9074;8.85 ;16.23
+1503;Tapestry;United States;Retailing;6.78 ;0.7957;7.25 ;14.26
+1504;MTN Group;South Africa;Telecommunications Services;10.26 ;-0.5232;22.84 ;11.14
+1505;Vingroup;Vietnam;Construction;7.71 ;0.4500;32.83 ;9.58
+1506;Hyundai Steel;South Korea;Materials;16.39 ;-0.0700;23.6 ;2.2
+1507;Brookfield Renewable Holdings;United States;Utilities;4.91 ;0.2939;63.47 ;10.49
+1508;Burlington Stores;United States;Retailing;10.63 ;0.5036;8.77 ;14.06
+1509;Brighthouse Financial;United States;Insurance;4.72 ;0.3880;239.27 ;3.17
+1510;Fukuoka Financial Group;Japan;Banking;2.88 ;0.3949;211.57 ;4.81
+1511;Cleveland-Cliffs;United States;Materials;19.18 ;-0.7540;20.95 ;3.91
+1511;Endo;Ireland;Drugs & Biotechnology;1.76 ;5.46 ;4.68 ;1.64
+1511;Goodyear;United States;Consumer Durables;18.88 ;0.0700;20.96 ;3.12
+1511;Sumitomo Forestry;Japan;Construction;13.56 ;0.7692;14.39 ;6.07
+1515;Geberit;Switzerland;Construction;3.5 ;0.6780;4.02 ;22.09
+1516;Hunan Valin Steel;China;Materials;20;0.2823;20.29 ;4.73
+1517;China Jinmao;Hong Kong;Construction;8.23 ;0.0974;56.07 ;2.07
+1518;Pinnacle West;United States;Utilities;5.13 ;0.6088;27.25 ;11.18
+1519;Dexcom;United States;Health Care Equipment & Services;4.03 ;0.5762;6.48 ;28.1
+1519;News Corp;United States;Media;9.81 ;0.4140;16.16 ;15.39
+1521;Bajaj Holdings & Investment;India;Diversified Financials;0.218;0.8977;8.65 ;15.83
+1521;Lens Technology;China;Consumer Durables;9.83 ;0.5186;10.91 ;14.16
+1523;Akzo Nobel;Netherlands;Chemicals;11.47 ;0.5024;16.04 ;10.94
+1523;Ansys;United States;IT Software & Services;2.54 ;0.5757;8.05 ;28.11
+1523;Gemdale;China;Construction;10.28 ;-0.8497;40.29 ;2.95
+1523;Suntory Beverage & Food;Japan;Food, Drink & Tobacco;11.2 ;0.6171;13.1 ;10.56
+1523;Yang Ming Marine Transport;Taiwan;Transportation;6.93 ;2;14.77 ;7.5
+1528;Admiral Group;United Kingdom;Insurance;6.74 ;0.8476;9.95 ;13.08
+1529;Zhuhai Huafa Properties;China;Construction;8.03 ;0.1322;57.58 ;1.67
+1530;Manila Electric;Philippines;Utilities;8.21 ;0.8005;10.68 ;11.05
+1531;Gerdau (Cosigua);Brazil;Materials;12.43 ;0.8470;14.05 ;5.44
+1532;HF Sinclair;United States;Oil & Gas Operations;28.59 ;0.1734;16.95 ;5.75
+1532;Nitto Denko;Japan;Technology Hardware & Equipment;6.65 ;0.9002;8.84 ;12.69
+1534;Hyundai Engineering;South Korea;Construction;23.96 ;-0.1237;18.34 ;3.08
+1535;Empire;Canada;Food Markets;22.53 ;0.4906;11.57 ;8.41
+1535;Siam Cement;Thailand;Chemicals;14.48 ;0.1797;25.27 ;5.43
+1537;Formosa Petrochemical;Taiwan;Oil & Gas Operations;20.67 ;0.1859;11.32 ;10.26
+1538;Quilter;United Kingdom;Diversified Financials;6.96 ;-0.0434;78.21 ;2.42
+1539;Cholamandalam Investment and Finance;India;Business Services & Supplies;3.09 ;0.5042;23.62 ;15.17
+1540;China Power International Development;Hong Kong;Utilities;7.53 ;0.4673;46.64 ;4.82
+1541;Shizuoka Financial Group;Japan;Banking;2.09 ;0.4634;102.63 ;5.83
+1542;Anhui Construction Engineering Group;China;Construction;13.46 ;0.1864;27.17 ;1.12
+1542;Genmab;Denmark;Drugs & Biotechnology;3.12 ;1.14 ;6.36 ;12.61
+1542;Keysight Technologies;United States;Technology Hardware & Equipment;5.02 ;0.6110;9.39 ;24.89
+1542;Liberty Broadband;United States;Telecommunications Services;1.02 ;0.8690;16.85 ;12.36
+1546;Guangzhou Rural Commercial Bank;China;Banking;5.63 ;0.2890;186.78 ;1.91
+1547;SK Square;South Korea;Diversified Financials;1.4 ;2.72 ;14.89 ;8.24
+1548;Synovus;United States;Banking;3.41 ;0.5530;60.34 ;6
+1549;Boliden;Sweden;Materials;8.63 ;1.04 ;11.79 ;8.74
+1549;Church & Dwight;United States;Household & Personal Products;6.11 ;0.5853;8.88 ;24.44
+1551;Alfa Laval;Sweden;Capital Goods;6.33 ;0.6992;8.08 ;17.17
+1551;Savola Group;Saudi Arabia;Food, Drink & Tobacco;6.39 ;3.03 ;5.69 ;2.44
+1553;Bharat Electronics;India;Aerospace & Defense;2.77 ;0.5965;4.75 ;25.44
+1554;Chewy;United States;Retailing;11.86 ;0.3927;3.22 ;15.22
+1555;Chang Hwa Bank;Taiwan;Banking;3.04 ;0.4653;96.78 ;6.15
+1556;Grupo Bolivar;Colombia;Banking;8.33 ;0.1897;49.32 ;1.34
+1557;CAPITEC;South Africa;Insurance;3.1 ;0.6591;12.54 ;21.34
+1557;Genworth Financial;United States;Insurance;7.16 ;0.2990;69.65 ;2.8
+1559;Xiamen International Trade Group;China;Transportation;49.18 ;0.0107;13.66 ;1.81
+1560;Cullen/Frost Bankers;United States;Banking;2.84 ;0.5762;52.52 ;7.41
+1561;Caesars Entertainment;United States;Hotels, Restaurants & Leisure;11.24 ;-0.2780;32.59 ;6.03
+1562;Mitsubishi Motors;Japan;Consumer Durables;17.92 ;0.5623;14.57 ;3.7
+1563;Alexandria Real Estate Equities;United States;Diversified Financials;3.12 ;0.3096;37.53 ;13.13
+1564;Bank OZK;United States;Banking;2.78 ;0.7129;39.16 ;4.85
+1565;TMBThanachart Bank;Thailand;Banking;2.78 ;0.5962;50.55 ;5.14
+1566;S-Oil;South Korea;Oil & Gas Operations;26.87 ;-0.1416;16.74 ;4.25
+1567;Titan (India);India;Consumer Durables;6.94 ;0.3869;4.63 ;34.94
+1568;Bank of Maharashtra;India;Banking;3.36 ;0.6555;43.21 ;4.51
+1569;Cencosud;Chile;Retailing;17.66 ;0.1684;16.07 ;9.34
+1570;Electric Power Development;Japan;Utilities;8.29 ;0.6669;22.93 ;3.19
+1570;Samvardhana Motherson International;India;Consumer Durables;13.29 ;0.4929;11.68 ;11
+1572;Shengjing Bank;China;Banking;4.83 ;0.0863;153.82 ;1.11
+1573;Johnson Matthey;United Kingdom;Chemicals;15.14 ;0.6705;8.23 ;2.8
+1573;MIXUE Group;China;Food Markets;3.45 ;0.6165;2.71 ;22.94
+1575;Samsung Securities;South Korea;Diversified Financials;2.5 ;0.6593;42.3 ;2.99
+1576;Avis Budget Group;United States;Business Services & Supplies;11.79 ;-1.82 ;29.95 ;3.3
+1576;Mebuki Financial Group;Japan;Banking;1.87 ;0.3968;138.48 ;4.44
+1578;Lotte Chemical;South Korea;Chemicals;14.98 ;-1.25 ;23.47 ;1.87
+1579;Essex Property Trust;United States;Diversified Financials;1.77 ;0.7415;12.93 ;17.72
+1580;Lear;United States;Automotive (Automotive and Suppliers);23.3 ;0.5066;14.03 ;4.52
+1580;Old National Bank;United States;Banking;3.01 ;0.5636;53.88 ;6.65
+1582;Ralph Lauren;United States;Household & Personal Products;6.95 ;0.7046;7.08 ;13.59
+1583;Commercial International Bank;Egypt;Banking;4.78 ;1.1 ;23.9 ;4.75
+1583;Iron Mountain;United States;Diversified Financials;6.15 ;0.1802;18.72 ;25.77
+1585;General Insurance Corporation Of India;India;Insurance;5.6 ;0.8979;22.91 ;8.79
+1586;Hotai Motor;Taiwan;Trading Companies;8.64 ;0.6372;15.57 ;10.49
+1587;Wise;United Kingdom;Business Services & Supplies;2.19 ;0.5466;22.14 ;13.21
+1588;Atlassian;United States;IT Software & Services;4.79 ;-0.3461;5.45 ;59.91
+1589;The Mosaic Company;United States;Chemicals;11.12 ;0.1749;22.92 ;9.24
+1589;World Fuel Services;United States;Trading Companies;40.7 ;0.0189;6.59 ;1.37
+1591;Zhejiang Huayou Cobalt;China;Materials;8.79 ;0.6767;19.51 ;7.91
+1592;Avenue Supermarts;India;Retailing;6.84 ;0.3251;2.75 ;33.31
+1593;Campbell Soup;United States;Food, Drink & Tobacco;10.12 ;0.5210;15.91 ;10.82
+1594;Waters;United States;Health Care Equipment & Services;2.96 ;0.6378;4.55 ;20.1
+1595;Jiangsu Changshu Rural Commercial Bank;China;Banking;2.53 ;0.5465;53.65 ;3
+1596;AviChina Industry & Technology;China;Aerospace & Defense;12.01 ;0.3039;27.68 ;3.69
+1596;Harbin Bank;China;Banking;4.85 ;0.1277;125.68 ;0.411
+1598;Nomura Research Institute;Japan;IT Software & Services;5.02 ;0.6150;6.21 ;21.33
+1599;BOK Financial;United States;Banking;3.48 ;0.5553;50.47 ;5.91
+1600;Zhongsheng Group Holdings;China;Retailing;23.36 ;0.4463;15.09 ;3.55
+1601;RPM International;United States;Chemicals;7.3 ;0.6409;6.62 ;13.41
+1602;Huaqin Technology;China;Technology Hardware & Equipment;17.77 ;0.4381;11.25 ;9.2
+1603;Invitation Homes;United States;Diversified Financials;2.69 ;0.4651;18.7 ;20.7
+1604;BAC Holding International;Colombia;Business Services & Supplies;4.89 ;0.6625;39.16 ;3.19
+1604;Inner Mongolia Baotou Steel;China;Materials;9.26 ;0.0368;21.25 ;11.1
+1606;China Steel;Taiwan;Materials;11.22 ;0.0616;21.2 ;9.62
+1607;Cosmo Energy Holdings;Japan;Oil & Gas Operations;18.18 ;0.5246;14.55 ;3.4
+1607;Watsco;United States;Construction;7.58 ;0.4910;4.45 ;18.43
+1609;Iveco Group;Italy;Consumer Durables;16.54 ;0.3775;20.13 ;4.2
+1610;Tata Power Company;India;Utilities;7.68 ;0.4569;17.32 ;14.48
+1611;Daou Data;South Korea;Trading Companies;8.9 ;0.1205;39.23 ;0.311
+1611;Hikari Tsushin;Japan;Utilities;4.32 ;0.9979;14.54 ;12.1
+1613;PTT Global Chemical;Thailand;Oil & Gas Operations;17.24 ;-0.8450;19.38 ;2.38
+1614;Emera;Canada;Utilities;5.11 ;0.4139;29.86 ;13.19
+1614;Lundbergs;Sweden;Diversified Financials;2.81 ;0.5960;20.31 ;12.79
+1616;China Tourism Group Duty Free;China;Retailing;7.67 ;0.5936;10.49 ;13.56
+1617;CapitaLand Integrated Commercial Trust;Singapore;Diversified Financials;1.2 ;0.6987;18.7 ;11.9
+1617;Hangzhou Binjiang Real Estate Group;China;Construction;9.52 ;0.3537;35.49 ;4.27
+1619;Snowflake;United States;IT Software & Services;3.63 ;-1.29 ;9.03 ;52.92
+1620;Invesco;United States;Diversified Financials;6.06 ;0.8044;28.14 ;6.24
+1621;Flagstar Financial;United States;Banking;6.08 ;-0.8910;97.63 ;4.87
+1622;Tradeweb Markets;United States;Diversified Financials;1.73 ;0.5011;7.27 ;28.87
+1623;CTP;Netherlands;Construction;0.953;1.17 ;18.04 ;8.79
+1623;Neste;Finland;Oil & Gas Operations;22.32 ;-0.1017;16.66 ;6.97
+1625;Knorr-Bremse;Germany;Consumer Durables;8.53 ;0.4814;10.39 ;15.49
+1626;Rajesh Exports;India;Consumer Durables;34.09 ;0.0046;2.76 ;0.648
+1627;Metro Group;Germany;Food Markets;34.06 ;-0.1893;12.87 ;2.16
+1628;Hokuhoku Financial Group;Japan;Banking;1.19 ;0.2188;106.78 ;2.04
+1629;Comfort Systems USA;United States;Construction;7.32 ;0.5954;4.57 ;14.04
+1630;Vietnam Prosperity Joint-sock Commercial Bank;Vietnam;Banking;3.87 ;0.6372;38.91 ;5.03
+1631;PBF Energy;United States;Oil & Gas Operations;33.12 ;-0.5337;13.63 ;1.89
+1632;Asian Paints;India;Chemicals;4.1 ;0.5058;3.52 ;27.28
+1633;Moncler SpA;Italy;Household & Personal Products;3.36 ;0.6918;5.7 ;16.85
+1634;Far East Horizon;Hong Kong;Business Services & Supplies;5.37 ;0.5367;49.37 ;3.16
+1635;Canadian Tire Corporation;Canada;Retailing;11.94 ;0.6480;15.46 ;6.01
+1636;Momentum Metropolitan Holdings;South Africa;Insurance;8.42 ;0.2714;39.88 ;2.34
+1636;Zhejiang Expressway;China;Transportation;2.51 ;0.7646;29.75 ;5.29
+1638;Ultrapar Participacoes;Brazil;Retailing;24.76 ;0.4383;6.51 ;3.43
+1639;Novonesis A/S;Denmark;Chemicals;4.15 ;0.3308;16.75 ;29.31
+1640;Cadence Bank;United States;Banking;2.92 ;0.5398;47.74 ;5.27
+1641;Daou Technology;South Korea;Diversified Financials;8.53 ;0.2609;38.82 ;0.634
+1641;United Natural Foods;United States;Food Markets;31.68 ;-0.0820;7.73 ;1.59
+1643;Sonova Holding;Switzerland;Health Care Equipment & Services;4.2 ;0.6394;6.47 ;18.02
+1644;Ayala Corp;Philippines;Construction;5.69 ;0.7334;30.29 ;6.32
+1645;Tryg;Denmark;Insurance;6;0.7396;14.54 ;14.23
+1646;Axon Enterprise;United States;Aerospace & Defense;2.08 ;0.3762;4.47 ;46.26
+1647;Asia Commercial Bank;Vietnam;Banking;2.38 ;0.6700;33.9 ;4.1
+1648;Mobily;Saudi Arabia;Telecommunications Services;4.91 ;0.8624;10.25 ;12.87
+1649;Pinnacle Financial Partners;United States;Banking;3;0.4915;54.26 ;7.78
+1650;China Resources Gas Group;Hong Kong;Oil & Gas Operations;13.16 ;0.5239;17.05 ;6.33
+1650;WT Microelectronics;Taiwan;Trading Companies;29.87 ;0.2753;12.58 ;3.76
+1652;Roblox;United States;IT Software & Services;3.6 ;-0.9354;7.17 ;44.43
+1653;Group 1 Automotive;United States;Retailing;20.97 ;0.4696;9.89 ;5.3
+1653;NEXON;Japan;IT Software & Services;2.94 ;0.8901;8;12.54
+1655;Shanghai Commercial & Savings Bank;Taiwan;Banking;3.15 ;0.4197;76.14 ;6.94
+1656;Companhia Energetica de Minas Gerais;Brazil;Utilities;7.39 ;1.32 ;9.67 ;5.51
+1657;JM Smucker;United States;Food, Drink & Tobacco;8.79 ;-0.2567;18.43 ;12.26
+1658;Bank of Zhengzhou;China;Banking;3.62 ;0.2612;92.66 ;1.07
+1658;Power Assets Holdings;Hong Kong;Utilities;0.118;0.7842;12.11 ;13.94
+1660;Bureau Veritas;France;Business Services & Supplies;6.75 ;0.6159;7.45 ;14.22
+1661;Krafton;South Korea;IT Software & Services;1.99 ;0.9578;5.38 ;11.8
+1662;DCC;Ireland;Oil & Gas Operations;24.8 ;0.4180;11.97 ;6.31
+1663;Hanwha Ocean;South Korea;Capital Goods;8.18 ;0.3702;12.12 ;19.17
+1664;Compal Electronics;Taiwan;Technology Hardware & Equipment;28.34 ;0.3127;14.14 ;3.63
+1665;Gen Digital;United States;IT Software & Services;3.89 ;0.6350;15.36 ;15.57
+1666;China Merchants Port Holdings;Hong Kong;Transportation;1.52 ;1.01 ;21.82 ;6.65
+1667;Kiwoom Securities;South Korea;Diversified Financials;2.18 ;0.6123;37.83 ;2.02
+1667;Zheshang Development Group;China;Trading Companies;28.63 ;0.1003;6.91 ;0.612
+1669;Japan Securities Finance;Japan;Diversified Financials;0.354;0.0648;90.51 ;0.975
+1670;Hachijuni Bank;Japan;Banking;1.41 ;0.2379;88.33 ;3.13
+1671;Cloudflare;United States;IT Software & Services;1.67 ;-0.0788;3.3 ;42
+1671;Globalfoundries;United States;Semiconductors;6.75 ;-0.2650;16.8 ;19.51
+1671;Hansoh Pharmaceutical Group;China;Drugs & Biotechnology;1.7 ;0.6074;4.34 ;18.32
+1674;Nishi-nippon Financial Holdings;Japan;Banking;1.18 ;0.1819;87.81 ;1.9
+1675;Securitas;Sweden;Business Services & Supplies;15.31 ;0.4880;11.38 ;8.81
+1676;Altice USA;United States;Telecommunications Services;8.95 ;-0.1029;32.72 ;1.09
+1677;Hera;Italy;Utilities;13.94 ;0.5349;15.6 ;6.66
+1678;Weyerhaeuser;United States;Diversified Financials;7.09 ;0.3650;16.52 ;18.01
+1679;Avolta;Switzerland;Retailing;15.59 ;0.1170;19.2 ;6.51
+1679;Chailease Holding;Taiwan;Business Services & Supplies;3.17 ;0.7032;29.97 ;5.88
+1679;WPG Holdings;Taiwan;Trading Companies;27.42 ;0.2256;12.38 ;3.43
+1682;Kyushu Financial Group;Japan;Banking;1.4 ;0.1627;85.81 ;2.1
+1683;Tingyi Holding;China;Food, Drink & Tobacco;11.21 ;0.5189;7.28 ;10.02
+1684;Sofina;Belgium;Diversified Financials;1.38 ;1.47 ;11.55 ;9.14
+1685;Chandra Asri Petrochemical;Indonesia;Chemicals;1.78 ;-0.0690;5.66 ;40.09
+1686;North Pacific Bank;Japan;Banking;0.912;0.1016;83.84 ;1.26
+1687;Rollins;United States;Business Services & Supplies;3.46 ;0.4772;2.95 ;26.83
+1688;Take-Two Interactive Software;United States;IT Software & Services;5.45 ;-3.66 ;12.68 ;39.78
+1689;Barry Callebaut;Switzerland;Food, Drink & Tobacco;14.69 ;0.1622;19.77 ;5.05
+1689;E-L Financial;Canada;Insurance;2.5 ;1.14 ;19.55 ;3.24
+1689;LIC Housing Finance;India;Business Services & Supplies;3.32 ;0.6156;35.72 ;3.81
+1692;CPFL Energia;Brazil;Utilities;7.91 ;1.01 ;12.48 ;7.92
+1692;Dai Nippon Printing;Japan;Business Services & Supplies;9.52 ;0.8480;12.59 ;5.87
+1694;Cambricon Technologies;China;Semiconductors;0.312;0.0180;0.958;39.4
+1695;Columbia Banking System;United States;Banking;2.95 ;0.4962;51.52 ;4.75
+1696;IEIT Systems;China;Technology Hardware & Equipment;15.93 ;0.3184;9.75 ;9.74
+1697;Yamaguchi Financial;Japan;Banking;1.29 ;0.1900;81.75 ;2.38
+1698;Shenzhen Overseas;China;Media;7.24 ;-1.2 ;44.63 ;2.7
+1699;Link REIT;Hong Kong;Diversified Financials;1.85 ;-0.2935;31.05 ;11.96
+1700;Rexel;France;Trading Companies;20.86 ;0.3668;14.92 ;7.84
+1701;Kongsberg Gruppen;Norway;Capital Goods;4.54 ;0.4766;6.11 ;26.43
+1702;International Container Terminal Services;Philippines;Transportation;2.91 ;0.8300;7.83 ;12.56
+1703;Interpublic Group;United States;Media;10.52 ;0.4937;17.13 ;9.15
+1704;Computershare;Australia;IT Software & Services;3.01 ;0.7001;5.05 ;14.67
+1704;Hirogin Holdings;Japan;Banking;1.17 ;0.2202;78.7 ;2.36
+1706;Jiangxi Bank;China;Banking;3.13 ;0.0966;78.59 ;0.582
+1706;Pop Mart International Group;China;Media;1.81 ;0.4344;2.07 ;29.5
+1708;Randstad N.V.;Netherlands;Business Services & Supplies;25.59 ;0.1224;11.79 ;7.01
+1709;Gaming And Leisure Properties;United States;Diversified Financials;1.55 ;0.7748;12.13 ;13.12
+1709;Yunnan Copper;China;Materials;25.47 ;0.1902;6.79 ;3.24
+1711;Erie Indemnity;United States;Insurance;3.9 ;0.6142;2.97 ;16.85
+1712;B3;Brazil;Diversified Financials;1.76 ;0.8489;7.5 ;12.04
+1713;Adecco Group;Switzerland;Business Services & Supplies;25.03 ;0.3274;12.53 ;4.38
+1713;Doosan;South Korea;Technology Hardware & Equipment;13.3 ;-0.1659;20.48 ;3.83
+1715;Ceconomy;Germany;Retailing;24.91 ;0.0833;13.56 ;1.79
+1716;Focus Media Information Technology;China;Conglomerates;1.7 ;0.7206;3.22 ;13.74
+1717;Huntington Ingalls Industries;United States;Aerospace & Defense;11.54 ;0.5500;12.77 ;8.87
+1718;Harel Insurance Investments & Financial Services;Israel;Insurance;7.34 ;0.2556;42.07 ;3.42
+1718;Toppan Printing;Japan;Business Services & Supplies;11.36 ;0.5902;14.94 ;8.07
+1720;Kyoto Financial Group;Japan;Banking;1;0.2140;75.42 ;4.86
+1721;Public Power;Greece;Utilities;9.71 ;0.1643;28.29 ;5.39
+1722;InterContinental Hotels;United Kingdom;Hotels, Restaurants & Leisure;4.92 ;0.6287;4.75 ;16.19
+1722;Latour Ab Investment;Sweden;Diversified Financials;2.45 ;0.5836;6.08 ;17.84
+1722;Sasol;South Africa;Chemicals;14.23 ;-2.69 ;19.48 ;2.23
+1725;Zhongji Innolight;China;Semiconductors;3.56 ;0.7959;4.36 ;12.66
+1726;Datadog;United States;IT Software & Services;2.68 ;0.1837;5.79 ;35.02
+1727;Sinotrans Ltd.;China;Transportation;14.63 ;0.5441;10.58 ;3.24
+1728;CoStar Group;United States;IT Software & Services;2.74 ;0.1387;9.26 ;34.93
+1729;Clal Insurance Enterprises;Israel;Insurance;6.94 ;0.1940;45.63 ;2.22
+1730;BG Financial Group;Panama;Banking;1.79 ;0.7982;19.67 ;9.03
+1731;SBI Sumishin Net Bank;Japan;Banking;0.900;0.1726;73.58 ;4.17
+1732;Lotte Shopping;South Korea;Retailing;10.26 ;-0.7352;26.49 ;1.32
+1732;Medipal Holdings;Japan;Health Care Equipment & Services;24.1 ;0.3263;12.44 ;3.45
+1734;Clorox;United States;Household & Personal Products;7.17 ;0.4570;5.58 ;17.03
+1735;Taiwan Business Bank;Taiwan;Banking;2.24 ;0.3499;72.44 ;3.93
+1735;Unicharm;Japan;Household & Personal Products;6.53 ;0.5402;7.89 ;16.09
+1737;BIM Birlesik Magazalar;Turkey;Food Markets;14.94 ;0.5319;6.67 ;7.22
+1738;Bank of Jiujiang;Hong Kong;Banking;2.86 ;0.0567;70.75 ;1.73
+1739;BayWa;Germany;Trading Companies;23.6 ;-0.6045;13.41 ;0.344
+1740;Hologic;United States;Health Care Equipment & Services;4.04 ;0.7440;8.73 ;13.02
+1741;KION Group;Germany;Capital Goods;12.44 ;0.3896;20.91 ;5.51
+1742;Qingdao Rural Commercial Bank;China;Banking;2.64 ;0.3877;70.55 ;2.4
+1743;Chugin Financial Group;Japan;Banking;1.31 ;0.1545;70.44 ;1.92
+1744;Coca-Cola Bottling Consolidated;United States;Food, Drink & Tobacco;6.9 ;0.6331;5.61 ;11.94
+1745;Aramark;United States;Hotels, Restaurants & Leisure;17.55 ;0.3396;12.71 ;8.73
+1746;Orient Securities;China;Diversified Financials;2.9 ;0.4324;57.23 ;4.89
+1746;Zscaler;United States;Business Services & Supplies;2.42 ;-0.0155;5.01 ;33.36
+1748;Shimizu;Japan;Construction;12.44 ;0.5187;16;7.07
+1749;Taylor Morrison;United States;Construction;8.36 ;0.9065;9.38 ;5.78
+1750;Hygon Information Technology;China;IT Software & Services;1.36 ;0.2976;4.28 ;33
+1750;Voestalpine;Austria;Materials;17.35 ;-0.0692;16.1 ;4.42
+1752;Daishi Hokuetsu Financial Group;Japan;Banking;1.21 ;0.1564;68.91 ;1.83
+1753;Alnylam Pharmaceuticals;United States;Drugs & Biotechnology;2.25 ;-0.2782;4.3 ;32.72
+1753;Central Bank of India;India;Banking;4.65 ;0.4357;54.72 ;3.9
+1755;Bank of Lanzhou;China;Banking;2.67 ;0.2606;68.55 ;1.81
+1756;Ampol;Australia;Oil & Gas Operations;22.78 ;0.0808;8.25 ;3.42
+1756;Crown Holdings;United States;Materials;11.82 ;0.4240;13.85 ;10.45
+1758;Pentair;United Kingdom;Capital Goods;4.08 ;0.6470;6.75 ;14.81
+1759;Bausch Health Companies;Canada;Drugs & Biotechnology;9.63 ;-0.0427;26.52 ;2.01
+1760;Eve Energy;China;Capital Goods;7.19 ;0.5695;14.96 ;11.51
+1760;Zall Smart Commerce Group;China;Transportation;22.56 ;0.0179;9.52 ;0.330
+1762;HubSpot;United States;IT Software & Services;2.63 ;0.0046;3.8 ;32.1
+1762;Permian Resources;United States;Oil & Gas Operations;5;0.9899;17.16 ;8.71
+1764;FIBI Holdings;Israel;Banking;3.45 ;0.3088;68.22 ;2.04
+1764;Prio;Brazil;Oil & Gas Operations;2.66 ;1.91 ;9.02 ;5.04
+1766;Avnet;United States;Trading Companies;22.48 ;0.3177;11.94 ;4.49
+1766;Domino's Pizza;United States;Hotels, Restaurants & Leisure;4.71 ;0.5842;1.82 ;16.72
+1766;Grupo Elektra;Mexico;Retailing;10.98 ;-0.6085;23.09 ;3.8
+1769;Oshkosh;United States;Consumer Durables;10.76 ;0.6814;9.42 ;5.74
+1770;Saab Group;Sweden;Aerospace & Defense;6.14 ;0.4388;10.12 ;23.61
+1771;Daito Trust Construction;Japan;Construction;12.04 ;0.6034;6.84 ;7.12
+1771;Luzerner Kantonalbank;Switzerland;Banking;1.34 ;0.3253;68.06 ;4.01
+1773;Ryder System;United States;Transportation;12.67 ;0.4980;16.42 ;5.67
+1774;Anhui Gujing Distillery;China;Food, Drink & Tobacco;2.94 ;0.7796;5.93 ;12.13
+1774;Gunma Bank;Japan;Banking;1.25 ;0.2533;67.52 ;2.97
+1774;Northern Star Resources;Australia;Materials;3.66 ;0.6242;8.54 ;15.23
+1777;Saudi Investment Bank;Saudi Arabia;Banking;2.62 ;0.4966;43.67 ;5.03
+1778;F.N.B.;United States;Banking;2.59 ;0.4594;49.02 ;4.78
+1779;Microchip Technology;United States;Semiconductors;4.76 ;0.3088;15.63 ;25.22
+1780;77 Bank;Japan;Banking;0.966;0.2379;66.8 ;2.2
+1781;Yunnan Baiyao Group;China;Drugs & Biotechnology;5.53 ;0.6599;7.25 ;14.16
+1782;Commerce Bancshares;United States;Banking;1.9 ;0.5414;32.37 ;8.12
+1782;Elia System Operator;Belgium;Utilities;4.08 ;0.4556;25.98 ;11.09
+1782;Keppel Ltd;Singapore;Construction;4.94 ;0.7035;20.27 ;9.12
+1785;Mid-america Apartment Communities;United States;Diversified Financials;2.19 ;0.5275;11.81 ;18.63
+1786;Beijing Shougang;China;Materials;14.47 ;0.1141;18.17 ;3.71
+1786;EasyJet;United Kingdom;Transportation;11.8 ;0.5729;14.8 ;4.89
+1788;Jointown Pharmaceutical Group;China;Health Care Equipment & Services;20.64 ;0.2840;14.4 ;3.42
+1789;Goertek;China;Technology Hardware & Equipment;13.53 ;0.3816;10.83 ;9.96
+1790;Alaska Air Group;United States;Transportation;12.64 ;0.3610;19.82 ;5.14
+1791;UMB Financial;United States;Banking;2.79 ;0.4412;50.49 ;6.95
+1792;Oi;Brazil;Telecommunications Services;0.590;1.78 ;3.78 ;0.416
+1793;Bank of Xi'an;China;Banking;2.38 ;0.3447;64.1 ;2.11
+1794;Zhejiang Chint Electrics;China;Capital Goods;8.41 ;0.5818;19.23 ;6.65
+1795;iM Financial Group;South Korea;Banking;3.84 ;0.1368;63.95 ;1.11
+1796;Bank Muscat;Oman;Banking;2.11 ;0.5358;37.26 ;4.89
+1796;JB Financial Group;South Korea;Banking;3.05 ;0.4714;45.32 ;2.25
+1798;Bendigo & Adelaide Bank;Australia;Banking;3.41 ;0.3163;63.26 ;3.94
+1799;CoreWeave;United States;IT Software & Services;1.92 ;-0.8634;17.83 ;19.28
+1800;AVIC Capital;China;Business Services & Supplies;2.56 ;0.0276;63.05 ;4.19
+1800;Eastroc Beverage (Group);China;Food, Drink & Tobacco;2.36 ;0.5047;3.13 ;19.84
+1800;Uniqa;Austria;Insurance;8.27 ;0.3760;30.34 ;3.54
+1803;Autoliv;Sweden;Consumer Durables;10.35 ;0.6860;8.11 ;7.04
+1804;Satellite Chemical;China;Chemicals;6.77 ;0.9168;9.47 ;8.86
+1805;Starwood Property Trust;United States;Diversified Financials;2.04 ;0.3521;62.56 ;6.38
+1806;Bank of Queensland;Australia;Banking;3.42 ;0.1995;62.46 ;3.1
+1806;Valley National Bancorp;United States;Banking;3.53 ;0.3900;61.87 ;4.81
+1808;Blom Bank;Lebanon;Banking;1.7 ;1.08 ;18.11 ;0.911
+1809;F5;United States;IT Software & Services;2.89 ;0.5948;5.9 ;15.57
+1810;Basler Kantonalbank;Switzerland;Banking;1.78 ;0.2116;61.67 ;0.452
+1810;Steris;Ireland;Health Care Equipment & Services;5.4 ;0.4676;10.01 ;22.11
+1812;Banque Centrale Populaire;Morocco;Banking;3.26 ;0.4169;53.52 ;5.87
+1813;Almarai;Saudi Arabia;Food, Drink & Tobacco;5.67 ;0.6268;9.88 ;14.34
+1813;Eicher Motors;India;Consumer Durables;2.14 ;0.5310;2.91 ;17.88
+1813;Parkland;Canada;Trading Companies;20.66 ;0.0927;9.77 ;4.32
+1816;SLM;United States;Business Services & Supplies;3.05 ;0.6229;28.9 ;5.84
+1817;AGC;Japan;Consumer Durables;13.65 ;-0.6208;18.39 ;6.5
+1818;ELM;Saudi Arabia;IT Software & Services;1.97 ;0.4869;2.54 ;21.22
+1819;Weihai City Commercial Bank;China;Banking;2.61 ;0.2767;60.59 ;2.31
+1820;Whirlpool;United States;Consumer Durables;15.74 ;0.0090;16.51 ;4.29
+1821;Inhibrx Biosciences;United States;Drugs & Biotechnology;0;1.69 ;0.181;0.177
+1822;Aeroports de Paris;France;Transportation;6.66 ;0.3699;20.89 ;12.23
+1822;SiriusXM Holdings;United States;Media;8.7 ;-1.59 ;27.52 ;7.34
+1822;Sprouts Farmers Markets;United States;Food Markets;7.72 ;0.3806;4.11 ;16.5
+1825;Olympus;Japan;Health Care Equipment & Services;6.51 ;0.5527;8.95 ;13.76
+1826;Asbury Automotive Group;United States;Retailing;17.19 ;0.4303;10.47 ;4.39
+1827;First National Of Nebraska;United States;Banking;3.23 ;0.5580;32.31 ;3.71
+1827;Tongling Nonferrous Metals;China;Materials;20.05 ;0.3903;11.09 ;5.55
+1829;SGH;Australia;Trading Companies;7.08 ;0.5240;8.17 ;12.88
+1830;LS Corp;South Korea;Capital Goods;20.2 ;0.1740;13.94 ;2.41
+1831;Inventec;Taiwan;Technology Hardware & Equipment;20.12 ;0.2263;10.25 ;4.44
+1832;Iyogin Holdings;Japan;Banking;1.39 ;0.3476;59.55 ;3.24
+1833;Essential Utilities;United States;Utilities;2.09 ;0.5953;18.46 ;11.05
+1834;ARC Resources;Canada;Oil & Gas Operations;3.72 ;0.8205;9.39 ;11.15
+1834;NH Investment & Securities;South Korea;Diversified Financials;4.11 ;0.4804;42.41 ;3.43
+1834;Viva Energy Group;Australia;Oil & Gas Operations;19.88 ;-0.0503;7.51 ;1.7
+1837;MBH Bank Plc.;Hungary;Banking;3.4 ;0.5633;31.48 ;5.04
+1838;Konami;Japan;IT Software & Services;2.76 ;0.5135;4.13 ;18.16
+1838;Trade Desk;United States;IT Software & Services;2.44 ;0.3931;6.11 ;26.77
+1840;Beazley;Ireland;Insurance;6.29 ;1.13 ;15.42 ;7.41
+1841;Shanghai Tunnel Engineering;China;Construction;9.54 ;0.3948;23.67 ;2.63
+1842;Kesko;Finland;Food Markets;12.89 ;0.4100;8.77 ;9.33
+1843;Airports of Thailand;Thailand;Transportation;1.96 ;0.5657;5.98 ;15.75
+1844;Xiamen Bank;China;Banking;1.95 ;0.3517;57.48 ;2.26
+1845;Celanese;United States;Chemicals;10.28 ;-1.52 ;22.86 ;4.87
+1845;Tech Mahindra;India;IT Software & Services;6.27 ;0.5029;5.21 ;16.75
+1847;BeiGene;Cayman Islands;Drugs & Biotechnology;3.81 ;-0.6450;5.92 ;26.98
+1848;Bank Of Gansu;China;Banking;1.99 ;0.0809;56.81 ;0.453
+1849;China Mengniu Dairy;Hong Kong;Food, Drink & Tobacco;12.32 ;0.0142;14.56 ;9.72
+1850;Yara International;Norway;Chemicals;14.18 ;0.2864;15.67 ;8.28
+1851;Federal Bank;India;Banking;3.71 ;0.4827;41.33 ;5.64
+1852;Alfresa Holdings;Japan;Health Care Equipment & Services;19.41 ;0.2272;10.13 ;2.57
+1853;SKF Group;Sweden;Materials;9.21 ;0.5998;11.27 ;8.75
+1854;Talen Energy;United States;Utilities;2.37 ;0.9980;6.74 ;9.63
+1855;Buzzi Unicem;Italy;Construction;4.67 ;1.02 ;9;9.46
+1855;Prosperity Bancshares;United States;Banking;1.8 ;0.4992;38.77 ;6.4
+1857;Hengyi Petrochemical;China;Household & Personal Products;17.4 ;0.0325;14.73 ;2.76
+1858;Equatorial Energia;Brazil;Utilities;8.41 ;0.5216;18.84 ;7.92
+1859;Cipla;India;Drugs & Biotechnology;3.23 ;0.5963;4.13 ;14.42
+1860;New World Development;Hong Kong;Construction;4.04 ;-2.43 ;55.04 ;1.56
+1860;Shenzhou International Group Holdings;China;Household & Personal Products;3.98 ;0.8672;7.28 ;10.25
+1862;Americanas;Brazil;Retailing;2.67 ;1.54 ;2.83 ;0.207
+1863;FactSet Research Systems;United States;Business Services & Supplies;2.25 ;0.5425;4.24 ;16.11
+1864;Ricoh;Japan;Technology Hardware & Equipment;16.41 ;0.2756;15.24 ;5.69
+1865;Kimco Realty;United States;Diversified Financials;2.06 ;0.4063;20.31 ;13.83
+1866;MasTec;United States;Construction;12.3 ;0.1628;9.46 ;9.89
+1867;Solventum;United States;Health Care Equipment & Services;8.25 ;0.4780;14.46 ;11.43
+1868;Warner Music Group;United States;Business Services & Supplies;6.34 ;0.5050;9.15 ;15.52
+1869;EMS-Chemie Holding;Switzerland;Chemicals;2.35 ;0.5232;2.46 ;16.8
+1870;Ag Anadolu Grubu Holding Anonim Sirketi;Turkey;Food, Drink & Tobacco;16.21 ;0.1414;15.38 ;1.81
+1871;Nippon Express Holdings;Japan;Transportation;17.02 ;0.2095;14.62 ;4.67
+1872;Indorama Ventures;Thailand;Chemicals;15.35 ;-0.5799;15.88 ;3.11
+1873;Eternal;India;Transportation;2.15 ;0.0792;4.07 ;25.79
+1874;CP Axtra;Thailand;Food Markets;14.42 ;0.2995;16.03 ;7.64
+1875;Digital China Group;China;Technology Hardware & Equipment;18.07 ;0.1018;6.24 ;3.64
+1875;Haidilao International Holding;China;Hotels, Restaurants & Leisure;5.94 ;0.6542;3.12 ;12.58
+1877;Webuild;Italy;Construction;11.93 ;0.2104;18.92 ;3.52
+1878;Will Semiconductor;China;Semiconductors;3.57 ;0.4618;5.34 ;20.05
+1879;Shandong Hi-Speed Road & Bridge Group;China;Construction;9.89 ;0.3227;22.38 ;1.25
+1880;Lion Finance Group;United Kingdom;Banking;2.1 ;0.9158;18.55 ;3.37
+1881;KGHM Polska Miedz;Poland;Materials;8.72 ;0.7206;13.05 ;6.69
+1882;Wan Hai Lines;Taiwan;Transportation;5.04 ;1.48 ;12.55 ;7.09
+1883;Navient;United States;Business Services & Supplies;4.24 ;0.1310;51.79 ;1.21
+1884;DLF;India;Construction;0.837;0.4788;7.47 ;18.93
+1884;Jinshang Bank;China;Banking;1.85 ;0.2438;51.58 ;1.05
+1886;AmBank Group;Malaysia;Banking;1.84 ;0.4292;44.17 ;3.79
+1887;San-In Godo Bank;Japan;Banking;0.792;0.1290;51.42 ;1.3
+1888;Braskem;Brazil;Chemicals;14.36 ;-2.1 ;16.44 ;1.58
+1889;TMX Group;Canada;Diversified Financials;2.17 ;0.3515;27.96 ;10.71
+1890;Yunnan Yuntianhua;China;Transportation;8.42 ;0.7410;7.05 ;5.64
+1891;Pandora;Denmark;Consumer Durables;4.59 ;0.7582;3.85 ;11.13
+1892;Mercuries & Associates;Taiwan;Insurance;3.58 ;0.0472;50.52 ;0.444
+1893;Grupo Catalana Occidente;Spain;Insurance;6.44 ;0.6884;20.04 ;6.58
+1894;Aozora Bank;Japan;Diversified Financials;1.45 ;-0.1252;50.42 ;1.89
+1894;Manpower;United States;Business Services & Supplies;17.54 ;0.1110;8.04 ;1.98
+1896;Ningbo Jintian Copper (Group);China;Materials;17.52 ;0.0698;3.78 ;1.34
+1897;Inchcape;United Kingdom;Trading Companies;11.84 ;0.5380;7.06 ;3.35
+1897;St. Galler Kantonalbank;Switzerland;Banking;1.19 ;0.2442;50.3 ;3.51
+1897;Zalando;Germany;Retailing;11.44 ;0.2716;8.59 ;10.18
+1900;Saipem;Italy;Construction;15.74 ;0.3310;15.2 ;4.47
+1901;Nitori Holdings;Japan;Retailing;6.18 ;0.5810;8.46 ;12.98
+1902;Stora Enso;Finland;Materials;9.93 ;-0.1020;21.77 ;7.22
+1903;Aier Eye Hospital Group;China;Health Care Equipment & Services;3.01 ;0.5135;4.77 ;16.68
+1904;Yes Bank;India;Banking;4.38 ;0.2894;49.62 ;6.53
+1905;New Hope Liuhe;China;Food, Drink & Tobacco;14.3 ;0.0658;16.17 ;5.95
+1906;Hyakugo Bank;Japan;Banking;0.793;0.1117;49.08 ;1.13
+1907;IHH Healthcare;Malaysia;Health Care Equipment & Services;5.33 ;0.5807;12.69 ;13.85
+1907;Teleperformance;France;Business Services & Supplies;11.12 ;0.5657;12.5 ;6.2
+1909;Nova Ljubljanska Banka;Slovenia;Banking;1.84 ;0.5566;29.03 ;3.01
+1910;Huaibei Mining Holdings;China;Materials;9.03 ;0.6747;12.02 ;4.5
+1911;AlRayan Bank;Qatar;Diversified Financials;2.01 ;0.4017;46.5 ;5.58
+1912;Juroku Financial Group;Japan;Banking;0.788;0.1341;48.69 ;1.19
+1912;PT Adaro Energy Indonesia;Indonesia;Materials;2.08 ;1.38 ;10.91 ;3.38
+1914;Celltrion;South Korea;Drugs & Biotechnology;2.61 ;0.3100;14.3 ;23.27
+1915;Dentsu;Japan;Media;9.31 ;-1.27 ;22.32 ;5.4
+1916;Shiga Bank;Japan;Banking;0.787;0.0926;48.31 ;1.83
+1917;AltaGas;Canada;Oil & Gas Operations;9.1 ;0.4350;18.14 ;8.6
+1918;Hulic;Japan;Construction;4.2 ;0.6799;21.74 ;7.66
+1919;First Quantum Minerals;Canada;Materials;4.96 ;0.1365;24.18 ;11.45
+1919;Straumann Holding;Switzerland;Health Care Equipment & Services;2.84 ;0.4390;4.07 ;19.58
+1921;Qinghai Salt Lake Industry;China;Chemicals;1.97 ;0.6752;6.45 ;11.73
+1922;Celestica;Canada;Technology Hardware & Equipment;10.1 ;0.4227;5.83 ;10.33
+1923;Bangchak;Thailand;Retailing;16.85 ;0.0541;9.28 ;1.44
+1923;DCI Indonesia;Indonesia;Business Services & Supplies;0.139;0.0670;0.323;23.65
+1925;Just Group;United Kingdom;Insurance;4.27 ;0.0869;47.49 ;1.87
+1926;Delivery Hero;Germany;IT Software & Services;13.3 ;-0.9545;13.2 ;8.87
+1927;Graphic Packaging;United States;Materials;8.81 ;0.6580;11.14 ;7.55
+1928;SSAB;Sweden;Materials;9.78 ;0.6169;10.02 ;6.16
+1929;International Distributions Services;United Kingdom;Transportation;16.68 ;0.3194;11.11 ;4.67
+1930;Hanwa;Japan;Trading Companies;16.67 ;0.2604;7.43 ;1.31
+1930;Wärtsilä;Finland;Capital Goods;7.18 ;0.5808;8.48 ;10.29
+1932;Ubiquiti;United States;Technology Hardware & Equipment;2.15 ;0.4449;1.18 ;18.94
+1933;Bid;South Africa;Hotels, Restaurants & Leisure;12.55 ;0.4333;5.77 ;8.38
+1934;Arab Banking;Bahrain;Banking;3.7 ;0.2850;46.27 ;1.05
+1935;Ambuja Cements;India;Construction;3.94 ;0.5106;9.14 ;15.81
+1935;China Fortune Land Development;China;Construction;4.17 ;-0.8864;46.15 ;1.21
+1935;Kingfisher;United Kingdom;Retailing;16.3 ;0.2358;14.22 ;6.39
+1935;Symrise;Germany;Chemicals;5.41 ;0.5173;8.84 ;15.52
+1939;Prologis Property Mexico;Mexico;Diversified Financials;0.466;1.3 ;9.27 ;5.57
+1939;SpareBank 1 SR-Bank;Norway;Banking;2.34 ;0.4719;36.08 ;5.66
+1939;Sumec Corporation;China;Capital Goods;16.47 ;0.1629;8.25 ;1.71
+1942;Bolsa de Valores de Colombia;Colombia;Diversified Financials;0.086;0.0244;46.05 ;0.175
+1942;Jio Financial Services;India;Diversified Financials;0.246;0.1907;15.62 ;18.81
+1942;Tyler Technologies;United States;IT Software & Services;2.19 ;0.2899;5.19 ;22.61
+1945;Deutsche Pfandbriefbank;Germany;Banking;3.3 ;0.0844;45.74 ;0.835
+1946;Samsara;United States;IT Software & Services;1.25 ;-0.1549;2.02 ;22.44
+1947;Elbit Systems;Israel;Aerospace & Defense;6.83 ;0.3212;10.97 ;16.71
+1947;W. P. Carey;United States;Diversified Financials;1.58 ;0.4608;17.54 ;13.27
+1949;GFL Environmental;Canada;Business Services & Supplies;5.74 ;-0.5275;15.38 ;19.26
+1949;Skechers USA;United States;Household & Personal Products;9.13 ;0.6353;8.65 ;7.19
+1951;National Bank of Ras Al-Khaimah (P.S.C.);United Arab Emirates;Banking;1.97 ;0.5993;24.72 ;3.59
+1951;RattanIndia Power;India;Utilities;0.390;1.29 ;1.14 ;0.667
+1953;China Gas Holdings;Hong Kong;Oil & Gas Operations;10.3 ;0.3987;19.76 ;4.85
+1953;Unisplendour;China;Technology Hardware & Equipment;11.19 ;0.2975;12.13 ;9.89
+1955;Sichuan Biokin Pharmaceutical;China;Drugs & Biotechnology;0.807;0.5152;0.978;15.24
+1955;Sigma Healthcare;Australia;Drugs & Biotechnology;3.18 ;-0.0091;1.16 ;22.1
+1957;EFG International;Switzerland;Diversified Financials;3.08 ;0.3652;44.8 ;4.34
+1957;Kohl's;United States;Retailing;16.22 ;0.1090;13.56 ;0.786
+1959;CIFI Holdings Group;China;Construction;6.64 ;-0.9830;35.09 ;0.329
+1960;BXP;United States;Diversified Financials;3.41 ;0.0131;26.09 ;10.43
+1961;Goneo Group;China;Capital Goods;2.33 ;0.5982;3.02 ;12.65
+1962;Bank of Cyprus Holdings;Cyprus;Banking;1.41 ;0.5497;27.42 ;2.82
+1962;Eva Airways;Taiwan;Transportation;6.88 ;0.9032;10.79 ;6.43
+1964;BEKB-BCBE;Switzerland;Banking;0.882;0.2051;44.69 ;2.82
+1965;Alior Bank;Poland;Banking;2.12 ;0.5887;24.91 ;3.72
+1966;Sime Darby;Malaysia;Trading Companies;16.09 ;0.3353;10.53 ;3.23
+1967;Liberty Media Corporation Series A Liberty Formula One;United States;Media;3.65 ;-0.0300;11.76 ;21.84
+1968;Umicore;Belgium;Materials;16.07 ;-1.6 ;9.98 ;2.28
+1969;AVIC Chengdu Aircraft;China;Technology Hardware & Equipment;0.244;0.0156;0.581;21.79
+1969;China Resources Beer (Holdings);Hong Kong;Food, Drink & Tobacco;5.37 ;0.6581;9.49 ;11.5
+1971;Hertz Global Holdings;United States;Business Services & Supplies;9.05 ;-2.86 ;21.8 ;1.18
+1972;Nexi S.p.A.;Italy;Banking;7.88 ;0.1810;25.36 ;7.17
+1973;Hancock Holding;United States;Banking;1.91 ;0.4695;34.75 ;4.48
+1974;Accor;France;Hotels, Restaurants & Leisure;6.06 ;0.6220;12.48 ;11.55
+1974;Suzuken;Japan;Drugs & Biotechnology;15.91 ;0.2257;8.3 ;2.39
+1976;Logitech International;Switzerland;Technology Hardware & Equipment;4.55 ;0.6546;3.73 ;11.48
+1976;Trent;India;Retailing;1.94 ;0.2310;0.987;21.38
+1978;Reddit;United States;IT Software & Services;1.3 ;-0.4843;2.34 ;21.36
+1979;Nanto Bank;Japan;Banking;0.632;0.0919;43.55 ;0.827
+1980;NOV;United States;Oil & Gas Operations;8.87 ;0.6350;11.36 ;4.67
+1981;Banco Davivienda;Colombia;Banking;5.56 ;-0.0285;43.43 ;2.46
+1982;LG Innotek Co.,;South Korea;Technology Hardware & Equipment;15.68 ;0.2845;7.9 ;2.34
+1983;Aichi Financial Group;Japan;Banking;0.554;0.0708;43.38 ;0.910
+1984;Associated Banc-Corp;United States;Banking;2.12 ;0.1433;43.31 ;3.7
+1984;U-Haul Holding;United States;Business Services & Supplies;5.77 ;0.4132;20.33 ;11.9
+1986;Hainan Airlines Holding;China;Transportation;8.8 ;0.2218;20.51 ;8.07
+1986;Pt Adaro Andalan Indonesia;Indonesia;Materials;5.32 ;1.21 ;5.99 ;3.27
+1988;Bath & Body Works;United States;Retailing;7.31 ;0.7980;4.87 ;6.34
+1989;Berry Global Group;United States;Conglomerates;11.79 ;0.4710;13.58 ;7.96
+1989;KakaoBank;South Korea;Banking;2.15 ;0.3227;42.66 ;7.27
+1991;Allegion;Ireland;Consumer Durables;3.82 ;0.6219;4.56 ;11.76
+1992;Hisense Kelon Electrical Holdings;China;Consumer Durables;12.83 ;0.4652;9.55 ;4.22
+1992;Jiangxi Zhengbang Technology;China;Food, Drink & Tobacco;0.984;1.2 ;2.68 ;3.52
+1992;Ogaki Kyoritsu Bank;Japan;Banking;0.523;0.0702;42.85 ;0.647
+1995;Tokyo Kiraboshi Financial Group;Japan;Banking;0.781;0.1834;42.84 ;1.14
+1996;Dino Polska;Poland;Food Markets;7.36 ;0.3781;3.16 ;13.84
+1997;China Aviation Oil;Singapore;Trading Companies;15.52 ;0.0784;1.99 ;0.559
+1998;Jet2;United Kingdom;Business Services & Supplies;8.79 ;0.6288;7.95 ;3.93
+1998;Keiyo Bank;Japan;Banking;0.474;0.0927;42.56 ;0.679
+1998;PT Lippo Karawaci;Indonesia;Construction;0.716;1.18 ;3.34 ;0.366
