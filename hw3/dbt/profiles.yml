@@ -1,0 +1,11 @@
+clickhouse_profile:     # must match "profile" in dbt_project.yml
+  target: dev
+  outputs:
+    dev:
+      type: clickhouse
+      # schema not set - will use custom macro generate_schema_name to create 'silver' and 'gold' databases
+      host: clickhouse
+      port: 8123
+      user: dbt_user
+      password: dbt_pass
+      secure: false

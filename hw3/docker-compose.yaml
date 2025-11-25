@@ -1,0 +1,198 @@
+services:
+    mongodb:
+        image: mongo:8
+        container_name: mongodb
+        restart: always
+        ports:
+            - "27017:27017"
+        environment:
+            MONGO_INITDB_ROOT_USERNAME: root
+            MONGO_INITDB_ROOT_PASSWORD: root
+        volumes:
+            - mongo_data:/data/db
+
+    mongodb-init:
+        image: python:3.12
+        container_name: mongodb-init
+        depends_on:
+            - mongodb
+        volumes:
+            - ./mongo:/mongo # contains init.py, seed.py
+            - ../requirements.txt:/requirements.txt:ro
+        working_dir: /mongo
+        command: >
+            bash -c "
+              echo 'Installing dependencies...' &&
+              pip install -r /requirements.txt &&
+              echo 'Waiting for MongoDB...' &&
+              sleep 10 &&
+              python init.py &&
+              python seed.py
+            "
+
+    airflow-db:
+        container_name: airflow-db
+        image: postgres:16.4
+        depends_on:
+            - mongodb-init
+        environment:
+            POSTGRES_USER: airflow
+            POSTGRES_PASSWORD: airflow
+            POSTGRES_DB: airflow
+            PGUSER: airflow
+            PGPASSWORD: airflow
+            PGDATABASE: airflow
+        ports:
+            - "5432:5432"
+        volumes:
+            - ./pgdata_airflow:/var/lib/postgresql/data
+        healthcheck:
+            test: ["CMD-SHELL", "pg_isready -U airflow"]
+            interval: 10s
+            retries: 5
+        restart: always
+
+    # --- Airflow Webserver ---
+    airflow-webserver:
+        image: apache/airflow:2.8.1
+        container_name: airflow-webserver
+        command: webserver
+        environment:
+            AIRFLOW__CORE__EXECUTOR: LocalExecutor
+            AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@airflow-db:5432/airflow
+            AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+            AIRFLOW__API__AUTH_BACKENDS: "airflow.api.auth.backend.basic_auth"
+            _PIP_ADDITIONAL_REQUIREMENTS: "apache-airflow-providers-mongo pymongo yfinance==0.2.66 multitasking==0.0.11"
+        ports:
+            - "8080:8080"
+        volumes:
+            - ./dags:/opt/airflow/dags
+            - ./logs:/opt/airflow/logs
+            - ./plugins:/opt/airflow/plugins
+            - /var/run/docker.sock:/var/run/docker.sock            
+        depends_on:
+            - airflow-init
+            - airflow-db
+            - mongodb-init
+        restart: always
+
+    # --- Airflow Scheduler ---
+    airflow-scheduler:
+        image: apache/airflow:2.8.1
+        container_name: airflow-scheduler
+        command: scheduler
+
+        environment:
+            AIRFLOW__CORE__EXECUTOR: LocalExecutor
+            AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@airflow-db:5432/airflow
+            AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+            _PIP_ADDITIONAL_REQUIREMENTS: "apache-airflow-providers-mongo pymongo yfinance==0.2.66 multitasking==0.0.11 requests"
+            CLICKHOUSE_USER: etl
+            CLICKHOUSE_PASSWORD: pass
+        volumes:
+            - ./dags:/opt/airflow/dags
+            - ./logs:/opt/airflow/logs
+            - ./plugins:/opt/airflow/plugins
+            - /var/run/docker.sock:/var/run/docker.sock
+        depends_on:
+            - airflow-init
+            - airflow-db
+            - mongodb-init
+        restart: always
+
+    # --- Airflow DB initialization & user setup ---
+    airflow-init:
+        image: apache/airflow:2.8.1
+        container_name: airflow-init
+        entrypoint: /bin/bash
+        command:
+            - -c
+            - |
+                airflow db init
+                airflow users create \
+                  --username airflow \
+                  --password airflow \
+                  --firstname Admin \
+                  --lastname User \
+                  --role Admin \
+                  --email admin@example.com
+        environment:
+            AIRFLOW__CORE__EXECUTOR: LocalExecutor
+            AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@airflow-db:5432/airflow
+            _PIP_ADDITIONAL_REQUIREMENTS: "apache-airflow-providers-mongo pymongo yfinance==0.2.66 multitasking==0.0.11"
+        volumes:
+            - ./dags:/opt/airflow/dags
+            - ./logs:/opt/airflow/logs
+            - ./plugins:/opt/airflow/plugins
+        depends_on:
+            - airflow-db
+            - mongodb-init
+        restart: "no"
+
+    clickhouse:
+        image: clickhouse/clickhouse-server:24.8
+        container_name: clickhouse
+        restart: always
+        ports:
+            - "8123:8123" # HTTP
+            - "9000:9000" # TCP
+        environment:
+            - CLICKHOUSE_DEFAULT_ACCESS_MANAGEMENT=1
+        volumes:
+            - clickhouse_data:/var/lib/clickhouse
+            - ./clickhouse/init:/docker-entrypoint-initdb.d:ro
+        healthcheck:
+            test: ["CMD", "clickhouse-client", "--query", "SELECT 1"]
+            interval: 10s
+            timeout: 5s
+            retries: 5
+            start_period: 30s
+        depends_on:
+            - mongodb-init
+
+    clickhouse-init-users:
+        image: clickhouse/clickhouse-server:24.8
+        container_name: clickhouse-init-users
+        depends_on:
+            clickhouse:
+                condition: service_healthy
+        command: >
+            bash -c "
+            echo 'Waiting for ClickHouse to be ready...' &&
+            sleep 5 &&
+            until clickhouse-client --host clickhouse --port 9000 --query 'SELECT 1' > /dev/null 2>&1; do
+              echo 'Waiting for ClickHouse...' &&
+              sleep 2
+            done &&
+            echo 'Ensuring users exist...' &&
+            clickhouse-client --host clickhouse --port 9000 --multiquery --query \"
+            CREATE USER IF NOT EXISTS etl IDENTIFIED BY 'pass';
+            GRANT SELECT, INSERT, CREATE, CREATE DATABASE ON *.* TO etl;
+            CREATE USER IF NOT EXISTS dbt_user IDENTIFIED BY 'dbt_pass';
+            GRANT SELECT, INSERT, CREATE, CREATE DATABASE, ALTER, DROP ON *.* TO dbt_user;
+            \" &&
+            echo 'Users verified successfully!' &&
+            clickhouse-client --host clickhouse --port 9000 --user dbt_user --password dbt_pass --query 'SELECT 1' &&
+            echo 'dbt_user authentication test passed!'
+            "
+        restart: "on-failure"
+
+    # --- dbt initialization & user setup ---
+    dbt:
+        # dbt container for building and testing ClickHouse models
+        build:
+            context: ./dbt              # Build context is the current directory
+            dockerfile: Dockerfile   # Use the Dockerfile in this directory to build dbt image
+        container_name: dbt
+        depends_on:
+            - clickhouse      # Ensure ClickHouse starts before dbt
+            - clickhouse-init-users # Ensure users are created before dbt 
+        volumes:
+            - ./dbt:/dbt                                  # Mount local dbt project directory
+        working_dir: /dbt          # Set dbt project directory as the working directory
+        tty: true                  # Keep container running for interactive dbt commands
+
+
+volumes:
+    mongo_data:
+    clickhouse_data:
