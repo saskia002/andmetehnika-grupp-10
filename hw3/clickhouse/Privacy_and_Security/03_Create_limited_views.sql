@@ -21,7 +21,7 @@ FROM
         Industry,
         COUNT(*) OVER (PARTITION BY Industry) AS Industry_count
     FROM gold.DimCompany
-) t
+) t;
 
 CREATE OR REPLACE VIEW gold_limited_views.v_limited_DimDate AS
 SELECT
@@ -31,7 +31,7 @@ SELECT
     Month,
     Day,
     Quarter
-FROM gold.DimDate 
+FROM gold.DimDate;
 
 CREATE OR REPLACE VIEW gold_limited_views.v_limited_DimTicker AS
 SELECT
@@ -43,7 +43,7 @@ SELECT
     Sector,
     ValidFrom, 
     ValidTo      
-FROM gold.DimTicker
+FROM gold.DimTicker;
 
 CREATE OR REPLACE VIEW gold_limited_views.v_limited_FactFinancials AS
 SELECT
@@ -53,7 +53,7 @@ SELECT
     Profit,
     Assets,
     MarketValue
-FROM gold.FactFinancials
+FROM gold.FactFinancials;
 
 CREATE OR REPLACE VIEW gold_limited_views.v_limited_FactForbesRank AS
 SELECT
@@ -65,7 +65,7 @@ SELECT
         '–',
         toString(intDiv(toUInt64(ForbesRank), 1000) * 100 + 99)
     ) AS ForbesRank_range, -- MASKED COLUMN as range
-FROM gold.FactForbesRank
+FROM gold.FactForbesRank;
 
 CREATE OR REPLACE VIEW gold_limited_views.v_limited_FactStock AS
 SELECT
@@ -79,4 +79,4 @@ SELECT
     LowPrice,
     MarketCap,
     Dividend
-FROM gold.FactStock
+FROM gold.FactStock;
