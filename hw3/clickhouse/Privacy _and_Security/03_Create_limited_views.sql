@@ -1,69 +1,7 @@
-CREATE OR REPLACE VIEW gold.v_DimCompany AS
-SELECT
-    CompanyKey,  
-    CompanyName,  
-    Headquarters,
-    Industry,
-    Sector,
-    ValidFrom,    
-    ValidTo       
-FROM gold.DimCompany;
+-- Create schema for limited views
+CREATE DATABASE IF NOT EXISTS gold_limited_views;
 
-CREATE OR REPLACE VIEW gold.v_DimDate AS
-SELECT
-    DateKey,
-    TradingDate,
-    Year,
-    Month,
-    Day,
-    Quarter
-FROM gold.DimDate 
-
-CREATE OR REPLACE VIEW gold.v_DimTicker AS
-SELECT
-    TickerKey, 
-    TickerSymbol,
-    Exchange,
-    Class,
-    Currency,
-    Sector,
-    ValidFrom, 
-    ValidTo      
-FROM gold.DimTicker
-
-CREATE OR REPLACE VIEW gold.v_FactFinancials AS
-SELECT
-    CompanyKey,
-    Year,
-    Sales,
-    Profit,
-    Assets,
-    MarketValue
-FROM gold.FactFinancials
-
-CREATE OR REPLACE VIEW gold.v_FactForbesRank AS
-SELECT
-    ForbesRankKey,
-    CompanyKey,
-    Year,
-    ForbesRank
-FROM gold.FactForbesRank
-
-CREATE OR REPLACE VIEW gold.v_FactStock AS
-SELECT
-    DateKey,
-    CompanyKey,
-    TickerKey,
-    TradingDate,
-    OpenPrice,
-    ClosePrice,
-    HighPrice,
-    LowPrice,
-    MarketCap,
-    Dividend
-FROM gold.FactStock
-
-CREATE OR REPLACE VIEW gold.v_limited_DimCompany AS
+CREATE OR REPLACE VIEW gold_limited_views.v_limited_DimCompany AS
 SELECT
     CompanyKey,  
     CompanyName,  
@@ -85,7 +23,7 @@ FROM
     FROM gold.DimCompany
 ) t
 
-CREATE OR REPLACE VIEW gold.v_limited_DimDate AS
+CREATE OR REPLACE VIEW gold_limited_views.v_limited_DimDate AS
 SELECT
     DateKey,
     TradingDate,
@@ -95,7 +33,7 @@ SELECT
     Quarter
 FROM gold.DimDate 
 
-CREATE OR REPLACE VIEW gold.v_limited_DimTicker AS
+CREATE OR REPLACE VIEW gold_limited_views.v_limited_DimTicker AS
 SELECT
     TickerKey,
     TickerSymbol,
@@ -107,7 +45,7 @@ SELECT
     ValidTo      
 FROM gold.DimTicker
 
-CREATE OR REPLACE VIEW gold.v_limited_FactFinancials AS
+CREATE OR REPLACE VIEW gold_limited_views.v_limited_FactFinancials AS
 SELECT
     CompanyKey,
     Year,
@@ -117,7 +55,7 @@ SELECT
     MarketValue
 FROM gold.FactFinancials
 
-CREATE OR REPLACE VIEW gold.v_limited_FactForbesRank AS
+CREATE OR REPLACE VIEW gold_limited_views.v_limited_FactForbesRank AS
 SELECT
     ForbesRankKey,
     CompanyKey,
@@ -129,7 +67,7 @@ SELECT
     ) AS ForbesRank_range, -- MASKED COLUMN as range
 FROM gold.FactForbesRank
 
-CREATE OR REPLACE VIEW gold.v_limited_FactStock AS
+CREATE OR REPLACE VIEW gold_limited_views.v_limited_FactStock AS
 SELECT
     DateKey,
     CompanyKey,
