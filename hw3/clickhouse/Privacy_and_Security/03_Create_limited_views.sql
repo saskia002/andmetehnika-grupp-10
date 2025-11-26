@@ -5,20 +5,25 @@ CREATE OR REPLACE VIEW gold_limited_views.v_limited_DimCompany AS
 SELECT
     CompanyKey,  
     CompanyName,  
-    concat('***', left(CompanyName, len(CompanyName)-5)) AS CompanyName_masked,
+    concat(substring(CompanyName, 1, 3), '***') AS CompanyName_masked, -- Show first 3 chars + ***
     Headquarters,
     CASE
         WHEN Industry_count < 10 THEN 'Other'
         ELSE Industry
-    END AS Industry_masked -- Mask as OTHER when less than 10 companies with that Industry
+    END AS Industry_masked,
     Sector,
     ValidFrom,    
     ValidTo       
 FROM
 (
     SELECT
+        CompanyKey,
         CompanyName,
+        Headquarters,
         Industry,
+        Sector,
+        ValidFrom,
+        ValidTo,
         COUNT(*) OVER (PARTITION BY Industry) AS Industry_count
     FROM gold.DimCompany
 ) t;
