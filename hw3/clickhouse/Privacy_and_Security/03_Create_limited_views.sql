@@ -66,10 +66,10 @@ SELECT
     CompanyKey,
     Year,
     concat(
-        toString(intDiv(toUInt64(ForbesRank), 1000) * 100),
+        toString(intDiv(toUInt64(ForbesRank), 100) * 100),
         '–',
-        toString(intDiv(toUInt64(ForbesRank), 1000) * 100 + 99)
-    ) AS ForbesRank_range, -- MASKED COLUMN as range
+        toString(intDiv(toUInt64(ForbesRank), 100) * 100 + 99)
+    ) AS ForbesRank_range -- MASKED COLUMN as range
 FROM gold.FactForbesRank;
 
 CREATE OR REPLACE VIEW gold_limited_views.v_limited_FactStock AS
