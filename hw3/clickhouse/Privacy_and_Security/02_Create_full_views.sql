@@ -1,7 +1,13 @@
--- Create schema for limited views
+-- Create the database for views
 CREATE DATABASE IF NOT EXISTS gold_full_views;
 
-CREATE OR REPLACE VIEW gold_full_views.v_DimCompany AS
+-- Drop and create materialized views
+DROP TABLE IF EXISTS gold_full_views.v_DimCompany;
+CREATE MATERIALIZED VIEW gold_full_views.v_DimCompany
+ENGINE = MergeTree()
+ORDER BY CompanyKey
+POPULATE
+AS
 SELECT
     CompanyKey,  
     CompanyName,  
@@ -10,10 +16,14 @@ SELECT
     Sector,
     ValidFrom,    
     ValidTo       
-FROM gold.DimCompany
-WITH SECURITY DEFINER;
+FROM gold.DimCompany;
 
-CREATE OR REPLACE VIEW gold_full_views.v_DimDate AS
+DROP TABLE IF EXISTS gold_full_views.v_DimDate;
+CREATE MATERIALIZED VIEW gold_full_views.v_DimDate
+ENGINE = MergeTree()
+ORDER BY DateKey
+POPULATE
+AS
 SELECT
     DateKey,
     TradingDate,
@@ -21,10 +31,14 @@ SELECT
     Month,
     Day,
     Quarter
-FROM gold.DimDate
-WITH SECURITY DEFINER;
+FROM gold.DimDate;
 
-CREATE OR REPLACE VIEW gold_full_views.v_DimTicker AS
+DROP TABLE IF EXISTS gold_full_views.v_DimTicker;
+CREATE MATERIALIZED VIEW gold_full_views.v_DimTicker
+ENGINE = MergeTree()
+ORDER BY TickerKey
+POPULATE
+AS
 SELECT
     TickerKey, 
     TickerSymbol,
@@ -34,10 +48,14 @@ SELECT
     Sector,
     ValidFrom, 
     ValidTo      
-FROM gold.DimTicker
-WITH SECURITY DEFINER;
+FROM gold.DimTicker;
 
-CREATE OR REPLACE VIEW gold_full_views.v_FactFinancials AS
+DROP TABLE IF EXISTS gold_full_views.v_FactFinancials;
+CREATE MATERIALIZED VIEW gold_full_views.v_FactFinancials
+ENGINE = MergeTree()
+ORDER BY (CompanyKey, Year)
+POPULATE
+AS
 SELECT
     CompanyKey,
     Year,
@@ -45,19 +63,27 @@ SELECT
     Profit,
     Assets,
     MarketValue
-FROM gold.FactFinancials
-WITH SECURITY DEFINER;
+FROM gold.FactFinancials;
 
-CREATE OR REPLACE VIEW gold_full_views.v_FactForbesRank AS
+DROP TABLE IF EXISTS gold_full_views.v_FactForbesRank;
+CREATE MATERIALIZED VIEW gold_full_views.v_FactForbesRank
+ENGINE = MergeTree()
+ORDER BY (CompanyKey, Year)
+POPULATE
+AS
 SELECT
     ForbesRankKey,
     CompanyKey,
     Year,
     ForbesRank
-FROM gold.FactForbesRank
-WITH SECURITY DEFINER;
+FROM gold.FactForbesRank;
 
-CREATE OR REPLACE VIEW gold_full_views.v_FactStock AS
+DROP TABLE IF EXISTS gold_full_views.v_FactStock;
+CREATE MATERIALIZED VIEW gold_full_views.v_FactStock
+ENGINE = MergeTree()
+ORDER BY (DateKey, CompanyKey, TickerKey)
+POPULATE
+AS
 SELECT
     DateKey,
     CompanyKey,
@@ -69,5 +95,4 @@ SELECT
     LowPrice,
     MarketCap,
     Dividend
-FROM gold.FactStock
-WITH SECURITY DEFINER;
+FROM gold.FactStock;
