@@ -55,25 +55,25 @@ with DAG(
     create_roles_users = PythonOperator(
         task_id="create_roles_users",
         python_callable=run_clickhouse_script,
-        op_kwargs={"script_path": "/hw3/clickhouse/Privacy_and_Security/01_Create_roles_users.sql"}
+        op_kwargs={"script_path": "/opt/airflow/clickhouse/Privacy_and_Security/01_Create_roles_users.sql"}
     )
 
     create_full_views = PythonOperator(
         task_id="create_full_views",
         python_callable=run_clickhouse_script,
-        op_kwargs={"script_path": "/hw3/clickhouse/Privacy_and_Security/02_Create_full_views.sql"}
+        op_kwargs={"script_path": "/opt/airflow/clickhouse/Privacy_and_Security/02_Create_full_views.sql"}
     )
 
     create_limited_views = PythonOperator(
         task_id="create_limited_views",
         python_callable=run_clickhouse_script,
-        op_kwargs={"script_path": "/hw3/clickhouse/Privacy_and_Security/03_Create_limited_views.sql"}
+        op_kwargs={"script_path": "/opt/airflow/clickhouse/Privacy_and_Security/03_Create_limited_views.sql"}
     )
 
     grant_access = PythonOperator(
         task_id="grant_access",
         python_callable=run_clickhouse_script,
-        op_kwargs={"script_path": "/hw3/clickhouse/Privacy_and_Security/04_Grant_access_to_roles.sql"}
+        op_kwargs={"script_path": "/opt/airflow/clickhouse/Privacy_and_Security/04_Grant_access_to_roles.sql"}
     )
 
     # --------------------------
