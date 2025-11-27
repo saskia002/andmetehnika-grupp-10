@@ -1,12 +1,11 @@
--- Create the database for views
+-- Create the database
 CREATE DATABASE IF NOT EXISTS gold_full_views;
 
--- Drop and create materialized views
+-- Drop and create tables (not views)
 DROP TABLE IF EXISTS gold_full_views.v_DimCompany;
-CREATE MATERIALIZED VIEW gold_full_views.v_DimCompany
+CREATE TABLE gold_full_views.v_DimCompany
 ENGINE = MergeTree()
 ORDER BY CompanyKey
-POPULATE
 AS
 SELECT
     CompanyKey,  
@@ -19,10 +18,9 @@ SELECT
 FROM gold.DimCompany;
 
 DROP TABLE IF EXISTS gold_full_views.v_DimDate;
-CREATE MATERIALIZED VIEW gold_full_views.v_DimDate
+CREATE TABLE gold_full_views.v_DimDate
 ENGINE = MergeTree()
 ORDER BY DateKey
-POPULATE
 AS
 SELECT
     DateKey,
@@ -34,10 +32,9 @@ SELECT
 FROM gold.DimDate;
 
 DROP TABLE IF EXISTS gold_full_views.v_DimTicker;
-CREATE MATERIALIZED VIEW gold_full_views.v_DimTicker
+CREATE TABLE gold_full_views.v_DimTicker
 ENGINE = MergeTree()
 ORDER BY TickerKey
-POPULATE
 AS
 SELECT
     TickerKey, 
@@ -51,10 +48,9 @@ SELECT
 FROM gold.DimTicker;
 
 DROP TABLE IF EXISTS gold_full_views.v_FactFinancials;
-CREATE MATERIALIZED VIEW gold_full_views.v_FactFinancials
+CREATE TABLE gold_full_views.v_FactFinancials
 ENGINE = MergeTree()
 ORDER BY (CompanyKey, Year)
-POPULATE
 AS
 SELECT
     CompanyKey,
@@ -66,10 +62,9 @@ SELECT
 FROM gold.FactFinancials;
 
 DROP TABLE IF EXISTS gold_full_views.v_FactForbesRank;
-CREATE MATERIALIZED VIEW gold_full_views.v_FactForbesRank
+CREATE TABLE gold_full_views.v_FactForbesRank
 ENGINE = MergeTree()
 ORDER BY (CompanyKey, Year)
-POPULATE
 AS
 SELECT
     ForbesRankKey,
@@ -79,10 +74,9 @@ SELECT
 FROM gold.FactForbesRank;
 
 DROP TABLE IF EXISTS gold_full_views.v_FactStock;
-CREATE MATERIALIZED VIEW gold_full_views.v_FactStock
+CREATE TABLE gold_full_views.v_FactStock
 ENGINE = MergeTree()
 ORDER BY (DateKey, CompanyKey, TickerKey)
-POPULATE
 AS
 SELECT
     DateKey,
