@@ -65,4 +65,4 @@ with DAG(
     )
 
     # --- Task dependencies ---
-    create_roles_users >> create_full_views >> create_limited_views >> grant_access
+    create_roles_users >> [create_full_views, create_limited_views] >> grant_access
