@@ -10,7 +10,8 @@ SELECT
     Sector,
     ValidFrom,    
     ValidTo       
-FROM gold.DimCompany;
+FROM gold.DimCompany
+WITH SECURITY DEFINER;
 
 CREATE OR REPLACE VIEW gold_full_views.v_DimDate AS
 SELECT
@@ -20,7 +21,8 @@ SELECT
     Month,
     Day,
     Quarter
-FROM gold.DimDate;
+FROM gold.DimDate
+WITH SECURITY DEFINER;
 
 CREATE OR REPLACE VIEW gold_full_views.v_DimTicker AS
 SELECT
@@ -32,7 +34,8 @@ SELECT
     Sector,
     ValidFrom, 
     ValidTo      
-FROM gold.DimTicker;
+FROM gold.DimTicker
+WITH SECURITY DEFINER;
 
 CREATE OR REPLACE VIEW gold_full_views.v_FactFinancials AS
 SELECT
@@ -42,7 +45,8 @@ SELECT
     Profit,
     Assets,
     MarketValue
-FROM gold.FactFinancials;
+FROM gold.FactFinancials
+WITH SECURITY DEFINER;
 
 CREATE OR REPLACE VIEW gold_full_views.v_FactForbesRank AS
 SELECT
@@ -50,7 +54,8 @@ SELECT
     CompanyKey,
     Year,
     ForbesRank
-FROM gold.FactForbesRank;
+FROM gold.FactForbesRank
+WITH SECURITY DEFINER;
 
 CREATE OR REPLACE VIEW gold_full_views.v_FactStock AS
 SELECT
@@ -64,4 +69,5 @@ SELECT
     LowPrice,
     MarketCap,
     Dividend
-FROM gold.FactStock;
+FROM gold.FactStock
+WITH SECURITY DEFINER;
