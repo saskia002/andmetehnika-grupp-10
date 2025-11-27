@@ -3,8 +3,7 @@ CREATE DATABASE IF NOT EXISTS gold_limited_views;
 
 CREATE OR REPLACE VIEW gold_limited_views.v_limited_DimCompany AS
 SELECT
-    CompanyKey,  
-    CompanyName,  
+    CompanyKey,    
     concat(substring(CompanyName, 1, 3), '***') AS CompanyName_masked, -- Show first 3 chars + ***
     Headquarters,
     CASE

@@ -45,6 +45,65 @@
 
     6.5. Wait for the DAGs to be finished and ...
 
+8. Clikchouse users and roles
+
+    8.1 creation of roles, users and limited and full views is part of DAG run_dbt_transformations.py
+        In case you would like to run them manually then you can got hw3 folder in terminal and run scripts that using following commands:
+
+        to create users and roles:
+            ```bash
+            docker exec -i clickhouse clickhouse-client < clickhouse/Privacy_and_Security/01_Create_roles_users.sql 
+            ```
+
+        to run views manually if needed
+            ```bash
+            docker exec -i clickhouse clickhouse-client < clickhouse/Privacy_and_Security/02_Create_full_views.sql 
+            ```
+            ```bash
+            docker exec -i clickhouse clickhouse-client < clickhouse/Privacy_and_Security/03_Create_limited_views.sql 
+            ```
+    8.2 As now schemas gold_full_views and gold_limited_views have been created then you can assign to roles access to relevant schemas
+            ```bash
+            docker exec -i clickhouse clickhouse-client < clickhouse/Privacy_and_Security/04_Grant_access_to_roles.sql 
+            ```
+    
+    8.3 Script for creating clickhouse roles is:
+        -- Create two roles
+            CREATE ROLE IF NOT EXISTS analyst_full;
+            CREATE ROLE IF NOT EXISTS analyst_limited;
+
+        -- Create users (if needed)
+            CREATE USER IF NOT EXISTS user_full IDENTIFIED BY 'full123';
+            CREATE USER IF NOT EXISTS user_limited IDENTIFIED BY 'limited123';
+
+        -- Grant roles to users
+            GRANT analyst_full TO user_full;
+            GRANT analyst_limited TO user_limited;
+
+    8.4 After schemas have been created:
+        -- Grant SELECT on full views to role _full
+            GRANT SELECT ON gold_full_views.*  TO analyst_full;
+
+        -- Grant SELECT on masked views to role _limited
+            GRANT SELECT ON gold_limited_views.*  TO analyst_limited;
+
+    8.4 Masking
+
+        As we have only public data then we don't need masking but for project we chose 3 columns.
+        We have masked in DimCompany Company Name by showing only first 3 characters in name and Industry by showing Other in case there as less than 10 rows with same Industry. And then we have masked ForbesRank by showing ranges 1-99, 100-199 etc. More details in sql script 03_Create_limited_views.sql 
+
+    8.5 to log in as specific user you can run for example:
+
+        ```bash
+        docker exec -it clickhouse clickhouse-client --user user_full --password full123
+        ```
+
+        ```bash
+        docker exec -it clickhouse clickhouse-client --user user_limited --password limited123
+        ```
+
+
+
 ## Airflow
 
 Daily at 22:00 UTC
