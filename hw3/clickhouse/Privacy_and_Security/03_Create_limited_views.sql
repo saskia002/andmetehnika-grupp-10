@@ -1,7 +1,7 @@
 -- Create schema for limited views
 CREATE DATABASE IF NOT EXISTS gold_limited_views;
 
-CREATE OR REPLACE TABLE gold_limited_views.v_limited_DimCompany AS
+CREATE OR REPLACE VIEW gold_limited_views.v_limited_DimCompany AS
 SELECT
     CompanyKey,    
     concat(substring(CompanyName, 1, 3), '***') AS CompanyName_masked, -- Show first 3 chars + ***
@@ -27,7 +27,7 @@ FROM
     FROM gold.DimCompany
 ) t;
 
-CREATE OR REPLACE TABLE gold_limited_views.v_limited_DimDate AS
+CREATE OR REPLACE VIEW gold_limited_views.v_limited_DimDate AS
 SELECT
     DateKey,
     TradingDate,
@@ -37,7 +37,7 @@ SELECT
     Quarter
 FROM gold.DimDate;
 
-CREATE OR REPLACE TABLE gold_limited_views.v_limited_DimTicker AS
+CREATE OR REPLACE VIEW gold_limited_views.v_limited_DimTicker AS
 SELECT
     TickerKey,
     TickerSymbol,
@@ -49,7 +49,7 @@ SELECT
     ValidTo      
 FROM gold.DimTicker;
 
-CREATE OR REPLACE TABLE gold_limited_views.v_limited_FactFinancials AS
+CREATE OR REPLACE VIEW gold_limited_views.v_limited_FactFinancials AS
 SELECT
     CompanyKey,
     Year,
@@ -59,7 +59,7 @@ SELECT
     MarketValue
 FROM gold.FactFinancials;
 
-CREATE OR REPLACE TABLE gold_limited_views.v_limited_FactForbesRank AS
+CREATE OR REPLACE VIEW gold_limited_views.v_limited_FactForbesRank AS
 SELECT
     ForbesRankKey,
     CompanyKey,
