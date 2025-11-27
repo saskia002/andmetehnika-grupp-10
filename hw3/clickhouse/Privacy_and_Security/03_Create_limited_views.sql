@@ -71,7 +71,7 @@ SELECT
     ) AS ForbesRank_range -- MASKED COLUMN as range
 FROM gold.FactForbesRank;
 
-CREATE OR REPLACE TABLE gold_limited_views.v_limited_FactStock AS
+CREATE OR REPLACE VIEW gold_limited_views.v_limited_FactStock AS
 SELECT
     DateKey,
     CompanyKey,
