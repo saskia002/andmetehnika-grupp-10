@@ -1,24 +1,21 @@
 from datetime import datetime
 from airflow import DAG
 from airflow.operators.python import PythonOperator
-from airflow.sensors.external_task import ExternalTaskSensor
 import subprocess
 import logging
-import time
 
-# running clickhouse scripts as called
 def run_clickhouse_script(script_path: str, container_name="clickhouse", **context):
-    import subprocess
-    import logging
-
-    cmd = ["docker", "exec", "-i", container_name, "clickhouse-client", "<", script_path]
-
+    """
+    Executes a SQL script inside the ClickHouse container
+    by piping it from Airflow container.
+    """
     logging.info(f"Running ClickHouse script: {script_path}")
 
     try:
+        # Use cat to pipe SQL file into ClickHouse
         result = subprocess.run(
-            f"docker exec -i {container_name} clickhouse-client < {script_path}",
-            shell=True,  # required for input redirection `<`
+            f"cat {script_path} | docker exec -i {container_name} clickhouse-client",
+            shell=True,
             check=True,
             capture_output=True,
             text=True
@@ -27,31 +24,22 @@ def run_clickhouse_script(script_path: str, container_name="clickhouse", **conte
         if result.stderr:
             logging.warning(result.stderr)
         return result.stdout
+
     except subprocess.CalledProcessError as e:
         logging.error(f"ClickHouse script failed: {script_path}")
         logging.error(e.stderr)
         raise
 
-
+# --- DAG definition ---
 with DAG(
     dag_id="run_clickhouse_views",
     start_date=datetime(2025, 10, 26),
-    schedule=None,  # Triggered by other DAGs
+    schedule=None,  # manually triggered or triggered by other DAGs
     catchup=False,
-    description="Run dbt transformations to refresh Silver and Gold layers"
+    description="Run ClickHouse SQL scripts to refresh Silver/Gold layers",
 ) as dag:
-    
-    # Wait for dbt marts DAG to finish
-    wait_for_dbt_marts = ExternalTaskSensor(    
-        task_id="wait_for_dbt_marts",
-        external_dag_id="run_dbt_transformations",  # your dbt DAG id
-        external_task_id="run_dbt_marts",           # the specific dbt task
-        mode="poke",                                # or "reschedule" to free worker
-        poke_interval=60,                           # check every 60 seconds
-        timeout=3600                                # fail after 1 hour
-    )
 
-    # ClickHouse DAG tasks
+    # --- Tasks ---
     create_roles_users = PythonOperator(
         task_id="create_roles_users",
         python_callable=run_clickhouse_script,
@@ -76,15 +64,5 @@ with DAG(
         op_kwargs={"script_path": "/opt/airflow/clickhouse/Privacy_and_Security/04_Grant_access_to_roles.sql"}
     )
 
-    # --------------------------
-    # Dependencies
-    # --------------------------
-    # Wait for dbt marts first
-    wait_for_dbt_marts >> create_full_views
-
-    # Roles can be created beforehand
-    create_roles_users >> create_full_views
-
-    # Then limited views and grants
-    create_full_views >> create_limited_views >> grant_access
-
+    # --- Task dependencies ---
+    create_roles_users >> create_full_views >> create_limited_views >> grant_access
