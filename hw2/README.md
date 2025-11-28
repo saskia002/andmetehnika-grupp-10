@@ -41,9 +41,9 @@
 
         password: airflow
     
-    6.4. Trigger the DAG called load_companies_dag - it will trigger fetch_yfinance_dag after completion
+    6.4. Trigger the DAG called load_companies_dag - it will trigger fetch_yfinance_dag and dbt transformations after completion
 
-    6.5. Wait for the DAGs to be finished and ...
+    6.5. Wait for the DAGs to be finished 
 
 ## Airflow
 

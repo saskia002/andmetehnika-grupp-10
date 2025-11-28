@@ -208,7 +208,7 @@ with DAG(
     run_dbt_staging = PythonOperator(
         task_id="run_dbt_staging",
         python_callable=run_dbt_command,
-        op_kwargs={"command": "run","selector": "staging"},
+        op_kwargs={"command": "run","selector": "staging", "full_refresh": True},
     )
 
     # Run dbt snapshots (needed before DimCompany and DimTicker)

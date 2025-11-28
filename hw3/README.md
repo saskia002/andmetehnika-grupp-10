@@ -45,6 +45,224 @@
 
     6.5. Wait for the DAGs to be finished and ...
 
+8. DBT flows to load silver and gold schemas and run some tests:
+
+    Dbt graph:
+![alt text](image-2.png)
+
+9. Clikchouse users and roles
+
+    9.1 Creation of roles, users and limited and full views is part of DAG run_clickhouse_views.py
+        In case you would like to run them manually then you can run scripts that using following commands:
+
+        to create users and roles:
+            ```bash
+            docker exec -i clickhouse clickhouse-client < clickhouse/Privacy_and_Security/01_Create_roles_users.sql 
+            ```
+
+        to run views manually if needed:
+            ```bash
+            docker exec -i clickhouse clickhouse-client < clickhouse/Privacy_and_Security/02_Create_full_views.sql 
+            ```
+            ```bash
+            docker exec -i clickhouse clickhouse-client < clickhouse/Privacy_and_Security/03_Create_limited_views.sql 
+            ```
+
+    9.2 As now schemas gold_full_views and gold_limited_views have been created then you can assign to roles access to relevant schemas:
+            ```bash
+            docker exec -i clickhouse clickhouse-client < clickhouse/Privacy_and_Security/04_Grant_access_to_roles.sql 
+            ```
+    
+    9.3 Script for creating clickhouse roles is:
+        -- Create two roles
+            CREATE ROLE IF NOT EXISTS analyst_full;
+            CREATE ROLE IF NOT EXISTS analyst_limited;
+
+        -- Create users (if needed)
+            CREATE USER IF NOT EXISTS user_full IDENTIFIED BY 'full123';
+            CREATE USER IF NOT EXISTS user_limited IDENTIFIED BY 'limited123';
+
+        -- Grant roles to users
+            GRANT analyst_full TO user_full;
+            GRANT analyst_limited TO user_limited;
+
+    9.4 After schemas have been created:
+        -- Grant SELECT on full views to role _full
+            GRANT SELECT ON gold_full_views.*  TO analyst_full;
+
+        -- Grant SELECT on masked views to role _limited
+            GRANT SELECT ON gold_limited_views.*  TO analyst_limited;
+
+    9.5 Masking:
+
+        As we have only public data then we don't need masking but for project we chose 3 columns.
+        We have masked in DimCompany Company Name by showing only first 3 characters in name and Industry by showing Other in case there as less than 10 rows with same Industry. And then we have masked ForbesRank by showing ranges 1-99, 100-199 etc. More details in sql script 03_Create_limited_views.sql 
+
+    9.6 To test if access has been granted properly for a specific user you can run for example:
+
+        ```bash
+        docker exec -it clickhouse clickhouse-client --user user_full --password full123
+        ```
+
+        ```bash
+        docker exec -it clickhouse clickhouse-client --user user_limited --password limited123
+        ```
+
+    9.7 Demonstrating how access was applied.
+        User_full can see this in v_DimCustomer view and in v_FactForbesRank:
+
+        SELECT *
+        FROM gold_full_views.v_DimCompany
+        LIMIT 20
+
+        Query id: 09ab68a1-bc06-4875-ab20-75972c2bceb6
+
+            ┌─CompanyKey─┬─CompanyName─────────────┬─Headquarters───┬─Industry──────────────┬─Sector─┬───────────ValidFrom─┬─ValidTo─┐
+         1. │    1498202 │ Thai Beverage           │ Thailand       │ Food, Drink & Tobacco │ sector │ 2025-11-26 22:00:12 │    ᴺᵁᴸᴸ │
+         2. │    2345189 │ Carlsberg               │ Denmark        │ Food, Drink & Tobacco │ sector │ 2025-11-26 22:00:12 │    ᴺᵁᴸᴸ │
+         3. │    5220951 │ China Reinsurance Group │ China          │ Insurance             │ sector │ 2025-11-26 22:00:12 │    ᴺᵁᴸᴸ │
+         4. │    7200852 │ First Solar             │ United States  │ Semiconductors        │ sector │ 2025-11-26 22:00:12 │    ᴺᵁᴸᴸ │
+         5. │    9354239 │ Absa Group              │ South Africa   │ Banking               │ sector │ 2025-11-26 22:00:12 │    ᴺᵁᴸᴸ │
+         6. │    9435555 │ Comcast                 │ United States  │ Media                 │ sector │ 2025-11-26 22:00:12 │    ᴺᵁᴸᴸ │
+         7. │   11038534 │ AutoZone                │ United States  │ Retailing             │ sector │ 2025-11-26 22:00:12 │    ᴺᵁᴸᴸ │
+         8. │   11223193 │ KION Group              │ Germany        │ Capital Goods         │ sector │ 2025-11-26 22:00:12 │    ᴺᵁᴸᴸ │
+         9. │   11561711 │ Grupo Bolivar           │ Colombia       │ Banking               │ sector │ 2025-11-26 22:00:12 │    ᴺᵁᴸᴸ │
+        10. │   14081743 │ Rongsheng Petrochemical │ China          │ Trading Companies     │ sector │ 2025-11-26 22:00:12 │    ᴺᵁᴸᴸ │
+        11. │   14269537 │ Leonardo                │ Italy          │ Aerospace & Defense   │ sector │ 2025-11-26 22:00:12 │    ᴺᵁᴸᴸ │
+        12. │   17570256 │ Braskem                 │ Brazil         │ Chemicals             │ sector │ 2025-11-26 22:00:12 │    ᴺᵁᴸᴸ │
+        13. │   18871775 │ China Resources Power   │ Hong Kong      │ Utilities             │ sector │ 2025-11-26 22:00:12 │    ᴺᵁᴸᴸ │
+        14. │   19898266 │ ON Semiconductor        │ United States  │ Semiconductors        │ sector │ 2025-11-26 22:00:12 │    ᴺᵁᴸᴸ │
+        15. │   21008206 │ Svenska Handelsbanken   │ Sweden         │ Banking               │ sector │ 2025-11-26 22:00:12 │    ᴺᵁᴸᴸ │
+        16. │   21609815 │ WPG Holdings            │ Taiwan         │ Trading Companies     │ sector │ 2025-11-26 22:00:12 │    ᴺᵁᴸᴸ │
+        17. │   25338307 │ Bendigo & Adelaide Bank │ Australia      │ Banking               │ sector │ 2025-11-26 22:00:12 │    ᴺᵁᴸᴸ │
+        18. │   26896184 │ Admiral Group           │ United Kingdom │ Insurance             │ sector │ 2025-11-26 22:00:12 │    ᴺᵁᴸᴸ │
+        19. │   29252092 │ Kobe Steel              │ Japan          │ Materials             │ sector │ 2025-11-26 22:00:12 │    ᴺᵁᴸᴸ │
+        20. │   30430672 │ Airports of Thailand    │ Thailand       │ Transportation        │ sector │ 2025-11-26 22:00:12 │    ᴺᵁᴸᴸ │
+            └────────────┴─────────────────────────┴────────────────┴───────────────────────┴────────┴─────────────────────┴─────────┘
+
+        User_limited
+        SELECT *
+        FROM gold_full_views.v_FactForbesRank
+        LIMIT 20
+
+        Query id: ca120b90-10bd-4b0e-9f40-7abef46549b4
+
+            ┌─ForbesRankKey─┬─CompanyKey─┬─Year─┬─ForbesRank─┐
+         1. │    2706011932 │    1498202 │ 2025 │       1430 │
+         2. │      32989423 │    2345189 │ 2025 │       1068 │
+         3. │    3437575244 │    5220951 │ 2025 │        823 │
+         4. │     939482241 │    7200852 │ 2025 │       1388 │
+         5. │    2434062735 │    9354239 │ 2025 │        860 │
+         6. │    3522948459 │    9435555 │ 2025 │         43 │
+         7. │    2180687872 │   11038534 │ 2025 │        581 │
+         8. │    3584919919 │   11223193 │ 2025 │       1741 │
+         9. │    1801428246 │   11561711 │ 2025 │       1556 │
+        10. │    2713575799 │   14081743 │ 2025 │        915 │
+        11. │    3008644712 │   14269537 │ 2025 │        603 │
+        12. │     929097974 │   17570256 │ 2025 │       1888 │
+        13. │    2584414747 │   18871775 │ 2025 │        718 │
+        14. │     797766346 │   19898266 │ 2025 │       1172 │
+        15. │    4229563782 │   21008206 │ 2025 │        362 │
+        16. │    2574066609 │   21609815 │ 2025 │       1679 │
+        17. │    3408912498 │   25338307 │ 2025 │       1798 │
+        18. │    1379357143 │   26896184 │ 2025 │       1528 │
+        19. │    3764122092 │   29252092 │ 2025 │       1325 │
+        20. │    1077920342 │   30430672 │ 2025 │       1843 │
+            └───────────────┴────────────┴──────┴────────────┘
+
+        USER_LIMITED:
+
+        Has no access to full views as illustrated with below snip
+
+        SELECT *
+        FROM gold_full_views.v_FactForbesRank
+        LIMIT 20
+
+        Query id: ed453d1c-9cef-4c04-8399-42f598d7f76c
+
+
+        Elapsed: 0.003 sec. 
+
+        Received exception from server (version 24.8.14):
+        Code: 497. DB::Exception: Received from localhost:9000. DB::Exception: user_limited: Not enough privileges. To execute this query, it's necessary to have the grant SELECT(ForbesRankKey, CompanyKey, Year, ForbesRank) ON gold_full_views.v_FactForbesRank. (ACCESS_DENIED)
+
+        SELECT *
+        FROM gold_limited_views.v_limited_FactForbesRank
+        LIMIT 20
+
+        Query id: f358038f-7b27-4cff-9927-aff46053a770
+
+            ┌─ForbesRankKey─┬─CompanyKey─┬─Year─┬─ForbesRank_range─┐
+         1. │    2706011932 │    1498202 │ 2025 │ 1400–1499        │
+         2. │      32989423 │    2345189 │ 2025 │ 1000–1099        │
+         3. │    3437575244 │    5220951 │ 2025 │ 800–899          │
+         4. │     939482241 │    7200852 │ 2025 │ 1300–1399        │
+         5. │    2434062735 │    9354239 │ 2025 │ 800–899          │
+         6. │    3522948459 │    9435555 │ 2025 │ 0–99             │
+         7. │    2180687872 │   11038534 │ 2025 │ 500–599          │
+         8. │    3584919919 │   11223193 │ 2025 │ 1700–1799        │
+         9. │    1801428246 │   11561711 │ 2025 │ 1500–1599        │
+        10. │    2713575799 │   14081743 │ 2025 │ 900–999          │
+        11. │    3008644712 │   14269537 │ 2025 │ 600–699          │
+        12. │     929097974 │   17570256 │ 2025 │ 1800–1899        │
+        13. │    2584414747 │   18871775 │ 2025 │ 700–799          │
+        14. │     797766346 │   19898266 │ 2025 │ 1100–1199        │
+        15. │    4229563782 │   21008206 │ 2025 │ 300–399          │
+        16. │    2574066609 │   21609815 │ 2025 │ 1600–1699        │
+        17. │    3408912498 │   25338307 │ 2025 │ 1700–1799        │
+        18. │    1379357143 │   26896184 │ 2025 │ 1500–1599        │
+        19. │    3764122092 │   29252092 │ 2025 │ 1300–1399        │
+        20. │    1077920342 │   30430672 │ 2025 │ 1800–1899        │
+            └───────────────┴────────────┴──────┴──────────────────┘
+
+        SELECT *
+        FROM gold_limited_views.v_limited_DimCompany
+        WHERE Industry_masked = 'Other'
+
+        Query id: acfad185-3d30-4f34-95e5-6bb023f1769b
+
+        ┌─CompanyKey─┬─CompanyName_masked─┬─Headquarters─────────┬─Industry_masked─┬─Sector─┬───────────ValidFrom─┬─ValidTo─┐
+        1. │  996027435 │ Foc***             │ China                │ Other           │ sector │ 2025-11-26 22:00:12 │    ᴺᵁᴸᴸ │
+        2. │ 1020744919 │ 0.0***             │ United States        │ Other           │ sector │ 2025-11-26 22:00:12 │    ᴺᵁᴸᴸ │
+        3. │ 1387160080 │ Cat***             │ United States        │ Other           │ sector │ 2025-11-26 22:00:12 │    ᴺᵁᴸᴸ │
+        4. │ 1920135996 │ Ama***             │ United States        │ Other           │ sector │ 2025-11-26 22:00:12 │    ᴺᵁᴸᴸ │
+        5. │ 2141452240 │ GS ***             │ South Korea          │ Other           │ sector │ 2025-11-26 22:00:12 │    ᴺᵁᴸᴸ │
+        6. │ 2542415425 │ Int***             │ United Arab Emirates │ Other           │ sector │ 2025-11-26 22:00:12 │    ᴺᵁᴸᴸ │
+        7. │ 2647474541 │ Jar***             │ Bermuda              │ Other           │ sector │ 2025-11-26 22:00:12 │    ᴺᵁᴸᴸ │
+        8. │ 4196625743 │ Air***             │ United States        │ Other           │ sector │ 2025-11-26 22:00:12 │    ᴺᵁᴸᴸ │
+        └────────────┴────────────────────┴──────────────────────┴─────────────────┴────────┴─────────────────────┴─────────┘
+
+        At the same time with full_user we cannot find Industry Other
+
+        SELECT *
+        FROM gold_full_views.v_DimCompany
+        WHERE Industry = 'Other'
+
+        Query id: cadcd311-71a6-4613-a021-18ba33199f7b
+
+        Ok.
+
+        0 rows in set. Elapsed: 0.010 sec. Processed 1.70 thousand rows, 41.92 KB (178.63 thousand rows/s., 4.39 MB/s.)
+        Peak memory usage: 1.48 KiB.
+
+        SELECT
+            Industry,
+            count(*)
+        FROM gold_full_views.v_DimCompany
+        GROUP BY Industry
+        HAVING count(CompanyKey) < 10
+
+        Query id: 36d8be63-be83-4fd6-b42f-cbf1adf96a57
+
+        ┌─Industry───────────────────────────────┬─count()─┐
+     1. │ Conglomerates                          │       5 │
+     2. │ Retail and Wholesale                   │       1 │
+     3. │ Engineering, Manufacturing             │       1 │
+     4. │ Construction, Chemicals, Raw Materials │       1 │
+        └────────────────────────────────────────┴─────────┘
+
+
+
 ## Airflow
 
 Daily at 22:00 UTC
