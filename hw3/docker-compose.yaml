@@ -15,6 +15,7 @@ services:
         command: server /data --console-address ":9001"
         volumes:
             - ./.minio_data:/data
+            - tmp_shared:/tmp
         #networks:
         #    iceberg_network:
         #        aliases:
@@ -38,10 +39,13 @@ services:
             CATALOG__REST__S3__SECRET-ACCESS-KEY: minioadmin
         depends_on:
             - minio
+        volumes:
+            - tmp_shared:/tmp
         #networks:
         #    iceberg_network:
 
     iceberg-init:
+        user: root
         image: python:3.12
         container_name: iceberg-init
         depends_on:
@@ -69,7 +73,8 @@ services:
               sleep 10 &&
               python init_s3_bucket.py &&
               python init_duck_db.py &&
-              python init_iceberg.py
+              python init_iceberg.py &&
+              chmod -R 777 /tmp
             "
 
     airflow-db:
@@ -95,22 +100,36 @@ services:
         restart: always
 
     airflow-webserver:
-        image: apache/airflow:2.8.1
+        #image: apache/airflow:2.8.1
+        build:
+            context: ./dags # Build context is the current directory
+            dockerfile: Dockerfile # Use the Dockerfile in this directory to build the image
         container_name: airflow-webserver
         command: webserver
+        user: root
         environment:
             AIRFLOW__CORE__EXECUTOR: LocalExecutor
             AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@airflow-db:5432/airflow
             AIRFLOW__CORE__LOAD_EXAMPLES: "false"
             AIRFLOW__API__AUTH_BACKENDS: "airflow.api.auth.backend.basic_auth"
-            _PIP_ADDITIONAL_REQUIREMENTS: "apache-airflow-providers-mongo pymongo yfinance==0.2.66 multitasking==0.0.11"
+            #_PIP_ADDITIONAL_REQUIREMENTS: "apache-airflow-providers-mongo pymongo yfinance==0.2.66 multitasking==0.0.11"
+
+            PYICEBERG_HOME: /iceberg
+            PYICEBERG_CATALOG__REST__URI: http://iceberg_rest:8181/
+            PYICEBERG_CATALOG__REST__WAREHOUSE: s3://bucket/
+            PYICEBERG_CATALOG__REST__IO__IMPL: org.apache.iceberg.aws.s3.S3FileIO
+            PYICEBERG_CATALOG__REST__S3__ENDPOINT: http://minio:9000
+            PYICEBERG_CATALOG__REST__S3__ACCESS-KEY-ID: minioadmin
+            PYICEBERG_CATALOG__REST__S3__SECRET-ACCESS-KEY: minioadmin
         ports:
             - "8080:8080"
         volumes:
+            - ./iceberg:/iceberg # contains init files
             - ./dags:/opt/airflow/dags
             - ./logs:/opt/airflow/logs
             - ./plugins:/opt/airflow/plugins
             - /var/run/docker.sock:/var/run/docker.sock
+            - tmp_shared:/tmp
         depends_on:
             - airflow-init
             - airflow-db
@@ -118,22 +137,35 @@ services:
         restart: always
 
     airflow-scheduler:
-        image: apache/airflow:2.8.1
+        build:
+            context: ./dags # Build context is the current directory
+            dockerfile: Dockerfile # Use the Dockerfile in this directory to build the image
         container_name: airflow-scheduler
         command: scheduler
+        user: root
 
         environment:
             AIRFLOW__CORE__EXECUTOR: LocalExecutor
             AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@airflow-db:5432/airflow
             AIRFLOW__CORE__LOAD_EXAMPLES: "false"
-            _PIP_ADDITIONAL_REQUIREMENTS: "apache-airflow-providers-mongo pymongo yfinance==0.2.66 multitasking==0.0.11 requests"
+            #_PIP_ADDITIONAL_REQUIREMENTS: "apache-airflow-providers-mongo pymongo yfinance==0.2.66 multitasking==0.0.11 requests"
             CLICKHOUSE_USER: etl
             CLICKHOUSE_PASSWORD: pass
+
+            PYICEBERG_HOME: /iceberg
+            PYICEBERG_CATALOG__REST__URI: http://iceberg_rest:8181/
+            PYICEBERG_CATALOG__REST__WAREHOUSE: s3://bucket/
+            PYICEBERG_CATALOG__REST__IO__IMPL: org.apache.iceberg.aws.s3.S3FileIO
+            PYICEBERG_CATALOG__REST__S3__ENDPOINT: http://minio:9000
+            PYICEBERG_CATALOG__REST__S3__ACCESS-KEY-ID: minioadmin
+            PYICEBERG_CATALOG__REST__S3__SECRET-ACCESS-KEY: minioadmin
+
         volumes:
             - ./dags:/opt/airflow/dags
             - ./logs:/opt/airflow/logs
             - ./plugins:/opt/airflow/plugins
             - /var/run/docker.sock:/var/run/docker.sock
+            - tmp_shared:/tmp
         depends_on:
             - airflow-init
             - airflow-db
@@ -160,7 +192,7 @@ services:
         environment:
             AIRFLOW__CORE__EXECUTOR: LocalExecutor
             AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@airflow-db:5432/airflow
-            _PIP_ADDITIONAL_REQUIREMENTS: "yfinance==0.2.66 multitasking==0.0.11"
+            #_PIP_ADDITIONAL_REQUIREMENTS: "yfinance==0.2.66 multitasking==0.0.11"
         volumes:
             - ./dags:/opt/airflow/dags
             - ./logs:/opt/airflow/logs
@@ -235,3 +267,4 @@ services:
 
 volumes:
     clickhouse_data:
+    tmp_shared:
