@@ -1,14 +1,10 @@
-from datetime import datetime
-from airflow import DAG
-from airflow.operators.python import PythonOperator
-from airflow.operators.trigger_dagrun import TriggerDagRunOperator
-from airflow.api.common.experimental.trigger_dag import trigger_dag
-from pymongo import MongoClient
+import duckdb
 import pandas as pd
 import requests
 import json
 import logging
 import os
+from pyiceberg.catalog import load_catalog
 
 CLICKHOUSE_HOST = os.getenv("CLICKHOUSE_HOST", "http://clickhouse")
 CLICKHOUSE_PORT = os.getenv("CLICKHOUSE_PORT", "8123")
@@ -22,17 +18,17 @@ def insert_companies_to_bronze(**context):
     companies_dict = ti.xcom_pull(task_ids="load_companies", key="companies_dict")
     print("abua")
     print(companies_dict)
-    
+
     if not companies_dict:
         logging.warning("No companies data to insert")
         return
-    
+
     # Check for existing records to prevent duplicates
     url = f"{CLICKHOUSE_HOST}:{CLICKHOUSE_PORT}/"
     auth = None
     if CLICKHOUSE_USER or CLICKHOUSE_PASSWORD:
         auth = (CLICKHOUSE_USER, CLICKHOUSE_PASSWORD)
-    
+
     # Get existing ranks (using FINAL to get deduplicated view)
     try:
         check_sql = "SELECT rank FROM bronze.companies_raw FINAL"
@@ -51,7 +47,7 @@ def insert_companies_to_bronze(**context):
     except Exception as e:
         logging.warning(f"Could not check existing records: {e}. Proceeding with insert...")
         existing_ranks = set()
-    
+
     lines = []
     skipped_count = 0
     for record in companies_dict:
@@ -60,7 +56,7 @@ def insert_companies_to_bronze(**context):
         if rank in existing_ranks:
             skipped_count += 1
             continue
-            
+
         obj = {
             "rank": rank,
             "company": record.get("company", ""),
@@ -75,14 +71,14 @@ def insert_companies_to_bronze(**context):
         }
         lines.append(json.dumps(obj))
         existing_ranks.add(rank)  # Track what we're inserting
-    
+
     if skipped_count > 0:
         logging.info(f"Skipped {skipped_count} duplicate company records")
-    
+
     if not lines:
         logging.warning("All records were duplicates, nothing to insert")
         return
-    
+
     # Insert into ClickHouse Bronze layer
     insert_sql = "INSERT INTO bronze.companies_raw FORMAT JSONEachRow"
     params = {
@@ -90,7 +86,7 @@ def insert_companies_to_bronze(**context):
         "database": "bronze",
         "input_format_skip_unknown_fields": 1,
     }
-    
+
     try:
         resp = requests.post(
             url,
@@ -112,16 +108,15 @@ def insert_companies_to_bronze(**context):
         raise
 
 
+def load_companies_from_iceberg(**context):
+    conn = duckdb.connect()
+    catalog = load_catalog(name="rest")
+    table = catalog.load_table("default.forbes_2000")
+    arrow_table_read = table.scan().to_arrow()
+    conn.register('forbes_2000', arrow_table_read)
+    df = conn.sql("SELECT * FROM forbes_2000").fetchdf()
 
-
-def load_companies_from_mongodb(**context):
-    client = MongoClient("mongodb://root:root@mongodb:27017")
-    db = client["forbes_2000"]
-    collection = db["companies"]
-
-    companies = list(collection.find({}, {"_id":0})) #removing ids since don't need them
-    df = pd.DataFrame(companies)
-    print(f"loaded {len(df)} companies from MongoDB")
+    print(f"loaded {len(df)} companies from Iceberg")
     df_dict = df.where(pd.notnull(df), None).to_dict(orient="records")
 
     execution_date_utc = context["execution_date"].isoformat()
