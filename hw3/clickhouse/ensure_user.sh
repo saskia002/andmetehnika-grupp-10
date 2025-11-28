@@ -19,11 +19,11 @@ ensure_user() {
     local username=$1
     local password=$2
     local grants=$3
-    
+
     echo "Checking if user '$username' exists..."
-    
+
     USER_EXISTS=$($CLICKHOUSE_CLIENT --query "SELECT count() FROM system.users WHERE name = '$username'" 2>/dev/null || echo "0")
-    
+
     if [ "$USER_EXISTS" = "0" ] || [ -z "$USER_EXISTS" ]; then
         echo "User '$username' does not exist. Creating..."
         $CLICKHOUSE_CLIENT --query "CREATE USER IF NOT EXISTS $username IDENTIFIED BY '$password'" || {
@@ -36,7 +36,7 @@ ensure_user() {
         echo "User '$username' already exists."
         $CLICKHOUSE_CLIENT --query "ALTER USER $username IDENTIFIED BY '$password'" 2>/dev/null || true
     fi
-    
+
     echo "Setting permissions for user '$username'..."
     $CLICKHOUSE_CLIENT --query "$grants" || echo "Warning: Some permissions may not have been set (user might already have them)"
 }
@@ -46,4 +46,3 @@ ensure_user "etl" "pass" "GRANT SELECT, INSERT, CREATE, CREATE DATABASE ON *.* T
 ensure_user "dbt_user" "dbt_pass" "GRANT SELECT, INSERT, CREATE, CREATE DATABASE, ALTER ON *.* TO dbt_user"
 
 echo "User verification complete!"
-
