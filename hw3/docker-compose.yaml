@@ -1,40 +1,82 @@
-services:
-    mongodb:
-        image: mongo:8
-        container_name: mongodb
-        restart: always
-        ports:
-            - "27017:27017"
-        environment:
-            MONGO_INITDB_ROOT_USERNAME: root
-            MONGO_INITDB_ROOT_PASSWORD: root
-        volumes:
-            - mongo_data:/data/db
+#networks:
+#    iceberg_network:
+#        driver: bridge
 
-    mongodb-init:
-        image: python:3.12
-        container_name: mongodb-init
-        depends_on:
-            - mongodb
+services:
+    minio:
+        image: minio/minio:RELEASE.2024-10-13T13-34-11Z
+        container_name: minio
+        ports:
+            - "9000:9000" # MinIO API
+            - "9901:9001" # MinIO Console
+        environment:
+            MINIO_ROOT_USER: minioadmin
+            MINIO_ROOT_PASSWORD: minioadmin
+        command: server /data --console-address ":9001"
         volumes:
-            - ./mongo:/mongo # contains init.py, seed.py
-            - ../requirements.txt:/requirements.txt:ro
-        working_dir: /mongo
+            - ./.minio_data:/data
+        #networks:
+        #    iceberg_network:
+        #        aliases:
+        #            - minio
+
+    iceberg_rest:
+        image: tabulario/iceberg-rest:1.6.0
+        container_name: iceberg_rest
+        ports:
+            - "8181:8181"
+        environment:
+            AWS_ACCESS_KEY_ID: minioadmin
+            AWS_SECRET_ACCESS_KEY: minioadmin
+            AWS_REGION: us-east-1
+            AWS_ENDPOINT: http://minio:9000
+            CATALOG__REST__URI: http://iceberg_rest:8181/
+            CATALOG__REST__WAREHOUSE: s3://bucket/
+            CATALOG__REST__IO__IMPL: org.apache.iceberg.aws.s3.S3FileIO
+            CATALOG__REST__S3__ENDPOINT: http://minio:9000
+            CATALOG__REST__S3__ACCESS-KEY-ID: minioadmin
+            CATALOG__REST__S3__SECRET-ACCESS-KEY: minioadmin
+        depends_on:
+            - minio
+        #networks:
+        #    iceberg_network:
+
+    iceberg-init:
+        image: python:3.12
+        container_name: iceberg-init
+        depends_on:
+            - minio
+            - iceberg_rest
+        #networks:
+        #    - iceberg_network
+        volumes:
+            - ./iceberg:/iceberg # contains init files
+            - ./requirements.txt:/requirements.txt:ro
+        environment:
+            PYICEBERG_HOME: /iceberg
+            PYICEBERG_CATALOG__REST__URI: http://iceberg_rest:8181/
+            PYICEBERG_CATALOG__REST__WAREHOUSE: s3://bucket/
+            PYICEBERG_CATALOG__REST__IO__IMPL: org.apache.iceberg.aws.s3.S3FileIO
+            PYICEBERG_CATALOG__REST__S3__ENDPOINT: http://minio:9000
+            PYICEBERG_CATALOG__REST__S3__ACCESS-KEY-ID: minioadmin
+            PYICEBERG_CATALOG__REST__S3__SECRET-ACCESS-KEY: minioadmin
+        working_dir: /iceberg
         command: >
             bash -c "
               echo 'Installing dependencies...' &&
               pip install -r /requirements.txt &&
-              echo 'Waiting for MongoDB...' &&
+              echo 'Waiting for iceberg...' &&
               sleep 10 &&
-              python init.py &&
-              python seed.py
+              python init_s3_bucket.py &&
+              python init_duck_db.py &&
+              python init_iceberg.py
             "
 
     airflow-db:
         container_name: airflow-db
         image: postgres:16.4
-        depends_on:
-            - mongodb-init
+        #depends_on:
+        #    - iceberg-init
         environment:
             POSTGRES_USER: airflow
             POSTGRES_PASSWORD: airflow
@@ -52,7 +94,6 @@ services:
             retries: 5
         restart: always
 
-    # --- Airflow Webserver ---
     airflow-webserver:
         image: apache/airflow:2.8.1
         container_name: airflow-webserver
@@ -69,14 +110,13 @@ services:
             - ./dags:/opt/airflow/dags
             - ./logs:/opt/airflow/logs
             - ./plugins:/opt/airflow/plugins
-            - /var/run/docker.sock:/var/run/docker.sock            
+            - /var/run/docker.sock:/var/run/docker.sock
         depends_on:
             - airflow-init
             - airflow-db
-            - mongodb-init
+            - iceberg-init
         restart: always
 
-    # --- Airflow Scheduler ---
     airflow-scheduler:
         image: apache/airflow:2.8.1
         container_name: airflow-scheduler
@@ -97,12 +137,13 @@ services:
         depends_on:
             - airflow-init
             - airflow-db
-            - mongodb-init
+            - iceberg-init
         restart: always
 
-    # --- Airflow DB initialization & user setup ---
     airflow-init:
-        image: apache/airflow:2.8.1
+        build:
+            context: ./dags # Build context is the current directory
+            dockerfile: Dockerfile # Use the Dockerfile in this directory to build the image
         container_name: airflow-init
         entrypoint: /bin/bash
         command:
@@ -119,15 +160,15 @@ services:
         environment:
             AIRFLOW__CORE__EXECUTOR: LocalExecutor
             AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@airflow-db:5432/airflow
-            _PIP_ADDITIONAL_REQUIREMENTS: "apache-airflow-providers-mongo pymongo yfinance==0.2.66 multitasking==0.0.11"
+            _PIP_ADDITIONAL_REQUIREMENTS: "yfinance==0.2.66 multitasking==0.0.11"
         volumes:
             - ./dags:/opt/airflow/dags
             - ./logs:/opt/airflow/logs
             - ./plugins:/opt/airflow/plugins
         depends_on:
             - airflow-db
-            - mongodb-init
-        restart: "no"
+            - iceberg-init
+        #restart: always
 
     clickhouse:
         image: clickhouse/clickhouse-server:24.8
@@ -135,7 +176,7 @@ services:
         restart: always
         ports:
             - "8123:8123" # HTTP
-            - "9000:9000" # TCP
+            - "9002:9000" # TCP
         environment:
             - CLICKHOUSE_DEFAULT_ACCESS_MANAGEMENT=1
         volumes:
@@ -148,7 +189,7 @@ services:
             retries: 5
             start_period: 30s
         depends_on:
-            - mongodb-init
+            - iceberg-init
 
     clickhouse-init-users:
         image: clickhouse/clickhouse-server:24.8
@@ -181,18 +222,16 @@ services:
     dbt:
         # dbt container for building and testing ClickHouse models
         build:
-            context: ./dbt              # Build context is the current directory
-            dockerfile: Dockerfile   # Use the Dockerfile in this directory to build dbt image
+            context: ./dbt # Build context is the current directory
+            dockerfile: Dockerfile # Use the Dockerfile in this directory to build dbt image
         container_name: dbt
         depends_on:
-            - clickhouse      # Ensure ClickHouse starts before dbt
-            - clickhouse-init-users # Ensure users are created before dbt 
+            - clickhouse # Ensure ClickHouse starts before dbt
+            - clickhouse-init-users # Ensure users are created before dbt
         volumes:
-            - ./dbt:/dbt                                  # Mount local dbt project directory
-        working_dir: /dbt          # Set dbt project directory as the working directory
-        tty: true                  # Keep container running for interactive dbt commands
-
+            - ./dbt:/dbt # Mount local dbt project directory
+        working_dir: /dbt # Set dbt project directory as the working directory
+        tty: true # Keep container running for interactive dbt commands
 
 volumes:
-    mongo_data:
     clickhouse_data:

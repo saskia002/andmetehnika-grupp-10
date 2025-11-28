@@ -1,14 +1,12 @@
 from typing import List, Dict, Any, Optional, Tuple
-from pymongo import MongoClient
 import requests
 import json
 import os
 import argparse
+from pyiceberg.catalog import load_catalog
+import duckdb
+import pandas as pd
 
-
-MONGO_URI = "mongodb://root:root@localhost:27017"
-MONGO_DB = "forbes_2000"
-MONGO_COLLECTION = "companies"
 
 CLICKHOUSE_HOST = "http://localhost"
 CLICKHOUSE_PORT = 8123  # HTTP port
@@ -25,23 +23,14 @@ def _auth_tuple() -> Optional[Tuple[str, str]]:
 	return None
 
 
-def fetch_companies_from_mongo() -> List[Dict[str, Any]]:
-	client = MongoClient(MONGO_URI)
-	db = client[MONGO_DB]
-	collection = db[MONGO_COLLECTION]
-	cursor = collection.find({}, {
-		"_id": 0,
-		"rank": 1,
-		"company": 1,
-		"ticker": 1,
-		"headquarters": 1,
-		"industry": 1,
-		"sales_in_millions": 1,
-		"profit_in_millions": 1,
-		"assets_in_millions": 1,
-		"market_value_in_millions": 1,
-	})
-	return list(cursor)
+def fetch_companies_from_iceberg() -> List[Dict[str, Any]]:
+	conn = duckdb.connect()
+	catalog = load_catalog(name="rest")
+	table = catalog.load_table("default.forbes_2000")
+	arrow_table_read = table.scan().to_arrow()
+	conn.register('forbes_2000', arrow_table_read)
+	df = conn.sql("SELECT * FROM forbes_2000").fetchdf()
+	return df.where(pd.notnull(df), None).to_dict(orient="records")
 
 
 def ch_query(sql: str) -> None:
@@ -129,17 +118,17 @@ def main() -> None:
 		help="Force immediate deduplication using OPTIMIZE TABLE (for ReplacingMergeTree)"
 	)
 	args = parser.parse_args()
-	
-	rows = fetch_companies_from_mongo()
-	print(f"Fetched {len(rows)} documents from MongoDB")
-	
+
+	rows = fetch_companies_from_iceberg()
+	print(f"Fetched {len(rows)} documents from Iceberg")
+
 	# Handle truncate option
 	if args.truncate:
 		truncate_table()
-	
+
 	# Insert data
 	upsert_into_clickhouse(rows)
-	
+
 	# Force immediate deduplication if requested
 	if args.force_deduplicate:
 		print("Forcing deduplication...")
@@ -153,5 +142,3 @@ def main() -> None:
 
 if __name__ == "__main__":
 	main()
-
-
