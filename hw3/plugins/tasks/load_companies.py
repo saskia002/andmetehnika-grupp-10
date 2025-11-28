@@ -109,11 +109,48 @@ def insert_companies_to_bronze(**context):
 
 
 def load_companies_from_iceberg(**context):
-    conn = duckdb.connect()
-    catalog = load_catalog(name="rest")
-    table = catalog.load_table("default.forbes_2000")
-    arrow_table_read = table.scan().to_arrow()
-    conn.register('forbes_2000', arrow_table_read)
+    #conn = duckdb.connect("data.duckdb")
+    #conn.install_extension("httpfs")
+    #conn.load_extension("httpfs")
+
+    #conn.sql("""
+    #    SET s3_region='us-east-1';
+    #    SET s3_url_style='path';
+    #    SET s3_endpoint='minio:9000';
+    #    SET s3_access_key_id='minioadmin';
+    #    SET s3_secret_access_key='minioadmin';
+    #    SET s3_use_ssl=false;
+    #""")
+
+    #catalog = load_catalog("rest")
+    #table = catalog.load_table("default.forbes_2000")
+    #arrow_table_read = table.scan().to_arrow()
+    #conn.register('forbes_2000', arrow_table_read)
+    #df = conn.sql("SELECT * FROM forbes_2000").fetchdf()
+
+
+    conn = duckdb.connect("data.duckdb")
+    conn.install_extension("httpfs")
+    conn.load_extension("httpfs")
+
+
+    conn.sql("""
+    SET s3_region='us-east-1';
+    SET s3_url_style='path';
+    SET s3_endpoint='minio:9000';
+    SET s3_access_key_id='minioadmin';
+    SET s3_secret_access_key='minioadmin';
+    SET s3_use_ssl=false;
+    """)
+
+    tables = [
+        "forbes_2000",
+    ]
+
+    for table in tables:
+        s3_path = 's3://bucket/forbes_2000_companies_2025.csv'
+        conn.sql(f"CREATE OR REPLACE TABLE {table} AS SELECT * FROM read_csv('{s3_path}')")
+
     df = conn.sql("SELECT * FROM forbes_2000").fetchdf()
 
     print(f"loaded {len(df)} companies from Iceberg")
