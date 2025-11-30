@@ -231,3 +231,5 @@ secrets/
 data.duckdb
 
 __pycache__/
+
+db-data/

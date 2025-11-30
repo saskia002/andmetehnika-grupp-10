@@ -33,17 +33,17 @@ def insert_stocks_to_bronze(data: list, date_data: dict, execution_date_utc: str
             trading_day_str = date_data["trading_day"]
         elif isinstance(date_data["trading_day"], pd.Timestamp):
             trading_day_str = date_data["trading_day"].strftime("%Y-%m-%d")
-        elif hasattr(date_data["trading_day"], 'isoformat'): 
+        elif hasattr(date_data["trading_day"], 'isoformat'):
             trading_day_str = date_data["trading_day"].isoformat()
         else:
             trading_day_str = str(date_data["trading_day"])
-    
+
     # Check for existing records to prevent duplicates
     url = f"{CLICKHOUSE_HOST}:{CLICKHOUSE_PORT}/"
     auth = None
     if CLICKHOUSE_USER or CLICKHOUSE_PASSWORD:
         auth = (CLICKHOUSE_USER, CLICKHOUSE_PASSWORD)
-    
+
     # Get existing ticker_symbol + execution_date_utc combinations (using FINAL to get deduplicated view)
     try:
         check_sql = "SELECT ticker_symbol, execution_date_utc FROM bronze.stocks_raw FINAL"
@@ -64,22 +64,22 @@ def insert_stocks_to_bronze(data: list, date_data: dict, execution_date_utc: str
     except Exception as e:
         logging.warning(f"Could not check existing records: {e}. Proceeding with insert...")
         existing_records = set()
-    
+
     lines = []
     skipped_count = 0
     for record in data:
         market_cap_value = record.get("market_cap")
         if market_cap_value is None or pd.isna(market_cap_value):
-            market_cap_value = None  
+            market_cap_value = None
         else:
             market_cap_value = int(market_cap_value)
-        
+
         ticker_symbol = str(record.get("ticker_symbol", ""))
         # Skip if this ticker_symbol + execution_date_utc already exists
         if (ticker_symbol, execution_date_formatted) in existing_records:
             skipped_count += 1
             continue
-        
+
         obj = {
             "ticker_symbol": ticker_symbol,
             "sector": record.get("sector") if record.get("sector") is not None else None,
@@ -100,14 +100,14 @@ def insert_stocks_to_bronze(data: list, date_data: dict, execution_date_utc: str
         }
         lines.append(json.dumps(obj, ensure_ascii=False, default=str))
         existing_records.add((ticker_symbol, execution_date_formatted))  # Track what we're inserting
-    
+
     if skipped_count > 0:
         logging.info(f"Skipped {skipped_count} duplicate stock records")
-    
+
     if not lines:
         logging.warning("All records were duplicates, nothing to insert")
         return
-    
+
     # Insert into ClickHouse Bronze layer
     insert_sql = "INSERT INTO bronze.stocks_raw FORMAT JSONEachRow"
     params = {
@@ -115,7 +115,7 @@ def insert_stocks_to_bronze(data: list, date_data: dict, execution_date_utc: str
         "database": "bronze",
         "input_format_skip_unknown_fields": 1,
     }
-    
+
     try:
         resp = requests.post(
             url,
@@ -147,24 +147,24 @@ def check_if_data_exists(execution_date_utc: str) -> bool:
 
     dt = pd.Timestamp(execution_date_utc)
     date = dt.date().isoformat()
-    
+
     query = f"""
-    SELECT COUNT(*) 
+    SELECT COUNT(*)
     FROM bronze.stocks_raw
     WHERE trading_day = '{date}'
     """
-    
+
     url = f"{CLICKHOUSE_HOST}:{CLICKHOUSE_PORT}/"
     params = {
         "query": query,
         "database": "bronze",
         "input_format_skip_unknown_fields": 1,
     }
-    
+
     auth = None
     if CLICKHOUSE_USER or CLICKHOUSE_PASSWORD:
         auth = (CLICKHOUSE_USER, CLICKHOUSE_PASSWORD)
-    
+
     try:
         response = requests.get(url, params=params, auth=auth)
         response.raise_for_status()
@@ -198,13 +198,13 @@ def fetch_stock_info(**context):
     #list of dictonaries, each company separately
     companies_dict = ast.literal_eval(conf.get("companies_dict"))
 
-    df = pd.DataFrame(companies_dict) 
+    df = pd.DataFrame(companies_dict)
 
     if check_if_data_exists(execution_date_utc):
         logging.info(f"Skipping Yahoo Finance pull for {execution_date_utc} as data already exists.")
         return
 
-    #df = df.iloc[:20]  <--------------------- Uncomment this ----------------------->
+    df = df.iloc[:100] # <--------------------- Uncomment this ----------------------->
 
     #making sure that there are no duplicate tickers in data
     df = df.drop_duplicates(subset=["ticker"], keep="first")
@@ -222,7 +222,7 @@ def fetch_stock_info(**context):
             if info:
 
                 data.append({
-                    'ticker_symbol': ticker, 
+                    'ticker_symbol': ticker,
                     'sector': info.get('sector'),
                     'open_price': info.get('open'),
                     'close_price': info.get('previousClose'),
@@ -259,4 +259,3 @@ def get_date_data(execution_date_utc):
     else:
         date_data["season"] = "Autumn"
     return date_data
-        

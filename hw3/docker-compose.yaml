@@ -1,8 +1,98 @@
-#networks:
-#    iceberg_network:
-#        driver: bridge
+x-superset-image: &superset-image apachesuperset.docker.scarf.sh/apache/superset:${TAG:-latest-dev}
+x-superset-volumes: &superset-volumes # /app/pythonpath_docker will be appended to the PYTHONPATH in the final container
+    - ./docker:/app/docker # optionally comment me out if having bash/r error - will need to manually install clickhouse_connect on Superset container
+    - ./superset-core:/app/superset-core # optionally comment me out if having bash/r error - will need to manually install clickhouse_connect on Superset container
+    - superset_home:/app/superset_home
 
 services:
+    redis:
+        image: redis:7
+        container_name: superset_cache
+        volumes:
+            - redis:/data
+
+    db:
+        env_file:
+            - path: docker/.env # default
+              required: true
+            - path: docker/.env-local # optional override
+              required: false
+        image: postgres:16
+        container_name: superset_db
+        volumes:
+            - db_home:/var/lib/postgresql/data
+            - ./docker/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+
+    superset:
+        env_file:
+            - path: docker/.env # default
+              required: true
+            - path: docker/.env-local # optional override
+              required: false
+        image: *superset-image
+        container_name: superset_app
+        command: ["/app/docker/docker-bootstrap.sh", "app-gunicorn"]
+        user: "root"
+        ports:
+            - 8088:8088
+        depends_on:
+            superset-init:
+                condition: service_completed_successfully
+        volumes: *superset-volumes
+
+    superset-init:
+        image: *superset-image
+        container_name: superset_init
+        command: ["/app/docker/docker-init.sh"]
+        env_file:
+            - path: docker/.env # default
+              required: true
+            - path: docker/.env-local # optional override
+              required: false
+        depends_on:
+            db:
+                condition: service_started
+            redis:
+                condition: service_started
+        user: "root"
+        volumes: *superset-volumes
+        healthcheck:
+            disable: true
+
+    superset-worker:
+        image: *superset-image
+        container_name: superset_worker
+        command: ["/app/docker/docker-bootstrap.sh", "worker"]
+        env_file:
+            - path: docker/.env # default
+              required: true
+            - path: docker/.env-local # optional override
+              required: false
+        depends_on:
+            superset-init:
+                condition: service_completed_successfully
+        user: "root"
+        volumes: *superset-volumes
+        healthcheck:
+            test: ["CMD-SHELL", "celery -A superset.tasks.celery_app:app inspect ping -d celery@$$HOSTNAME"]
+
+    superset-worker-beat:
+        image: *superset-image
+        container_name: superset_worker_beat
+        command: ["/app/docker/docker-bootstrap.sh", "beat"]
+        env_file:
+            - path: docker/.env # default
+              required: true
+            - path: docker/.env-local # optional override
+              required: false
+        depends_on:
+            superset-init:
+                condition: service_completed_successfully
+        user: "root"
+        volumes: *superset-volumes
+        healthcheck:
+            disable: true
+
     minio:
         image: minio/minio:RELEASE.2024-10-13T13-34-11Z
         container_name: minio
@@ -15,7 +105,6 @@ services:
         command: server /data --console-address ":9001"
         volumes:
             - ./.minio_data:/data
-            - tmp_shared:/tmp
         #networks:
         #    iceberg_network:
         #        aliases:
@@ -39,8 +128,8 @@ services:
             CATALOG__REST__S3__SECRET-ACCESS-KEY: minioadmin
         depends_on:
             - minio
-        volumes:
-            - tmp_shared:/tmp
+        #volumes:
+        #    - tmp_shared:/tmp
         #networks:
         #    iceberg_network:
 
@@ -130,8 +219,7 @@ services:
             - ./logs:/opt/airflow/logs
             - ./plugins:/opt/airflow/plugins
             - /var/run/docker.sock:/var/run/docker.sock
-            - tmp_shared:/tmp
-            - ./clickhouse:/opt/airflow/clickhouse           
+            - ./clickhouse:/opt/airflow/clickhouse
         depends_on:
             - airflow-init
             - airflow-db
@@ -168,7 +256,6 @@ services:
             - ./logs:/opt/airflow/logs
             - ./plugins:/opt/airflow/plugins
             - /var/run/docker.sock:/var/run/docker.sock
-            - tmp_shared:/tmp
             - ./clickhouse:/opt/airflow/clickhouse
         depends_on:
             - airflow-init
@@ -205,7 +292,7 @@ services:
             - airflow-db
             - iceberg-init
         #restart: always
-    
+
     mysql:
         container_name: openmetadata_mysql
         image: docker.getcollate.io/openmetadata/db:1.10.7
@@ -213,8 +300,8 @@ services:
         restart: always
         environment:
             MYSQL_ROOT_PASSWORD: password
-            MYSQL_DATABASE: openmetadata_db    
-            MYSQL_USER: openmetadata_user          
+            MYSQL_DATABASE: openmetadata_db
+            MYSQL_USER: openmetadata_user
             MYSQL_PASSWORD: openmetadata_password
         expose:
             - 3306
@@ -255,8 +342,8 @@ services:
             SERVER_PORT: ${SERVER_PORT:-8585}
             SERVER_ADMIN_PORT: ${SERVER_ADMIN_PORT:-8586}
             LOG_LEVEL: ${LOG_LEVEL:-INFO}
-        
-            # Migration 
+
+            # Migration
             MIGRATION_LIMIT_PARAM: ${MIGRATION_LIMIT_PARAM:-1200}
 
             # OpenMetadata Server Authentication Configuration
@@ -306,7 +393,7 @@ services:
             JWT_ISSUER: ${JWT_ISSUER:-"open-metadata.org"}
             JWT_KEY_ID: ${JWT_KEY_ID:-"Gb389a-9f76-gdjs-a92j-0242bk94356"}
             # OpenMetadata Server Pipeline Service Client Configuration
-            PIPELINE_SERVICE_CLIENT_ENDPOINT: ${PIPELINE_SERVICE_CLIENT_ENDPOINT:-http://ingestion:8080}
+            PIPELINE_SERVICE_CLIENT_ENDPOINT: ${PIPELINE_SERVICE_CLIENT_ENDPOINT:-http://ingestion:8082}
             PIPELINE_SERVICE_CLIENT_HEALTH_CHECK_INTERVAL: ${PIPELINE_SERVICE_CLIENT_HEALTH_CHECK_INTERVAL:-300}
             SERVER_HOST_API_URL: ${SERVER_HOST_API_URL:-http://openmetadata-server:8585/api}
             PIPELINE_SERVICE_CLIENT_VERIFY_SSL: ${PIPELINE_SERVICE_CLIENT_VERIFY_SSL:-"no-ssl"}
@@ -333,7 +420,7 @@ services:
             ELASTICSEARCH_SOCKET_TIMEOUT_SECS: ${ELASTICSEARCH_SOCKET_TIMEOUT_SECS:-60}
             ELASTICSEARCH_KEEP_ALIVE_TIMEOUT_SECS: ${ELASTICSEARCH_KEEP_ALIVE_TIMEOUT_SECS:-600}
             ELASTICSEARCH_BATCH_SIZE: ${ELASTICSEARCH_BATCH_SIZE:-100}
-            ELASTICSEARCH_PAYLOAD_BYTES_SIZE: ${ELASTICSEARCH_PAYLOAD_BYTES_SIZE:-10485760}   #max payLoadSize in Bytes
+            ELASTICSEARCH_PAYLOAD_BYTES_SIZE: ${ELASTICSEARCH_PAYLOAD_BYTES_SIZE:-10485760} #max payLoadSize in Bytes
             ELASTICSEARCH_INDEX_MAPPING_LANG: ${ELASTICSEARCH_INDEX_MAPPING_LANG:-EN}
 
             #eventMonitoringConfiguration
@@ -371,7 +458,7 @@ services:
             #email configuration:
             OM_EMAIL_ENTITY: ${OM_EMAIL_ENTITY:-"OpenMetadata"}
             OM_SUPPORT_URL: ${OM_SUPPORT_URL:-"https://slack.open-metadata.org"}
-            AUTHORIZER_ENABLE_SMTP : ${AUTHORIZER_ENABLE_SMTP:-false}
+            AUTHORIZER_ENABLE_SMTP: ${AUTHORIZER_ENABLE_SMTP:-false}
             OPENMETADATA_SERVER_URL: ${OPENMETADATA_SERVER_URL:-""}
             OPENMETADATA_SMTP_SENDER_MAIL: ${OPENMETADATA_SMTP_SENDER_MAIL:-""}
             SMTP_SERVER_ENDPOINT: ${SMTP_SERVER_ENDPOINT:-""}
@@ -398,11 +485,11 @@ services:
             WEB_CONF_FRAME_ORIGIN: ${WEB_CONF_FRAME_ORIGIN:-""}
             #Content Type
             WEB_CONF_CONTENT_TYPE_OPTIONS_ENABLED: ${WEB_CONF_CONTENT_TYPE_OPTIONS_ENABLED:-false}
-            #XSS-Protection  
+            #XSS-Protection
             WEB_CONF_XSS_PROTECTION_ENABLED: ${WEB_CONF_XSS_PROTECTION_ENABLED:-false}
             WEB_CONF_XSS_PROTECTION_ON: ${WEB_CONF_XSS_PROTECTION_ON:-true}
             WEB_CONF_XSS_PROTECTION_BLOCK: ${WEB_CONF_XSS_PROTECTION_BLOCK:-true}
-            #CSP    
+            #CSP
             WEB_CONF_XSS_CSP_ENABLED: ${WEB_CONF_XSS_CSP_ENABLED:-false}
             WEB_CONF_XSS_CSP_POLICY: ${WEB_CONF_XSS_CSP_POLICY:-"default-src 'self'"}
             WEB_CONF_XSS_CSP_REPORT_ONLY_POLICY: ${WEB_CONF_XSS_CSP_REPORT_ONLY_POLICY:-""}
@@ -478,7 +565,7 @@ services:
             JWT_ISSUER: ${JWT_ISSUER:-"open-metadata.org"}
             JWT_KEY_ID: ${JWT_KEY_ID:-"Gb389a-9f76-gdjs-a92j-0242bk94356"}
             # OpenMetadata Server Pipeline Service Client Configuration
-            PIPELINE_SERVICE_CLIENT_ENDPOINT: ${PIPELINE_SERVICE_CLIENT_ENDPOINT:-http://ingestion:8080}
+            PIPELINE_SERVICE_CLIENT_ENDPOINT: ${PIPELINE_SERVICE_CLIENT_ENDPOINT:-http://ingestion:8082}
             PIPELINE_SERVICE_CLIENT_HEALTH_CHECK_INTERVAL: ${PIPELINE_SERVICE_CLIENT_HEALTH_CHECK_INTERVAL:-300}
             SERVER_HOST_API_URL: ${SERVER_HOST_API_URL:-http://openmetadata-server:8585/api}
             PIPELINE_SERVICE_CLIENT_VERIFY_SSL: ${PIPELINE_SERVICE_CLIENT_VERIFY_SSL:-"no-ssl"}
@@ -505,7 +592,7 @@ services:
             ELASTICSEARCH_SOCKET_TIMEOUT_SECS: ${ELASTICSEARCH_SOCKET_TIMEOUT_SECS:-60}
             ELASTICSEARCH_KEEP_ALIVE_TIMEOUT_SECS: ${ELASTICSEARCH_KEEP_ALIVE_TIMEOUT_SECS:-600}
             ELASTICSEARCH_BATCH_SIZE: ${ELASTICSEARCH_BATCH_SIZE:-100}
-            ELASTICSEARCH_PAYLOAD_BYTES_SIZE: ${ELASTICSEARCH_PAYLOAD_BYTES_SIZE:-10485760}   #max payLoadSize in Bytes
+            ELASTICSEARCH_PAYLOAD_BYTES_SIZE: ${ELASTICSEARCH_PAYLOAD_BYTES_SIZE:-10485760} #max payLoadSize in Bytes
             ELASTICSEARCH_INDEX_MAPPING_LANG: ${ELASTICSEARCH_INDEX_MAPPING_LANG:-EN}
 
             #eventMonitoringConfiguration
@@ -534,11 +621,11 @@ services:
             OM_SM_REGION: ${OM_SM_REGION:-""}
             OM_SM_ACCESS_KEY_ID: ${OM_SM_ACCESS_KEY_ID:-""}
             OM_SM_ACCESS_KEY: ${OM_SM_ACCESS_KEY:-""}
-            
+
             #email configuration:
             OM_EMAIL_ENTITY: ${OM_EMAIL_ENTITY:-"OpenMetadata"}
             OM_SUPPORT_URL: ${OM_SUPPORT_URL:-"https://slack.open-metadata.org"}
-            AUTHORIZER_ENABLE_SMTP : ${AUTHORIZER_ENABLE_SMTP:-false}
+            AUTHORIZER_ENABLE_SMTP: ${AUTHORIZER_ENABLE_SMTP:-false}
             OPENMETADATA_SERVER_URL: ${OPENMETADATA_SERVER_URL:-""}
             OPENMETADATA_SMTP_SENDER_MAIL: ${OPENMETADATA_SMTP_SENDER_MAIL:-""}
             SMTP_SERVER_ENDPOINT: ${SMTP_SERVER_ENDPOINT:-""}
@@ -551,7 +638,7 @@ services:
             OPENMETADATA_HEAP_OPTS: ${OPENMETADATA_HEAP_OPTS:--Xmx1G -Xms1G}
             # Mask passwords values in UI
             MASK_PASSWORDS_API: ${MASK_PASSWORDS_API:-false}
-            
+
             #OpenMetadata Web Configuration
             WEB_CONF_URI_PATH: ${WEB_CONF_URI_PATH:-"/api"}
             #HSTS
@@ -565,18 +652,18 @@ services:
             WEB_CONF_FRAME_ORIGIN: ${WEB_CONF_FRAME_ORIGIN:-""}
             #Content Type
             WEB_CONF_CONTENT_TYPE_OPTIONS_ENABLED: ${WEB_CONF_CONTENT_TYPE_OPTIONS_ENABLED:-false}
-            #XSS-Protection  
+            #XSS-Protection
             WEB_CONF_XSS_PROTECTION_ENABLED: ${WEB_CONF_XSS_PROTECTION_ENABLED:-false}
             WEB_CONF_XSS_PROTECTION_ON: ${WEB_CONF_XSS_PROTECTION_ON:-true}
             WEB_CONF_XSS_PROTECTION_BLOCK: ${WEB_CONF_XSS_PROTECTION_BLOCK:-true}
-            #CSP    
+            #CSP
             WEB_CONF_XSS_CSP_ENABLED: ${WEB_CONF_XSS_CSP_ENABLED:-false}
             WEB_CONF_XSS_CSP_POLICY: ${WEB_CONF_XSS_CSP_POLICY:-"default-src 'self'"}
             WEB_CONF_XSS_CSP_REPORT_ONLY_POLICY: ${WEB_CONF_XSS_CSP_REPORT_ONLY_POLICY:-""}
             #Cache
             WEB_CONF_CACHE_CONTROL: ${WEB_CONF_CACHE_CONTROL:-""}
             WEB_CONF_PRAGMA: ${WEB_CONF_PRAGMA:-""}
-    
+
         expose:
             - 8585
             - 8586
@@ -591,7 +678,7 @@ services:
             execute-migrate-all:
                 condition: service_completed_successfully
         healthcheck:
-            test: [ "CMD", "wget", "-q", "--spider",  "http://localhost:8586/healthcheck" ]
+            test: ["CMD", "wget", "-q", "--spider", "http://localhost:8586/healthcheck"]
 
     ingestion:
         container_name: openmetadata_ingestion
@@ -614,7 +701,7 @@ services:
             DB_USER: ${AIRFLOW_DB_USER:-airflow_user}
             DB_PASSWORD: ${AIRFLOW_DB_PASSWORD:-airflow_pass}
             # extra connection-string properties for the database
-            # EXAMPLE 
+            # EXAMPLE
             # require SSL (only for Postgres)
             # properties: "?sslmode=require"
             DB_PROPERTIES: ${AIRFLOW_DB_PROPERTIES:-}
@@ -627,12 +714,11 @@ services:
         command:
             - "/opt/airflow/ingestion_dependency.sh"
         expose:
-            - 8080
+            - 8082
         volumes:
             - ingestion-volume-dag-airflow:/opt/airflow/dag_generated_configs
             - ingestion-volume-dags:/opt/airflow/dags
             - ingestion-volume-tmp:/tmp
-
 
     clickhouse:
         image: clickhouse/clickhouse-server:24.8
@@ -705,4 +791,9 @@ volumes:
     ingestion-volume-tmp:
     es-data:
     clickhouse_data:
-    tmp_shared:
+    superset_home:
+        external: false
+    db_home:
+        external: false
+    redis:
+        external: false
