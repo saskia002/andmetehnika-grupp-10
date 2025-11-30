@@ -50,6 +50,12 @@ GRANT SELECT, INSERT, CREATE, CREATE DATABASE ON *.* TO etl;
 CREATE USER IF NOT EXISTS dbt_user IDENTIFIED BY 'dbt_pass';
 GRANT SELECT, INSERT, CREATE, CREATE DATABASE, ALTER ON *.* TO dbt_user;
 
+-- Create user for openmetadata
+CREATE USER IF NOT EXISTS openmetadata_user IDENTIFIED BY 'omd_pass';
+GRANT SELECT, SHOW ON system.* to openmetadata_user;
+GRANT SHOW DATABASES, SHOW TABLES, SELECT ON gold_full_views.* TO openmetadata_user;
+GRANT SHOW DATABASES, SHOW TABLES, SELECT ON gold_limited_views.* TO openmetadata_user;
+
 -- Create views for dbt to query (deduplicated, avoiding dbt-clickhouse auto-transformation issues)
 CREATE VIEW IF NOT EXISTS bronze.companies_raw_view AS
 SELECT 
