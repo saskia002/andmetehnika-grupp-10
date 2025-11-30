@@ -1,5 +1,6 @@
-networks:
-    data_net:
+#networks:
+#    iceberg_network:
+#        driver: bridge
 
 services:
     minio:
@@ -15,7 +16,10 @@ services:
         volumes:
             - ./.minio_data:/data
             - tmp_shared:/tmp
-        networks: [data_net]
+        #networks:
+        #    iceberg_network:
+        #        aliases:
+        #            - minio
 
     iceberg_rest:
         image: tabulario/iceberg-rest:1.6.0
@@ -37,7 +41,8 @@ services:
             - minio
         volumes:
             - tmp_shared:/tmp
-        networks: [data_net]
+        #networks:
+        #    iceberg_network:
 
     iceberg-init:
         user: root
@@ -46,7 +51,8 @@ services:
         depends_on:
             - minio
             - iceberg_rest
-        networks: [data_net]
+        #networks:
+        #    - iceberg_network
         volumes:
             - ./iceberg:/iceberg # contains init files
             - ./requirements.txt:/requirements.txt:ro
@@ -92,7 +98,6 @@ services:
             interval: 10s
             retries: 5
         restart: always
-        networks: [data_net]
 
     airflow-webserver:
         #image: apache/airflow:2.8.1
@@ -132,7 +137,6 @@ services:
             - airflow-db
             - iceberg-init
         restart: always
-        networks: [data_net]
 
     airflow-scheduler:
         build:
@@ -171,7 +175,6 @@ services:
             - airflow-db
             - iceberg-init
         restart: always
-        networks: [data_net]
 
     airflow-init:
         build:
@@ -202,7 +205,6 @@ services:
             - airflow-db
             - iceberg-init
         #restart: always
-        networks: [data_net]
     
     mysql:
         container_name: openmetadata_mysql
@@ -225,7 +227,6 @@ services:
             interval: 15s
             timeout: 10s
             retries: 10
-        networks: [data_net]
 
     elasticsearch:
         container_name: openmetadata_elasticsearch
@@ -244,7 +245,6 @@ services:
             retries: 10
         volumes:
             - es-data:/usr/share/elasticsearch/data
-        networks: [data_net]
 
     execute-migrate-all:
         container_name: execute_migrate_all
@@ -420,7 +420,6 @@ services:
                 condition: service_healthy
             mysql:
                 condition: service_healthy
-        networks: [data_net]
 
     openmetadata-server:
         container_name: openmetadata_server
@@ -593,7 +592,6 @@ services:
                 condition: service_completed_successfully
         healthcheck:
             test: [ "CMD", "wget", "-q", "--spider",  "http://localhost:8586/healthcheck" ]
-        networks: [data_net]
 
     ingestion:
         container_name: openmetadata_ingestion
@@ -634,7 +632,7 @@ services:
             - ingestion-volume-dag-airflow:/opt/airflow/dag_generated_configs
             - ingestion-volume-dags:/opt/airflow/dags
             - ingestion-volume-tmp:/tmp
-        networks: [data_net]
+
 
     clickhouse:
         image: clickhouse/clickhouse-server:24.8
@@ -685,7 +683,6 @@ services:
             echo 'dbt_user authentication test passed!'
             "
         restart: "on-failure"
-        networks: [data_net]
 
     # --- dbt initialization & user setup ---
     dbt:
@@ -701,7 +698,6 @@ services:
             - ./dbt:/dbt # Mount local dbt project directory
         working_dir: /dbt # Set dbt project directory as the working directory
         tty: true # Keep container running for interactive dbt commands
-        networks: [data_net]
 
 volumes:
     ingestion-volume-dag-airflow:
