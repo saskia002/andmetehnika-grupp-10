@@ -18,13 +18,13 @@
     docker-compose build --no-cache
     ```
    
-6. Run docker
+5. Run docker
 
     ```bash
     docker-compose up -d
     ```
 
-7. Airflow is scheduled to run every day at 22:00 UTC, to run it manually:
+6. Airflow is scheduled to run every day at 22:00 UTC, to run it manually:
 
     6.1. (Optional) Firstly pulling stock info with yfinance API takes time (~15 minutes), to shorten it you can pull less data
 
@@ -43,17 +43,85 @@
     
     6.4. Trigger the DAG called load_companies_dag - it will trigger fetch_yfinance_dag after completion
 
-    6.5. Wait for the DAGs to be finished and ...
+    6.5. Wait for the DAGs to be finished 
 
-8. DBT flows to load silver and gold schemas and run some tests:
+7. Run DAG run_clickhouse_views to create views and roles
 
-    Dbt graph:
-![alt text](image-2.png)
+8. Access OpenMetaData via http://localhost:8585/ (full solution screenshots are in the report)
 
-9. Clikchouse users and roles
+    8.1. Log into 
 
-    9.1 Creation of roles, users and limited and full views is part of DAG run_clickhouse_views.py
-        In case you would like to run them manually then you can run scripts that using following commands:
+       email: admin@open-metadata.org
+
+       password: admin
+    
+    8.2. First a database service must be registered, for that go to Settings -> Services -> Databases -> Add new service
+
+    8.3. Choose ClickHouse service
+    
+    8.4. Add service name (e.g. clickhouse_warehouse) and fill out nex fields with values:
+
+       Username: openmetadata_user
+
+       Password: omd_pass
+
+       Host and Port: clickhouse:8123
+    
+    8.5. After saving service the agents should start automatically
+
+    8.6. Do add Apache superset dashboard  go to Settings -> Services -> Dashboards -> Add new service
+
+    8.7. Choose superset service
+
+    8.8. Add service name (e.g. superset_dashboard) and fill out nex fields with values:
+     
+       Host and Port: http://localhost:8088/
+
+       Superset Connection: MysqlConnection 
+
+       Username: openmetadata_user
+
+       Password: openmetadata_password
+
+    8.9. Same as last time after saving the service the agents should start automatically.
+
+9. Access Apache superset via http://localhost:8585/ (Superset dashboard screenshots are in the report)
+
+    9.1. Login with credentials:
+       
+       Username: admin
+
+       Password: admin
+    
+    9.2. Go to Settings -> Database connections -> add database
+
+    9.3. Use the following values for fields:
+
+       Host: clickhouse
+
+       Port: 8123
+
+       Username: etl
+
+       Password: pass
+
+       Display name: ClickHouse Connect (Superset)
+    
+    9.4. After that you can go to SQL Lab and do queries like:
+
+       select * from gold.FactFinancials
+    
+
+
+## DBT and ClickHouse:
+
+Dbt graph (flow to load silver and gold schemas and run some tests):
+
+![alt text](dbt_graph.png)
+
+
+1. Creation of roles, users and limited and full views is part of DAG run_clickhouse_views.py
+    In case you would like to run them manually then you can run scripts that using following commands:
 
         to create users and roles:
             ```bash
@@ -68,12 +136,14 @@
             docker exec -i clickhouse clickhouse-client < clickhouse/Privacy_and_Security/03_Create_limited_views.sql 
             ```
 
-    9.2 As now schemas gold_full_views and gold_limited_views have been created then you can assign to roles access to relevant schemas:
+2. As now schemas gold_full_views and gold_limited_views have been created then you can assign to roles access to relevant schemas:
+
             ```bash
             docker exec -i clickhouse clickhouse-client < clickhouse/Privacy_and_Security/04_Grant_access_to_roles.sql 
             ```
     
-    9.3 Script for creating clickhouse roles is:
+3. Script for creating clickhouse roles is:
+
         -- Create two roles
             CREATE ROLE IF NOT EXISTS analyst_full;
             CREATE ROLE IF NOT EXISTS analyst_limited;
@@ -86,19 +156,20 @@
             GRANT analyst_full TO user_full;
             GRANT analyst_limited TO user_limited;
 
-    9.4 After schemas have been created:
+4. After schemas have been created:
+
         -- Grant SELECT on full views to role _full
             GRANT SELECT ON gold_full_views.*  TO analyst_full;
 
         -- Grant SELECT on masked views to role _limited
             GRANT SELECT ON gold_limited_views.*  TO analyst_limited;
 
-    9.5 Masking:
+5. Masking:
 
         As we have only public data then we don't need masking but for project we chose 3 columns.
         We have masked in DimCompany Company Name by showing only first 3 characters in name and Industry by showing Other in case there as less than 10 rows with same Industry. And then we have masked ForbesRank by showing ranges 1-99, 100-199 etc. More details in sql script 03_Create_limited_views.sql 
 
-    9.6 To test if access has been granted properly for a specific user you can run for example:
+6. To test if access has been granted properly for a specific user you can run for example:
 
         ```bash
         docker exec -it clickhouse clickhouse-client --user user_full --password full123
@@ -108,8 +179,7 @@
         docker exec -it clickhouse clickhouse-client --user user_limited --password limited123
         ```
 
-    9.7 Demonstrating how access was applied.
-        User_full can see this in v_DimCustomer view and in v_FactForbesRank:
+7. Demonstrating how access was applied. User_full can see this in v_DimCustomer view and in v_FactForbesRank:
 
         SELECT *
         FROM gold_full_views.v_DimCompany
@@ -255,10 +325,10 @@
         Query id: 36d8be63-be83-4fd6-b42f-cbf1adf96a57
 
         ┌─Industry───────────────────────────────┬─count()─┐
-     1. │ Conglomerates                          │       5 │
-     2. │ Retail and Wholesale                   │       1 │
-     3. │ Engineering, Manufacturing             │       1 │
-     4. │ Construction, Chemicals, Raw Materials │       1 │
+        │ Conglomerates                          │       5 │
+        │ Retail and Wholesale                   │       1 │
+        │ Engineering, Manufacturing             │       1 │
+        │ Construction, Chemicals, Raw Materials │       1 │
         └────────────────────────────────────────┴─────────┘
 
 
@@ -299,9 +369,23 @@ Daily at 22:00 UTC
 │   to Gold(Marts)             │
 │   run dbt tests).            │
 └──────────────────────────────┘
+
+
+┌──────────────────────────────┐
+│    run_clickhouse_views      │
+│   create roles and views     │
+│       in clickhouse          │
+│                              │
+│                              │
+│                              │
+└──────────────────────────────┘
 ```
 </pre>
 
+![alt text](load_companies.png)
+![alt text](fetch_yfinance.png)
+![alt text](dbt_transf.png)
+![alt text](clickhouse_views.png)
 ### Overview
 
 The workflow involves two DAGs
